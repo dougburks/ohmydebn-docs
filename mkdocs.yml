@@ -1,6 +1,9 @@
 site_name: OhMyDebn
 site_url: https://dougburks.github.io/ohmydebn-docs/
 
+plugins:
+  - glightbox
+
 theme:
   name: material
   features:
