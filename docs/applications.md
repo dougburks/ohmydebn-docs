@@ -46,4 +46,3 @@ To monitor your system performance, press `Super + T` to launch btop.
 To visualize your system audio, press `Ctrl + Shift + A` to launch Cava.
 
 ![OhMyDebn Cava audio visualizer](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cava-audio.png)
-
