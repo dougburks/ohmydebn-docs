@@ -1,5 +1,5 @@
 site_name: OhMyDebn Docs
-site_url: https://ohmydebn.org/docs
+site_url: https://dougburks.github.io/ohmydebn-docs
 theme:
   name: material
   features:
