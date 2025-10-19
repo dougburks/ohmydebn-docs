@@ -1,0 +1,35 @@
+site_name: OhMyDebn Docs
+site_url: https://ohmydebn.org/docs
+theme:
+  name: material
+  features:
+    - content.code.copy
+  palette:
+    scheme: slate
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+nav:
+  - Introduction: index.md
+  - Gallery: gallery.md
+  - Motivation: motivation.md
+  - FAQ: faq.md
+  - Ingredients: ingredients.md
+  - Requirements: requirements.md
+  - Warnings: warnings.md
+  - Installation: installation.md
+  - Window Tiling: window-tiling.md
+  - Desktop Themes: desktop-themes.md
+  - Desktop Effects: desktop-effects.md
+  - Screen Magnifier: screen-magnifier.md
+  - Hotkeys: hotkeys.md
+  - Applications: applications.md
+  - Terminal: terminal.md
+  - Text Editor: text-editor.md
+  - Documents: documents.md
+  - Firewall: firewall.md
+  - Updating: updating.md
+  - Resetting: resetting.md
+  - Acknowledgements: acknowledgements.md

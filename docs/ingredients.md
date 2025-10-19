@@ -1,0 +1,26 @@
+# Ingredients
+
+- Base OS: [Debian](https://www.debian.org/) 13 for stability and compatibility
+- Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
+- Desktop themes: artfully polished themes from [Linux Mint](https://linuxmint.com/) and [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
+- Theme builder: [Aether](https://github.com/bjarneo/aether) by [Bjarne Øverli](https://x.com/iamdothash)
+- Terminal emulator: [Alacritty](https://alacritty.org/) with Caskaydia Nerd Fonts
+- Shell: [Zsh](https://en.wikipedia.org/wiki/Z_shell) with [Oh My Zsh](https://ohmyz.sh/)
+- Shell prompt: [Starship](https://starship.rs/)
+- Text editor: [neovim](https://neovim.io/) with [LazyVim](https://www.lazyvim.org/)
+- Performance monitoring: [btop](https://github.com/aristocratos/btop)
+- Application launcher: [Rofi](https://davatorium.github.io/rofi/current/rofi.1/)
+- Audio visualizer: [Cava](https://github.com/karlstav/cava)
+- Shell cat command alternative: [bat](https://github.com/sharkdp/bat) with syntax highlighting
+- Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command and [eza](https://github.com/eza-community/eza) for beautiful directory listings
+- Web browser: [Chromium](https://www.chromium.org/Home/) with uBlock Origin Lite content blocker
+- Password management: [KeePassXC](https://keepassxc.org/)
+- Default image viewer: [Ristretto](https://docs.xfce.org/apps/ristretto/start)
+- Image editor: [GIMP](https://www.gimp.org/)
+- System summary: [screenfetch](https://github.com/KittyKatt/screenFetch)
+- Window automation: [xdotool](https://github.com/jordansissel/xdotool)
+- Office Suite: [LibreOffice](https://www.libreoffice.org/)
+- Firewall: [ufw](https://help.ubuntu.com/community/UFW) with default deny for inbound traffic
+- Eye candy: dazzling terminal effects via [tte](https://github.com/ChrisBuilds/terminaltexteffects) for demoscene nostalgia
+
+
