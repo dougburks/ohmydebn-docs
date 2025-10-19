@@ -22,5 +22,3 @@
 - Office Suite: [LibreOffice](https://www.libreoffice.org/)
 - Firewall: [ufw](https://help.ubuntu.com/community/UFW) with default deny for inbound traffic
 - Eye candy: dazzling terminal effects via [tte](https://github.com/ChrisBuilds/terminaltexteffects) for demoscene nostalgia
-
-
