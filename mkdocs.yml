@@ -1,7 +1,5 @@
 site_name: OhMyDebn Docs
 site_url: https://dougburks.github.io/ohmydebn-docs/
-repo_url: https://github.com/dougburks/ohmydebn-docs/
-edit_uri: edit/main/docs/
 
 theme:
   name: material
