@@ -12,5 +12,5 @@ Every year or so, I review my desktop environment to make sure I'm using the bes
 - How can I use hotkeys to keep hands on keys for better ergonomics and more speed?
 - Which Linux distro provides all of the above and runs on the hardware that I need it to?
 
-I've been inspired by [DHH](https://dhh.dk/) and his [Omakub](https://omakub.org/) and [Omarchy](https://omarchy.org/) setups to not only build my ideal desktop environment but publish it here so that others can benefit as well. This is my own personal [omakase](https://en.wikipedia.org/wiki/Omakase) menu, a curated collection of comprehensive components that balances the ideals of productivity, flexibility, and beauty while offering a modern command line experience and some fun 8-bit nostalgia as well.
+I've been inspired by [DHH](https://dhh.dk/) and his [Omakub](https://omakub.org/) and [Omarchy](https://omarchy.org/) setups to not only build my ideal desktop environment but publish it so that others can benefit as well. This is my own personal [omakase](https://en.wikipedia.org/wiki/Omakase) menu, a curated collection of comprehensive components that balances the ideals of productivity, flexibility, and beauty while offering a modern command line experience and some fun 8-bit nostalgia as well.
 
