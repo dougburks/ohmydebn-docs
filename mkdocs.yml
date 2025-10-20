@@ -1,5 +1,6 @@
 site_name: OhMyDebn
 site_url: https://dougburks.github.io/ohmydebn-docs/
+repo_url: https://github.com/dougburks/ohmydebn
 
 plugins:
   - glightbox
