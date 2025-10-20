@@ -1,5 +1,3 @@
-# Terminal
-
 To start a terminal session, press `Super + Enter`. This launches a beautiful and powerful [Alacritty](https://alacritty.org) terminal window that includes:
 
 - Caskaydia Nerd Fonts

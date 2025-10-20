@@ -1,4 +1,3 @@
-
 ## Default Theme
 
 The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.

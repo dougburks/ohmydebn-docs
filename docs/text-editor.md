@@ -8,4 +8,4 @@ The [hotkeys](hotkeys.md) section includes more hotkeys for Neovim and a link to
 
 ## VSCode
 
-You can also install VSCode from the OhMyDebn menu.
+If you prefer a graphical text editor, you can install VSCode from the OhMyDebn menu.

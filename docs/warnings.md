@@ -1,5 +1,3 @@
-# Warnings
-
 !!! warning
 - OhMyDebn is intended for a clean new installation
 - OhMyDebn may make changes to your APT configuration

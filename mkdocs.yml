@@ -24,8 +24,8 @@ nav:
   - Introduction: index.md
   - Motivation: motivation.md
   - Gallery: gallery.md
-  - FAQ: faq.md
   - Ingredients: ingredients.md
+  - FAQ: faq.md
   - Requirements: requirements.md
   - Warnings: warnings.md
   - Source Code: source-code.md

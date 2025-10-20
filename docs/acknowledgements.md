@@ -1,5 +1,3 @@
-# Acknowledgements
-
 Thanks to the following!
 
 - My dad for introducing me to computers

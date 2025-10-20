@@ -1,5 +1,3 @@
-# Requirements
-
 OhMyDebn requires the following:
 
 - x86_64 or ARM architecture

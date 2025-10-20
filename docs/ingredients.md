@@ -1,4 +1,4 @@
-# Ingredients
+Here's what you get in OhMyDebn:
 
 - Base OS: [Debian](https://www.debian.org/) 13 for stability and compatibility
 - Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
