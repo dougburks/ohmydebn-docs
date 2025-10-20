@@ -22,8 +22,8 @@ markdown_extensions:
 
 nav:
   - Introduction: index.md
-  - Gallery: gallery.md
   - Motivation: motivation.md
+  - Gallery: gallery.md
   - FAQ: faq.md
   - Ingredients: ingredients.md
   - Requirements: requirements.md
