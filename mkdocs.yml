@@ -4,6 +4,7 @@ repo_url: https://github.com/dougburks/ohmydebn
 
 plugins:
   - glightbox
+  - search
 
 theme:
   name: material
