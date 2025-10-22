@@ -21,4 +21,5 @@ Here's what you get in OhMyDebn:
 - Window automation: [xdotool](https://github.com/jordansissel/xdotool)
 - Office Suite: [LibreOffice](https://www.libreoffice.org/)
 - Firewall: [ufw](https://help.ubuntu.com/community/UFW) with default deny for inbound traffic
+- Mandatory Access Control: [AppArmor](https://wiki.debian.org/AppArmor/HowToUse)
 - Eye candy: dazzling terminal effects via [tte](https://github.com/ChrisBuilds/terminaltexteffects) for demoscene nostalgia
