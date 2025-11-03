@@ -8,7 +8,7 @@ Pressing `Super + K` will open Chromium and navigate to this list of keyboard bi
 | `Ctrl + Shift + G` | gTile window tiling |
 | `Ctrl + Shift + O` | OhMyDebn logo |
 | `Ctrl + Shift + S` | screenfetch system summary |
-| `Ctrl + Shift + A` | audio visualizer (Cava) |
+| `Ctrl + Shift + A` | Aether theme builder |
 | `Ctrl + Super + T` | Pick a new theme |
 | `Ctrl + Super + B` | Next background image for theme |
 
