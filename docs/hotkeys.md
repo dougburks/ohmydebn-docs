@@ -60,6 +60,17 @@ Pressing `Super + K` will open Chromium and navigate to this list of keyboard bi
 | `Shift + Ctrl + Alt + Left` | Move window to left workspace |
 | `Shift + Ctrl + Alt + Right` | Move window to right workspace |
 
+## Text Selection (most apps)
+
+| Hotkey | Function |
+|--------|----------|
+| Shift + Up | Select text one line up |
+| Shift + Down | Select text one line down |
+| Shift + Left | Select text one character to the left |
+| Shift + Right | Select text one character to the right |
+| Ctrl + Shift + Left | Select text one word to the left |
+| Ctrl + Shift + Right | Select text one word to the right |
+
 ## System
 
 | Hotkey | Function |
