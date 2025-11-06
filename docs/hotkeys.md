@@ -41,9 +41,9 @@ Pressing `Super + K` will open Chromium and navigate to this list of keyboard bi
 | `Ctrl + Shift + 8 (numeric keypad)` | Tile to top half with gaps |
 | `Ctrl + Shift + 9 (numeric keypad)` | Tile to top right corner with gaps |
 | `Ctrl + Shift + Down` | Tile to bottom half with gaps |
-| `Ctrl + Shift + Left` | Tile to left half with gaps |
+| `Ctrl + Shift + H` | Tile to left half with gaps |
 | `Ctrl + Shift + Enter` | Tile to full screen with gaps |
-| `Ctrl + Shift + Right` | Tile to right half with gaps |
+| `Ctrl + Shift + L` | Tile to right half with gaps |
 | `Ctrl + Shift + Up` | Tile to top half with gaps |
 
 ## Workspaces
