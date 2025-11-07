@@ -1,2 +1,3 @@
-LibreOffice is installed to handle common file types like documents and spreadsheets. For PDF files, Evince is the default PDF viewer. If you need to annotate a PDF, you can use the included Xournal++.
+LibreOffice is installed to handle common file types like documents and spreadsheets. 
 
+For PDF files, the included Xournal++ can not only view PDFs but annotate them as well.
