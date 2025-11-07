@@ -1,3 +1,3 @@
 LibreOffice is installed to handle common file types like documents and spreadsheets. 
 
-For PDF files, the included Xournal++ can not only view PDFs but annotate them as well.
+PDF files open by default in the chromium web browser. If you need to annotate PDFs, then you can use the included Xournal++.
