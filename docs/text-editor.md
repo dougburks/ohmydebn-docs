@@ -9,3 +9,5 @@ The [hotkeys](hotkeys.md) section includes more hotkeys for Neovim and a link to
 ## VSCode
 
 If you prefer a graphical text editor, you can install VSCode from the OhMyDebn menu.
+
+![OhMyDebn VSCode screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-vscode.png)
