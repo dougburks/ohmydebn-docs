@@ -35,9 +35,9 @@ There are also hotkeys for common tiling options that leverage gTile for window 
 - Press `Ctrl + Shift + 1 (numeric keypad)` to tile to bottom left corner with gaps.
 - Press `Ctrl + Shift + 2 (numeric keypad)` or `Ctrl + Shift + Down` to tile to bottom half with gaps.
 - Press `Ctrl + Shift + 3 (numeric keypad)` to tile to bottom right corner with gaps.
-- Press `Ctrl + Shift + 4 (numeric keypad)` or `Ctrl + Shift + Left` to tile to left half with gaps.
+- Press `Ctrl + Shift + 4 (numeric keypad)` or `Ctrl + Shift + H` to tile to left half with gaps.
 - Press `Ctrl + Shift + 5 (numeric keypad)` or `Ctrl + Shift + Enter` to tile to full screen with gaps.
-- Press `Ctrl + Shift + 6 (numeric keypad)` or `Ctrl + Shift + Right` to tile to right half with gaps.
+- Press `Ctrl + Shift + 6 (numeric keypad)` or `Ctrl + Shift + L` to tile to right half with gaps.
 - Press `Ctrl + Shift + 7 (numeric keypad)` to tile to top left corner with gaps.
 - Press `Ctrl + Shift + 8 (numeric keypad)` or `Ctrl + Shift + Up` to tile to top half with gaps.
 - Press `Ctrl + Shift + 9 (numeric keypad)` to tile to top right corner with gaps.
