@@ -85,7 +85,7 @@ Here are some screenshots of the themes included from Omarchy.
 
 ## Building New Themes using Aether
 
-The `Build New Theme using Aether` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Here are a few example screenshots.
+The `Build New Theme` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Here are a few example screenshots.
 
 Aether example 1:
 
