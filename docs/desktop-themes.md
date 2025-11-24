@@ -87,7 +87,17 @@ Here are some screenshots of the themes included from Omarchy.
 
 The `Build New Theme using Aether` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Here are a few example screenshots.
 
+Aether example 1:
+
 ![OhMyDebn theme build 1](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-1.png)
+
+Aether example 2:
+
 ![OhMyDebn theme build 2](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-2.png)
+
+Aether example 3:
+
 ![OhMyDebn theme build 3](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-3.png)
+Aether example 4:
+
 ![OhMyDebn theme build 4](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-4.png)
