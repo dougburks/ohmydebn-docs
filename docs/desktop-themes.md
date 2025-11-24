@@ -35,13 +35,25 @@ Here are some screenshots of the themes included from Omarchy.
 
 ![OhMyDebn with catppuccin latte theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-catppuccin-latte.png)
 
+### Ethereal
+
+![OhMyDebn with ethereal theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-ethereal.png)
+
 ### Everforest
 
 ![OhMyDebn with everforest theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-everforest.png)
 
+### Flexoki Light
+
+![OhMyDebn with flexoki light theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-flexoki-light.png)
+
 ### Gruvbox
 
 ![OhMyDebn with gruvbox theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-gruvbox.png)
+
+### Hackerman
+
+![OhMyDebn with hackerman theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-hackerman.png)
 
 ### Kanagawa
 
