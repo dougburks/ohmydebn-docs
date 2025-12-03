@@ -6,7 +6,7 @@ The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
 ## Changing Theme
 
-You can change the desktop theme by pressing `Ctrl + Super + T`. This will bring up a list of installed themes including the default Ohmydebn theme and several themes from Omarchy. There are also options at the end of the list titled `Next Background`, `Install Theme from URL`, `Install All Omarchy Extra Themes`, `Build New Theme with Aether`, `Browse Aether Themes`, and `Remove Theme`.
+You can change the desktop theme by pressing `Ctrl + Super + T`. This will bring up a list of installed themes including the default Ohmydebn theme and several themes from Omarchy. There are also options at the end of the list titled `Next Background`, `Install Theme from URL`, `Install All Omarchy Extra Themes`, `Build New Theme with Aether`, `Browse Aether Themes`, and `Remove Theme`. Depending on how many themes you have installed, you may not see all items on the first screen so you may need to use the arrow keys or PageUp/PageDown keys to see all items.
 
 ![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-set-gui.png)
 
@@ -96,7 +96,7 @@ Here are some screenshots of the themes included from Omarchy.
 
 ## Building New Themes using Aether
 
-The `Build New Theme` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Here are a few example screenshots.
+The `Build New Theme` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Alternatively, you can launch Aether using the hotkey `Ctrl + Shift + A`. You can then use Aether to search for wallpaper and extract colors to build a desktop theme. Here are a few example screenshots.
 
 Aether example 1:
 
