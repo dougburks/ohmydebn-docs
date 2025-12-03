@@ -2,7 +2,8 @@ Here's what you get in OhMyDebn:
 
 - Base OS: [Debian](https://www.debian.org/) 13 for stability and compatibility
 - Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
-- Desktop themes: artfully polished themes from [Linux Mint](https://linuxmint.com/) and [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
+- Desktop themes: beautiful themes from [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
+- Desktop icons: artfully polished icons from [Linux Mint](https://linuxmint.com/)
 - Theme builder: [Aether](https://github.com/bjarneo/aether) by [Bjarne Øverli](https://x.com/iamdothash)
 - Terminal emulator: [Alacritty](https://alacritty.org/) with Caskaydia Nerd Fonts
 - Shell: [Zsh](https://en.wikipedia.org/wiki/Z_shell) with [Oh My Zsh](https://ohmyz.sh/)

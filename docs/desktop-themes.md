@@ -6,23 +6,34 @@ The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
 ## Changing Theme
 
-You can change the desktop theme by pressing `Ctrl + Super + T`. This will bring up a list of installed themes including the default Ohmydebn theme and several themes from Omarchy. There are also options at the end of the list titled `Next Background`, `Install Theme from URL`, `Build New Theme`, and `Remove Theme`.
+You can change the desktop theme by pressing `Ctrl + Super + T`. This will bring up a list of installed themes including the default Ohmydebn theme and several themes from Omarchy. There are also options at the end of the list titled `Next Background`, `Install Theme from URL`, `Install All Omarchy Extra Themes`, `Build New Theme with Aether`, `Browse Aether Themes`, and `Remove Theme`.
 
 ![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-set-gui.png)
+
 ## Backgrounds
 
 Some themes include multiple background options. If the theme you select has multiple backgrounds, you can switch to the next background by selecting the `Next Background` option from the menu. Alternatively, you can press `Ctrl + Super + B` at any time.
 
 ## Installing Themes
 
-The `Install Theme from URL` option allows you to install new themes from a URL.
+The `Install Theme from URL` option allows you to install a new theme from the Omarchy Extra Themes collection.
 
 ![OhMyDebn theme install](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-install.png)
+
+## Install All Omarchy Extra Themes
+
+The `Install All Omarchy Extra Themes` option allows you to install all themes from the Omarchy Extra Themes collection.
+
+## Browse Aether Themes
+
+The `Browse Aether Themes` option allows you to install a new theme from the Aether Themes collection.
+
 ## Removing Themes
 
 The `Remove Theme` option allows you to remove any extra themes that you've installed.
 
 ![OhMyDebn theme remove](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-remove.png)
+
 ## Themes Included from Omarchy
 
 Here are some screenshots of the themes included from Omarchy.

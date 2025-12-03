@@ -8,7 +8,7 @@ For the quickest and easiest installation, the best option is to start with the 
 ```
 curl -LO https://ohmydebn.org/install.sh
 ```
-3. Once you have reviewed install.sh and the rest of the code in the repo, you can run the install script:
+3. Once you have reviewed install.sh and the rest of the [source code](#source-code), you can run the install script:
 ```
 bash install.sh
 ```
