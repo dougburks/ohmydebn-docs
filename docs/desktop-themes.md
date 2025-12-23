@@ -24,9 +24,13 @@ The `Install Theme from URL` option allows you to install a new theme from the O
 
 The `Install All Omarchy Extra Themes` option allows you to install all themes from the Omarchy Extra Themes collection.
 
+![OhMyDebn install all omarchy extra themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-install-all.png)
+
 ## Browse Aether Themes
 
 The `Browse Aether Themes` option allows you to install a new theme from the Aether Themes collection.
+
+![OhMyDebn browse aether themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-browse.png)
 
 ## Removing Themes
 
