@@ -40,6 +40,7 @@ nav:
   - Text Editor: text-editor.md
   - Documents: documents.md
   - Firewall: firewall.md
+  - Virtualization: virtualization.md
   - Updating: updating.md
   - Resetting: resetting.md
   - Acknowledgements: acknowledgements.md
