@@ -14,8 +14,8 @@ Neovim is a powerful terminal-based text editor. To start it, press `Super + N` 
 
 The [hotkeys](hotkeys.md) section includes more hotkeys for Neovim and a link to additional information.
 
-## VSCode
+## Visual Studio Code
 
-VSCode is a powerful text editor with a graphical user interface. You can install it from the OhMyDebn menu.
+Visual Studio Code (VS Code) is a powerful text editor with a graphical user interface. You can install it from the OhMyDebn menu via Install - Editor - VSCode.
 
 ![OhMyDebn VSCode screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-vscode.png)
