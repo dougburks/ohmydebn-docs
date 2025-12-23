@@ -14,6 +14,6 @@ You can then start Virtual Machine Manager from the menu or by pressing `Ctrl + 
 
 ![OhMyDebn Virtualization Machine Manager](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-virtualization-2-vmm.png)
 
-Once you've created a VM, if you want to create a snapshot then we recommend using the `internal` option:
+Once you've created a VM, if you want to create a snapshot then we recommend setting `Snapshot Mode` to `internal`:
 
 ![OhMyDebn Virtualization Snapshots](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-virtualization-3-snapshots.png)
