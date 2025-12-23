@@ -4,6 +4,8 @@ There are multiple options for text editors depending on your needs.
 
 gedit is a very simple text editor with a graphical user interface. You can launch it from the app menu or by pressing Ctrl + Super + E.
 
+![OhMyDebn gedit screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gedit.png)
+
 ## Neovim
 
 Neovim is a powerful terminal-based text editor. To start it, press `Super + N` or type `nvim` at any terminal prompt. The first time it loads, it will install several plugins. Once that is done, you can press the `Q` key until you get to the main menu. You can then press the space bar and then the `E` key to open Explorer.
