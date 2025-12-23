@@ -98,9 +98,10 @@ Pressing `Super + K` will open Chromium and navigate to this list of keyboard bi
 | `Super + X` | X.com |
 | `Alt + F2` | Run dialog |
 | `Shift + Super + C` | Cinnamon calendar
-| `Ctrl + Super + A` | Cava audio visualizer
-| `Ctrl + Super + C` | Calculator
-| `Ctrl + Super + E` | gEdit Text Editor
+| `Ctrl + Super + A` | audio visualizer (cava)
+| `Ctrl + Super + C` | Calculator (galculator)
+| `Ctrl + Super + E` | Simple Text Editor (gedit)
+| `Ctrl + Super + S` | Visual Studio Code (if installed)
 | `Ctrl + Super + V` | Virtual Machine Manager (if installed)
 
 ## Browser (Chromium)
