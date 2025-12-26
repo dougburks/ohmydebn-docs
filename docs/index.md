@@ -11,7 +11,7 @@ OhMyDebn is a debonair Debian + Cinnamon setup inspired by Omarchy. It is beauti
 *Stars bow to its charm.*  
   -- AI, probably
 
-## Why is it called "OhMyDebn"?
+## Why is it called OhMyDebn?
 
 There are several meanings for the name:
 
