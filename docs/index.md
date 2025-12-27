@@ -20,3 +20,13 @@ There are several meanings for the name:
 - It's so debonair, it will make your friends say "Oh! My Debian installations never looked this good!"
 - Obligatory [recursive acronym](https://en.wikipedia.org/wiki/Recursive_acronym) OHMYDEBN: OhMyDebn Heals My Yearning for a Desktop Environment Beautifully Now!
 
+## Who is this for?
+
+OhMyDebn is designed for many different use cases:
+
+- Folks that want beautiful Omarchy themes on a stable, reliable, and versatile Debian base OS
+- Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful command line experience
+- Folks that prefer to keep hands on keyboard and use hotkeys as much as possible but still have the option of not having to use those hotkeys
+- Developers who want a beautiful neovim or VS Code experience
+- Folks with older hardware that is not compatible with modern versions of Windows or MacOS
+- Anybody who wants to see 2026 be the year of the Linux desktop!
