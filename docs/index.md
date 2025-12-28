@@ -24,7 +24,7 @@ There are several meanings for the name:
 
 OhMyDebn is designed for many different use cases:
 
-- Folks that want beautiful Omarchy themes on a stable, reliable, and versatile Debian base OS
+- Folks that want beautiful Omarchy themes on a Debian base OS
 - Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful command line experience
 - Folks that prefer to keep hands on keyboard and use hotkeys as much as possible but still have the option of not having to use those hotkeys
 - Developers who want a beautiful neovim or VS Code experience
