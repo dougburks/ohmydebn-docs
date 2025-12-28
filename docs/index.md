@@ -25,8 +25,8 @@ There are several meanings for the name:
 OhMyDebn is designed for many different use cases:
 
 - Folks that want beautiful [Omarchy themes](desktop-themes.md/#themes-included-from-omarchy) on a Debian base OS
-- Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful command line experience
-- Folks that prefer to keep hands on keyboard and use hotkeys as much as possible but still have the option of not having to use those hotkeys
-- Developers who want a beautiful neovim or VS Code experience
-- Folks with older hardware that is not compatible with modern versions of Windows or MacOS
+- Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful [terminal](terminal.md)
+- Folks that prefer to keep hands on keyboard and use [hotkeys](hotkeys.md) as much as possible but still have the option of not having to use those hotkeys
+- Developers who want a beautiful [neovim](text-editor.md/#neovim) or [Visual Studio Code](text-editor.md/#visual-studio-code) experience
+- Folks with older hardware that is not compatible with modern versions of [Windows](gallery.md/#2017-dell-precision) or [MacOS](gallery.md/#2014-macbook)
 - Anybody who wants to see 2026 be the year of the Linux desktop!
