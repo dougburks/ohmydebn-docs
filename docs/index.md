@@ -28,5 +28,6 @@ OhMyDebn is designed for many different use cases:
 - Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful [terminal](terminal.md)
 - Folks that prefer to keep hands on keyboard and use [hotkeys](hotkeys.md) as much as possible but still have the option of not having to use those hotkeys
 - Developers who want a beautiful [neovim](text-editor.md/#neovim) or [Visual Studio Code](text-editor.md/#visual-studio-code) experience
-- Folks with older hardware that is not compatible with modern versions of [Windows](gallery.md/#2017-dell-precision) or [MacOS](gallery.md/#2014-macbook)
+- Folks with [older Windows machines that can't run Windows 11](gallery.md/#2017-dell-precision)
+- Folks with [older Apple machines that can't run the latest version of macOS](gallery.md/#2014-macbook)
 - Anybody who wants to see 2026 be the year of the Linux desktop!
