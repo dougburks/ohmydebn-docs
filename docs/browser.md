@@ -2,7 +2,7 @@
 
 The default browser is [Chromium](https://www.chromium.org/Home/) with the uBlock Origin Lite content blocker already installed for you.
 
-To launch the browser, you can open it from the traditional program menu, from the Rofi application launcher, or just press `Super + B`.
+To launch the browser, you can open it from the [Cinnamon menu](cinnamon-menu.md), from the [Apps menu](apps-menu.md), or via [hotkey](hotkeys.md) `Super + B`.
 
 ![OhMyDebn chromium web browser with uBlock Origin Lite content blocker](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-chromium-ublock.png)
 
