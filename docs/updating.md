@@ -1,4 +1,4 @@
-Before updating, please review the Release Notes at https://github.com/dougburks/ohmydebn/releases so that you are aware of any changes.
+Before updating, please review the Release Notes at [https://github.com/dougburks/ohmydebn/releases](https://github.com/dougburks/ohmydebn/releases) so that you are aware of any changes.
 
 Also make sure that you have stable power and Internet access to avoid any interruptions to the update process.
 
