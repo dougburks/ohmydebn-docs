@@ -12,7 +12,7 @@ To show an animated OhMyDebn logo demo, press `Ctrl + Alt + D`.
 
 ## System Summary
 
-To see a system summary, press `Ctrl + Shift + S` to launch screenfetch.
+To see a system summary, you can launch screenfetch from the [OhMyDebn menu](ohmydebn-menu.md) - About option or via [hotkey](hotkeys.md) `Ctrl + Shift + S`.
 
 ![OhMyDebn system summary via screenfetch](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-screenfetch-gui.png)
 
