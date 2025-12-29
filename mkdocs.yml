@@ -37,15 +37,11 @@ nav:
   - Hotkeys: hotkeys.md
   - OhMyDebn Menu: ohmydebn-menu.md
   - Apps Menu: apps-menu.md
-  - Applications: applications.md
   - Browser: browser.md
   - Text Editor: text-editor.md
   - Documents: documents.md
   - Terminal: terminal.md
-  - OhMyDebn Logo: ohmydebn-logo.md
-  - OhMyDebn Demo: ohmydebn-demo.md
-  - System Summary: system-summary.md
-  - System Monitoring: system-monitoring.md
+  - Utilities: utilities.md
   - Firewall: firewall.md
   - Virtualization: virtualization.md
   - Updating: updating.md
