@@ -34,7 +34,6 @@ nav:
   - Desktop Themes: desktop-themes.md
   - Desktop Effects: desktop-effects.md
   - Screen Magnifier: screen-magnifier.md
-  - Hotkeys: hotkeys.md
   - OhMyDebn Menu: ohmydebn-menu.md
   - Apps Menu: apps-menu.md
   - Browser: browser.md
@@ -46,4 +45,5 @@ nav:
   - Virtualization: virtualization.md
   - Updating: updating.md
   - Resetting: resetting.md
+  - Hotkeys: hotkeys.md
   - Acknowledgements: acknowledgements.md
