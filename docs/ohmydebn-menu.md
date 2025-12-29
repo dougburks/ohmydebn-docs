@@ -2,4 +2,4 @@ The OhMyDebn menu allows you to launch apps, learn about OhMyDebn, and configure
 
 ![OhMyDebn Menu](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-menu.png)
 
-The first option launches the separate [Apps menu](apps-menu).
+The first option launches the separate [Apps menu](apps-menu.md).
