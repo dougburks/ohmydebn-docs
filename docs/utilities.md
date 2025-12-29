@@ -18,12 +18,12 @@ To see a system summary, open the [OhMyDebn menu](ohmydebn-menu.md) and choose t
 
 ## System Monitoring
 
-To monitor your system performance, press `Super + T` to launch btop.
+To monitor your system performance, launch btop via [Cinnamon menu](cinnamon-menu.md) or via [hotkey](hotkey.md) `Super + T`.
 
 ![OhMyDebn btop](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-btop.png)
 
 ## Audio visualizer via Cava
 
-To visualize your system audio, press `Ctrl + Super + A` to run `cava`.
+To visualize your system audio, run `cava` in a terminal or use [hotkey](hotkeys.md) `Ctrl + Super + A`.
 
 ![OhMyDebn Cava audio visualizer](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cava-audio.png)
