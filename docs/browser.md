@@ -8,4 +8,4 @@ To launch the browser, you can open it from the traditional program menu, from t
 
 ## Installing Other Browsers
 
-If you prefer Google Chrome or Firefox, you can install them by going to [OhMyDebn Menu](#ohmydebn-menu) -> Install -> Browser.
+If you prefer Google Chrome or Firefox, you can install them by going to the [OhMyDebn menu](ohmydebn-menu.md) and selecting Install -> Browser.
