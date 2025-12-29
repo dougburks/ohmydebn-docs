@@ -44,7 +44,8 @@ nav:
   - Terminal: terminal.md
   - OhMyDebn Logo: ohmydebn-logo.md
   - OhMyDebn Demo: ohmydebn-demo.md
-  - Screenfetch: screenfetch.md
+  - System Summary: system-summary.md
+  - System Monitoring: system-monitoring.md
   - Firewall: firewall.md
   - Virtualization: virtualization.md
   - Updating: updating.md
