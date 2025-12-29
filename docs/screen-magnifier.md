@@ -1,6 +1,6 @@
 ## Enabling Screen Magnifier
 
-If you need to zoom in on part of your screen, you can do so by enabling the magnifier via [OhMyDebn Menu](applications.md/#ohmydebn-menu). 
+If you need to zoom in on part of your screen, you can do so by enabling the magnifier via the [OhMyDebn menu](ohmydebn-menu.md). 
 
 ## Using Screen Magnifier
 
