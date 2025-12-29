@@ -1,4 +1,4 @@
-You can start a terminal session from the [Cinnamon menu](cinnamon-menu.md), [Apps menu](apps-menu.md) or via [hotkey](hotkeys.md) `Super + Enter`. This launches a beautiful and powerful [Alacritty](https://alacritty.org) terminal window that includes:
+You can start a terminal session from the [Cinnamon menu](cinnamon-menu.md), [Apps menu](apps-menu.md), or via [hotkey](hotkeys.md) `Super + Enter`. This launches a beautiful and powerful [Alacritty](https://alacritty.org) terminal window that includes:
 
 - Caskaydia Nerd Fonts
 - [Zsh](https://en.wikipedia.org/wiki/Z_shell) shell with [Oh My Zsh](https://ohmyz.sh/)
