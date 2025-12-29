@@ -1,4 +1,4 @@
-Pressing `Super + K` will open Chromium and navigate to this list of keyboard bindings.
+Pressing `Super + K` will open the [browser](browser.md) and navigate to this list of keyboard bindings.
 
 ## OhMyDebn
 
