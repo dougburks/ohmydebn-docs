@@ -2,7 +2,7 @@ There are multiple options for text editors depending on your needs.
 
 ## gedit
 
-gedit is a very simple text editor with a graphical user interface. You can launch it from the app menu or by pressing Ctrl + Super + E.
+gedit is a very simple text editor with a graphical user interface. You can launch it from the [Apps menu](apps-menu.md) or by pressing Ctrl + Super + E.
 
 ![OhMyDebn gedit screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gedit.png)
 
@@ -16,6 +16,6 @@ The [hotkeys](hotkeys.md) section includes more hotkeys for Neovim and a link to
 
 ## Visual Studio Code
 
-Visual Studio Code (VS Code) is a powerful text editor with a graphical user interface. You can install it from the OhMyDebn menu via `Install` - `Editor` - `VSCode`. Once installed, you can launch it from the app menu or by pressing `Ctrl + Super + S`.
+Visual Studio Code (VS Code) is a powerful text editor with a graphical user interface. You can install it from the OhMyDebn menu via `Install` - `Editor` - `VSCode`. Once installed, you can launch it from the [Apps menu](apps-menu.md) or by pressing `Ctrl + Super + S`.
 
 ![OhMyDebn VSCode screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-vscode.png)
