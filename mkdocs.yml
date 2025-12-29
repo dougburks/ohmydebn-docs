@@ -39,9 +39,10 @@ nav:
   - Apps Menu: apps-menu.md
   - Applications: applications.md
   - Browser: browser.md
-  - Terminal: terminal.md
   - Text Editor: text-editor.md
   - Documents: documents.md
+  - Terminal: terminal.md
+  - OhMyDebn Logo: ohmydebn-logo.md
   - Firewall: firewall.md
   - Virtualization: virtualization.md
   - Updating: updating.md
