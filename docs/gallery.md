@@ -1,6 +1,6 @@
 ## Battle Station
 
-Here's my OhMyDebn battle station! It's a MacBook Pro running MacOS and Parallels with 3 OhMyDebn virtual machines!
+Here's my OhMyDebn battle station! On the left is a MacBook Pro running MacOS and Parallels with an OhMyDebn virtual machine. On the right is a mini PC running OhMyDebn as the main OS and OhMyDebn as a guest virtual machine!
 
 ![OhMyDebn Battle Station](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-battle-station.png)
 
