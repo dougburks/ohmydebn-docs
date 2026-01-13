@@ -1,5 +1,3 @@
-## AI
-
 OhMyDebn includes [OpenCode](https://opencode.ai/) by default. This includes a CLI version that runs in a terminal and GUI version that runs as an app.
 
 `opencode-cli` runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md). You can start it via [hotkey](hotkeys.md) `Super + A`.

@@ -1,5 +1,3 @@
-## Airplay
-
 The [OhMyDebn menu](ohmydebn-menu.md) includes an option to install [Uxplay](https://github.com/FDH2/UxPlay) which is an Airplay receiver. Once installed, you can run it like this to listen on ports starting at 6000:
 
 ```bash
