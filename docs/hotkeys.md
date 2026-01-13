@@ -87,7 +87,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 |--------|----------|
 | `Super + Space` | Application Launcher (Rofi) |
 | `Super + Return` | Terminal (Alacritty) |
-| `Super + A` | AI (Grok) |
+| `Super + A` | AI (OpenCode) |
 | `Super + B` | Browser (Chromium) |
 | `Super + F` | File Manager (Nemo) |
 | `Super + G` | Google search |
