@@ -1,6 +1,6 @@
 ## OhMyDebn
 
-OhMyDebn is a debonair Debian + Cinnamon setup inspired by Omarchy. It is beautiful yet powerful and productive. Command lines and hotkeys and beauty, oh my!
+OhMyDebn is a debonair Linux environment that combines the stability of the Debian Linux distro, the intuitiveness of the Cinnamon desktop environment, and the beauty of Omarchy.
 
 ![OhMyDebn screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png)
 
@@ -24,6 +24,7 @@ There are several meanings for the name:
 
 OhMyDebn is designed for many different use cases:
 
+- [AI](ai.md) enthusiasts
 - Folks that want beautiful [Omarchy themes](desktop-themes.md/#themes-included-from-omarchy) on a Debian base OS
 - Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful [terminal](terminal.md)
 - Folks that prefer to keep hands on keyboard and use [hotkeys](hotkeys.md) as much as possible but still have the option of not having to use those hotkeys
