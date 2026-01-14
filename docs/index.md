@@ -1,6 +1,6 @@
 ## OhMyDebn
 
-OhMyDebn is a debonair Linux environment that combines the stability of the Debian Linux distro, the intuitiveness of the Cinnamon desktop environment, and the beauty of Omarchy.
+OhMyDebn is a debonair Linux platform that combines the stability of the Debian distro, the ease of use of the Cinnamon desktop, and the beauty of Omarchy.
 
 ![OhMyDebn screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png)
 
