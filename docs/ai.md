@@ -12,4 +12,4 @@ OpenCode is updated using our standard [update](updating.md) process so whenever
 
 The OpenCode config includes an OhMyDebn skill so that it knows about the underlying platform:
 
-![OhMyDebn opencode-skill](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-skill.mp4)
+<video src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-skill.mp4" controls></video>
