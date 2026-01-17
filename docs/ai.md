@@ -9,3 +9,7 @@ The full app can be started from the [Cinnamon menu](cinnamon-menu.md) or the [A
 ![OhMyDebn opencode-gui](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-gui.png)
 
 OpenCode is updated using our standard [update](updating.md) process so whenever you update OhMyDebn you will get the latest OpenCode version specified by that OhMyDebn release. OpenCode is evolving rapidly and updates are released on a daily basis. If there is a newer version of OpenCode that you would like to upgrade to, then you can use the `ohmydebn-update-opencode` command. You can either specify a version number or run the command with no arguments to automatically upgrade to the latest version.
+
+The OpenCode config includes an OhMyDebn skill so that it knows about the underlying platform:
+
+![OhMyDebn opencode-skill](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-skill.mp4)
