@@ -46,6 +46,10 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Shift + Enter` | Tile to full screen with gaps |
 | `Ctrl + Shift + L` | Tile to right half with gaps |
 | `Ctrl + Shift + Up` | Tile to top half with gaps |
+| `Super + Shift + Left` | Move window to monitor on left |
+| `Super + Shift + Right` | Move window to monitor on right |
+| `Super + Shift + Up` | Move window to monitor above |
+| `Super + Shift + Down` | Move window to monitor below |
 
 ## Workspaces
 
