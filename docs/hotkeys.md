@@ -102,9 +102,9 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Super + A` | audio visualizer (cava)
 | `Ctrl + Super + C` | Calculator (galculator)
 | `Ctrl + Super + E` | Simple Text Editor (gedit)
-| `Ctrl + Super + G` | Antigravity (if installed)
-| `Ctrl + Super + S` | Visual Studio Code (if installed)
-| `Ctrl + Super + V` | Virtual Machine Manager (if installed)
+| `Ctrl + Super + G` | Antigravity
+| `Ctrl + Super + S` | Visual Studio Code
+| `Ctrl + Super + V` | Virtual Machine Manager
 
 ## Browser (Chromium)
 
