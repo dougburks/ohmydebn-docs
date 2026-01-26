@@ -5,6 +5,7 @@ Here's what you get in OhMyDebn:
 - Desktop themes: beautiful themes from Omarchy and [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
 - Desktop icons: artfully polished icons from [Linux Mint](https://linuxmint.com/)
 - Theme builder: [Aether](https://github.com/bjarneo/aether) by [Bjarne Øverli](https://x.com/iamdothash)
+- AI: OpenCode, VS Code with Github Copilot (optional), Antigravity with Google Agentic AI (optional)
 - Terminal emulator: [Alacritty](https://alacritty.org/) with Caskaydia Nerd Fonts
 - Shell: [Zsh](https://en.wikipedia.org/wiki/Z_shell) with [Oh My Zsh](https://ohmyz.sh/)
 - Shell prompt: [Starship](https://starship.rs/)
