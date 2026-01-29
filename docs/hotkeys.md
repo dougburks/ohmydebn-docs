@@ -12,6 +12,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Shift + A` | Aether theme builder |
 | `Ctrl + Super + T` | Pick a new theme |
 | `Ctrl + Super + B` | Next background image for theme |
+| `Ctrl + Super + U` | Update to latest version of OhMyDebn |
 
 ## Windows
 
