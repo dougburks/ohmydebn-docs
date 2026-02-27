@@ -78,6 +78,10 @@ Here are some screenshots of the themes included from Omarchy.
 
 ![OhMyDebn with matte black theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-matte-black.png)
 
+### Miasma
+
+![OhMyDebn with miasma theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-miasma.png)
+
 ### Nord
 
 ![OhMyDebn with nord theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-nord.png)
@@ -97,6 +101,14 @@ Here are some screenshots of the themes included from Omarchy.
 ### Tokyo Night
 
 ![OhMyDebn with tokyo night theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-tokyo-night.png)
+
+### Vantablack
+
+![OhMyDebn with vantablack theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-vantablack.png)
+
+### White
+
+![OhMyDebn with white theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-white.png)
 
 ## Building New Themes using Aether
 
