@@ -111,6 +111,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Super + S` | Visual Studio Code
 | `Ctrl + Alt + V` | Virtual Machine Manager
 | `Ctrl + Alt + B` | Boxes Virtualization
+| `Ctrl + Alt + M` | cliamp terminal music player
 
 ## Browser (Chromium)
 

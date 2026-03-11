@@ -6,7 +6,8 @@ OhMyDebn includes [Rhythmbox](https://en.wikipedia.org/wiki/Rhythmbox) music pla
 
 ## cliamp
 
-The [OhMyDebn menu](ohmydebn-menu.md) includes an option to install [cliamp](https://github.com/bjarneo/cliamp) which is a terminal music player.
+
+[cliamp](https://github.com/bjarneo/cliamp) is a terminal music player. Hotkey `Ctrl + Alt + M` will check to see if it's installed and install if necessary. Alternatively, you can install via the [OhMyDebn menu](ohmydebn-menu.md).
 
 ![OhMyDebn cliamp](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cliamp.png)
 
