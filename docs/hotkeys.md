@@ -109,7 +109,8 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Super + E` | Simple Text Editor (gedit)
 | `Ctrl + Super + G` | Antigravity
 | `Ctrl + Super + S` | Visual Studio Code
-| `Ctrl + Super + V` | Virtual Machine Manager
+| `Ctrl + Alt + V` | Virtual Machine Manager
+| `Ctrl + Alt + B` | Boxes Virtualization
 
 ## Browser (Chromium)
 
