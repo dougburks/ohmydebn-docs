@@ -93,15 +93,6 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Alt + B` | Boxes Virtualization
 | `Ctrl + Alt + V` | Virtual Machine Manager
 
-## Text Editors
-
-| Hotkey | Function |
-|--------|----------|
-| `Super + N` | Neovim |
-| `Ctrl + Super + E` | Simple Text Editor (gedit)
-| `Ctrl + Super + G` | Antigravity
-| `Ctrl + Super + S` | Visual Studio Code
-
 ## Media
 
 | Hotkey | Function |
@@ -176,6 +167,15 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 |--------|----------|
 | `Ctrl + Shift + Super + N` | Show notifications |
 | `Ctrl + Shift + Super + C` | Clear notifications |
+
+## Text Editors
+
+| Hotkey | Function |
+|--------|----------|
+| `Ctrl + Super + E` | Simple Text Editor (gedit)
+| `Ctrl + Super + G` | Antigravity
+| `Ctrl + Super + S` | Visual Studio Code
+| `Super + N` | Neovim |
 
 ## Neovim (with LazyVim)
 
