@@ -86,6 +86,29 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Alt + End` | Shut down |
 | `Ctrl + Alt + Escape` | Restart Cinnamon desktop |
 
+## Virtualization
+
+| Hotkey | Function |
+|--------|----------|
+| `Ctrl + Alt + B` | Boxes Virtualization
+| `Ctrl + Alt + V` | Virtual Machine Manager
+
+## Text Editors
+
+| Hotkey | Function |
+|--------|----------|
+| `Super + N` | Neovim |
+| `Ctrl + Super + E` | Simple Text Editor (gedit)
+| `Ctrl + Super + G` | Antigravity
+| `Ctrl + Super + S` | Visual Studio Code
+
+## Media
+
+| Hotkey | Function |
+|--------|----------|
+| `Ctrl + Super + A` | audio visualizer (cava)
+| `Ctrl + Alt + M` | cliamp terminal music player
+
 ## Apps
 
 | Hotkey | Function |
@@ -97,21 +120,13 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Super + F` | File Manager (Nemo) |
 | `Super + G` | Google search |
 | `Super + T` | btop |
-| `Super + N` | Neovim |
 | `Super + O` | ohmydebn.org |
 | `Super + E` | Email (GMail) |
 | `Super + C` | Calendar (Google Calendar) |
 | `Super + X` | X.com |
 | `Alt + F2` | Run dialog |
 | `Shift + Super + C` | Cinnamon calendar
-| `Ctrl + Super + A` | audio visualizer (cava)
 | `Ctrl + Super + C` | Calculator (galculator)
-| `Ctrl + Super + E` | Simple Text Editor (gedit)
-| `Ctrl + Super + G` | Antigravity
-| `Ctrl + Super + S` | Visual Studio Code
-| `Ctrl + Alt + V` | Virtual Machine Manager
-| `Ctrl + Alt + B` | Boxes Virtualization
-| `Ctrl + Alt + M` | cliamp terminal music player
 
 ## Browser (Chromium)
 
