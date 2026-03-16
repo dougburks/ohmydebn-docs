@@ -27,3 +27,15 @@ To monitor your system performance, launch btop via [Cinnamon menu](cinnamon-men
 To visualize your system audio, run `cava` in a terminal or use [hotkey](hotkeys.md) `Ctrl + Super + A`.
 
 ![OhMyDebn Cava audio visualizer](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cava-audio.png)
+## Deskflow
+
+[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities). You can then run via menu and share your keyboard and mouse with other systems running Deskflow.
+
+## LocalSend
+
+[LocalSend}(https://github.com/localsend/localsend) is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities). You can then run via menu and transfer files to other systems running LocalSend.
+
+## SSH Server
+
+SSH server is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities). You can then SSH to the system from other systems.
+

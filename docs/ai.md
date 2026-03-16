@@ -2,9 +2,11 @@ OhMyDebn includes several different options for your AI needs: OpenCode, Visual 
 
 ## OpenCode
 
-OhMyDebn includes [OpenCode](https://opencode.ai/) by default. This includes a CLI version that runs in a terminal and GUI version that runs as an app.
+OpenCode is available as an optional installation. You can install via OhMyDebn menu (Install->AI). You can run via menu or hotkey Super + A. That hotkey checks to see if it's installed first so even on a new installation you can just press Super + A and it will install and then run.
 
-`opencode-cli` runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md). You can start it via [hotkey](hotkeys.md) `Super + A`.
+[OpenCode](https://opencode.ai/) includes a CLI version that runs in a terminal and a GUI version that runs as an app.
+
+`opencode-cli` runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md).
 
 ![OhMyDebn opencode-cli](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-cli.png)
 
@@ -12,7 +14,7 @@ The full app can be started from the [Cinnamon menu](cinnamon-menu.md) or the [A
 
 ![OhMyDebn opencode-gui](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-gui.png)
 
-OpenCode is updated using our standard [update](updating.md) process so whenever you update OhMyDebn you will get the latest OpenCode version specified by that OhMyDebn release. OpenCode is evolving rapidly and updates are released on a daily basis. If there is a newer version of OpenCode that you would like to upgrade to, then you can use the `ohmydebn-update-opencode` command. You can either specify a version number or run the command with no arguments to automatically upgrade to the latest version.
+OpenCode is updated using our standard [update](updating.md) process so whenever you update OhMyDebn you will get the latest OpenCode version specified by that OhMyDebn release. OpenCode is evolving rapidly and updates are released on a daily basis. If there is a newer version of OpenCode that you would like to upgrade to without waiting for the next OhMyDebn version, then you can use the `ohmydebn-opencode-install latest` command.
 
 ## Visual Studio Code with Github Copilot AI
 
