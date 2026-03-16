@@ -118,6 +118,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Alt + F2` | Run dialog |
 | `Shift + Super + C` | Cinnamon calendar
 | `Ctrl + Super + C` | Calculator (galculator)
+| `Ctrl + Super + L` | LocalSend
 
 ## Browser (Chromium)
 
