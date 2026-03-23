@@ -8,7 +8,7 @@ Here's what you get in OhMyDebn by default:
 - Terminal emulator: [Alacritty](https://alacritty.org/) with Caskaydia Nerd Fonts
 - Shell: [Zsh](https://en.wikipedia.org/wiki/Z_shell) with [Oh My Zsh](https://ohmyz.sh/)
 - Shell prompt: [Starship](https://starship.rs/)
-- Text editor: [gedit](https://gedit-text-editor.org/), [neovim](https://neovim.io/) with [LazyVim](https://www.lazyvim.org/), and [VS code](https://code.visualstudio.com/) (optional)
+- Text editor: [gedit](https://gedit-text-editor.org/) and [neovim](https://neovim.io/) with [LazyVim](https://www.lazyvim.org/)
 - Performance monitoring: [btop](utilities.md#system-monitoring)
 - Application launcher: [Rofi](ohmydebn-menu.md)
 - Shell cat command alternative: [bat](https://github.com/sharkdp/bat) with syntax highlighting
