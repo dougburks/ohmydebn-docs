@@ -1,6 +1,6 @@
 ## Virtualization
 
-If you'd like to run a virtual machine (VM) on your OhMyDebn installation, you can use Boxes or Virtual Machine Manager. Boxes is simpler and is the recommended option for most users. If you need more flexibility, then consider Virtual Machine Manager.
+If you'd like to run a virtual machine (VM) on your OhMyDebn installation, you can use Boxes or Virtual Machine Manager. [Boxes](https://apps.gnome.org/Boxes/) is simpler and is the recommended option for most users. If you need more flexibility, then consider [Virtual Machine Manager](https://virt-manager.org/).
 
 ## Boxes
 
