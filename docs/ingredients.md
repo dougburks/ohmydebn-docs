@@ -1,4 +1,4 @@
-Here's what you get in OhMyDebn:
+Here's what you get in OhMyDebn by default:
 
 - Base OS: [Debian](https://www.debian.org/) 13 for stability and compatibility
 - Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
@@ -26,8 +26,8 @@ Here's what you get in OhMyDebn:
 - Music player: Rhythmbox
 - Audio visualizer: [Cava](https://github.com/karlstav/cava)
 
-Optional:
+Here are some additional components that you can optionally install:
 
-- [AI](ai.md): [OpenCode](ai.md#opencode), [VS Code with Github Copilot](ai.md#visual-studio-code-with-github-copilot-ai), [Antigravity with Google Agentic AI](ai.md#antigravity-with-google-agentic-ai)
-- [Virtualization](virtualization.md): optionally run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
+- [AI](ai.md): [OpenCode](ai.md#opencode) with free and paid models, [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with Github Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
+- [Virtualization](virtualization.md): run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - [Music player](media.md): [cliamp](media.md#cliamp) terminal music player
