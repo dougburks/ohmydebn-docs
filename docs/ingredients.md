@@ -18,7 +18,7 @@ Here's what you get in OhMyDebn by default:
 - Office Suite: [LibreOffice](documents.md#libreoffice)
 - Default image viewer: [Ristretto](documents.md#ristretto)
 - Image editor: [GIMP](documents.md#gimp)
-- PDF editor: [Xournal++](documents.md#xournal++)
+- PDF editor: [Xournal++](documents.md#xournal)
 - System summary: [screenfetch](utilities.md#system-summary)
 - Window automation: [xdotool](https://github.com/jordansissel/xdotool)
 - Firewall: [ufw](firewall.md) with default deny for inbound traffic
