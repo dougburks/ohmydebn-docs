@@ -25,7 +25,7 @@ Here's what you get in OhMyDebn by default:
 - Mandatory Access Control: [AppArmor](https://wiki.debian.org/AppArmor/HowToUse)
 - Eye candy: dazzling terminal effects via [tte](https://github.com/ChrisBuilds/terminaltexteffects) for demoscene nostalgia
 - Music player: [Rhythmbox](media.md#rhythmbox)
-- Audio visualizer: [Cava](media.md#audio-visualizer-via-cava)
+- Audio visualizer: [Cava](media.md#cava)
 
 Here are some additional components that you can optionally install:
 
