@@ -15,11 +15,12 @@ Here's what you get in OhMyDebn by default:
 - Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command and [eza](https://github.com/eza-community/eza) for beautiful directory listings
 - Web browser: [Chromium](browser.md) with uBlock Origin Lite content blocker
 - Password management: [KeePassXC](https://keepassxc.org/)
-- Default image viewer: [Ristretto](https://docs.xfce.org/apps/ristretto/start)
-- Image editor: [GIMP](https://www.gimp.org/)
+- Office Suite: [LibreOffice](documents.md#libreoffice)
+- Default image viewer: [Ristretto](documents.md#ristretto)
+- Image editor: [GIMP](documents.md#gimp)
+- PDF editor: [Xournal++](documents.md#xournal++)
 - System summary: [screenfetch](utilities.md#system-summary)
 - Window automation: [xdotool](https://github.com/jordansissel/xdotool)
-- Office Suite: [LibreOffice](documents.md)
 - Firewall: [ufw](firewall.md) with default deny for inbound traffic
 - Mandatory Access Control: [AppArmor](https://wiki.debian.org/AppArmor/HowToUse)
 - Eye candy: dazzling terminal effects via [tte](https://github.com/ChrisBuilds/terminaltexteffects) for demoscene nostalgia
@@ -31,3 +32,4 @@ Here are some additional components that you can optionally install:
 - AI: [OpenCode](ai.md#opencode) with free and paid models, [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with Github Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - Terminal music player: [cliamp](media.md#cliamp)
+- anything from the massive [Debian repo](https://packages.debian.org/trixie/)!
