@@ -20,7 +20,7 @@ Some themes include multiple background options. If the theme you select has mul
 
 ## Build New Theme with Aether
 
-The `Build New Theme` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Alternatively, you can launch Aether using the hotkey `Ctrl + Shift + A`. You can then use Aether to search for wallpaper and extract colors to build a desktop theme. Here are a few example screenshots.
+The `Build New Theme` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Alternatively, you can launch Aether using the hotkey `Ctrl + Shift + A`. You can then use Aether to search for wallpaper and extract colors to build a desktop theme.
 
 ## Install Theme from URL
 
