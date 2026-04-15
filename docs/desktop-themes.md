@@ -4,11 +4,15 @@ The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
 ![OhMyDebn screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png)
 
-## Changing Theme
+## Theme Menu
 
-You can change the desktop theme by going to the [OhMyDebn menu](ohmydebn-menu.md) and selecting Style - Theme or via [hotkey](hotkeys.md) `Ctrl + Super + T`. The first menu option will launch Aether and allow you to select any theme that is already installed. There are also options at the end of the list titled `Next Background in Current Theme`, `Build New Theme with Aether`, `Install Theme from URL`, `Install All Omarchy Extra Themes`, and `Remove Theme`.
+You can access the theme menu by going to the [OhMyDebn menu](ohmydebn-menu.md) and selecting Style - Theme or via [hotkey](hotkeys.md) `Ctrl + Super + T`.
 
 ![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-set-gui.png)
+
+## Select an Installed Theme
+
+The first menu option will launch Aether and allow you to select any theme that is already installed.
 
 ## Next Background in Current Theme
 
