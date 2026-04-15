@@ -10,11 +10,15 @@ You can change the desktop theme by going to the [OhMyDebn menu](ohmydebn-menu.m
 
 ![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-set-gui.png)
 
-## Backgrounds
+## Next Background in Current Theme
 
-Some themes include multiple background options. If the theme you select has multiple backgrounds, you can switch to the next background by selecting the `Next Background` option from the menu. Alternatively, you can press `Ctrl + Super + B` at any time.
+Some themes include multiple background options. If the theme you select has multiple backgrounds, you can switch to the next background by selecting the `Next Background in Current Theme` option from the menu. Alternatively, you can press `Ctrl + Super + B` at any time.
 
-## Installing Themes
+## Build New Theme with Aether
+
+The `Build New Theme` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Alternatively, you can launch Aether using the hotkey `Ctrl + Shift + A`. You can then use Aether to search for wallpaper and extract colors to build a desktop theme. Here are a few example screenshots.
+
+## Install Theme from URL
 
 The `Install Theme from URL` option allows you to install a new theme from the Omarchy Extra Themes collection.
 
@@ -26,13 +30,7 @@ The `Install All Omarchy Extra Themes` option allows you to install all themes f
 
 ![OhMyDebn install all omarchy extra themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-install-all.png)
 
-## Browse Aether Themes
-
-The `Browse Aether Themes` option allows you to install a new theme from the Aether Themes collection.
-
-![OhMyDebn browse aether themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-browse.png)
-
-## Removing Themes
+## Remove Theme
 
 The `Remove Theme` option allows you to remove any extra themes that you've installed.
 
@@ -110,21 +108,4 @@ Here are some screenshots of the themes included from Omarchy.
 
 ![OhMyDebn with white theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-white.png)
 
-## Building New Themes using Aether
 
-The `Build New Theme` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Alternatively, you can launch Aether using the hotkey `Ctrl + Shift + A`. You can then use Aether to search for wallpaper and extract colors to build a desktop theme. Here are a few example screenshots.
-
-Aether example 1:
-
-![OhMyDebn theme build 1](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-1.png)
-
-Aether example 2:
-
-![OhMyDebn theme build 2](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-2.png)
-
-Aether example 3:
-
-![OhMyDebn theme build 3](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-3.png)
-Aether example 4:
-
-![OhMyDebn theme build 4](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-aether-4.png)
