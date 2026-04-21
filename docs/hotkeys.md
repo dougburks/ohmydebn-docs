@@ -119,6 +119,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Shift + Super + C` | Cinnamon calendar
 | `Ctrl + Super + C` | Calculator (galculator)
 | `Ctrl + Super + L` | LocalSend
+| `Ctrl + Alt + P` | OhMyPCAP
 
 ## Browser (Chromium)
 
