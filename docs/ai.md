@@ -10,7 +10,7 @@ OpenCode is available as an optional installation. You can install via OhMyDebn 
 
 ![OhMyDebn opencode-cli](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-cli.png)
 
-The full app can be started from the [Cinnamon menu](cinnamon-menu.md) or the [Apps menu](apps-menu.md).
+The full app can be started from the Cinnamon menu or the Apps menu.
 
 ![OhMyDebn opencode-gui](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-gui.png)
 

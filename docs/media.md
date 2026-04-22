@@ -14,13 +14,13 @@ g)
 ## cliamp
 
 
-[cliamp](https://github.com/bjarneo/cliamp) is a terminal music player. Hotkey `Ctrl + Alt + M` will check to see if it's installed and install if necessary. Alternatively, you can install via the [OhMyDebn menu](ohmydebn-menu.md).
+[cliamp](https://github.com/bjarneo/cliamp) is a terminal music player. Hotkey `Ctrl + Alt + M` will check to see if it's installed and install if necessary. Alternatively, you can install via the OhMyDebn menu.
 
 ![OhMyDebn cliamp](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cliamp.png)
 
 ## Airplay
 
-The [OhMyDebn menu](ohmydebn-menu.md) includes an option to install [Uxplay](https://github.com/FDH2/UxPlay) which is an Airplay receiver. Once installed, you can run it like this to listen on ports starting at 6000:
+The OhMyDebn menu includes an option to install [Uxplay](https://github.com/FDH2/UxPlay) which is an Airplay receiver. Once installed, you can run it like this to listen on ports starting at 6000:
 
 ```bash
 uxplay -p 6000

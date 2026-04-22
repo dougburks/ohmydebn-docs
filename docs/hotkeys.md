@@ -4,8 +4,8 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 
 | Hotkey | Function |
 |--------|----------|
-| `Super` | [Cinnamon menu](cinnamon-menu.md) |
-| `Super + Alt + Space` | [OhMyDebn menu](ohmydebn-menu.md) |
+| `Super` | Cinnamon menu |
+| `Super + Alt + Space` | OhMyDebn menu |
 | `Ctrl + Shift + G` | gTile window tiling |
 | `Ctrl + Shift + O` | OhMyDebn logo |
 | `Ctrl + Shift + S` | screenfetch system summary |

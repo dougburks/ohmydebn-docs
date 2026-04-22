@@ -10,7 +10,7 @@ Here's what you get in OhMyDebn by default:
 - Shell prompt: [Starship](https://starship.rs/)
 - Text editors: [gedit](text-editor.md#gedit) and [neovim](text-editor.md#neovim) with [LazyVim](https://www.lazyvim.org/)
 - Performance monitoring: [btop](utilities.md#system-monitoring)
-- Application launcher: [Rofi](ohmydebn-menu.md)
+- Application launcher: Rofi
 - Shell cat command alternative: [bat](https://github.com/sharkdp/bat) with syntax highlighting
 - Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command and [eza](https://github.com/eza-community/eza) for beautiful directory listings
 - Web browser: [Chromium](browser.md) with uBlock Origin Lite content blocker

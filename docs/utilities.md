@@ -6,19 +6,19 @@ To show the OhMyDebn logo in all of its glory, press `Ctrl + Shift + O`.
 
 ## OhMyDebn Demo
 
-To show an animated OhMyDebn logo demo, open the [OhMyDebn menu](ohmydebn-menu.md) and choose the Demo option or just use [hotkey](hotkeys.md) `Ctrl + Alt + D`.
+To show an animated OhMyDebn logo demo, open the OhMyDebn menu and choose the Demo option or just use [hotkey](hotkeys.md) `Ctrl + Alt + D`.
 
 ![OhMyDebn animated logo demo](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-demo.gif)
 
 ## System Summary
 
-To see a system summary, open the [OhMyDebn menu](ohmydebn-menu.md) and choose the About option or just use [hotkey](hotkeys.md) `Ctrl + Shift + S`.
+To see a system summary, open the OhMyDebn menu and choose the About option or just use [hotkey](hotkeys.md) `Ctrl + Shift + S`.
 
 ![OhMyDebn system summary via screenfetch](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-screenfetch-gui.png)
 
 ## System Monitoring
 
-To monitor your system performance, launch btop via [Cinnamon menu](cinnamon-menu.md) or via [hotkey](hotkey.md) `Super + T`.
+To monitor your system performance, launch btop via Cinnamon menu or via [hotkey](hotkey.md) `Super + T`.
 
 ![OhMyDebn btop](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-btop.png)
 

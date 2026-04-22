@@ -6,7 +6,7 @@ The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
 ## Theme Menu
 
-You can access the theme menu by going to the [OhMyDebn menu](ohmydebn-menu.md) and selecting Style - Theme or via [hotkey](hotkeys.md) `Ctrl + Super + T`.
+You can access the theme menu by going to the OhMyDebn menu and selecting Style - Theme or via [hotkey](hotkeys.md) `Ctrl + Super + T`.
 
 ![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-set-gui.png)
 
