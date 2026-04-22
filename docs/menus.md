@@ -4,7 +4,7 @@ The Cinnamon desktop includes its own menu that allows you to launch apps and co
 
 ![Cinnamon Menu](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/cinnamon-menu.png)
 
-The Cinnamon menu includes an entry to launch the [OhMyDebn menu](ohmydebn-menu.md).
+The Cinnamon menu includes an entry to launch the OhMyDebn menu.
 
 ## OhMyDebn Menu
 
@@ -12,7 +12,7 @@ The OhMyDebn menu allows you to launch apps, learn about OhMyDebn, and configure
 
 ![OhMyDebn Menu](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-menu.png)
 
-The first option launches the separate [Apps menu](apps-menu.md).
+The first option launches the separate Apps menu.
 
 ## Apps Menu
 
