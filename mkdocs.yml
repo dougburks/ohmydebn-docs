@@ -42,6 +42,7 @@ nav:
   - Text Editor: text-editor.md
   - Documents: documents.md
   - Terminal: terminal.md
+  - Password Manager: password-manager.md
   - Utilities: utilities.md
   - Firewall: firewall.md
   - Virtualization: virtualization.md
