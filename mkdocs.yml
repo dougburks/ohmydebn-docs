@@ -44,7 +44,7 @@ nav:
   - Utilities: utilities.md
   - Firewall: firewall.md
   - Virtualization: virtualization.md
-  - PCAP Analysis: ohmypcap.md
+  - PCAP Analysis: pcap-analysis.md
   - Media: media.md
   - Updating: updating.md
   - Resetting: resetting.md
