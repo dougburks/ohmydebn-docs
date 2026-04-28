@@ -13,3 +13,5 @@ To install Podman, launch the OhMyDebn menu and then select `Install` - `Contain
 ## Distrobox
 
 Distrobox allows you to use any Linux distro inside your terminal. It does this using containers and can use either Docker or Podman.
+
+To install Distrobox, launch the OhMyDebn menu and then select `Install` - `Containerization` - `Distrobox`.
