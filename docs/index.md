@@ -1,6 +1,6 @@
 ## OhMyDebn
 
-OhMyDebn is a debonair Linux platform that gives you the stability of the Debian distro, the ease of use of the Cinnamon desktop, the beauty of Omarchy, and the power of AI.
+OhMyDebn is a debonair Linux desktop for power users. It gives you the stability of the Debian distro, the ease of use of the Cinnamon desktop, and the power of AI, containers, and virtualization.
 
 ![OhMyDebn screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png)
 
@@ -16,7 +16,7 @@ OhMyDebn is a debonair Linux platform that gives you the stability of the Debian
 There are several meanings for the name:
 
 - It is my [omakase](https://en.wikipedia.org/wiki/Omakase) menu for Debian
-- Command lines and hotkeys and beauty, oh my!
+- [AI](ai.md) and [VMs](virtualization.md) and [containers](containerization.md), oh my!
 - It's so debonair, it will make your friends say "Oh! My Debian installations never looked this good!"
 - Obligatory [recursive acronym](https://en.wikipedia.org/wiki/Recursive_acronym) OHMYDEBN: OhMyDebn Heals My Yearning for a Desktop Environment Beautifully Now!
 
@@ -24,7 +24,7 @@ There are several meanings for the name:
 
 OhMyDebn is designed for many different use cases:
 
-- [AI](ai.md) enthusiasts
+- Power users that want to leverage [AI](ai.md), [containers](containerization.md), and [virtualization](virtualization.md)
 - Folks that want beautiful [Omarchy themes](desktop-themes.md/#themes-included-from-omarchy) on a Debian base OS
 - Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful [terminal](terminal.md)
 - Folks that prefer to keep hands on keyboard and use [hotkeys](hotkeys.md) as much as possible but still have the option of not having to use those hotkeys
