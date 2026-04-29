@@ -31,5 +31,6 @@ Here are some additional components that you can optionally install:
 
 - AI: [OpenCode](ai.md#opencode) with free and paid models, [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with Github Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
+- Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)
 - Terminal music player: [cliamp](media.md#cliamp)
 - anything from the massive [Debian repo](https://packages.debian.org/trixie/)!
