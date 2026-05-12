@@ -120,6 +120,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Super + C` | Calculator (galculator)
 | `Ctrl + Super + L` | LocalSend
 | `Ctrl + Alt + P` | OhMyPCAP
+| `Ctrl + Alt + G` | Gestures
 
 ## Browser (Chromium)
 
