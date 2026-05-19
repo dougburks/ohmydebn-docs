@@ -4,17 +4,9 @@ OhMyDebn includes several different options for your AI needs: OpenCode, Visual 
 
 OpenCode is available as an optional installation. You can install via OhMyDebn menu (Install->AI). You can run via menu or hotkey Super + A. That hotkey checks to see if it's installed first so even on a new installation you can just press Super + A and it will install and then run.
 
-[OpenCode](https://opencode.ai/) includes a CLI version that runs in a terminal and a GUI version that runs as an app.
-
-`opencode-cli` runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md).
+[OpenCode](https://opencode.ai/) runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md).
 
 ![OhMyDebn opencode-cli](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-cli.png)
-
-The full app can be started from the Cinnamon menu or the Apps menu.
-
-![OhMyDebn opencode-gui](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-gui.png)
-
-OpenCode is updated using our standard [update](updating.md) process so whenever you update OhMyDebn you will get the latest OpenCode version specified by that OhMyDebn release. OpenCode is evolving rapidly and updates are released on a daily basis. If there is a newer version of OpenCode that you would like to upgrade to without waiting for the next OhMyDebn version, then you can use the `ohmydebn-opencode-install latest` command.
 
 ## Visual Studio Code with Github Copilot AI
 
