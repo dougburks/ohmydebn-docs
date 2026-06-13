@@ -1,13 +1,16 @@
-If you're in cybersecurity or networking, then you may need to analyze pcap files. The OhMyDebn menu has an Install section that allows you to install standard libpcap utilities like tcpdump, tshark, and wireshark. It also allows you to install our new OhMyPCAP tool. Alternatively, you can run `ohmydebn-ohmypcap` or just use hotkey `Ctrl + Alt + P`. Any of these methods will check to see if OhMyPCAP is installed and install it if necessary.
+If you're in cybersecurity or networking, then you may need to analyze pcap files. The OhMyDebn menu has an Install section that allows you to install standard libpcap utilities like tcpdump, tshark, and wireshark. It also allows you to install our new SO-CRATES tool. Alternatively, you can run `ohmydebn-socrates` or just use hotkey `Ctrl + Alt + S`. Any of these methods will check to see if SO-CRATES is installed and install it if necessary.
 
-Once OhMyPCAP starts just click the hyperlink at the bottom of the terminal window to open the OhMyPCAP web interface in your browser.
+Once SO-CRATES starts just click the hyperlink at the bottom of the terminal window to open the SO-CRATES web interface in your browser.
 
-The welcome screen allows you to upload a PCAP file or load a previous analysis:
+The welcome screen gives you an overview of SO-CRATES:
 
-![OhMyPCAP welcome screen](https://raw.githubusercontent.com/dougburks/ohmypcap/refs/heads/main/docs/images/ohmypcap-welcome.png)
+![SO-CRATES welcome screen](https://raw.githubusercontent.com/dougburks/ohmypcap/refs/heads/main/docs/images/so-crates-welcome.png)
+The main screen allows you to upload a pcap file, log file, or binary file:
+
+![SO-CRATES main screen](https://raw.githubusercontent.com/dougburks/ohmypcap/refs/heads/main/docs/images/so-crates-main.png)
 
 After analysis, you can view security alerts, network metadata, and extract streams:
 
-![OhMyPCAP analysis screen](https://raw.githubusercontent.com/dougburks/ohmypcap/refs/heads/main/docs/images/ohmypcap-analysis.png)
+![SO-CRATES analysis screen](https://raw.githubusercontent.com/dougburks/ohmypcap/refs/heads/main/docs/images/so-crates-analysis.png)
 
-You can read more about OhMyPCAP at <https://github.com/dougburks/ohmypcap>.
+You can read more about SO-CRATES at <https://github.com/dougburks/so-crates>.
