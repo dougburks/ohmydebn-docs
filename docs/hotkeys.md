@@ -121,6 +121,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Super + L` | LocalSend
 | `Ctrl + Alt + G` | Gestures
 | `Ctrl + Alt + S` | SO-CRATES
+| `Ctrl + Alt + W` | Cloudflare Warp
 
 ## Browser (Chromium)
 
