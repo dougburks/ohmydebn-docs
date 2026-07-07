@@ -7,6 +7,9 @@ OpenCode is available as an optional installation. You can install via OhMyDebn 
 [OpenCode](https://opencode.ai/) runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md).
 
 ![OhMyDebn opencode-cli](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-cli.png)
+## Claude Code
+
+Claude Code is available as an optional installation. You can install via OhMyDebn menu (Install->AI). You can run via menu or hotkey Ctrl + Alt + C. That hotkey checks to see if it's installed first so even on a new installation you can just press Ctrl + Alt + C and it will install and then run.
 
 ## Visual Studio Code with Github Copilot AI
 

@@ -122,6 +122,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Alt + G` | Gestures
 | `Ctrl + Alt + S` | SO-CRATES
 | `Ctrl + Alt + W` | Cloudflare Warp
+| `Ctrl + Alt + C` | Claude Code
 
 ## Browser (Chromium)
 
