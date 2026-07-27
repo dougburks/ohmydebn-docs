@@ -8,4 +8,4 @@ To launch the browser, you can open it from the Cinnamon menu, from the Apps men
 
 ## Installing Other Browsers
 
-If you prefer other browsers like Brave, Firefox, or Google Chrome, you can install them by going to the OhMyDebn menu and selecting Install -> Browser.
+If you prefer other browsers like Brave, Firefox, Google Chrome, or Helium you can install them by going to the OhMyDebn menu and selecting Install -> Browser.
