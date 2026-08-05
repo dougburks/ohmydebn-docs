@@ -13,4 +13,6 @@ After analysis, you can view security alerts, network metadata, and extract stre
 
 ![SO-CRATES analysis screen](https://raw.githubusercontent.com/dougburks/ohmypcap/refs/heads/main/docs/images/so-crates-analysis.png)
 
+SO-CRATES has a theme sync option. If you enable this option, then whenever your change your OhMyDebn theme, then the SO-CRATES will automatically update as well.
+
 You can read more about SO-CRATES at <https://github.com/dougburks/so-crates>.

@@ -34,3 +34,6 @@ To monitor your system performance, launch btop via Cinnamon menu or via [hotkey
 
 SSH server is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities). You can then SSH to the system from other systems.
 
+## PowerShell
+
+Microsoft PowerShell is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities).

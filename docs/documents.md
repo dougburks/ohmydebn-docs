@@ -1,6 +1,6 @@
-## LibreOffice
+## Office Documents
 
-[LibreOffice](https://www.libreoffice.org/) is installed to handle common file types like documents and spreadsheets.
+Several options are available to handle standard office documents and spreadsheets: LibreOffice Suite, Calligra Suite, Gnumeric, and Abiword. You can find these options in the Install menu under Office Apps.
 
 ## Xournal++
 

@@ -16,7 +16,7 @@ bash install.sh
 
 The installation script supports the following option:
 
-- `--no-uninstall` - installs OhMyDebn without removing existing packages like Firefox, Thunderbird, etc.
+- `--no-uninstall` - installs OhMyDebn without removing existing packages like Firefox, Thunderbird, LibreOffice, etc.
 
 Example:
 ```
@@ -27,6 +27,10 @@ bash install.sh --no-uninstall
 ### Debian 13 Minimal
 
 Instead of starting from a Debian Live 13 Cinnamon ISO image, an alternative is to start from a Debian 13 minimal netinst installer on x86_64 or ARM64 hardware. Once the Debian netinst installer completes, reboot into your new installation and then start our installer as shown above. It will automatically install the necessary Cinnamon desktop packages and continue on with OhMyDebn installation. Once installation is complete, reboot and enjoy your new OhMyDebn desktop!
+
+### Linux Mint Debian Edition 7
+
+Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allows for installation on LMDE 7.
 
 ### Raspberry Pi
 
