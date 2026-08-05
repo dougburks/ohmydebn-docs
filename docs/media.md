@@ -8,8 +8,7 @@ OhMyDebn includes [Rhythmbox](https://en.wikipedia.org/wiki/Rhythmbox) music pla
 
 To visualize your system audio, run `cava` in a terminal or use [hotkey](hotkeys.md) `Ctrl + Super + A`.
 
-![OhMyDebn Cava audio visualizer](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cava-audio.pn
-g)
+![OhMyDebn Cava audio visualizer](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cava-audio.png)
 
 ## cliamp
 

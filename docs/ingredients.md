@@ -15,7 +15,6 @@ Here's what you get in OhMyDebn by default:
 - Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command and [eza](https://github.com/eza-community/eza) for beautiful directory listings
 - Web browser: [Chromium](browser.md) with uBlock Origin Lite content blocker
 - Password management: [KeePassXC](https://keepassxc.org/)
-- Office Suite: [LibreOffice](documents.md#libreoffice)
 - Default image viewer: [Ristretto](documents.md#ristretto)
 - Image editor: [GIMP](documents.md#gimp)
 - PDF editor: [Xournal++](documents.md#xournal)

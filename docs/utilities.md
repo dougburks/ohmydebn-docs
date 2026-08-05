@@ -18,7 +18,7 @@ To see a system summary, open the OhMyDebn menu and choose the About option or j
 
 ## System Monitoring
 
-To monitor your system performance, launch btop via Cinnamon menu or via [hotkey](hotkey.md) `Super + T`.
+To monitor your system performance, launch btop via Cinnamon menu or via [hotkey](hotkeys.md) `Super + T`.
 
 ![OhMyDebn btop](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-btop.png)
 
