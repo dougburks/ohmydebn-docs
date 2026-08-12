@@ -43,6 +43,7 @@ nav:
   - Password Manager: password-manager.md
   - Utilities: utilities.md
   - Firewall: firewall.md
+  - VPN: vpn.md
   - Virtualization: virtualization.md
   - Containerization: containerization.md
   - Cybersecurity: cybersecurity.md

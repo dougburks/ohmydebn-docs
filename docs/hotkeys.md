@@ -120,6 +120,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Super + C` | Calculator (galculator)
 | `Ctrl + Super + L` | LocalSend
 | `Ctrl + Alt + G` | Gestures
+| `Ctrl + Alt + P` | PowerShell
 | `Ctrl + Alt + S` | SO-CRATES
 | `Ctrl + Alt + W` | Cloudflare Warp
 | `Ctrl + Alt + C` | Claude Code

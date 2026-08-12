@@ -1,4 +1,4 @@
-OhMyDebn includes several different options for your AI needs: OpenCode, Visual Studio Code with Github Copilot AI, and Antigravity with Google Agentic AI.
+OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, ChatGPT, Visual Studio Code with Github Copilot AI, and Antigravity with Google Agentic AI.
 
 ## OpenCode
 
@@ -10,6 +10,10 @@ OpenCode is available as an optional installation. You can install via OhMyDebn 
 ## Claude Code
 
 Claude Code is available as an optional installation. You can install via OhMyDebn menu (Install->AI). You can run in an existing terminal session with the claude command. Alternatively, you can use hotkey Ctrl + Alt + C to start a terminal and run Claude. That hotkey checks to see if it's installed first so even on a new installation you can just press Ctrl + Alt + C and it will install and then run.
+
+## ChatGPT
+
+ChatGPT is available as an optional installation. You can install via OhMyDebn menu (Install->AI). You can then run via menu.
 
 ## Visual Studio Code with Github Copilot AI
 
