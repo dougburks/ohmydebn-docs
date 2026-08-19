@@ -100,6 +100,10 @@ Here are some screenshots of the themes included from Omarchy.
 
 ![OhMyDebn with osaka jade theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-osaka-jade.png)
 
+### Retro 82
+
+![OhMyDebn with retro 82 theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-retro-82.png)
+
 ### Ristretto
 
 ![OhMyDebn with ristretto theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-ristretto.png)
