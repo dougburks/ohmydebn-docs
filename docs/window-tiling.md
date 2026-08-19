@@ -45,7 +45,7 @@ There are also hotkeys for common tiling options that leverage gTile for window 
 For example, to lay out windows like in the following screenshot:
 
 - Press `Ctrl + Shift + O` to display the OhMyDebn logo and then `Ctrl + Shift + 7` to tile to the upper left corner.
-- Press `Ctrl + Shift + S` to display the screenfetch window and then `Ctrl + Shift + 1` to tile to the lower left corner.
+- Press `Ctrl + Shift + S` to display the fastfetch window and then `Ctrl + Shift + 1` to tile to the lower left corner.
 - Press `Super + T` to start btop and then `Ctrl + Shift + 9` to tile to the upper right corner.
 - Press `Super + F` to start the file manager and then press `Ctrl + Shift + 3` to tile to the lower right corner.
 

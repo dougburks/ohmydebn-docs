@@ -12,10 +12,12 @@ The OhMyDebn menu allows you to launch apps, learn about OhMyDebn, and configure
 
 ![OhMyDebn Menu](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-menu.png)
 
+Once open, you can browse categories with the arrow keys or start typing to instantly search across every option in the menu, not just the current category.
+
 The first option launches the separate Apps menu.
 
 ## Apps Menu
 
-To run applications, you can select `Apps` from the OhMyDebn menu or just press the [hotkey](hotkeys.md) `Super + Space`. You can then use arrow keys to select which application you'd like to run or start typing the first few letters of the application name.
+To run applications, you can select `Apps` from the OhMyDebn menu or just press the [hotkey](hotkeys.md) `Super + Space` (or `Super + R`). You can then use arrow keys to select which application you'd like to run or start typing the first few letters of the application name.
 
-![OhMyDebn Rofi](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-rofi.png)
+![OhMyDebn Apps Menu](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-apps.png)

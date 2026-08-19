@@ -4,39 +4,35 @@ The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
 ![OhMyDebn screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png)
 
-## Theme Menu
+## Theme Carousel
 
-You can access the theme menu by going to the OhMyDebn menu and selecting Style - Theme or via [hotkey](hotkeys.md) `Ctrl + Super + T`.
+You can browse and change your theme by going to the OhMyDebn menu and selecting Style, or via [hotkey](hotkeys.md) `Ctrl + Super + T` (or `Ctrl + Super + B`, which opens the same carousel).
 
-![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-set-gui.png)
+![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-carousel.png)
 
-## Select an Installed Theme
+This opens a full-screen theme and background browser:
 
-The first menu option will launch Aether and allow you to select any theme that is already installed.
+- `Left` / `Right` browse your installed themes.
+- `Up` / `Down` browse the backgrounds included with the theme currently shown, when it has more than one.
+- `Enter` applies the theme and background currently shown.
+- `Esc` cancels without changing anything.
+- `B` opens the [Omarchy Extra Themes](https://bjarneo.github.io/omarchy-themes/) gallery in your browser to browse for more themes. Picking one there installs and applies it automatically.
+- `C` launches [Aether](https://github.com/bjarneo/aether) so you can build your own theme. You can also launch Aether directly using the hotkey `Ctrl + Shift + A` and use it to search for wallpaper and extract colors to build a desktop theme.
+- `R` removes the theme currently shown (only available for themes you've installed yourself, not the themes bundled with OhMyDebn). Press it again to confirm.
 
-## Next Background in Current Theme
+## Add a Custom Background
 
-Some themes include multiple background options. If the theme you select has multiple backgrounds, you can switch to the next background by selecting the `Next Background in Current Theme` option from the menu. Alternatively, you can press `Ctrl + Super + B` at any time.
-
-## Build New Theme with Aether
-
-The `Build New Theme` option allows you to build your own theme using the [Aether](https://github.com/bjarneo/aether) theme builder. Alternatively, you can launch Aether using the hotkey `Ctrl + Shift + A`. You can then use Aether to search for wallpaper and extract colors to build a desktop theme.
+To add your own background images to the current theme, go to the OhMyDebn menu and select Install - Style - Background. This opens the current theme's backgrounds folder in the file manager so you can copy images into it; they'll then show up when browsing backgrounds with `Up` / `Down` in the theme carousel.
 
 ## Install Theme from URL
 
-The `Install Theme from URL` option allows you to install a new theme from the Omarchy Extra Themes collection.
+To install a new theme from a git repo, go to the OhMyDebn menu and select Install - Style - Theme.
 
 ![OhMyDebn theme install](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-install.png)
 
-## Install All Omarchy Extra Themes
-
-The `Install All Omarchy Extra Themes` option allows you to install all themes from the Omarchy Extra Themes collection.
-
-![OhMyDebn install all omarchy extra themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-install-all.png)
-
 ## Remove Theme
 
-The `Remove Theme` option allows you to remove any extra themes that you've installed.
+To remove a theme you've installed yourself, go to the OhMyDebn menu and select Remove - Theme (or press `R` while it's shown in the theme carousel, described above).
 
 ![OhMyDebn theme remove](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-remove.png)
 
@@ -76,6 +72,18 @@ Here are some screenshots of the themes included from Omarchy.
 
 ![OhMyDebn with kanagawa theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-kanagawa.png)
 
+### Last Horizon
+
+![OhMyDebn with last horizon theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-last-horizon.png)
+
+### Lumon
+
+![OhMyDebn with lumon theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-lumon.png)
+
+### Lupine
+
+![OhMyDebn with lupine theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-lupine.png)
+
 ### Matte Black
 
 ![OhMyDebn with matte black theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-matte-black.png)
@@ -99,6 +107,10 @@ Here are some screenshots of the themes included from Omarchy.
 ### Rose Pine
 
 ![OhMyDebn with rose pine theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-rose-pine.png)
+
+### Solitude
+
+![OhMyDebn with solitude theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-solitude.png)
 
 ### Tokyo Night
 

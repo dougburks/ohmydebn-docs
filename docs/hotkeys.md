@@ -8,10 +8,10 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Super + Alt + Space` | OhMyDebn menu |
 | `Ctrl + Shift + G` | gTile window tiling |
 | `Ctrl + Shift + O` | OhMyDebn logo |
-| `Ctrl + Shift + S` | screenfetch system summary |
+| `Ctrl + Shift + S` | fastfetch system summary |
 | `Ctrl + Shift + A` | Aether theme builder |
-| `Ctrl + Super + T` | Pick a new theme |
-| `Ctrl + Super + B` | Next background image for theme |
+| `Ctrl + Super + T` | Browse and pick a theme |
+| `Ctrl + Super + B` | Browse and pick a background for the current theme |
 | `Ctrl + Super + U` | Update to latest version of OhMyDebn |
 
 ## Windows
@@ -104,7 +104,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 
 | Hotkey | Function |
 |--------|----------|
-| `Super + Space` | Application Launcher (Rofi) |
+| `Super + Space` or `Super + R` | Application Launcher |
 | `Super + Return` | Terminal (Alacritty) |
 | `Super + A` | AI (OpenCode) |
 | `Super + B` | Browser |

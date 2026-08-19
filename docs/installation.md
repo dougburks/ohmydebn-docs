@@ -14,13 +14,13 @@ bash install.sh
 ```
 ## Installation Options
 
-The installation script supports the following option:
+By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following option:
 
-- `--no-uninstall` - installs OhMyDebn without removing existing packages like Firefox, Thunderbird, LibreOffice, etc.
+- `--power-user` - removes optional apps that ship on the base Debian 13 Cinnamon ISO (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: Boxes, Brave Origin, Claude Code, GIMP, OpenCode, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3. It also enables the [screen magnifier](screen-magnifier.md).
 
 Example:
 ```
-bash install.sh --no-uninstall
+bash install.sh --power-user
 ```
 ## Alternative installations
 

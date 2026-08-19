@@ -14,7 +14,7 @@ To show an animated OhMyDebn logo demo, open the OhMyDebn menu and choose the De
 
 To see a system summary, open the OhMyDebn menu and choose the About option or just use [hotkey](hotkeys.md) `Ctrl + Shift + S`.
 
-![OhMyDebn system summary via screenfetch](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-screenfetch-gui.png)
+![OhMyDebn system summary via fastfetch](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-fastfetch-gui.png)
 
 ## System Monitoring
 

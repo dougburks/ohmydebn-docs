@@ -12,4 +12,4 @@ PDF files open by default in the [chromium web browser](browser.md). If you need
 
 ## GIMP
 
-[GIMP](https://www.gimp.org/) is the default image editor.
+[GIMP](https://www.gimp.org/) is available as an optional installation. You can install via OhMyDebn menu (Install->Media). That menu option checks to see if it's installed first so even on a new installation it will install and then run GIMP.

@@ -10,15 +10,14 @@ Here's what you get in OhMyDebn by default:
 - Shell prompt: [Starship](https://starship.rs/)
 - Text editors: [gedit](text-editor.md#gedit) and [neovim](text-editor.md#neovim) with [LazyVim](https://www.lazyvim.org/)
 - Performance monitoring: [btop](utilities.md#system-monitoring)
-- Application launcher: Rofi
+- Application launcher: custom GTK app launcher
 - Shell cat command alternative: [bat](https://github.com/sharkdp/bat) with syntax highlighting
 - Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command and [eza](https://github.com/eza-community/eza) for beautiful directory listings
 - Web browser: [Chromium](browser.md) with uBlock Origin Lite content blocker
 - Password management: [KeePassXC](https://keepassxc.org/)
 - Default image viewer: [Ristretto](documents.md#ristretto)
-- Image editor: [GIMP](documents.md#gimp)
 - PDF editor: [Xournal++](documents.md#xournal)
-- System summary: [screenfetch](utilities.md#system-summary)
+- System summary: [fastfetch](utilities.md#system-summary)
 - Window automation: [xdotool](https://github.com/jordansissel/xdotool)
 - Firewall: [ufw](firewall.md) with default deny for inbound traffic
 - Mandatory Access Control: [AppArmor](https://wiki.debian.org/AppArmor/HowToUse)
@@ -33,4 +32,5 @@ Here are some additional components that you can optionally install:
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)
 - Terminal music player: [cliamp](media.md#cliamp)
+- Image editor: [GIMP](documents.md#gimp)
 - anything from the massive [Debian repo](https://packages.debian.org/trixie/)!
