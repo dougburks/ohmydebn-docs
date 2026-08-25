@@ -27,7 +27,7 @@ Here's what you get in OhMyDebn by default:
 
 Here are some additional components that you can optionally install:
 
-- AI: [OpenCode](ai.md#opencode) with free and paid models, [ChatGPT](ai.md#chatgpt), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with Github Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
+- AI: [OpenCode](ai.md#opencode) with free and paid models, [Claude Code](ai.md#claude-code), [ChatGPT](ai.md#chatgpt), [Pi](ai.md#pi), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with Github Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
 - VPN: [Cloudflare Warp](vpn.md#cloudflare-warp) or [Tailscale](vpn.md#tailscale)
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)

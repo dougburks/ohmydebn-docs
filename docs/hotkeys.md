@@ -5,10 +5,10 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | Hotkey | Function |
 |--------|----------|
 | `Super` | Cinnamon menu |
-| `Super + Alt + Space` | OhMyDebn menu |
+| `Super + Space` or `Super + Alt + Space` | OhMyDebn menu |
 | `Ctrl + Shift + G` | gTile window tiling |
 | `Ctrl + Shift + O` | OhMyDebn logo |
-| `Ctrl + Shift + S` | fastfetch system summary |
+| `Ctrl + Shift + S` | system summary via fastfetch |
 | `Ctrl + Shift + A` | Aether theme builder |
 | `Ctrl + Super + T` | Browse and pick a theme |
 | `Ctrl + Super + B` | Browse and pick a background for the current theme |
@@ -104,9 +104,9 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 
 | Hotkey | Function |
 |--------|----------|
-| `Super + Space` or `Super + R` | Application Launcher |
+| `Super + R` | Application Launcher |
 | `Super + Return` | Terminal (Alacritty) |
-| `Super + A` | AI (OpenCode) |
+| `Super + A` | AI (your default assistant, [configurable](ai.md#default-ai-assistant)) |
 | `Super + B` | Browser |
 | `Super + F` | File Manager (Nemo) |
 | `Super + G` | Google search |

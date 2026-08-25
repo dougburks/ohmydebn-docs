@@ -36,4 +36,4 @@ SSH server is available as an optional installation. You can install via OhMyDeb
 
 ## PowerShell
 
-Microsoft PowerShell is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities).
+[Microsoft PowerShell](https://github.com/PowerShell/PowerShell) is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities).

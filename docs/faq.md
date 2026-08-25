@@ -23,14 +23,16 @@ Here are my requirements for a desktop environment:
 
 Cinnamon satisfies these requirements and has some nice eye candy!
 
-## Why Debian Cinnamon?
+## Why Debian Cinnamon instead of Linux Mint?
 
-Why use Debian Cinnamon instead of Linux Mint or Linux Mint Debian Edition (LMDE)? Linux Mint and LMDE are great, but there are a few reasons why you might want to use Debian 13 Cinnamon instead:
+Linux Mint is great, but there are a few reasons why the project defaults to vanilla Debian 13 Cinnamon instead:
 
 - Linux Mint is only available for x86 architecture. If you're on ARM, you need a distro compiled for ARM that can run Cinnamon (like Debian).
 - Raspberry Pi OS is based on Debian 13. You can use this repo to turn it into OhMyDebn!
 - For fun and for science!
-  
+
+This doesn't apply to Linux Mint Debian Edition (LMDE), though - it's already Debian-based and already ships Cinnamon, so it's just as valid a starting point as vanilla Debian. Our [installer supports installing directly onto LMDE 7](installation.md#linux-mint-debian-edition-7) if you'd rather start there and keep Mint's extras.
+
 
 ## What is the relationship between OhMyDebn and Security Onion?
 

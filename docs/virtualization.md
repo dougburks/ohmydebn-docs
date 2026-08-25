@@ -4,7 +4,7 @@ If you'd like to run a virtual machine (VM) on your OhMyDebn installation, you c
 
 ## Boxes
 
-The hotkey for Boxes is `Ctrl + Alt + B`. This will check to see if Boxes is installed and install it if necessary. Alternatively, you can install Boxes by running `ohmydebn-boxes-install` or launch the OhMyDebn menu and then select `Install` - `Virtualization` - `Boxes`.
+The hotkey for [Boxes](https://apps.gnome.org/Boxes/) is `Ctrl + Alt + B`. This will check to see if Boxes is installed and install it if necessary. Alternatively, you can install Boxes by running `ohmydebn-boxes-install` or launch the OhMyDebn menu and then select `Install` - `Virtualization` - `Boxes`.
 
 At the prompt, press Enter to continue:
 
@@ -21,7 +21,7 @@ You can then start Boxes from the Cinnamon menu or Apps menu or via [hotkey](hot
 
 ## Virtual Machine Manager
 
-The hotkey for Virtual Machine Manager is `Ctrl + Alt + V`. This will check to see if Virtual Machine Manager is installed and install it if necessary. Alternatively, you can install Virtual Machine Manager by running `ohmydebn-virtualization-install` or launch the OhMyDebn menu and then select `Install` - `Virtualization` - `Virtual Machine Manager`.
+The hotkey for [Virtual Machine Manager](https://virt-manager.org/) is `Ctrl + Alt + V`. This will check to see if Virtual Machine Manager is installed and install it if necessary. Alternatively, you can install Virtual Machine Manager by running `ohmydebn-virtualization-install` or launch the OhMyDebn menu and then select `Install` - `Virtualization` - `Virtual Machine Manager`.
 
 At the prompt, press Enter to continue:
 

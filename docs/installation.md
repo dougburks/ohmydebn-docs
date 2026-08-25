@@ -14,9 +14,10 @@ bash install.sh
 ```
 ## Installation Options
 
-By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following option:
+By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following options:
 
-- `--power-user` - removes optional apps that ship on the base Debian 13 Cinnamon ISO (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: Boxes, Brave Origin, Claude Code, GIMP, OpenCode, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3. It also enables the [screen magnifier](screen-magnifier.md).
+- `--power-user` - removes optional apps that ship on the base Debian 13 Cinnamon ISO (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: Boxes, Brave Origin, Claude Code, GIMP, OpenCode, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3. It also enables the [screen magnifier](screen-magnifier.md). On Kali Linux, Firefox is left in place even with this option since Kali doesn't ship an alternative browser by default.
+- `--yes` - skips every confirmation prompt for unattended installs (for example, scripted or automated provisioning). Everything the prompts warn about still happens; this only removes the pause to read them, so make sure you understand those warnings before using it.
 
 Example:
 ```
@@ -31,6 +32,10 @@ Instead of starting from a Debian Live 13 Cinnamon ISO image, an alternative is 
 ### Linux Mint Debian Edition 7
 
 Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allows for installation on LMDE 7.
+
+### Kali Linux
+
+Kali Linux (Rolling) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Kali and continue on with OhMyDebn installation.
 
 ### Raspberry Pi
 

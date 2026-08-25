@@ -1,6 +1,6 @@
 ## Office Documents
 
-Several options are available to handle standard office documents and spreadsheets: LibreOffice Suite, Calligra Suite, Gnumeric, and Abiword. You can find these options in the Install menu under Office Apps.
+Several options are available to handle standard office documents and spreadsheets: [LibreOffice](https://www.libreoffice.org/) Suite, [Calligra](https://calligra.org/) Suite, [Gnumeric](http://www.gnumeric.org/), and [Abiword](https://www.abisource.com/). You can find these options in the Install menu under Office Apps.
 
 ## Xournal++
 

@@ -2,8 +2,8 @@ OhMyDebn supports two VPN options: [Cloudflare Warp](https://one.one.one.one/) a
 
 ## Cloudflare Warp
 
-Cloudflare Warp is available as an optional installation. You can install via OhMyDebn menu (Install->VPN). You can run via menu or [hotkey](hotkeys.md) `Ctrl + Alt + W`. That hotkey checks to see if it's installed first so even on a new installation you can just press `Ctrl + Alt + W` and it will install and then run.
+[Cloudflare Warp](https://one.one.one.one/) is available as an optional installation. You can install via OhMyDebn menu (Install->VPN). You can run via menu or [hotkey](hotkeys.md) `Ctrl + Alt + W`. That hotkey checks to see if it's installed first so even on a new installation you can just press `Ctrl + Alt + W` and it will install and then run.
 
 ## Tailscale
 
-Tailscale is available as an optional installation. You can install via OhMyDebn menu (Install->VPN). You can then run via menu.
+[Tailscale](https://tailscale.com/) is available as an optional installation. You can install via OhMyDebn menu (Install->VPN). You can then run via menu.
