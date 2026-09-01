@@ -18,7 +18,7 @@ The first option launches the separate Apps menu.
 
 ## Apps Menu
 
-To run applications, you can select `Apps` from the OhMyDebn menu or just press the [hotkey](hotkeys.md) `Super + R`. You can then use arrow keys to select which application you'd like to run or start typing the first few letters of the application name.
+To run applications, you can select `Apps` from the OhMyDebn menu. You can then use arrow keys to select which application you'd like to run or start typing the first few letters of the application name.
 
 ![OhMyDebn Apps Menu](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-apps.png)
 

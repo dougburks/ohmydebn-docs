@@ -47,6 +47,4 @@ By default, `Usermode networking` uses QEMU's older built-in SLIRP driver. The `
 
 To upgrade an existing VM to `passt`, open the OhMyDebn menu and select `Virtualization` - `Virtual Machine Networking`. This lists every VM on the system (whether it was created with Virtual Machine Manager or Boxes) along with its current networking backend, and lets you upgrade any VM that's still using SLIRP with one click. The VM must be shut off first, since a networking backend change only takes effect the next time it starts.
 
-![OhMyDebn Virtual Machine Networking](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-virtualization-passt-upgrade.png)
-
 Alternatively, if you're creating a new VM from the command line, you can use `virt-install --network type=passt` from the start instead of the graphical wizard.
