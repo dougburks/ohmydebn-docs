@@ -22,6 +22,14 @@ To monitor your system performance, launch btop via Cinnamon menu or via [hotkey
 
 ![OhMyDebn btop](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-btop.png)
 
+## Speed Test
+
+To test your network or disk speed, open the OhMyDebn menu and choose `Trigger` - `Speed Test` - `Network Speed Test` or `Disk Speed Test`. Each shows a live dial readout while it measures, running a download/read pass followed by an upload/write pass. If you'd rather see the results in a [terminal](terminal.md) instead, run `ohmydebn-network-speedtest` or `ohmydebn-disk-speedtest`.
+
+![OhMyDebn network speed test](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-network-speedtest.png)
+
+![OhMyDebn disk speed test](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-disk-speedtest.png)
+
 ## Deskflow
 
 [Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities). You can then run via menu and share your keyboard and mouse with other systems running Deskflow.

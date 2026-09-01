@@ -27,6 +27,7 @@ To configure gTile:
 - go to System Settings -> Extensions
 - next to gTile, click the Configure button
 - click the Behavior tab
+- from here you can adjust the window gap size, and enable Automatic tiling or Maximize with gaps (see below)
 
 ![OhMyDebn gTile settings](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-settings.png)
 
@@ -50,3 +51,16 @@ For example, to lay out windows like in the following screenshot:
 - Press `Super + F` to start the file manager and then press `Ctrl + Shift + 3` to tile to the lower right corner.
 
 ![OhMyDebn gTile window tiling with gaps](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-tiling.png)
+
+## Automatic Tiling
+
+In addition to the manual tiling options above, gTile can automatically place windows for you as they open - no hotkey required. Configure this from the same Behavior tab covered above, using the **Automatic tiling** dropdown:
+
+- **Off** (the default) - nothing is tiled automatically; only the manual hotkeys above apply.
+- **Rule-based tiling** - many of OhMyDebn's own hotkey-launched apps (like [cliamp](media.md) and [SO-CRATES](cybersecurity.md)) are automatically placed in a sensible spot as soon as they open.
+- **Traditional tiling (3 windows)** - every new window is automatically split into a tiling layout, cycling through up to 3 windows before starting over - similar to a classic tiling window manager.
+- **Traditional tiling (unlimited)** - the same idea, but keeps splitting the screen for as many windows as you open instead of cycling back to the start.
+
+## Maximize with Gaps
+
+If you'd rather your maximized windows keep the same gap as your other tiled windows instead of filling the screen edge-to-edge, enable **Maximize with gaps** on the same Behavior tab. Once enabled, clicking a window's maximize button (or double-clicking its titlebar, or pressing `Super + PageUp`) leaves a gap around the window instead of a true edge-to-edge maximize. Doing it again restores the window to its original size and position.

@@ -33,6 +33,8 @@ Linux Mint is great, but there are a few reasons why the project defaults to van
 
 This doesn't apply to Linux Mint Debian Edition (LMDE), though - it's already Debian-based and already ships Cinnamon, so it's just as valid a starting point as vanilla Debian. Our [installer supports installing directly onto LMDE 7](installation.md#linux-mint-debian-edition-7) if you'd rather start there and keep Mint's extras.
 
+The x86-only limitation above does still apply to regular (Ubuntu-based) Linux Mint, but if you're already on x86_64 hardware and would rather keep Mint's extras than start from vanilla Debian, our [installer also supports installing directly onto Linux Mint 22](installation.md#linux-mint-22).
+
 
 ## What is the relationship between OhMyDebn and Security Onion?
 
