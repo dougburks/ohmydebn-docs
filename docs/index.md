@@ -1,6 +1,6 @@
 ## OhMyDebn
 
-OhMyDebn is a debonair Linux desktop for power users. It gives you the stability of the Debian distro, the ease of use of the Cinnamon desktop, and the power of AI, containers, and virtualization.
+OhMyDebn is a debonair Linux desktop for power users. It gives you the stability of the Debian or Ubuntu distros, the ease of use of the Cinnamon desktop, and the power of AI, containers, and virtualization.
 
 ![OhMyDebn screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png)
 

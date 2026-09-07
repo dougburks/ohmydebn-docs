@@ -16,7 +16,7 @@ bash install.sh
 
 By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following options:
 
-- `--power-user` - removes optional apps that ship on the base Debian 13 Cinnamon ISO (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: [Virtual Machine Manager](virtualization.md#virtual-machine-manager), Brave Origin, Claude Code, GIMP, OpenCode, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3. It also enables the [screen magnifier](screen-magnifier.md). On Kali Linux, Firefox is left in place even with this option since Kali doesn't ship an alternative browser by default.
+- `--power-user` - removes optional apps that ship in your base distro (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: [Virtual Machine Manager](virtualization.md#virtual-machine-manager), Brave Origin, GIMP, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3. It also enables the [screen magnifier](screen-magnifier.md). On Kali Linux, Firefox is left in place even with this option since Kali doesn't ship an alternative browser by default.
 - `--yes` - skips every confirmation prompt for unattended installs (for example, scripted or automated provisioning). Everything the prompts warn about still happens; this only removes the pause to read them, so make sure you understand those warnings before using it.
 
 Example:
@@ -40,11 +40,15 @@ Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allow
 
 ### Linux Mint 22
 
-Regular Linux Mint 22.x (the Ubuntu-based edition, on x86_64 hardware) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Mint 22 and continue on with OhMyDebn installation.
+Regular Linux Mint 22.x (the Ubuntu-based edition, on x86_64 hardware) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Mint 22 and continue on with OhMyDebn installation. It will also disable a few Mint-specific autostart apps (Update Manager, System Reports, Welcome Screen, Warpinator, and Sticky Notes) that either duplicate something OhMyDebn already provides (Warpinator vs. our LocalSend integration) or just add unrequested noise on first login - you can always re-enable any of them from Cinnamon's Startup Applications settings.
 
 ### Kali Linux
 
 Kali Linux (Rolling) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Kali and continue on with OhMyDebn installation.
+
+### Ubuntu
+
+Ubuntu 24.04 LTS and 26.04 LTS (on x86_64 hardware) are also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Ubuntu and continue on with OhMyDebn installation. Chromium is only available as a snap on Ubuntu, so that's how OhMyDebn installs and configures it there - functionally equivalent, though its Appearance settings currently can't follow your OhMyDebn theme's dark/light mode automatically due to a snap packaging limitation.
 
 ### Raspberry Pi
 

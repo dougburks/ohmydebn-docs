@@ -1,6 +1,6 @@
 ## Office Documents
 
-Several options are available to handle standard office documents and spreadsheets: [LibreOffice](https://www.libreoffice.org/) Suite, [Calligra](https://calligra.org/) Suite, [Gnumeric](http://www.gnumeric.org/), and [Abiword](https://www.abisource.com/). You can find these options in the Install menu under Office Apps.
+Several options are available to handle standard office documents and spreadsheets: [LibreOffice](https://www.libreoffice.org/) Suite, [Calligra](https://calligra.org/) Suite, [Gnumeric](http://www.gnumeric.org/), and [Abiword](https://www.abisource.com/). You can find these options in the Apps menu under Office.
 
 ## Xournal++
 
@@ -12,4 +12,4 @@ PDF files open by default in the [chromium web browser](browser.md). If you need
 
 ## GIMP
 
-[GIMP](https://www.gimp.org/) is available as an optional installation. You can install via OhMyDebn menu (Install->Media). That menu option checks to see if it's installed first so even on a new installation it will install and then run GIMP.
+[GIMP](https://www.gimp.org/) is available as an optional installation. You can install via OhMyDebn menu (Apps->Editors). That menu option checks to see if it's installed first so even on a new installation it will install and then run GIMP.

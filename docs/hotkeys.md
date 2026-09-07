@@ -124,6 +124,8 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Alt + S` | SO-CRATES
 | `Ctrl + Alt + W` | Cloudflare Warp
 | `Ctrl + Alt + C` | Claude Code
+| `Ctrl + Super + Return` | [herdr](terminal.md#herdr)
+| `Super + Alt + Return` | [tmux](terminal.md#tmux) terminal
 
 ## Browser (Chromium)
 

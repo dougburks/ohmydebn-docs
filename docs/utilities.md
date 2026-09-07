@@ -32,16 +32,12 @@ To test your network or disk speed, open the OhMyDebn menu and choose `Trigger` 
 
 ## Deskflow
 
-[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities). You can then run via menu and share your keyboard and mouse with other systems running Deskflow.
+[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install via OhMyDebn menu (Apps->Utility). You can then run via menu and share your keyboard and mouse with other systems running Deskflow.
 
 ## LocalSend
 
-[LocalSend](https://github.com/localsend/localsend) is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities). You can then run via menu and transfer files to other systems running LocalSend.
+[LocalSend](https://github.com/localsend/localsend) is available as an optional installation. You can install via OhMyDebn menu (Apps->Utility). You can then run via menu and transfer files to other systems running LocalSend.
 
 ## SSH Server
 
-SSH server is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities). You can then SSH to the system from other systems.
-
-## PowerShell
-
-[Microsoft PowerShell](https://github.com/PowerShell/PowerShell) is available as an optional installation. You can install via OhMyDebn menu (Install->Utilities).
+SSH server is available as an optional installation. You can install via OhMyDebn menu (Apps->Utility). You can then SSH to the system from other systems.

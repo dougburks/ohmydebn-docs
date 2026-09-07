@@ -35,6 +35,8 @@ This doesn't apply to Linux Mint Debian Edition (LMDE), though - it's already De
 
 The x86-only limitation above does still apply to regular (Ubuntu-based) Linux Mint, but if you're already on x86_64 hardware and would rather keep Mint's extras than start from vanilla Debian, our [installer also supports installing directly onto Linux Mint 22](installation.md#linux-mint-22).
 
+The same reasoning applies to plain Ubuntu too - our [installer also supports installing directly onto Ubuntu 24.04/26.04](installation.md#ubuntu) if that's where you're already set up.
+
 
 ## What is the relationship between OhMyDebn and Security Onion?
 
