@@ -1,1355 +1,855 @@
-<!DOCTYPE html><html lang="en" class="no-js"><head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-        <link rel="canonical" href="https://dougburks.github.io/ohmydebn-docs/">
-      
-      
-      
-        <link rel="next" href="motivation/">
-      
-      
-        
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
-    
-    
-      
-        <title>OhMyDebn</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
-      
-      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OhMyDebn: A Debonair Linux Desktop for Power Users</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Geist+Mono:wght@400;500;600&display=swap');
 
+  :root {
+    /* No invented palette, no invented atmosphere - these are the
+       real Ohmydebn theme's own colors from its colors.toml, the
+       same values every Style Manager swatch below reads from. The
+       page looks like the actual product from the first paint, not
+       an original design that happens to borrow its colors on click. */
+    --void: #1e1e2e;
+    --surface: #2c2c3b;
+    --surface-raised: #393947;
+    --edge: rgba(255, 255, 255, 0.09);
+    --edge-bright: rgba(255, 255, 255, 0.22);
 
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
+    --violet: #89b4fa;
+    --cyan: #94e2d5;
+    --emerald: #a6e3a1;
+    --ember: #f6b6ab;
 
-    
-    
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
-            html.glightbox-open { overflow: initial; height: 100%; }
-            .gslide-title { margin-top: 0px; user-select: text; }
-            .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: white; }
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
-        </style></head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#ohmydebn" class="md-skip">
-          Skip to content
-        </a>
-      
+    /* The wordmark's own gradient stops - usually identical to
+       violet/cyan/emerald above, but darkened by JS for light themes.
+       A theme's real accent colors are tuned to read as small syntax
+       highlights on their own background; several are too light in
+       absolute terms to ever work as large gradient headline text,
+       even against the flat page background - measured, not assumed:
+       Flexoki Light's cyan and emerald both sat under 3:1 against its
+       own bg, well short of the 5:1+ ordinary body text there gets. */
+    --wordmark-1: var(--violet);
+    --wordmark-2: var(--cyan);
+    --wordmark-3: var(--emerald);
+
+    --text: #cdd6f4;
+    /* Both derived from --text and --void, not stored per theme. A
+       theme's own "muted" color is tuned for syntax dimming, not for
+       body copy against that same theme's background - some are far
+       too close in luminance to their own bg to read as text. Mixing
+       down from the guaranteed-legible foreground instead keeps every
+       tier readable on every palette, automatically. */
+    --text-dim: color-mix(in srgb, var(--text) 62%, var(--void));
+    --text-faint: color-mix(in srgb, var(--text) 40%, var(--void));
+
+    --font-display: "Bricolage Grotesque", "Arial Black", sans-serif;
+    --font-body: "Instrument Sans", "Helvetica Neue", sans-serif;
+    --font-mono: "Geist Mono", "JetBrains Mono", "Courier New", monospace;
+
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--void);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Applying a palette reassigns the custom properties above at
+     :root - this is what makes the swap read as a transition
+     instead of a jump cut. */
+  body, .glass, .btn, a, code {
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body, .glass, .btn, a, code { transition: none; }
+  }
+
+  a { color: var(--text); text-decoration-color: var(--edge-bright); text-underline-offset: 0.2em; }
+  a:hover { color: var(--cyan); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+
+  .wrap { max-width: 68rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 3rem); }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+  .eyebrow::before { content: ""; width: 0.4em; height: 0.4em; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 8px var(--emerald); }
+
+  /* ---------- glass panel, with a cursor-tracked spotlight border ---------- */
+  .glass {
+    position: relative;
+    background: linear-gradient(180deg, var(--surface-raised), var(--surface));
+    border: 1px solid var(--edge);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    overflow: hidden;
+  }
+  .glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), var(--edge-bright), transparent 60%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .glass:hover::before { opacity: 1; }
+
+  /* ---------- nav ---------- */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.6rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .topbar-mark {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+  }
+  .topbar-mark .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: linear-gradient(135deg, var(--violet), var(--cyan)); box-shadow: 0 0 12px var(--cyan); }
+  .version-pill {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    border: 1px solid var(--edge);
+    padding: 0.15rem 0.6rem;
+    margin-left: 0.3rem;
+  }
+  .topbar-links { display: flex; gap: clamp(1rem, 3vw, 2rem); font-size: 0.85rem; }
+  .topbar-links a { text-decoration: none; color: var(--text-dim); }
+  .topbar-links a:hover { color: var(--text); }
+
+  /* ---------- hero ---------- */
+  .hero { padding-block: clamp(2rem, 6vh, 3.5rem) clamp(2.5rem, 7vh, 4.5rem); text-align: center; }
+
+  h1.wordmark {
+    margin: 0.6em auto 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 9vw, 5.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    max-width: 20ch;
+    background: linear-gradient(100deg, var(--wordmark-1) 0%, var(--wordmark-2) 45%, var(--wordmark-3) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-wrap: balance;
+  }
+
+  .tagline {
+    margin: 1.3rem auto 0;
+    max-width: 36rem;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--text-dim);
+    text-wrap: balance;
+  }
+
+  .distro-row {
+    margin: 1.4rem auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+  .distro-row span { white-space: nowrap; }
+  .distro-row a { color: inherit; text-decoration-color: transparent; }
+  .distro-row a:hover { color: var(--text); text-decoration-color: var(--edge-bright); }
+
+  .install-cta { max-width: 40rem; margin: 2.2rem auto 0; text-align: left; padding: 1.1rem 1.2rem; }
+  .term-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .term-bar span { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+  .copy-btn {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    background: transparent;
+    border: 1px solid var(--edge);
+    padding: 0.35rem 0.65rem;
+    cursor: pointer;
+  }
+  .copy-btn:hover { color: var(--text); border-color: var(--edge-bright); }
+  .term-line { font-family: var(--font-mono); font-size: 0.95rem; color: var(--text); margin: 0; word-break: break-word; }
+  .term-line .prompt { color: var(--emerald); }
+  .cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1.05em;
+    background: var(--cyan);
+    vertical-align: text-bottom;
+    margin-left: 1px;
+    animation: blink 0.9s steps(1) infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1.8rem; }
+  .btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    text-shadow: none;
+    padding: 0.85rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+  .btn.primary {
+    color: var(--void);
+    background: linear-gradient(100deg, var(--violet), var(--cyan));
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+  }
+  .btn.primary:hover { filter: brightness(1.08); }
+  .btn.ghost {
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--edge);
+  }
+  .btn.ghost:hover { border-color: var(--edge-bright); }
+
+  ol.install-steps {
+    margin: 1rem auto 0;
+    max-width: 40rem;
+    padding: 0 0 0 1.4rem;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    text-align: left;
+  }
+  ol.install-steps li { margin-bottom: 0.3rem; }
+  ol.install-steps li::marker { color: var(--emerald); font-family: var(--font-mono); font-size: 0.9em; }
+  ol.install-steps a { color: var(--text-dim); }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    color: var(--emerald);
+    background: var(--surface-raised);
+    border: 1px solid var(--edge);
+    padding: 0.1em 0.4em;
+    white-space: nowrap;
+  }
+
+  /* ---------- sections, revealed on scroll ---------- */
+  section { padding-block: clamp(2.5rem, 6vh, 4.5rem); }
+  .reveal { opacity: 0; transform: translateY(1rem); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  .section-head { max-width: 38rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    line-height: 1.15;
+    margin: 0.4em 0 0;
+    color: var(--text);
+    text-wrap: balance;
+  }
+  .section-head p { margin: 0.9rem 0 0; font-size: 1rem; color: var(--text-dim); max-width: 46ch; }
+
+  /* ---------- feature grid ---------- */
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr)); gap: 1.25rem; }
+  .feature { padding: 1.4rem 1.5rem 1.6rem; }
+  .feature .icon { width: 2.4rem; height: 2.4rem; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 600; font-size: 0.8rem; color: var(--void); margin-bottom: 1rem; }
+  .feature h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: var(--text); margin: 0 0 0.5em; }
+  .feature p { margin: 0; font-size: 0.95rem; color: var(--text-dim); }
+
+  /* ---------- theme swatches - live, clickable ---------- */
+  .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); gap: 1rem; }
+  .theme-chip { padding: 0.9rem; cursor: pointer; }
+  .theme-chip:hover { border-color: var(--edge-bright); }
+  .theme-chip:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+  .theme-chip.current { border-color: var(--violet); }
+  .theme-swatches { display: flex; height: 1.8rem; overflow: hidden; }
+  .theme-swatches span { flex: 1; }
+  .theme-name { margin: 0.65rem 0 0; font-size: 0.82rem; color: var(--text); font-weight: 600; }
+  .theme-name .tag { display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ember); margin-bottom: 0.2rem; visibility: hidden; }
+  .theme-chip.current .theme-name .tag { visibility: visible; }
+  .theme-more { margin-top: 1.3rem; font-size: 0.92rem; color: var(--text-dim); }
+  .theme-thumb {
+    display: block;
+    width: calc(100% + 1.8rem);
+    height: 5.5rem;
+    object-fit: cover;
+    margin: -0.9rem -0.9rem 0.8rem;
+  }
+
+  /* A real desktop screenshot, shown on hover/focus so the small
+     wallpaper thumbnail above isn't the only preview a theme gets.
+     Fixed-positioned and JS-placed rather than a child of the chip,
+     since .glass sets overflow:hidden and would clip anything that
+     tried to float outside the card's own bounds. Hidden entirely on
+     touch-only devices, where hover has no meaning and it would just
+     get stuck open. */
+  .theme-preview {
+    position: fixed;
+    z-index: 50;
+    width: min(26rem, 82vw);
+    aspect-ratio: 2540 / 1374;
+    background: var(--void);
+    border: 1px solid var(--edge-bright);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(6px) scale(0.98);
+    transition: opacity 0.16s ease, transform 0.16s ease;
+  }
+  .theme-preview.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+  .theme-preview img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  @media (prefers-reduced-motion: reduce) { .theme-preview { transition: none; } }
+  @media (hover: none) { .theme-preview { display: none; } }
+
+  /* ---------- closing ---------- */
+  .closing { text-align: center; }
+  .closing h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 5vw, 2.8rem); color: var(--text); margin: 0.3em auto 0; max-width: 20ch; text-wrap: balance; }
+  .closing p.sponsor { max-width: 42rem; margin: 1.4rem auto 0; font-size: 0.92rem; color: var(--text-dim); }
+
+  .colophon {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--edge);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-dim);
+  }
+  .colophon a { color: var(--text-dim); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <span class="topbar-mark"><span class="dot" aria-hidden="true"></span>OhMyDebn<span class="version-pill">v4.6</span></span>
+    <nav class="topbar-links">
+      <a href="/docs">Docs</a>
+      <a href="https://github.com/dougburks/ohmydebn">GitHub</a>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <p class="eyebrow" style="justify-content: center;">A debonair linux desktop for power users</p>
+    <h1 class="wordmark">Linux, refined.</h1>
+    <p class="tagline">The stability of a Debian-based distro, the ease of Cinnamon desktop, and the power of AI, containers, and virtualization &mdash; one hotkey away.</p>
+
+    <div class="distro-row">
+      <span><a href="https://www.linuxmint.com/hwe.php">Linux Mint</a></span><span>&middot;</span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span>&middot;</span><span><a href="https://linuxmint.com/download_lmde.php">LMDE</a></span><span>&middot;</span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali</a></span>
     </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="OhMyDebn" class="md-header__button md-logo" aria-label="OhMyDebn" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            OhMyDebn
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Introduction
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-    
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#install">Install</a>
+      <a class="btn ghost" href="https://github.com/dougburks/ohmydebn">View on GitHub</a>
     </div>
   </div>
 </div>
-      
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/dougburks/ohmydebn" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+
+<section class="wrap">
+  <div class="section-head reveal">
+    <p class="eyebrow">What you choose</p>
+    <h2>Pick your combination</h2>
+    <p>Every layer below is independent &mdash; mix a base distro, a window management style, and a navigation style however you like.</p>
   </div>
-  <div class="md-source__repository">
-    GitHub
+  <div class="features">
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--violet), var(--cyan));">01</div>
+      <h3>Base Distro</h3>
+      <p>Debian 13, Ubuntu, Linux Mint, LMDE, or Kali &mdash; pick the one you already trust from the list above.</p>
+    </div>
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--cyan), var(--emerald));">02</div>
+      <h3>Window Management</h3>
+      <p>A traditional menu and taskbar, or automatic window tiling &mdash; your call.</p>
+    </div>
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--emerald), var(--ember));">03</div>
+      <h3>Navigation</h3>
+      <p>Point and click with a mouse, or drive everything from the keyboard with hotkeys.</p>
+    </div>
   </div>
-</a>
+</section>
+
+<section class="wrap">
+  <div class="section-head reveal">
+    <p class="eyebrow">What you get</p>
+    <h2>Every ingredient, picked with care</h2>
+    <p>Regardless of which base OS you choose, you still get an amazing desktop experience.</p>
+  </div>
+  <div class="features">
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--violet), var(--cyan));">01</div>
+      <h3>Cinnamon Desktop</h3>
+      <p>Stable, reliable, and easy to use with a traditional menu and taskbar.</p>
+    </div>
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--ember), var(--violet));">02</div>
+      <h3>Themeable to the Bone</h3>
+      <p>A theme carousel, an Aether theme builder, and a gallery of Omarchy-inspired looks &mdash; change your whole desktop's mood in seconds.</p>
+    </div>
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--violet), var(--emerald));">03</div>
+      <h3>Containers and VMs, on Tap</h3>
+      <p>Docker, Podman, Distrobox, Boxes, and Virtual Machine Manager &mdash; install only the ones you actually use.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head reveal">
+    <p class="eyebrow">AI</p>
+    <h2>An assistant, always in reach</h2>
+    <p>Bring your own agent, reach it with one hotkey, and let it keep working even after you look away.</p>
+  </div>
+  <div class="features">
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--violet), var(--cyan));">01</div>
+      <h3>Pick Your Assistant</h3>
+      <p>OpenCode, Claude Code, Pi, and more &mdash; install whichever ones you use and set your favorite as default.</p>
+    </div>
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--cyan), var(--emerald));">02</div>
+      <h3>One Hotkey Away</h3>
+      <p><code>Super + A</code> always reaches your default assistant, no matter which one it is.</p>
+    </div>
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--emerald), var(--ember));">03</div>
+      <h3>Herd Your Agents</h3>
+      <p><a href="https://herdr.dev/">Herdr</a> keeps agents running in the background across every project and machine &mdash; close the lid, and they're still working when you check back.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head reveal">
+    <p class="eyebrow">Security</p>
+    <h2>Locked down by default</h2>
+    <p>None of this is optional or something you have to remember to turn on &mdash; it's already on, out of the box.</p>
+  </div>
+  <div class="features">
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--cyan), var(--violet));">01</div>
+      <h3>Firewall by Default</h3>
+      <p>ufw denies all inbound connections out of the box &mdash; no ports open unless you open them.</p>
+    </div>
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--emerald), var(--violet));">02</div>
+      <h3>Mandatory Access Control</h3>
+      <p>AppArmor is enabled system-wide, confining apps to only the resources they need.</p>
+    </div>
+    <div class="feature glass reveal">
+      <div class="icon" style="background: linear-gradient(135deg, var(--ember), var(--cyan));">03</div>
+      <h3>Pinned Repositories</h3>
+      <p>Every third-party repo we add is pinned to only the packages it's actually needed for, so it can never silently override the rest of your system.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head reveal">
+    <p class="eyebrow">Bundled themes</p>
+    <h2>A look for every mood</h2>
+    <p>Browse a growing gallery of Omarchy-inspired looks, or build your own with Aether. This page runs on the same palette system &mdash; click any swatch below to preview it live.</p>
+  </div>
+  <div class="theme-grid" id="styleGrid">
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="catppuccinlatte" data-shot="images/ohmydebn-theme-catppuccin-latte.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin-latte/backgrounds/1-color-fade.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#eff1f5"></span><span style="background:#1e66f5"></span><span style="background:#40a02b"></span><span style="background:#d84e2b"></span><span style="background:#179299"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Catppuccin Latte</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="catppuccin" data-shot="images/ohmydebn-theme-catppuccin.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin/backgrounds/1-totoro.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#1e1e2e"></span><span style="background:#89b4fa"></span><span style="background:#a6e3a1"></span><span style="background:#f6b6ab"></span><span style="background:#94e2d5"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Catppuccin Mocha</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="ethereal" data-shot="images/ohmydebn-theme-ethereal.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ethereal/backgrounds/1-cosmic.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#060b1e"></span><span style="background:#7d82d9"></span><span style="background:#92a593"></span><span style="background:#eb8b54"></span><span style="background:#a3bfd1"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Ethereal</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="everforest" data-shot="images/ohmydebn-theme-everforest.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/everforest/backgrounds/1-tree-tops.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#2d353b"></span><span style="background:#7fbbb3"></span><span style="background:#a7c080"></span><span style="background:#e09d7f"></span><span style="background:#83c092"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Everforest</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="flexokilight" data-shot="images/ohmydebn-theme-flexoki-light.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/flexoki-light/backgrounds/1-orb.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#fffcf0"></span><span style="background:#205ea6"></span><span style="background:#879a39"></span><span style="background:#d0772b"></span><span style="background:#3aa99f"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Flexoki Light</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="gruvbox" data-shot="images/ohmydebn-theme-gruvbox.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/gruvbox/backgrounds/1-the-backwater.jpg" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#282828"></span><span style="background:#7daea3"></span><span style="background:#a9b665"></span><span style="background:#e1875c"></span><span style="background:#89b482"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Gruvbox</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="hackerman" data-shot="images/ohmydebn-theme-hackerman.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/hackerman/backgrounds/1-synth-scape.jpg" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#0b0c16"></span><span style="background:#82fb9c"></span><span style="background:#4fe88f"></span><span style="background:#50f7a3"></span><span style="background:#7cf8f7"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Hackerman</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="kanagawa" data-shot="images/ohmydebn-theme-kanagawa.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/kanagawa/backgrounds/1-kanagawa.jpg" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#1f1f28"></span><span style="background:#7e9cd8"></span><span style="background:#76946a"></span><span style="background:#c17158"></span><span style="background:#6a9589"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Kanagawa</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="lasthorizon" data-shot="images/ohmydebn-theme-last-horizon.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/last-horizon/backgrounds/1-eyes-wide.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#0c0b0c"></span><span style="background:#b59790"></span><span style="background:#87a9b0"></span><span style="background:#6b5e73"></span><span style="background:#a5a0b6"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Last Horizon</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="lumon" data-shot="images/ohmydebn-theme-lumon.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lumon/backgrounds/01-united-in-severance.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#16242d"></span><span style="background:#8bc9eb"></span><span style="background:#5e95bc"></span><span style="background:#8bc9eb"></span><span style="background:#b4e4f6"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Lumon</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="lupine" data-shot="images/ohmydebn-theme-lupine.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lupine/backgrounds/01-cherry-blossom-bokeh.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#fafafa"></span><span style="background:#3264eb"></span><span style="background:#4a2fd0"></span><span style="background:#026fde"></span><span style="background:#0c67de"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Lupine</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="matteblack" data-shot="images/ohmydebn-theme-matte-black.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/matte-black/backgrounds/0-ship-at-sea.jpg" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#121212"></span><span style="background:#e68e0d"></span><span style="background:#ffc107"></span><span style="background:#c63d3d"></span><span style="background:#bebebe"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Matte Black</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="miasma" data-shot="images/ohmydebn-theme-miasma.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/miasma/backgrounds/01-nature-of-fear.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#222222"></span><span style="background:#78824b"></span><span style="background:#5f875f"></span><span style="background:#8d6242"></span><span style="background:#c9a554"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Miasma</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="nord" data-shot="images/ohmydebn-theme-nord.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/nord/backgrounds/0-black-moon.jpg" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#2e3440"></span><span style="background:#81a1c1"></span><span style="background:#a3be8c"></span><span style="background:#d5967a"></span><span style="background:#88c0d0"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Nord</p>
+    </div>
+    <div class="theme-chip glass reveal current" role="button" tabindex="0" data-theme="ohmydebn" data-shot="images/ohmydebn.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/dougburks/ohmydebn/main/themes/ohmydebn/backgrounds/yosemite.png" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#1e1e2e"></span><span style="background:#89b4fa"></span><span style="background:#a6e3a1"></span><span style="background:#f6b6ab"></span><span style="background:#94e2d5"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>OhMyDebn</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="osakajade" data-shot="images/ohmydebn-theme-osaka-jade.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/osaka-jade/backgrounds/1-glowing-city.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#111c18"></span><span style="background:#509475"></span><span style="background:#549e6a"></span><span style="background:#a2734b"></span><span style="background:#2dd5b7"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Osaka Jade</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="retro82" data-shot="images/ohmydebn-theme-retro-82.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/retro-82/backgrounds/1-in-the-groove.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#05182e"></span><span style="background:#faa968"></span><span style="background:#028391"></span><span style="background:#faa968"></span><span style="background:#8cbfb8"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Retro 82</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="ristretto" data-shot="images/ohmydebn-theme-ristretto.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ristretto/backgrounds/0-launch.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#2c2525"></span><span style="background:#f38d70"></span><span style="background:#adda78"></span><span style="background:#fb9a77"></span><span style="background:#85dacc"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Ristretto</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="rosepine" data-shot="images/ohmydebn-theme-rose-pine.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/rose-pine/backgrounds/1-funky-shapes.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#faf4ed"></span><span style="background:#56949f"></span><span style="background:#286983"></span><span style="background:#cf8057"></span><span style="background:#d7827e"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Ros&eacute; Pine</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="solitude" data-shot="images/ohmydebn-theme-solitude.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/solitude/backgrounds/1-on-pole.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#101315"></span><span style="background:#798186"></span><span style="background:#9fa5a9"></span><span style="background:#d9dbdc"></span><span style="background:#707070"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Solitude</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="tokyonight" data-shot="images/ohmydebn-theme-tokyo-night.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/tokyo-night/backgrounds/0-winding-road.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#1a1b26"></span><span style="background:#7aa2f7"></span><span style="background:#9ece6a"></span><span style="background:#eb927b"></span><span style="background:#449dab"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Tokyo Night</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="vantablack" data-shot="images/ohmydebn-theme-vantablack.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/vantablack/backgrounds/0-dot-hands.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#000000"></span><span style="background:#8d8d8d"></span><span style="background:#b6b6b6"></span><span style="background:#b9b9b9"></span><span style="background:#b0b0b0"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>Vantablack</p>
+    </div>
+    <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="white" data-shot="images/ohmydebn-theme-white.png">
+      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/white/backgrounds/1-white.webp" alt="" loading="lazy">
+      <div class="theme-swatches" aria-hidden="true"><span style="background:#ffffff"></span><span style="background:#6e6e6e"></span><span style="background:#3a3a3a"></span><span style="background:#4a4a4a"></span><span style="background:#3e3e3e"></span></div>
+      <p class="theme-name"><span class="tag">Current</span>White</p>
+    </div>
+  </div>
+  <p class="theme-more">...and whatever you build yourself with Aether.</p>
+  <div class="theme-preview" id="themePreview" aria-hidden="true"><img id="themePreviewImg" alt=""></div>
+</section>
+
+<section class="wrap closing" id="install">
+  <div class="reveal">
+    <p class="eyebrow" style="justify-content: center;">Get started</p>
+    <h2>Read the docs, star the repo, or just run the install.</h2>
+    <div class="distro-row">
+      <span><a href="https://www.linuxmint.com/hwe.php">Linux Mint</a></span><span>&middot;</span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span>&middot;</span><span><a href="https://linuxmint.com/download_lmde.php">LMDE</a></span><span>&middot;</span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali</a></span>
+    </div>
+    <ol class="install-steps">
+      <li>Pick your favorite distro from the list above (if you don't have a favorite, try <a href="https://www.linuxmint.com/hwe.php">Linux Mint</a>).</li>
+      <li>Download the ISO image, install it, and reboot into your new installation.</li>
+      <li>Review <a href="https://github.com/dougburks/ohmydebn/blob/main/install.sh">install.sh</a> and then run the following command as your normal (non-root) user.</li>
+    </ol>
+    <div class="install-cta glass">
+      <div class="term-bar">
+        <span>Install</span>
+        <button class="copy-btn" id="copyBtn" type="button">Copy</button>
       </div>
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="." title="OhMyDebn" class="md-nav__button md-logo" aria-label="OhMyDebn" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
-
-    </a>
-    OhMyDebn
-  </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/dougburks/ohmydebn" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+      <p class="term-line"><span class="prompt">$</span> <span id="typedCmd"></span><span class="cursor" id="cmdCursor"></span></p>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="/docs">Read the Docs</a>
+      <a class="btn ghost" href="https://github.com/dougburks/ohmydebn">View on GitHub</a>
+    </div>
+    <p class="sponsor">Everything above is free, open source, and reviewable.</p>
   </div>
-  <div class="md-source__repository">
-    GitHub
+  <div class="colophon">
+    <span>&copy; Doug Burks</span>
+    <span><a href="https://github.com/dougburks/ohmydebn">github.com/dougburks/ohmydebn</a></span>
   </div>
-</a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix="">
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#ohmydebn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OhMyDebn
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debonair-haiku" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Debonair Haiku
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-is-it-called-ohmydebn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why is it called OhMyDebn?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#who-is-this-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Who is this for?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="motivation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Motivation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="gallery/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Gallery
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ingredients/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ingredients
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="requirements/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Requirements
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="warnings/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Warnings
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="source-code/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Source Code
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="installation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="menus/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Menus
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="desktop-themes/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Desktop Themes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="desktop-effects/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Desktop Effects
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="screen-magnifier/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Screen Magnifier
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="window-tiling/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Window Tiling
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="browser/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Browser
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ai/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="text-editor/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Text Editor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="documents/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Documents
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="terminal/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Terminal
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="password-manager/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Password Manager
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="utilities/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Utilities
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="firewall/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Firewall
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="vpn/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    VPN
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="virtualization/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Virtualization
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="containerization/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Containerization
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="cybersecurity/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Cybersecurity
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="media/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Media
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="updating/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Updating
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="resetting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Resetting
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="hotkeys/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hotkeys
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="acknowledgements/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Acknowledgements
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#ohmydebn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OhMyDebn
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debonair-haiku" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Debonair Haiku
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-is-it-called-ohmydebn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why is it called OhMyDebn?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#who-is-this-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Who is this for?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-  
-  
-
-
-  <h1>Introduction</h1>
-
-<h2 id="ohmydebn">OhMyDebn</h2>
-<p>OhMyDebn is a debonair Linux desktop for power users. It gives you the stability of the Debian or Ubuntu distros, the ease of use of the Cinnamon desktop, and the power of AI, containers, and virtualization.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png" data-desc-position="bottom"><img alt="OhMyDebn screenshot" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png"></a></p>
-<h2 id="debonair-haiku">Debonair Haiku</h2>
-<p><em>Debonair strides bold,</em><br>
-<em>Elegance in every step,</em><br>
-<em>Stars bow to its charm.</em><br>
-  -- AI, probably</p>
-<h2 id="why-is-it-called-ohmydebn">Why is it called OhMyDebn?</h2>
-<p>There are several meanings for the name:</p>
-<ul>
-<li>It is my <a href="https://en.wikipedia.org/wiki/Omakase">omakase</a> menu for Debian</li>
-<li><a href="ai/">AI</a> and <a href="virtualization/">VMs</a> and <a href="containerization/">containers</a>, oh my!</li>
-<li>It's so debonair, it will make your friends say "Oh! My Debian installations never looked this good!"</li>
-<li>Obligatory <a href="https://en.wikipedia.org/wiki/Recursive_acronym">recursive acronym</a> OHMYDEBN: OhMyDebn Heals My Yearning for a Desktop Environment Beautifully Now!</li>
-</ul>
-<h2 id="who-is-this-for">Who is this for?</h2>
-<p>OhMyDebn is designed for many different use cases:</p>
-<ul>
-<li>Power users that want to leverage <a href="ai/">AI</a>, <a href="containerization/">containers</a>, and <a href="virtualization/">virtualization</a></li>
-<li>Folks that want beautiful <a href="desktop-themes/#themes-included-from-omarchy">Omarchy themes</a> on a Debian base OS</li>
-<li>Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful <a href="terminal/">terminal</a></li>
-<li>Folks that prefer to keep hands on keyboard and use <a href="hotkeys/">hotkeys</a> as much as possible but still have the option of not having to use those hotkeys</li>
-<li>Developers who want a beautiful <a href="text-editor/#neovim">neovim</a> or <a href="text-editor/#visual-studio-code">Visual Studio Code</a> experience</li>
-<li>Folks with <a href="gallery/#2017-dell-precision">older Windows machines that can't run Windows 11</a></li>
-<li>Folks with <a href="gallery/#2014-macbook">older Apple machines that can't run the latest version of macOS</a></li>
-<li>Anybody who wants to see 2026 be the year of the Linux desktop!</li>
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer">
-        
-        
-          
-          <a href="motivation/" class="md-footer__link md-footer__link--next" aria-label="Next: Motivation">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Motivation
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "navigation.footer"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
-      
-    
-  
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+</section>
+
+<script>
+  (function () {
+    "use strict";
+
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var full = "curl -LO https://ohmydebn.org/install.sh && bash install.sh";
+    var target = document.getElementById("typedCmd");
+    if (target) {
+      if (reduceMotion) {
+        target.textContent = full;
+      } else {
+        var i = 0;
+        (function type() {
+          if (i <= full.length) {
+            target.textContent = full.slice(0, i);
+            i++;
+            setTimeout(type, 28);
+          }
+        })();
+      }
+    }
+
+    var copyBtn = document.getElementById("copyBtn");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function () {
+        var done = function () {
+          var original = copyBtn.textContent;
+          copyBtn.textContent = "Copied";
+          setTimeout(function () { copyBtn.textContent = original; }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(full).then(done, selectFallback);
+        } else {
+          selectFallback();
+        }
+        function selectFallback() {
+          var range = document.createRange();
+          range.selectNodeContents(target);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+      });
+    }
+
+    // Cursor-tracked spotlight border on glass panels - a light CSS
+    // custom-property update on pointer move, no layout cost.
+    var glassEls = document.querySelectorAll(".glass");
+    glassEls.forEach(function (el) {
+      el.addEventListener("pointermove", function (e) {
+        var rect = el.getBoundingClientRect();
+        el.style.setProperty("--mx", (e.clientX - rect.left) + "px");
+        el.style.setProperty("--my", (e.clientY - rect.top) + "px");
+      });
+    });
+
+    // Style Manager: clicking a swatch reskins the whole page, since
+    // the wordmark gradient and every glass panel already read their
+    // colors from these same custom properties.
+    // Values pulled from each theme's real colors.toml under
+    // /usr/share/ohmydebn-themes/ - blue/cyan/mint/gold map onto this
+    // page's violet/cyan/emerald/ember roles. `photo` is only used as
+    // a static thumbnail on each swatch card, not a page background:
+    // the ohmydebn theme's own image from dougburks/ohmydebn,
+    // everything else from the upstream omacom/omarchy theme pack
+    // (quattro branch) it's ported from.
+    var THEMES = {
+      catppuccinlatte: { bg: "#eff1f5", surface: "#eaecf0", surfaceAlt: "#dcdee1", blue: "#1e66f5", cyan: "#179299", mint: "#40a02b", gold: "#d84e2b", text: "#4c4f69", textDim: "#acb0be", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin-latte/backgrounds/1-color-fade.webp" },
+      catppuccin: { bg: "#1e1e2e", surface: "#2c2c3b", surfaceAlt: "#393947", blue: "#89b4fa", cyan: "#94e2d5", mint: "#a6e3a1", gold: "#f6b6ab", text: "#cdd6f4", textDim: "#585b70", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin/backgrounds/1-totoro.webp" },
+      ethereal: { bg: "#060b1e", surface: "#151a2c", surfaceAlt: "#242839", blue: "#7d82d9", cyan: "#a3bfd1", mint: "#92a593", gold: "#eb8b54", text: "#ffcead", textDim: "#6d7db6", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ethereal/backgrounds/1-cosmic.webp" },
+      everforest: { bg: "#2d353b", surface: "#3a4147", surfaceAlt: "#464d53", blue: "#7fbbb3", cyan: "#83c092", mint: "#a7c080", gold: "#e09d7f", text: "#d3c6aa", textDim: "#475258", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/everforest/backgrounds/1-tree-tops.webp" },
+      flexokilight: { bg: "#fffcf0", surface: "#faf7eb", surfaceAlt: "#ebe8dd", blue: "#205ea6", cyan: "#3aa99f", mint: "#879a39", gold: "#d0772b", text: "#100f0f", textDim: "#b7b5ac", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/flexoki-light/backgrounds/1-orb.webp" },
+      gruvbox: { bg: "#282828", surface: "#353535", surfaceAlt: "#424242", blue: "#7daea3", cyan: "#89b482", mint: "#a9b665", gold: "#e1875c", text: "#d4be98", textDim: "#665c54", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/gruvbox/backgrounds/1-the-backwater.jpg" },
+      hackerman: { bg: "#0b0c16", surface: "#1a1b24", surfaceAlt: "#282932", blue: "#82fb9c", cyan: "#7cf8f7", mint: "#4fe88f", gold: "#50f7a3", text: "#ddf7ff", textDim: "#2d3450", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/hackerman/backgrounds/1-synth-scape.jpg" },
+      kanagawa: { bg: "#1f1f28", surface: "#2c2c35", surfaceAlt: "#3a3a42", blue: "#7e9cd8", cyan: "#6a9589", mint: "#76946a", gold: "#c17158", text: "#dcd7ba", textDim: "#54546d", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/kanagawa/backgrounds/1-kanagawa.jpg" },
+      lasthorizon: { bg: "#0c0b0c", surface: "#1b1a1b", surfaceAlt: "#292829", blue: "#b59790", cyan: "#a5a0b6", mint: "#87a9b0", gold: "#6b5e73", text: "#fafcfb", textDim: "#584e51", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/last-horizon/backgrounds/1-eyes-wide.webp" },
+      lumon: { bg: "#16242d", surface: "#24313a", surfaceAlt: "#323e46", blue: "#8bc9eb", cyan: "#b4e4f6", mint: "#5e95bc", gold: "#8bc9eb", text: "#d6e2ee", textDim: "#304860", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lumon/backgrounds/01-united-in-severance.webp" },
+      lupine: { bg: "#fafafa", surface: "#f5f5f5", surfaceAlt: "#e6e6e6", blue: "#3264eb", cyan: "#0c67de", mint: "#4a2fd0", gold: "#026fde", text: "#212121", textDim: "#9e9e9e", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lupine/backgrounds/01-cherry-blossom-bokeh.webp" },
+      matteblack: { bg: "#121212", surface: "#202020", surfaceAlt: "#2e2e2e", blue: "#e68e0d", cyan: "#bebebe", mint: "#ffc107", gold: "#c63d3d", text: "#bebebe", textDim: "#333333", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/matte-black/backgrounds/0-ship-at-sea.jpg" },
+      miasma: { bg: "#222222", surface: "#2f2f2f", surfaceAlt: "#3d3d3d", blue: "#78824b", cyan: "#c9a554", mint: "#5f875f", gold: "#8d6242", text: "#c2c2b0", textDim: "#666666", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/miasma/backgrounds/01-nature-of-fear.webp" },
+      nord: { bg: "#2e3440", surface: "#3b404b", surfaceAlt: "#474c57", blue: "#81a1c1", cyan: "#88c0d0", mint: "#a3be8c", gold: "#d5967a", text: "#d8dee9", textDim: "#4c566a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/nord/backgrounds/0-black-moon.jpg" },
+      ohmydebn: { bg: "#1e1e2e", surface: "#2c2c3b", surfaceAlt: "#393947", blue: "#89b4fa", cyan: "#94e2d5", mint: "#a6e3a1", gold: "#f6b6ab", text: "#cdd6f4", textDim: "#585b70", photo: "https://raw.githubusercontent.com/dougburks/ohmydebn/main/themes/ohmydebn/backgrounds/yosemite.png" },
+      osakajade: { bg: "#111c18", surface: "#1f2a26", surfaceAlt: "#2e3734", blue: "#509475", cyan: "#2dd5b7", mint: "#549e6a", gold: "#a2734b", text: "#c1c497", textDim: "#53685b", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/osaka-jade/backgrounds/1-glowing-city.webp" },
+      retro82: { bg: "#05182e", surface: "#14263b", surfaceAlt: "#233447", blue: "#faa968", cyan: "#8cbfb8", mint: "#028391", gold: "#faa968", text: "#f6dcac", textDim: "#2a6b78", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/retro-82/backgrounds/1-in-the-groove.webp" },
+      ristretto: { bg: "#2c2525", surface: "#393232", surfaceAlt: "#453f3f", blue: "#f38d70", cyan: "#85dacc", mint: "#adda78", gold: "#fb9a77", text: "#e6d9db", textDim: "#72696a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ristretto/backgrounds/0-launch.webp" },
+      rosepine: { bg: "#faf4ed", surface: "#f5efe8", surfaceAlt: "#e6e0da", blue: "#56949f", cyan: "#d7827e", mint: "#286983", gold: "#cf8057", text: "#575279", textDim: "#cecacd", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/rose-pine/backgrounds/1-funky-shapes.webp" },
+      solitude: { bg: "#101315", surface: "#1e2123", surfaceAlt: "#2d2f31", blue: "#798186", cyan: "#707070", mint: "#9fa5a9", gold: "#d9dbdc", text: "#cacccc", textDim: "#4b4e55", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/solitude/backgrounds/1-on-pole.webp" },
+      tokyonight: { bg: "#1a1b26", surface: "#282933", surfaceAlt: "#353640", blue: "#7aa2f7", cyan: "#449dab", mint: "#9ece6a", gold: "#eb927b", text: "#a9b1d6", textDim: "#414868", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/tokyo-night/backgrounds/0-winding-road.webp" },
+      vantablack: { bg: "#000000", surface: "#0f0f0f", surfaceAlt: "#1f1f1f", blue: "#8d8d8d", cyan: "#b0b0b0", mint: "#b6b6b6", gold: "#b9b9b9", text: "#ffffff", textDim: "#7a7a7a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/vantablack/backgrounds/0-dot-hands.webp" },
+      white: { bg: "#ffffff", surface: "#fafafa", surfaceAlt: "#ebebeb", blue: "#6e6e6e", cyan: "#3e3e3e", mint: "#3a3a3a", gold: "#4a4a4a", text: "#000000", textDim: "#808080", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/white/backgrounds/1-white.webp" }
+    };
+
+    var root = document.documentElement;
+    var chips = document.querySelectorAll(".theme-chip[data-theme]");
+
+    // Relative luminance of a theme's real bg, to decide whether it
+    // reads as a light or a dark theme - drives whether the wordmark
+    // gradient stops need darkening to stay legible.
+    function luminance(hex) {
+      hex = hex.replace("#", "");
+      var r = parseInt(hex.substr(0, 2), 16) / 255;
+      var g = parseInt(hex.substr(2, 2), 16) / 255;
+      var b = parseInt(hex.substr(4, 2), 16) / 255;
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    }
+
+    // Measured, not eyeballed: at 55% of original brightness, every
+    // theme's weakest accent still cleared 5:1+ against its own real
+    // bg color. Dark themes pass their accents through untouched -
+    // they already need to be light against a dark background.
+    function wordmarkColor(hex, isLight) {
+      if (!isLight) return hex;
+      hex = hex.replace("#", "");
+      var mix = 0.55;
+      var r = Math.round(parseInt(hex.substr(0, 2), 16) * mix);
+      var g = Math.round(parseInt(hex.substr(2, 2), 16) * mix);
+      var b = Math.round(parseInt(hex.substr(4, 2), 16) * mix);
+      function h(n) { var s = n.toString(16); return s.length < 2 ? "0" + s : s; }
+      return "#" + h(r) + h(g) + h(b);
+    }
+
+    function applyPalette(key) {
+      var t = THEMES[key];
+      if (!t) return;
+      root.style.setProperty("--void", t.bg);
+      root.style.setProperty("--surface", t.surface);
+      root.style.setProperty("--surface-raised", t.surfaceAlt);
+      root.style.setProperty("--violet", t.blue);
+      root.style.setProperty("--cyan", t.cyan);
+      root.style.setProperty("--emerald", t.mint);
+      root.style.setProperty("--ember", t.gold);
+      root.style.setProperty("--text", t.text);
+      // --text-dim and --text-faint are computed in CSS from --text
+      // and --void, not set here - see the :root comment.
+      var isLight = luminance(t.bg) > 0.5;
+      root.style.setProperty("--wordmark-1", wordmarkColor(t.blue, isLight));
+      root.style.setProperty("--wordmark-2", wordmarkColor(t.cyan, isLight));
+      root.style.setProperty("--wordmark-3", wordmarkColor(t.mint, isLight));
+      chips.forEach(function (c) {
+        c.classList.toggle("current", c.getAttribute("data-theme") === key);
+      });
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () { applyPalette(chip.getAttribute("data-theme")); });
+      chip.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          applyPalette(chip.getAttribute("data-theme"));
+        }
+      });
+    });
+
+    // Screenshot preview: a single shared element, positioned and
+    // sourced on hover/focus rather than one <img> per chip - each
+    // chip's own screenshot only ever loads once it's actually shown.
+    var previewEl = document.getElementById("themePreview");
+    var previewImg = document.getElementById("themePreviewImg");
+    if (previewEl && previewImg) {
+      var showPreview = function (chip) {
+        var url = chip.getAttribute("data-shot");
+        if (!url) return;
+        var nameEl = chip.querySelector(".theme-name");
+        previewImg.src = url;
+        previewImg.alt = nameEl ? nameEl.lastChild.nodeValue.trim() + " desktop screenshot" : "";
+        var rect = chip.getBoundingClientRect();
+        var pw = previewEl.offsetWidth;
+        var ph = previewEl.offsetHeight;
+        var left = Math.max(12, Math.min(rect.left + rect.width / 2 - pw / 2, window.innerWidth - pw - 12));
+        var top = rect.top - ph - 12;
+        if (top < 12) top = rect.bottom + 12;
+        previewEl.style.left = left + "px";
+        previewEl.style.top = top + "px";
+        previewEl.classList.add("is-visible");
+      };
+      var hidePreview = function () { previewEl.classList.remove("is-visible"); };
+      chips.forEach(function (chip) {
+        chip.addEventListener("pointerenter", function () { showPreview(chip); });
+        chip.addEventListener("pointerleave", hidePreview);
+        chip.addEventListener("focus", function () { showPreview(chip); });
+        chip.addEventListener("blur", hidePreview);
+      });
+    }
+
+    // One restrained settle-in per section as it enters view.
+    var revealEls = document.querySelectorAll(".reveal");
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      revealEls.forEach(function (el) { io.observe(el); });
+    }
+  })();
+</script>
+</body>
+</html>
