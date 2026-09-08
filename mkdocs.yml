@@ -3,6 +3,9 @@ site_url: https://ohmydebn.org/docs/
 site_dir: dist/docs
 repo_url: https://github.com/dougburks/ohmydebn
 
+extra:
+  homepage: https://ohmydebn.org/
+
 plugins:
   - glightbox
   - search
