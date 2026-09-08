@@ -1,4 +1,4 @@
-name: Deploy MkDocs
+name: Deploy site
 on:
   push:
     branches: [main]
@@ -13,4 +13,11 @@ jobs:
       with:
         python-version: '3.x'
     - run: pip install mkdocs mkdocs-material mkdocs-glightbox
-    - run: mkdocs gh-deploy --force
+    - run: mkdocs build
+    - run: cp index.html dist/index.html
+    - run: cp CNAME dist/CNAME
+    - run: cp -r images dist/images
+    - uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
