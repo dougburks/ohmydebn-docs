@@ -240,7 +240,7 @@
   .hero-shot-btn {
     display: block;
     width: min(100%, 46rem);
-    margin: 2.6rem auto 0;
+    margin: 2.6rem auto;
     padding: 0;
     border: none;
     background: none;
@@ -380,14 +380,6 @@
   .theme-name .tag { display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ember); margin-bottom: 0.2rem; visibility: hidden; }
   .theme-chip.current .theme-name .tag { visibility: visible; }
   .theme-more { margin-top: 1.3rem; font-size: 0.92rem; color: var(--text-dim); }
-  .theme-thumb {
-    display: block;
-    width: calc(100% + 1.8rem);
-    height: 5.5rem;
-    object-fit: cover;
-    margin: -0.9rem -0.9rem 0.8rem;
-  }
-
   /* A real desktop screenshot, shown on hover/focus so the small
      wallpaper thumbnail above isn't the only preview a theme gets.
      Fixed-positioned and JS-placed rather than a child of the chip,
@@ -571,129 +563,107 @@
     <h2>A look for every mood</h2>
     <p>Browse a growing gallery of Omarchy-inspired looks, or build your own with Aether. This page runs on the same palette system &mdash; click any swatch below to preview it live.</p>
   </div>
+
+  <button class="hero-shot-btn" id="galleryShotBtn" type="button" aria-label="View larger screenshot">
+    <img class="hero-shot" id="galleryShot" src="images/ohmydebn.png" alt="OhMyDebn desktop, OhMyDebn theme" loading="lazy">
+  </button>
+
   <div class="theme-grid" id="styleGrid">
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="catppuccinlatte" data-shot="images/ohmydebn-theme-catppuccin-latte.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin-latte/backgrounds/1-color-fade.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#eff1f5"></span><span style="background:#1e66f5"></span><span style="background:#40a02b"></span><span style="background:#d84e2b"></span><span style="background:#179299"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Catppuccin Latte</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="catppuccin" data-shot="images/ohmydebn-theme-catppuccin.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin/backgrounds/1-totoro.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#1e1e2e"></span><span style="background:#89b4fa"></span><span style="background:#a6e3a1"></span><span style="background:#f6b6ab"></span><span style="background:#94e2d5"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Catppuccin Mocha</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="ethereal" data-shot="images/ohmydebn-theme-ethereal.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ethereal/backgrounds/1-cosmic.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#060b1e"></span><span style="background:#7d82d9"></span><span style="background:#92a593"></span><span style="background:#eb8b54"></span><span style="background:#a3bfd1"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Ethereal</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="everforest" data-shot="images/ohmydebn-theme-everforest.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/everforest/backgrounds/1-tree-tops.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#2d353b"></span><span style="background:#7fbbb3"></span><span style="background:#a7c080"></span><span style="background:#e09d7f"></span><span style="background:#83c092"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Everforest</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="flexokilight" data-shot="images/ohmydebn-theme-flexoki-light.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/flexoki-light/backgrounds/1-orb.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#fffcf0"></span><span style="background:#205ea6"></span><span style="background:#879a39"></span><span style="background:#d0772b"></span><span style="background:#3aa99f"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Flexoki Light</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="gruvbox" data-shot="images/ohmydebn-theme-gruvbox.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/gruvbox/backgrounds/1-the-backwater.jpg" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#282828"></span><span style="background:#7daea3"></span><span style="background:#a9b665"></span><span style="background:#e1875c"></span><span style="background:#89b482"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Gruvbox</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="hackerman" data-shot="images/ohmydebn-theme-hackerman.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/hackerman/backgrounds/1-synth-scape.jpg" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#0b0c16"></span><span style="background:#82fb9c"></span><span style="background:#4fe88f"></span><span style="background:#50f7a3"></span><span style="background:#7cf8f7"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Hackerman</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="kanagawa" data-shot="images/ohmydebn-theme-kanagawa.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/kanagawa/backgrounds/1-kanagawa.jpg" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#1f1f28"></span><span style="background:#7e9cd8"></span><span style="background:#76946a"></span><span style="background:#c17158"></span><span style="background:#6a9589"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Kanagawa</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="lasthorizon" data-shot="images/ohmydebn-theme-last-horizon.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/last-horizon/backgrounds/1-eyes-wide.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#0c0b0c"></span><span style="background:#b59790"></span><span style="background:#87a9b0"></span><span style="background:#6b5e73"></span><span style="background:#a5a0b6"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Last Horizon</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="lumon" data-shot="images/ohmydebn-theme-lumon.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lumon/backgrounds/01-united-in-severance.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#16242d"></span><span style="background:#8bc9eb"></span><span style="background:#5e95bc"></span><span style="background:#8bc9eb"></span><span style="background:#b4e4f6"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Lumon</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="lupine" data-shot="images/ohmydebn-theme-lupine.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lupine/backgrounds/01-cherry-blossom-bokeh.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#fafafa"></span><span style="background:#3264eb"></span><span style="background:#4a2fd0"></span><span style="background:#026fde"></span><span style="background:#0c67de"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Lupine</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="matteblack" data-shot="images/ohmydebn-theme-matte-black.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/matte-black/backgrounds/0-ship-at-sea.jpg" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#121212"></span><span style="background:#e68e0d"></span><span style="background:#ffc107"></span><span style="background:#c63d3d"></span><span style="background:#bebebe"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Matte Black</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="miasma" data-shot="images/ohmydebn-theme-miasma.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/miasma/backgrounds/01-nature-of-fear.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#222222"></span><span style="background:#78824b"></span><span style="background:#5f875f"></span><span style="background:#8d6242"></span><span style="background:#c9a554"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Miasma</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="nord" data-shot="images/ohmydebn-theme-nord.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/nord/backgrounds/0-black-moon.jpg" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#2e3440"></span><span style="background:#81a1c1"></span><span style="background:#a3be8c"></span><span style="background:#d5967a"></span><span style="background:#88c0d0"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Nord</p>
     </div>
     <div class="theme-chip glass reveal current" role="button" tabindex="0" data-theme="ohmydebn" data-shot="images/ohmydebn.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/dougburks/ohmydebn/main/themes/ohmydebn/backgrounds/yosemite.png" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#1e1e2e"></span><span style="background:#89b4fa"></span><span style="background:#a6e3a1"></span><span style="background:#f6b6ab"></span><span style="background:#94e2d5"></span></div>
       <p class="theme-name"><span class="tag">Current</span>OhMyDebn</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="osakajade" data-shot="images/ohmydebn-theme-osaka-jade.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/osaka-jade/backgrounds/1-glowing-city.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#111c18"></span><span style="background:#509475"></span><span style="background:#549e6a"></span><span style="background:#a2734b"></span><span style="background:#2dd5b7"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Osaka Jade</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="retro82" data-shot="images/ohmydebn-theme-retro-82.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/retro-82/backgrounds/1-in-the-groove.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#05182e"></span><span style="background:#faa968"></span><span style="background:#028391"></span><span style="background:#faa968"></span><span style="background:#8cbfb8"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Retro 82</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="ristretto" data-shot="images/ohmydebn-theme-ristretto.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ristretto/backgrounds/0-launch.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#2c2525"></span><span style="background:#f38d70"></span><span style="background:#adda78"></span><span style="background:#fb9a77"></span><span style="background:#85dacc"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Ristretto</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="rosepine" data-shot="images/ohmydebn-theme-rose-pine.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/rose-pine/backgrounds/1-funky-shapes.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#faf4ed"></span><span style="background:#56949f"></span><span style="background:#286983"></span><span style="background:#cf8057"></span><span style="background:#d7827e"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Ros&eacute; Pine</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="solitude" data-shot="images/ohmydebn-theme-solitude.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/solitude/backgrounds/1-on-pole.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#101315"></span><span style="background:#798186"></span><span style="background:#9fa5a9"></span><span style="background:#d9dbdc"></span><span style="background:#707070"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Solitude</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="tokyonight" data-shot="images/ohmydebn-theme-tokyo-night.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/tokyo-night/backgrounds/0-winding-road.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#1a1b26"></span><span style="background:#7aa2f7"></span><span style="background:#9ece6a"></span><span style="background:#eb927b"></span><span style="background:#449dab"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Tokyo Night</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="vantablack" data-shot="images/ohmydebn-theme-vantablack.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/vantablack/backgrounds/0-dot-hands.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#000000"></span><span style="background:#8d8d8d"></span><span style="background:#b6b6b6"></span><span style="background:#b9b9b9"></span><span style="background:#b0b0b0"></span></div>
       <p class="theme-name"><span class="tag">Current</span>Vantablack</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="white" data-shot="images/ohmydebn-theme-white.png">
-      <img class="theme-thumb" src="https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/white/backgrounds/1-white.webp" alt="" loading="lazy">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#ffffff"></span><span style="background:#6e6e6e"></span><span style="background:#3a3a3a"></span><span style="background:#4a4a4a"></span><span style="background:#3e3e3e"></span></div>
       <p class="theme-name"><span class="tag">Current</span>White</p>
     </div>
   </div>
   <p class="theme-more">...and whatever you build yourself with Aether.</p>
   <div class="theme-preview" id="themePreview" aria-hidden="true"><img id="themePreviewImg" alt=""></div>
-
-  <button class="hero-shot-btn" id="galleryShotBtn" type="button" aria-label="View larger screenshot">
-    <img class="hero-shot" id="galleryShot" src="images/ohmydebn.png" alt="OhMyDebn desktop, OhMyDebn theme" loading="lazy">
-  </button>
 </section>
 
 <section class="wrap closing" id="install">
