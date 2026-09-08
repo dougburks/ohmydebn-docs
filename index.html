@@ -233,18 +233,70 @@
      screenshots used elsewhere on the page (2540x1374). Crossfades on
      theme change via JS (a plain src swap can't transition, so opacity
      dips, the src swaps once hidden, then it fades back in - the same
-     approach used for the term-bar copy feedback elsewhere). */
-  .hero-shot {
+     approach used for the term-bar copy feedback elsewhere). Wrapped
+     in a real <button> (opens the lightbox below) rather than the img
+     itself carrying the click handler, so it's keyboard-reachable and
+     announced as interactive for free. */
+  .hero-shot-btn {
     display: block;
     width: min(100%, 46rem);
     margin: 2.6rem auto 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .hero-shot {
+    display: block;
+    width: 100%;
     aspect-ratio: 2540 / 1374;
     object-fit: cover;
-    border: 1px solid var(--edge-bright);
+    border: 1px solid var(--edge);
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, border-color 0.2s ease;
   }
+  .hero-shot-btn:hover .hero-shot,
+  .hero-shot-btn:focus-visible .hero-shot { border-color: var(--edge-bright); }
   @media (prefers-reduced-motion: reduce) { .hero-shot { transition: none; } }
+
+  /* ---------- lightbox: the hero shot, enlarged, without leaving the page ---------- */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1.5rem, 6vw, 4rem);
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  .lightbox.is-open { opacity: 1; pointer-events: auto; }
+  .lightbox img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid var(--edge-bright);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  }
+  .lightbox-close {
+    position: absolute;
+    top: clamp(0.8rem, 3vw, 1.6rem);
+    right: clamp(0.8rem, 3vw, 1.6rem);
+    width: 2.4rem;
+    height: 2.4rem;
+    font-family: var(--font-body);
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--edge);
+    cursor: pointer;
+  }
+  .lightbox-close:hover { border-color: var(--edge-bright); }
+  @media (prefers-reduced-motion: reduce) { .lightbox { transition: none; } }
 
   .btn {
     font-family: var(--font-body);
@@ -407,7 +459,9 @@
       <a class="btn ghost" href="https://github.com/dougburks/ohmydebn">View on GitHub</a>
     </div>
 
-    <img class="hero-shot" id="heroShot" src="images/ohmydebn.png" alt="OhMyDebn desktop, Ohmydebn theme" loading="eager">
+    <button class="hero-shot-btn" id="heroShotBtn" type="button" aria-label="View larger screenshot">
+      <img class="hero-shot" id="heroShot" src="images/ohmydebn.png" alt="OhMyDebn desktop, OhMyDebn theme" loading="eager">
+    </button>
   </div>
 </div>
 
@@ -636,6 +690,10 @@
   </div>
   <p class="theme-more">...and whatever you build yourself with Aether.</p>
   <div class="theme-preview" id="themePreview" aria-hidden="true"><img id="themePreviewImg" alt=""></div>
+
+  <button class="hero-shot-btn" id="galleryShotBtn" type="button" aria-label="View larger screenshot">
+    <img class="hero-shot" id="galleryShot" src="images/ohmydebn.png" alt="OhMyDebn desktop, OhMyDebn theme" loading="lazy">
+  </button>
 </section>
 
 <section class="wrap closing" id="install">
@@ -668,6 +726,11 @@
     <span><a href="https://github.com/dougburks/ohmydebn">github.com/dougburks/ohmydebn</a></span>
   </div>
 </section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged desktop screenshot">
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
 
 <script>
   (function () {
@@ -765,24 +828,65 @@
     var root = document.documentElement;
     var chips = document.querySelectorAll(".theme-chip[data-theme]");
     var heroShotEl = document.getElementById("heroShot");
+    var galleryShotEl = document.getElementById("galleryShot");
 
     // A plain src swap snaps instantly, no matter what transition is
     // set on the element - browsers don't interpolate between two
     // bitmaps. Dip the opacity, swap the src once hidden, then bring
-    // it back, so switching themes still reads as a dissolve.
-    function setHeroShot(url, alt) {
-      if (!heroShotEl) return;
+    // it back, so switching themes still reads as a dissolve. Shared
+    // by both screenshot instances - the hero's and the one below the
+    // theme gallery - since both need the identical treatment.
+    function setShotImage(el, url, alt) {
+      if (!el) return;
       if (reduceMotion) {
-        heroShotEl.src = url;
-        heroShotEl.alt = alt;
+        el.src = url;
+        el.alt = alt;
         return;
       }
-      heroShotEl.style.opacity = "0";
+      el.style.opacity = "0";
       setTimeout(function () {
-        heroShotEl.src = url;
-        heroShotEl.alt = alt;
-        heroShotEl.style.opacity = "1";
+        el.src = url;
+        el.alt = alt;
+        el.style.opacity = "1";
       }, 300);
+    }
+
+    // Lightbox: shared by both screenshot buttons. Reads whatever the
+    // clicked image currently shows, so it always matches the active
+    // theme without tracking its own state, and returns focus to
+    // whichever button opened it.
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImg = document.getElementById("lightboxImg");
+    var lightboxClose = document.getElementById("lightboxClose");
+    if (lightbox && lightboxImg && lightboxClose) {
+      var lightboxTrigger = null;
+      var openLightbox = function (imgEl, triggerBtn) {
+        lightboxImg.src = imgEl.src;
+        lightboxImg.alt = imgEl.alt;
+        lightbox.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        lightboxClose.focus();
+        lightboxTrigger = triggerBtn;
+      };
+      var closeLightbox = function () {
+        lightbox.classList.remove("is-open");
+        document.body.style.overflow = "";
+        if (lightboxTrigger) lightboxTrigger.focus();
+      };
+      [
+        [document.getElementById("heroShotBtn"), heroShotEl],
+        [document.getElementById("galleryShotBtn"), galleryShotEl]
+      ].forEach(function (pair) {
+        var btn = pair[0], img = pair[1];
+        if (btn && img) btn.addEventListener("click", function () { openLightbox(img, btn); });
+      });
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
+      });
     }
 
     // Relative luminance of a theme's real bg, to decide whether it
@@ -831,7 +935,9 @@
       if (t.shot) {
         var chip = document.querySelector('.theme-chip[data-theme="' + key + '"] .theme-name');
         var name = chip ? chip.lastChild.nodeValue.trim() : "";
-        setHeroShot(t.shot, "OhMyDebn desktop, " + name + " theme");
+        var alt = "OhMyDebn desktop, " + name + " theme";
+        setShotImage(heroShotEl, t.shot, alt);
+        setShotImage(galleryShotEl, t.shot, alt);
       }
       chips.forEach(function (c) {
         c.classList.toggle("current", c.getAttribute("data-theme") === key);
