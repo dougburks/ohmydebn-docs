@@ -228,6 +228,24 @@
   @keyframes blink { 50% { opacity: 0; } }
 
   .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1.8rem; }
+
+  /* The real desktop, not a mockup - same aspect ratio as the theme
+     screenshots used elsewhere on the page (2540x1374). Crossfades on
+     theme change via JS (a plain src swap can't transition, so opacity
+     dips, the src swaps once hidden, then it fades back in - the same
+     approach used for the term-bar copy feedback elsewhere). */
+  .hero-shot {
+    display: block;
+    width: min(100%, 46rem);
+    margin: 2.6rem auto 0;
+    aspect-ratio: 2540 / 1374;
+    object-fit: cover;
+    border: 1px solid var(--edge-bright);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    transition: opacity 0.3s ease;
+  }
+  @media (prefers-reduced-motion: reduce) { .hero-shot { transition: none; } }
+
   .btn {
     font-family: var(--font-body);
     font-weight: 600;
@@ -388,6 +406,8 @@
       <a class="btn primary" href="#install">Install</a>
       <a class="btn ghost" href="https://github.com/dougburks/ohmydebn">View on GitHub</a>
     </div>
+
+    <img class="hero-shot" id="heroShot" src="images/ohmydebn.png" alt="OhMyDebn desktop, Ohmydebn theme" loading="eager">
   </div>
 </div>
 
@@ -717,33 +737,53 @@
     // everything else from the upstream omacom/omarchy theme pack
     // (quattro branch) it's ported from.
     var THEMES = {
-      catppuccinlatte: { bg: "#eff1f5", surface: "#eaecf0", surfaceAlt: "#dcdee1", blue: "#1e66f5", cyan: "#179299", mint: "#40a02b", gold: "#d84e2b", text: "#4c4f69", textDim: "#acb0be", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin-latte/backgrounds/1-color-fade.webp" },
-      catppuccin: { bg: "#1e1e2e", surface: "#2c2c3b", surfaceAlt: "#393947", blue: "#89b4fa", cyan: "#94e2d5", mint: "#a6e3a1", gold: "#f6b6ab", text: "#cdd6f4", textDim: "#585b70", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin/backgrounds/1-totoro.webp" },
-      ethereal: { bg: "#060b1e", surface: "#151a2c", surfaceAlt: "#242839", blue: "#7d82d9", cyan: "#a3bfd1", mint: "#92a593", gold: "#eb8b54", text: "#ffcead", textDim: "#6d7db6", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ethereal/backgrounds/1-cosmic.webp" },
-      everforest: { bg: "#2d353b", surface: "#3a4147", surfaceAlt: "#464d53", blue: "#7fbbb3", cyan: "#83c092", mint: "#a7c080", gold: "#e09d7f", text: "#d3c6aa", textDim: "#475258", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/everforest/backgrounds/1-tree-tops.webp" },
-      flexokilight: { bg: "#fffcf0", surface: "#faf7eb", surfaceAlt: "#ebe8dd", blue: "#205ea6", cyan: "#3aa99f", mint: "#879a39", gold: "#d0772b", text: "#100f0f", textDim: "#b7b5ac", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/flexoki-light/backgrounds/1-orb.webp" },
-      gruvbox: { bg: "#282828", surface: "#353535", surfaceAlt: "#424242", blue: "#7daea3", cyan: "#89b482", mint: "#a9b665", gold: "#e1875c", text: "#d4be98", textDim: "#665c54", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/gruvbox/backgrounds/1-the-backwater.jpg" },
-      hackerman: { bg: "#0b0c16", surface: "#1a1b24", surfaceAlt: "#282932", blue: "#82fb9c", cyan: "#7cf8f7", mint: "#4fe88f", gold: "#50f7a3", text: "#ddf7ff", textDim: "#2d3450", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/hackerman/backgrounds/1-synth-scape.jpg" },
-      kanagawa: { bg: "#1f1f28", surface: "#2c2c35", surfaceAlt: "#3a3a42", blue: "#7e9cd8", cyan: "#6a9589", mint: "#76946a", gold: "#c17158", text: "#dcd7ba", textDim: "#54546d", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/kanagawa/backgrounds/1-kanagawa.jpg" },
-      lasthorizon: { bg: "#0c0b0c", surface: "#1b1a1b", surfaceAlt: "#292829", blue: "#b59790", cyan: "#a5a0b6", mint: "#87a9b0", gold: "#6b5e73", text: "#fafcfb", textDim: "#584e51", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/last-horizon/backgrounds/1-eyes-wide.webp" },
-      lumon: { bg: "#16242d", surface: "#24313a", surfaceAlt: "#323e46", blue: "#8bc9eb", cyan: "#b4e4f6", mint: "#5e95bc", gold: "#8bc9eb", text: "#d6e2ee", textDim: "#304860", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lumon/backgrounds/01-united-in-severance.webp" },
-      lupine: { bg: "#fafafa", surface: "#f5f5f5", surfaceAlt: "#e6e6e6", blue: "#3264eb", cyan: "#0c67de", mint: "#4a2fd0", gold: "#026fde", text: "#212121", textDim: "#9e9e9e", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lupine/backgrounds/01-cherry-blossom-bokeh.webp" },
-      matteblack: { bg: "#121212", surface: "#202020", surfaceAlt: "#2e2e2e", blue: "#e68e0d", cyan: "#bebebe", mint: "#ffc107", gold: "#c63d3d", text: "#bebebe", textDim: "#333333", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/matte-black/backgrounds/0-ship-at-sea.jpg" },
-      miasma: { bg: "#222222", surface: "#2f2f2f", surfaceAlt: "#3d3d3d", blue: "#78824b", cyan: "#c9a554", mint: "#5f875f", gold: "#8d6242", text: "#c2c2b0", textDim: "#666666", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/miasma/backgrounds/01-nature-of-fear.webp" },
-      nord: { bg: "#2e3440", surface: "#3b404b", surfaceAlt: "#474c57", blue: "#81a1c1", cyan: "#88c0d0", mint: "#a3be8c", gold: "#d5967a", text: "#d8dee9", textDim: "#4c566a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/nord/backgrounds/0-black-moon.jpg" },
-      ohmydebn: { bg: "#1e1e2e", surface: "#2c2c3b", surfaceAlt: "#393947", blue: "#89b4fa", cyan: "#94e2d5", mint: "#a6e3a1", gold: "#f6b6ab", text: "#cdd6f4", textDim: "#585b70", photo: "https://raw.githubusercontent.com/dougburks/ohmydebn/main/themes/ohmydebn/backgrounds/yosemite.png" },
-      osakajade: { bg: "#111c18", surface: "#1f2a26", surfaceAlt: "#2e3734", blue: "#509475", cyan: "#2dd5b7", mint: "#549e6a", gold: "#a2734b", text: "#c1c497", textDim: "#53685b", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/osaka-jade/backgrounds/1-glowing-city.webp" },
-      retro82: { bg: "#05182e", surface: "#14263b", surfaceAlt: "#233447", blue: "#faa968", cyan: "#8cbfb8", mint: "#028391", gold: "#faa968", text: "#f6dcac", textDim: "#2a6b78", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/retro-82/backgrounds/1-in-the-groove.webp" },
-      ristretto: { bg: "#2c2525", surface: "#393232", surfaceAlt: "#453f3f", blue: "#f38d70", cyan: "#85dacc", mint: "#adda78", gold: "#fb9a77", text: "#e6d9db", textDim: "#72696a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ristretto/backgrounds/0-launch.webp" },
-      rosepine: { bg: "#faf4ed", surface: "#f5efe8", surfaceAlt: "#e6e0da", blue: "#56949f", cyan: "#d7827e", mint: "#286983", gold: "#cf8057", text: "#575279", textDim: "#cecacd", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/rose-pine/backgrounds/1-funky-shapes.webp" },
-      solitude: { bg: "#101315", surface: "#1e2123", surfaceAlt: "#2d2f31", blue: "#798186", cyan: "#707070", mint: "#9fa5a9", gold: "#d9dbdc", text: "#cacccc", textDim: "#4b4e55", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/solitude/backgrounds/1-on-pole.webp" },
-      tokyonight: { bg: "#1a1b26", surface: "#282933", surfaceAlt: "#353640", blue: "#7aa2f7", cyan: "#449dab", mint: "#9ece6a", gold: "#eb927b", text: "#a9b1d6", textDim: "#414868", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/tokyo-night/backgrounds/0-winding-road.webp" },
-      vantablack: { bg: "#000000", surface: "#0f0f0f", surfaceAlt: "#1f1f1f", blue: "#8d8d8d", cyan: "#b0b0b0", mint: "#b6b6b6", gold: "#b9b9b9", text: "#ffffff", textDim: "#7a7a7a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/vantablack/backgrounds/0-dot-hands.webp" },
-      white: { bg: "#ffffff", surface: "#fafafa", surfaceAlt: "#ebebeb", blue: "#6e6e6e", cyan: "#3e3e3e", mint: "#3a3a3a", gold: "#4a4a4a", text: "#000000", textDim: "#808080", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/white/backgrounds/1-white.webp" }
+      catppuccinlatte: { bg: "#eff1f5", surface: "#eaecf0", surfaceAlt: "#dcdee1", blue: "#1e66f5", cyan: "#179299", mint: "#40a02b", gold: "#d84e2b", text: "#4c4f69", textDim: "#acb0be", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin-latte/backgrounds/1-color-fade.webp", shot: "images/ohmydebn-theme-catppuccin-latte.png" },
+      catppuccin: { bg: "#1e1e2e", surface: "#2c2c3b", surfaceAlt: "#393947", blue: "#89b4fa", cyan: "#94e2d5", mint: "#a6e3a1", gold: "#f6b6ab", text: "#cdd6f4", textDim: "#585b70", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/catppuccin/backgrounds/1-totoro.webp", shot: "images/ohmydebn-theme-catppuccin.png" },
+      ethereal: { bg: "#060b1e", surface: "#151a2c", surfaceAlt: "#242839", blue: "#7d82d9", cyan: "#a3bfd1", mint: "#92a593", gold: "#eb8b54", text: "#ffcead", textDim: "#6d7db6", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ethereal/backgrounds/1-cosmic.webp", shot: "images/ohmydebn-theme-ethereal.png" },
+      everforest: { bg: "#2d353b", surface: "#3a4147", surfaceAlt: "#464d53", blue: "#7fbbb3", cyan: "#83c092", mint: "#a7c080", gold: "#e09d7f", text: "#d3c6aa", textDim: "#475258", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/everforest/backgrounds/1-tree-tops.webp", shot: "images/ohmydebn-theme-everforest.png" },
+      flexokilight: { bg: "#fffcf0", surface: "#faf7eb", surfaceAlt: "#ebe8dd", blue: "#205ea6", cyan: "#3aa99f", mint: "#879a39", gold: "#d0772b", text: "#100f0f", textDim: "#b7b5ac", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/flexoki-light/backgrounds/1-orb.webp", shot: "images/ohmydebn-theme-flexoki-light.png" },
+      gruvbox: { bg: "#282828", surface: "#353535", surfaceAlt: "#424242", blue: "#7daea3", cyan: "#89b482", mint: "#a9b665", gold: "#e1875c", text: "#d4be98", textDim: "#665c54", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/gruvbox/backgrounds/1-the-backwater.jpg", shot: "images/ohmydebn-theme-gruvbox.png" },
+      hackerman: { bg: "#0b0c16", surface: "#1a1b24", surfaceAlt: "#282932", blue: "#82fb9c", cyan: "#7cf8f7", mint: "#4fe88f", gold: "#50f7a3", text: "#ddf7ff", textDim: "#2d3450", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/hackerman/backgrounds/1-synth-scape.jpg", shot: "images/ohmydebn-theme-hackerman.png" },
+      kanagawa: { bg: "#1f1f28", surface: "#2c2c35", surfaceAlt: "#3a3a42", blue: "#7e9cd8", cyan: "#6a9589", mint: "#76946a", gold: "#c17158", text: "#dcd7ba", textDim: "#54546d", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/kanagawa/backgrounds/1-kanagawa.jpg", shot: "images/ohmydebn-theme-kanagawa.png" },
+      lasthorizon: { bg: "#0c0b0c", surface: "#1b1a1b", surfaceAlt: "#292829", blue: "#b59790", cyan: "#a5a0b6", mint: "#87a9b0", gold: "#6b5e73", text: "#fafcfb", textDim: "#584e51", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/last-horizon/backgrounds/1-eyes-wide.webp", shot: "images/ohmydebn-theme-last-horizon.png" },
+      lumon: { bg: "#16242d", surface: "#24313a", surfaceAlt: "#323e46", blue: "#8bc9eb", cyan: "#b4e4f6", mint: "#5e95bc", gold: "#8bc9eb", text: "#d6e2ee", textDim: "#304860", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lumon/backgrounds/01-united-in-severance.webp", shot: "images/ohmydebn-theme-lumon.png" },
+      lupine: { bg: "#fafafa", surface: "#f5f5f5", surfaceAlt: "#e6e6e6", blue: "#3264eb", cyan: "#0c67de", mint: "#4a2fd0", gold: "#026fde", text: "#212121", textDim: "#9e9e9e", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/lupine/backgrounds/01-cherry-blossom-bokeh.webp", shot: "images/ohmydebn-theme-lupine.png" },
+      matteblack: { bg: "#121212", surface: "#202020", surfaceAlt: "#2e2e2e", blue: "#e68e0d", cyan: "#bebebe", mint: "#ffc107", gold: "#c63d3d", text: "#bebebe", textDim: "#333333", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/matte-black/backgrounds/0-ship-at-sea.jpg", shot: "images/ohmydebn-theme-matte-black.png" },
+      miasma: { bg: "#222222", surface: "#2f2f2f", surfaceAlt: "#3d3d3d", blue: "#78824b", cyan: "#c9a554", mint: "#5f875f", gold: "#8d6242", text: "#c2c2b0", textDim: "#666666", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/miasma/backgrounds/01-nature-of-fear.webp", shot: "images/ohmydebn-theme-miasma.png" },
+      nord: { bg: "#2e3440", surface: "#3b404b", surfaceAlt: "#474c57", blue: "#81a1c1", cyan: "#88c0d0", mint: "#a3be8c", gold: "#d5967a", text: "#d8dee9", textDim: "#4c566a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/nord/backgrounds/0-black-moon.jpg", shot: "images/ohmydebn-theme-nord.png" },
+      ohmydebn: { bg: "#1e1e2e", surface: "#2c2c3b", surfaceAlt: "#393947", blue: "#89b4fa", cyan: "#94e2d5", mint: "#a6e3a1", gold: "#f6b6ab", text: "#cdd6f4", textDim: "#585b70", photo: "https://raw.githubusercontent.com/dougburks/ohmydebn/main/themes/ohmydebn/backgrounds/yosemite.png", shot: "images/ohmydebn.png" },
+      osakajade: { bg: "#111c18", surface: "#1f2a26", surfaceAlt: "#2e3734", blue: "#509475", cyan: "#2dd5b7", mint: "#549e6a", gold: "#a2734b", text: "#c1c497", textDim: "#53685b", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/osaka-jade/backgrounds/1-glowing-city.webp", shot: "images/ohmydebn-theme-osaka-jade.png" },
+      retro82: { bg: "#05182e", surface: "#14263b", surfaceAlt: "#233447", blue: "#faa968", cyan: "#8cbfb8", mint: "#028391", gold: "#faa968", text: "#f6dcac", textDim: "#2a6b78", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/retro-82/backgrounds/1-in-the-groove.webp", shot: "images/ohmydebn-theme-retro-82.png" },
+      ristretto: { bg: "#2c2525", surface: "#393232", surfaceAlt: "#453f3f", blue: "#f38d70", cyan: "#85dacc", mint: "#adda78", gold: "#fb9a77", text: "#e6d9db", textDim: "#72696a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/ristretto/backgrounds/0-launch.webp", shot: "images/ohmydebn-theme-ristretto.png" },
+      rosepine: { bg: "#faf4ed", surface: "#f5efe8", surfaceAlt: "#e6e0da", blue: "#56949f", cyan: "#d7827e", mint: "#286983", gold: "#cf8057", text: "#575279", textDim: "#cecacd", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/rose-pine/backgrounds/1-funky-shapes.webp", shot: "images/ohmydebn-theme-rose-pine.png" },
+      solitude: { bg: "#101315", surface: "#1e2123", surfaceAlt: "#2d2f31", blue: "#798186", cyan: "#707070", mint: "#9fa5a9", gold: "#d9dbdc", text: "#cacccc", textDim: "#4b4e55", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/solitude/backgrounds/1-on-pole.webp", shot: "images/ohmydebn-theme-solitude.png" },
+      tokyonight: { bg: "#1a1b26", surface: "#282933", surfaceAlt: "#353640", blue: "#7aa2f7", cyan: "#449dab", mint: "#9ece6a", gold: "#eb927b", text: "#a9b1d6", textDim: "#414868", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/tokyo-night/backgrounds/0-winding-road.webp", shot: "images/ohmydebn-theme-tokyo-night.png" },
+      vantablack: { bg: "#000000", surface: "#0f0f0f", surfaceAlt: "#1f1f1f", blue: "#8d8d8d", cyan: "#b0b0b0", mint: "#b6b6b6", gold: "#b9b9b9", text: "#ffffff", textDim: "#7a7a7a", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/vantablack/backgrounds/0-dot-hands.webp", shot: "images/ohmydebn-theme-vantablack.png" },
+      white: { bg: "#ffffff", surface: "#fafafa", surfaceAlt: "#ebebeb", blue: "#6e6e6e", cyan: "#3e3e3e", mint: "#3a3a3a", gold: "#4a4a4a", text: "#000000", textDim: "#808080", photo: "https://raw.githubusercontent.com/omacom/omarchy/quattro/themes/white/backgrounds/1-white.webp", shot: "images/ohmydebn-theme-white.png" }
     };
 
     var root = document.documentElement;
     var chips = document.querySelectorAll(".theme-chip[data-theme]");
+    var heroShotEl = document.getElementById("heroShot");
+
+    // A plain src swap snaps instantly, no matter what transition is
+    // set on the element - browsers don't interpolate between two
+    // bitmaps. Dip the opacity, swap the src once hidden, then bring
+    // it back, so switching themes still reads as a dissolve.
+    function setHeroShot(url, alt) {
+      if (!heroShotEl) return;
+      if (reduceMotion) {
+        heroShotEl.src = url;
+        heroShotEl.alt = alt;
+        return;
+      }
+      heroShotEl.style.opacity = "0";
+      setTimeout(function () {
+        heroShotEl.src = url;
+        heroShotEl.alt = alt;
+        heroShotEl.style.opacity = "1";
+      }, 300);
+    }
 
     // Relative luminance of a theme's real bg, to decide whether it
     // reads as a light or a dark theme - drives whether the wordmark
@@ -788,6 +828,11 @@
       root.style.setProperty("--wordmark-1", wordmarkColor(t.blue, isLight));
       root.style.setProperty("--wordmark-2", wordmarkColor(t.cyan, isLight));
       root.style.setProperty("--wordmark-3", wordmarkColor(t.mint, isLight));
+      if (t.shot) {
+        var chip = document.querySelector('.theme-chip[data-theme="' + key + '"] .theme-name');
+        var name = chip ? chip.lastChild.nodeValue.trim() : "";
+        setHeroShot(t.shot, "OhMyDebn desktop, " + name + " theme");
+      }
       chips.forEach(function (c) {
         c.classList.toggle("current", c.getAttribute("data-theme") === key);
       });
