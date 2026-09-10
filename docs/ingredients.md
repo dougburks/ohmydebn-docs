@@ -1,6 +1,6 @@
 Here's what you get in OhMyDebn by default:
 
-- Base OS: [Debian](https://www.debian.org/) 13 for stability and compatibility
+- Base OS: [Debian](https://www.debian.org/)-based distro for stability and compatibility
 - Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
 - Desktop themes: beautiful themes from Omarchy and [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
 - Desktop icons: artfully polished icons from [Linux Mint](https://linuxmint.com/)

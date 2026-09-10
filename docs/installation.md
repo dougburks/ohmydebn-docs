@@ -46,10 +46,7 @@ Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allow
 
 ### Debian 13 Live Cinnamon
 
-If you prefer vanilla Debian, start with the Debian Live 13 Cinnamon ISO image on x86_64 hardware. Download it from <https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/> and install it. Reboot into your newly installed Debian 13 Cinnamon and the default desktop should look like this:
-![debian-cinnamon screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/debian-cinnamon.png)
-
-Then run our installer as shown above.
+If you prefer vanilla Debian, start with the Debian Live 13 Cinnamon ISO image on x86_64 hardware. Download it from <https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/> and install it. Reboot into your newly installed Debian 13 Cinnamon and then run our installer as shown above.
 
 ### Debian 13 Minimal
 
