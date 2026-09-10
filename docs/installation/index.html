@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-with-debian-live-13-cinnamon-iso-image" class="md-skip">
+        <a href="#choosing-a-base-distro" class="md-skip">
           Skip to content
         </a>
       
@@ -509,10 +509,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#installation-with-debian-live-13-cinnamon-iso-image" class="md-nav__link">
+  <a href="#choosing-a-base-distro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation with Debian Live 13 Cinnamon ISO image
+        Choosing a base distro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-with-linux-mint-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation with Linux Mint Cinnamon
       
     </span>
   </a>
@@ -543,6 +554,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#debian-13-live-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debian 13 Live Cinnamon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#debian-13-minimal" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -558,17 +580,6 @@
     <span class="md-ellipsis">
       
         Linux Mint Debian Edition 7
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linux-mint-22" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Linux Mint 22
       
     </span>
   </a>
@@ -1240,10 +1251,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#installation-with-debian-live-13-cinnamon-iso-image" class="md-nav__link">
+  <a href="#choosing-a-base-distro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation with Debian Live 13 Cinnamon ISO image
+        Choosing a base distro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-with-linux-mint-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation with Linux Mint Cinnamon
       
     </span>
   </a>
@@ -1274,6 +1296,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#debian-13-live-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debian 13 Live Cinnamon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#debian-13-minimal" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1289,17 +1322,6 @@
     <span class="md-ellipsis">
       
         Linux Mint Debian Edition 7
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linux-mint-22" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Linux Mint 22
       
     </span>
   </a>
@@ -1366,18 +1388,28 @@
 
   <h1>Installation</h1>
 
-<h2 id="installation-with-debian-live-13-cinnamon-iso-image">Installation with Debian Live 13 Cinnamon ISO image</h2>
-<p>For the quickest and easiest installation, the best option is to start with the Debian Live 13 Cinnamon ISO image on x86_64 hardware. If for some reason that doesn't work for your use case, see the <a href="#alternative-installations">alternative installation options</a> below.</p>
+<h2 id="choosing-a-base-distro">Choosing a base distro</h2>
+<p>OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), or Ubuntu 24.04/26.04. If you already have a favorite, start there - see the sections below for any distro-specific notes.</p>
+<p>If you don't have a favorite, we recommend <a href="https://linuxmint.com/download.php">Linux Mint Cinnamon Edition</a> on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with <a href="#debian-13-live-cinnamon">Debian 13</a> or <a href="#raspberry-pi">Raspberry Pi OS</a> instead.</p>
+<h2 id="installation-with-linux-mint-cinnamon">Installation with Linux Mint Cinnamon</h2>
 <ol>
-<li>Download the Debian Live 13 Cinnamon ISO image from <a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/</a> and install it. Reboot into your newly installed Debian 13 Cinnamon and the default desktop should look like this:
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/debian-cinnamon.png" data-desc-position="bottom"><img alt="debian-cinnamon screenshot" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/debian-cinnamon.png"></a></li>
-<li>In your Debian 13 Cinnamon desktop, download the installation script:
-<div class="highlight"><pre><span></span><code>curl -LO https://ohmydebn.org/install.sh
-</code></pre></div></li>
+<li>
+<p>Download the latest Linux Mint Cinnamon Edition ISO image from <a href="https://linuxmint.com/download.php">https://linuxmint.com/download.php</a> and install it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If your hardware is very new and the standard ISO won't boot or is missing drivers, use the <a href="https://www.linuxmint.com/hwe.php">Linux Mint HWE ISO</a> instead - it's the same Mint with a newer kernel for hardware enablement. Otherwise, stick with the standard ISO as Mint recommends, since proprietary drivers and third-party modules (NVIDIA, Broadcom, VirtualBox, etc.) may have limited support with newer kernels.</p>
+</div>
+</li>
+<li>
+<p>In your new Linux Mint Cinnamon desktop, download the installation script:
+</p><div class="highlight"><pre><span></span><code>curl -LO https://ohmydebn.org/install.sh
+</code></pre></div><p></p>
+</li>
 <li>Once you have reviewed install.sh and the rest of the <a href="../source-code/">source code</a>, you can run the install script as your normal non-root user:
 <div class="highlight"><pre><span></span><code>bash install.sh
 </code></pre></div></li>
 </ol>
+<p>Our installer will detect Mint and continue on with OhMyDebn installation. It will also disable a few Mint-specific autostart apps (Update Manager, System Reports, Welcome Screen, Warpinator, and Sticky Notes) that either duplicate something OhMyDebn already provides (Warpinator vs. our LocalSend integration) or just add unrequested noise on first login - you can always re-enable any of them from Cinnamon's Startup Applications settings.</p>
 <h2 id="installation-options">Installation Options</h2>
 <p>By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following options:</p>
 <ul>
@@ -1391,12 +1423,14 @@
 </p><div class="highlight"><pre><span></span><code>ohmydebn-power-user-install
 </code></pre></div><p></p>
 <h2 id="alternative-installations">Alternative installations</h2>
+<h3 id="debian-13-live-cinnamon">Debian 13 Live Cinnamon</h3>
+<p>If you prefer vanilla Debian, start with the Debian Live 13 Cinnamon ISO image on x86_64 hardware. Download it from <a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/</a> and install it. Reboot into your newly installed Debian 13 Cinnamon and the default desktop should look like this:
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/debian-cinnamon.png" data-desc-position="bottom"><img alt="debian-cinnamon screenshot" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/debian-cinnamon.png"></a></p>
+<p>Then run our installer as shown above.</p>
 <h3 id="debian-13-minimal">Debian 13 Minimal</h3>
 <p>Instead of starting from a Debian Live 13 Cinnamon ISO image, an alternative is to start from a Debian 13 minimal netinst installer on x86_64 or ARM64 hardware. Once the Debian netinst installer completes, reboot into your new installation and then start our installer as shown above. It will automatically install the necessary Cinnamon desktop packages and continue on with OhMyDebn installation. Once installation is complete, reboot and enjoy your new OhMyDebn desktop!</p>
 <h3 id="linux-mint-debian-edition-7">Linux Mint Debian Edition 7</h3>
 <p>Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allows for installation on LMDE 7.</p>
-<h3 id="linux-mint-22">Linux Mint 22</h3>
-<p>Regular Linux Mint 22.x (the Ubuntu-based edition, on x86_64 hardware) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Mint 22 and continue on with OhMyDebn installation. It will also disable a few Mint-specific autostart apps (Update Manager, System Reports, Welcome Screen, Warpinator, and Sticky Notes) that either duplicate something OhMyDebn already provides (Warpinator vs. our LocalSend integration) or just add unrequested noise on first login - you can always re-enable any of them from Cinnamon's Startup Applications settings.</p>
 <h3 id="kali-linux">Kali Linux</h3>
 <p>Kali Linux (Rolling) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Kali and continue on with OhMyDebn installation.</p>
 <h3 id="ubuntu">Ubuntu</h3>
