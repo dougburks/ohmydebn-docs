@@ -450,10 +450,6 @@
       <a class="btn primary" href="#install">Install</a>
       <a class="btn ghost" href="https://github.com/dougburks/ohmydebn">View on GitHub</a>
     </div>
-
-    <button class="hero-shot-btn" id="heroShotBtn" type="button" aria-label="View larger screenshot">
-      <img class="hero-shot" id="heroShot" src="images/ohmydebn.png" alt="OhMyDebn desktop, OhMyDebn theme" loading="eager">
-    </button>
   </div>
 </div>
 
@@ -461,8 +457,12 @@
   <div class="section-head reveal">
     <p class="eyebrow">Bundled themes</p>
     <h2>A look for every mood</h2>
-    <p>Browse a growing gallery of Omarchy-inspired looks, or build your own with Aether. This page runs on the same palette system &mdash; click any swatch below to preview it live, and the screenshot above will follow along.</p>
+    <p>Browse a growing gallery of Omarchy-inspired looks, or build your own with Aether. This page runs on the same palette system &mdash; click any swatch below to preview it live, and the screenshot will follow along.</p>
   </div>
+
+  <button class="hero-shot-btn" id="themeShotBtn" type="button" aria-label="View larger screenshot">
+    <img class="hero-shot" id="themeShot" src="images/ohmydebn.png" alt="OhMyDebn desktop, OhMyDebn theme" loading="eager">
+  </button>
 
   <div class="theme-grid" id="styleGrid">
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="catppuccinlatte" data-shot="images/ohmydebn-theme-catppuccin-latte.png">
@@ -793,7 +793,7 @@
 
     var root = document.documentElement;
     var chips = document.querySelectorAll(".theme-chip[data-theme]");
-    var heroShotEl = document.getElementById("heroShot");
+    var themeShotEl = document.getElementById("themeShot");
 
     // A plain src swap snaps instantly, no matter what transition is
     // set on the element - browsers don't interpolate between two
@@ -838,8 +838,8 @@
         document.body.style.overflow = "";
         if (lightboxTrigger) lightboxTrigger.focus();
       };
-      var heroShotBtn = document.getElementById("heroShotBtn");
-      if (heroShotBtn && heroShotEl) heroShotBtn.addEventListener("click", function () { openLightbox(heroShotEl, heroShotBtn); });
+      var themeShotBtn = document.getElementById("themeShotBtn");
+      if (themeShotBtn && themeShotEl) themeShotBtn.addEventListener("click", function () { openLightbox(themeShotEl, themeShotBtn); });
       lightboxClose.addEventListener("click", closeLightbox);
       lightbox.addEventListener("click", function (e) {
         if (e.target === lightbox) closeLightbox();
@@ -896,7 +896,7 @@
         var chip = document.querySelector('.theme-chip[data-theme="' + key + '"] .theme-name');
         var name = chip ? chip.lastChild.nodeValue.trim() : "";
         var alt = "OhMyDebn desktop, " + name + " theme";
-        setShotImage(heroShotEl, t.shot, alt);
+        setShotImage(themeShotEl, t.shot, alt);
       }
       chips.forEach(function (c) {
         c.classList.toggle("current", c.getAttribute("data-theme") === key);
