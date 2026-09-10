@@ -40,6 +40,10 @@ ohmydebn-power-user-install
 ```
 ## Alternative installations
 
+### Linux Mint Debian Edition 7
+
+Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allows for installation on LMDE 7.
+
 ### Debian 13 Live Cinnamon
 
 If you prefer vanilla Debian, start with the Debian Live 13 Cinnamon ISO image on x86_64 hardware. Download it from <https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/> and install it. Reboot into your newly installed Debian 13 Cinnamon and the default desktop should look like this:
@@ -50,10 +54,6 @@ Then run our installer as shown above.
 ### Debian 13 Minimal
 
 Instead of starting from a Debian Live 13 Cinnamon ISO image, an alternative is to start from a Debian 13 minimal netinst installer on x86_64 or ARM64 hardware. Once the Debian netinst installer completes, reboot into your new installation and then start our installer as shown above. It will automatically install the necessary Cinnamon desktop packages and continue on with OhMyDebn installation. Once installation is complete, reboot and enjoy your new OhMyDebn desktop!
-
-### Linux Mint Debian Edition 7
-
-Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allows for installation on LMDE 7.
 
 ### Kali Linux
 
