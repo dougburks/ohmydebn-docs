@@ -1,10 +1,17 @@
-## Installation with Debian Live 13 Cinnamon ISO image
+## Choosing a base distro
 
-For the quickest and easiest installation, the best option is to start with the Debian Live 13 Cinnamon ISO image on x86_64 hardware. If for some reason that doesn't work for your use case, see the [alternative installation options](#alternative-installations) below.
+OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), or Ubuntu 24.04/26.04. If you already have a favorite, start there - see the sections below for any distro-specific notes.
 
-1. Download the Debian Live 13 Cinnamon ISO image from <https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/> and install it. Reboot into your newly installed Debian 13 Cinnamon and the default desktop should look like this:
-![debian-cinnamon screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/debian-cinnamon.png)
-2. In your Debian 13 Cinnamon desktop, download the installation script:
+If you don't have a favorite, we recommend [Linux Mint Cinnamon Edition](https://linuxmint.com/download.php) on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with [Debian 13](#debian-13-live-cinnamon) or [Raspberry Pi OS](#raspberry-pi) instead.
+
+## Installation with Linux Mint Cinnamon
+
+1. Download the latest Linux Mint Cinnamon Edition ISO image from <https://linuxmint.com/download.php> and install it.
+
+    !!! tip
+        If your hardware is very new and the standard ISO won't boot or is missing drivers, use the [Linux Mint HWE ISO](https://www.linuxmint.com/hwe.php) instead - it's the same Mint with a newer kernel for hardware enablement. Otherwise, stick with the standard ISO as Mint recommends, since proprietary drivers and third-party modules (NVIDIA, Broadcom, VirtualBox, etc.) may have limited support with newer kernels.
+
+2. In your new Linux Mint Cinnamon desktop, download the installation script:
 ```
 curl -LO https://ohmydebn.org/install.sh
 ```
@@ -12,6 +19,9 @@ curl -LO https://ohmydebn.org/install.sh
 ```
 bash install.sh
 ```
+
+Our installer will detect Mint and continue on with OhMyDebn installation. It will also disable a few Mint-specific autostart apps (Update Manager, System Reports, Welcome Screen, Warpinator, and Sticky Notes) that either duplicate something OhMyDebn already provides (Warpinator vs. our LocalSend integration) or just add unrequested noise on first login - you can always re-enable any of them from Cinnamon's Startup Applications settings.
+
 ## Installation Options
 
 By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following options:
@@ -30,6 +40,13 @@ ohmydebn-power-user-install
 ```
 ## Alternative installations
 
+### Debian 13 Live Cinnamon
+
+If you prefer vanilla Debian, start with the Debian Live 13 Cinnamon ISO image on x86_64 hardware. Download it from <https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/> and install it. Reboot into your newly installed Debian 13 Cinnamon and the default desktop should look like this:
+![debian-cinnamon screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/debian-cinnamon.png)
+
+Then run our installer as shown above.
+
 ### Debian 13 Minimal
 
 Instead of starting from a Debian Live 13 Cinnamon ISO image, an alternative is to start from a Debian 13 minimal netinst installer on x86_64 or ARM64 hardware. Once the Debian netinst installer completes, reboot into your new installation and then start our installer as shown above. It will automatically install the necessary Cinnamon desktop packages and continue on with OhMyDebn installation. Once installation is complete, reboot and enjoy your new OhMyDebn desktop!
@@ -37,10 +54,6 @@ Instead of starting from a Debian Live 13 Cinnamon ISO image, an alternative is 
 ### Linux Mint Debian Edition 7
 
 Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allows for installation on LMDE 7.
-
-### Linux Mint 22
-
-Regular Linux Mint 22.x (the Ubuntu-based edition, on x86_64 hardware) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Mint 22 and continue on with OhMyDebn installation. It will also disable a few Mint-specific autostart apps (Update Manager, System Reports, Welcome Screen, Warpinator, and Sticky Notes) that either duplicate something OhMyDebn already provides (Warpinator vs. our LocalSend integration) or just add unrequested noise on first login - you can always re-enable any of them from Cinnamon's Startup Applications settings.
 
 ### Kali Linux
 

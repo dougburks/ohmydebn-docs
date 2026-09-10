@@ -23,19 +23,19 @@ Here are my requirements for a desktop environment:
 
 Cinnamon satisfies these requirements and has some nice eye candy!
 
-## Why Debian Cinnamon instead of Linux Mint?
+## Should I start with Debian or Linux Mint?
 
-Linux Mint is great, but there are a few reasons why the project defaults to vanilla Debian 13 Cinnamon instead:
+Either works great, and our installer supports both. If you're on x86_64 hardware and don't have a favorite, we recommend [Linux Mint Cinnamon Edition](installation.md#installation-with-linux-mint-cinnamon) - Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, plus a friendly installer, a driver manager, and multimedia codecs out of the box. If your hardware is very new, Mint also offers an [HWE ISO](https://www.linuxmint.com/hwe.php) with a newer kernel.
+
+That said, Debian remains the project's foundation, and there are cases where it's the right choice:
 
 - Linux Mint is only available for x86 architecture. If you're on ARM, you need a distro compiled for ARM that can run Cinnamon (like Debian).
 - Raspberry Pi OS is based on Debian 13. You can use this repo to turn it into OhMyDebn!
-- For fun and for science!
+- You want the most vanilla base possible - for fun and for science!
 
-This doesn't apply to Linux Mint Debian Edition (LMDE), though - it's already Debian-based and already ships Cinnamon, so it's just as valid a starting point as vanilla Debian. Our [installer supports installing directly onto LMDE 7](installation.md#linux-mint-debian-edition-7) if you'd rather start there and keep Mint's extras.
+Linux Mint Debian Edition (LMDE) splits the difference - it's Debian-based and already ships Cinnamon. Our [installer supports installing directly onto LMDE 7](installation.md#linux-mint-debian-edition-7) if you'd rather have Mint's extras on a Debian base.
 
-The x86-only limitation above does still apply to regular (Ubuntu-based) Linux Mint, but if you're already on x86_64 hardware and would rather keep Mint's extras than start from vanilla Debian, our [installer also supports installing directly onto Linux Mint 22](installation.md#linux-mint-22).
-
-The same reasoning applies to plain Ubuntu too - our [installer also supports installing directly onto Ubuntu 24.04/26.04](installation.md#ubuntu) if that's where you're already set up.
+Plain Ubuntu works too - our [installer also supports installing directly onto Ubuntu 24.04/26.04](installation.md#ubuntu) if that's where you're already set up.
 
 
 ## What is the relationship between OhMyDebn and Security Onion?
