@@ -677,6 +677,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scrollable-tiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrollable Tiling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#maximize-with-gaps" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1212,6 +1223,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scrollable-tiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrollable Tiling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#maximize-with-gaps" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1266,10 +1288,9 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile.png" data-desc-position="bottom"><img alt="OhMyDebn gTile window tiling" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile.png"></a></p>
 <p>To configure gTile:</p>
 <ul>
-<li>go to System Settings -&gt; Extensions</li>
-<li>next to gTile, click the Configure button</li>
+<li>press <code>Super + Shift + G</code>, or go to System Settings -&gt; Extensions and click the Configure button next to gTile</li>
 <li>click the Behavior tab</li>
-<li>from here you can adjust the window gap size, and enable Automatic tiling or Maximize with gaps (see below)</li>
+<li>from here you can adjust the window gap size, enable Maximize with gaps, and choose an Automatic tiling mode (see below)</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-settings.png" data-desc-position="bottom"><img alt="OhMyDebn gTile settings" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-settings.png"></a></p>
 <p>There are also hotkeys for common tiling options that leverage gTile for window gaps:</p>
@@ -1293,13 +1314,33 @@
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-tiling.png" data-desc-position="bottom"><img alt="OhMyDebn gTile window tiling with gaps" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-tiling.png"></a></p>
 <h2 id="automatic-tiling">Automatic Tiling</h2>
-<p>In addition to the manual tiling options above, gTile can automatically place windows for you as they open - no hotkey required. Configure this from the same Behavior tab covered above, using the <strong>Automatic tiling</strong> dropdown:</p>
+<p>In addition to the manual tiling options above, gTile can automatically place windows for you as they open - no hotkey required. Configure this from the same Behavior tab covered above, using the <strong>Tiling mode</strong> dropdown:</p>
 <ul>
 <li><strong>Off</strong> (the default) - nothing is tiled automatically; only the manual hotkeys above apply.</li>
 <li><strong>Rule-based tiling</strong> - many of OhMyDebn's own hotkey-launched apps (like <a href="../media/">cliamp</a> and <a href="../cybersecurity/">SO-CRATES</a>) are automatically placed in a sensible spot as soon as they open.</li>
 <li><strong>Traditional tiling (3 windows)</strong> - every new window is automatically split into a tiling layout, cycling through up to 3 windows before starting over - similar to a classic tiling window manager.</li>
 <li><strong>Traditional tiling (unlimited)</strong> - the same idea, but keeps splitting the screen for as many windows as you open instead of cycling back to the start.</li>
+<li><strong>Scrollable tiling (like Niri)</strong> - every new window opens as its own full-height column, and your screen becomes a viewport that scrolls across the strip of columns (see below).</li>
 </ul>
+<p>You can change the mode at any time from the Behavior tab, or just press <code>Super + L</code> to cycle through the modes (<code>Super + Shift + L</code> cycles backward) - an on-screen display shows the newly selected mode, similar to Omarchy's layout toggle. Switching modes affects windows you open afterwards; existing windows stay where they are.</p>
+<p>Windows placed by automatic tiling glide smoothly into place, Hyprland-style. You can adjust the animation duration - or set it to 0 to disable the animation - on the same Behavior tab, and <a href="../desktop-effects/">disabling desktop effects</a> disables it as well.</p>
+<h2 id="scrollable-tiling">Scrollable Tiling</h2>
+<p>Scrollable tiling is inspired by scrolling window managers like Niri and PaperWM (and the scrolling layout in Omarchy):</p>
+<ul>
+<li>The first window you open fills the screen.</li>
+<li>The second window collapses the first into a column and opens beside it as its own column. By default each column is half the screen wide; this is configurable on the Behavior tab.</li>
+<li>Additional windows keep opening as new columns, and columns that no longer fit on screen are scrolled out of view (minimized) until you come back to them.</li>
+<li>Focusing a window in any way - clicking it in the window list, <code>Alt + Tab</code>, or the hotkeys below - scrolls its column back into view.</li>
+<li>Closing a window gives its space back to the remaining columns, and when only one window remains it expands to fill the screen again.</li>
+</ul>
+<p>Navigate the strip of columns with these hotkeys:</p>
+<ul>
+<li>Press <code>Super + ,</code> to focus the column to the left.</li>
+<li>Press <code>Super + .</code> to focus the column to the right.</li>
+<li>Press <code>Super + Shift + ,</code> to move the current column to the left.</li>
+<li>Press <code>Super + Shift + .</code> to move the current column to the right.</li>
+</ul>
+<p>All of these hotkeys (and the mode-cycling hotkeys above) can be rebound on the Hotkeys tab of the gTile settings.</p>
 <h2 id="maximize-with-gaps">Maximize with Gaps</h2>
 <p>If you'd rather your maximized windows keep the same gap as your other tiled windows instead of filling the screen edge-to-edge, enable <strong>Maximize with gaps</strong> on the same Behavior tab. Once enabled, clicking a window's maximize button (or double-clicking its titlebar, or pressing <code>Super + PageUp</code>) leaves a gap around the window instead of a true edge-to-edge maximize. Doing it again restores the window to its original size and position.</p>
 
