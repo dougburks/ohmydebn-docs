@@ -33,6 +33,13 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Super + PageDown` | Minimize window |
 | `Ctrl + Alt + Down` | Window selection |
 | `Ctrl + Shift + G` | gTile window tiling |
+| `Super + Shift + G` | gTile settings |
+| `Super + L` | Cycle automatic tiling mode |
+| `Super + Shift + L` | Cycle automatic tiling mode backward |
+| `Super + ,` | Scrollable tiling: focus column to the left |
+| `Super + .` | Scrollable tiling: focus column to the right |
+| `Super + Shift + ,` | Scrollable tiling: move column left |
+| `Super + Shift + .` | Scrollable tiling: move column right |
 | `Ctrl + Shift + 1 (numeric keypad)` | Tile to bottom left corner with gaps |
 | `Ctrl + Shift + 2 (numeric keypad)` | Tile to bottom half with gaps |
 | `Ctrl + Shift + 3 (numeric keypad)` | Tile to bottom right corner with gaps |
@@ -85,6 +92,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Alt + Del` | Logout |
 | `Ctrl + Alt + End` | Shut down |
 | `Ctrl + Alt + Escape` | Restart Cinnamon desktop |
+| `Super + Alt + L` | Looking Glass (Cinnamon debugging console) |
 
 ## Virtualization
 

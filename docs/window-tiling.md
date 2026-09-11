@@ -24,10 +24,9 @@ For more advanced window tiling options, we've included a custom version of the 
 
 To configure gTile:
 
-- go to System Settings -> Extensions
-- next to gTile, click the Configure button
+- press `Super + Shift + G`, or go to System Settings -> Extensions and click the Configure button next to gTile
 - click the Behavior tab
-- from here you can adjust the window gap size, and enable Automatic tiling or Maximize with gaps (see below)
+- from here you can adjust the window gap size, enable Maximize with gaps, and choose an Automatic tiling mode (see below)
 
 ![OhMyDebn gTile settings](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-settings.png)
 
@@ -54,12 +53,36 @@ For example, to lay out windows like in the following screenshot:
 
 ## Automatic Tiling
 
-In addition to the manual tiling options above, gTile can automatically place windows for you as they open - no hotkey required. Configure this from the same Behavior tab covered above, using the **Automatic tiling** dropdown:
+In addition to the manual tiling options above, gTile can automatically place windows for you as they open - no hotkey required. Configure this from the same Behavior tab covered above, using the **Tiling mode** dropdown:
 
 - **Off** (the default) - nothing is tiled automatically; only the manual hotkeys above apply.
 - **Rule-based tiling** - many of OhMyDebn's own hotkey-launched apps (like [cliamp](media.md) and [SO-CRATES](cybersecurity.md)) are automatically placed in a sensible spot as soon as they open.
 - **Traditional tiling (3 windows)** - every new window is automatically split into a tiling layout, cycling through up to 3 windows before starting over - similar to a classic tiling window manager.
 - **Traditional tiling (unlimited)** - the same idea, but keeps splitting the screen for as many windows as you open instead of cycling back to the start.
+- **Scrollable tiling (like Niri)** - every new window opens as its own full-height column, and your screen becomes a viewport that scrolls across the strip of columns (see below).
+
+You can change the mode at any time from the Behavior tab, or just press `Super + L` to cycle through the modes (`Super + Shift + L` cycles backward) - an on-screen display shows the newly selected mode, similar to Omarchy's layout toggle. Switching modes affects windows you open afterwards; existing windows stay where they are.
+
+Windows placed by automatic tiling glide smoothly into place, Hyprland-style. You can adjust the animation duration - or set it to 0 to disable the animation - on the same Behavior tab, and [disabling desktop effects](desktop-effects.md) disables it as well.
+
+## Scrollable Tiling
+
+Scrollable tiling is inspired by scrolling window managers like Niri and PaperWM (and the scrolling layout in Omarchy):
+
+- The first window you open fills the screen.
+- The second window collapses the first into a column and opens beside it as its own column. By default each column is half the screen wide; this is configurable on the Behavior tab.
+- Additional windows keep opening as new columns, and columns that no longer fit on screen are scrolled out of view (minimized) until you come back to them.
+- Focusing a window in any way - clicking it in the window list, `Alt + Tab`, or the hotkeys below - scrolls its column back into view.
+- Closing a window gives its space back to the remaining columns, and when only one window remains it expands to fill the screen again.
+
+Navigate the strip of columns with these hotkeys:
+
+- Press `Super + ,` to focus the column to the left.
+- Press `Super + .` to focus the column to the right.
+- Press `Super + Shift + ,` to move the current column to the left.
+- Press `Super + Shift + .` to move the current column to the right.
+
+All of these hotkeys (and the mode-cycling hotkeys above) can be rebound on the Hotkeys tab of the gTile settings.
 
 ## Maximize with Gaps
 
