@@ -259,6 +259,16 @@
   .hero-shot-btn:focus-visible .hero-shot { border-color: var(--edge-bright); }
   @media (prefers-reduced-motion: reduce) { .hero-shot { transition: none; } }
 
+  .demo-video-wrap { width: min(100%, 46rem); margin: 2.4rem auto 0; }
+  .demo-video {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--edge);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    background: var(--void);
+  }
+  .demo-video-caption { margin: 0.9rem 0 0; text-align: center; font-size: 0.9rem; color: var(--text-dim); }
+
   /* ---------- lightbox: the hero shot, enlarged, without leaving the page ---------- */
   .lightbox {
     position: fixed;
@@ -584,6 +594,14 @@
       <h3>Navigation</h3>
       <p>Point and click with a mouse, or drive everything from the keyboard with hotkeys.</p>
     </div>
+  </div>
+  <div class="demo-video-wrap reveal">
+    <video class="demo-video" controls muted playsinline preload="metadata"
+           poster="images/ohmydebn-gtile-automatic-tiling-poster.jpg">
+      <source src="images/ohmydebn-gtile-automatic-tiling.mp4" type="video/mp4">
+      Your browser doesn't support embedded video.
+    </video>
+    <p class="demo-video-caption">gTile automatic tiling in action &mdash; rule-based, traditional, and scrollable modes, cycled with Super + L.</p>
   </div>
 </section>
 
