@@ -65,6 +65,12 @@ You can change the mode at any time from the Behavior tab, or just press `Super 
 
 Windows placed by automatic tiling glide smoothly into place, Hyprland-style. You can adjust the animation duration - or set it to 0 to disable the animation - on the same Behavior tab, and [disabling desktop effects](desktop-effects.md) disables it as well.
 
+Here's automatic tiling in action - rule-based, traditional (3 windows), traditional (unlimited), and scrollable modes, cycled with `Super + L`:
+
+<video controls muted playsinline preload="metadata" style="max-width: 100%;" poster="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-automatic-tiling-poster.jpg">
+  <source src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-automatic-tiling.mp4" type="video/mp4">
+</video>
+
 ## Scrollable Tiling
 
 Scrollable tiling is inspired by scrolling window managers like Niri and PaperWM (and the scrolling layout in Omarchy):
