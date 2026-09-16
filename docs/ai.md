@@ -1,4 +1,4 @@
-OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, ChatGPT, Pi, Visual Studio Code with Github Copilot AI, and Antigravity with Google Agentic AI.
+OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, ChatGPT, Codex, Pi, Visual Studio Code with Github Copilot AI, and Antigravity with Google Agentic AI.
 
 ## Default AI Assistant
 
@@ -18,7 +18,11 @@ OpenCode is available as an optional installation. You can install via the OhMyD
 
 ## ChatGPT
 
-[ChatGPT](https://chatgpt.com/) is available as an optional installation. You can install via the OhMyDebn menu (Apps->AI). You can then run via menu.
+[ChatGPT](https://chatgpt.com/) is OpenAI's desktop app and is available as an optional installation. You can install via the OhMyDebn menu (Apps->AI), where it's listed as "ChatGPT (OpenAI GUI)" to distinguish it from Codex below. You can then run via menu.
+
+## Codex
+
+[Codex](https://github.com/openai/codex) is OpenAI's terminal-based coding agent and is available as an optional installation. You can install via the OhMyDebn menu (Apps->AI), where it's listed as "Codex (OpenAI CLI)". From an existing terminal session, the `codex` alias runs it directly.
 
 ## Pi
 
