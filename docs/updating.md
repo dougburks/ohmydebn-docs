@@ -32,3 +32,17 @@ less ~/.local/state/ohmydebn-logs/update-latest.log
 Only one update can run at a time. If you start a second one, whether from the menu, the hotkey, the notification, or a terminal, it tells you an update is already running and exits. Wait for the first one to finish.
 
 If the update can't refresh the package lists, for example with no Internet access or a broken third-party repository, it stops before changing anything and tells you which repository failed. Fix or remove that repository, then run the update again.
+
+## Checking your installation
+
+OhMyDebn includes a read-only self-check that looks at everything the installer sets up and reports one line per item: packages and the OhMyDebn apt repository, the Cinnamon extension and its settings, the current theme, the login session default, the update timer, the AI tools and their shell aliases, the custom hotkeys, and the tools other OhMyDebn commands rely on. It changes nothing.
+
+Run it from the OhMyDebn menu (Update -> Doctor), or from a terminal:
+
+```bash
+ohmydebn-doctor
+```
+
+Anything marked `FAIL` is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.
+
+Run it from a terminal inside your Cinnamon session so it can check the desktop settings too. Over SSH it still runs, but the desktop-specific checks are marked as skipped rather than failed.
