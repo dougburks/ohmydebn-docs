@@ -4,6 +4,8 @@ The default browser is [Brave Origin](https://brave.com/), the minimal edition o
 
 Brave Origin is the default for new OhMyDebn installs. If you installed OhMyDebn before this change, you keep [Chromium](https://www.chromium.org/Home/) (with the uBlock Origin Lite content blocker) as your default browser - OhMyDebn never changes the default browser of an existing install. Brave Origin is one selection away in the Browsers menu if you'd like to try it. If your distribution already ships Brave Origin (LCOS does), OhMyDebn uses that copy and adds nothing.
 
+Brave Origin is free on Linux, with an optional purchase to support Brave. OhMyDebn pre-accepts the free tier for you, so the first launch opens straight to the browser instead of Brave's buy-or-proceed dialog. You can still buy it later from Brave's settings.
+
 To launch the browser, you can open it from the Cinnamon menu, from the Apps menu, or via [hotkey](hotkeys.md) `Super + B`.
 
 ## Installing Other Browsers
