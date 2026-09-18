@@ -4,7 +4,7 @@ Several options are available to handle standard office documents and spreadshee
 
 ## Xournal++
 
-PDF files open by default in the [chromium web browser](browser.md). If you need to annotate PDFs, then you can use the included [Xournal++](https://xournalpp.github.io/).
+PDF files open by default in the [web browser](browser.md). If you need to annotate PDFs, then you can use the included [Xournal++](https://xournalpp.github.io/).
 
 ## Ristretto
 

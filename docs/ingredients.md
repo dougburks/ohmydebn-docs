@@ -13,7 +13,7 @@ Here's what you get in OhMyDebn by default:
 - Application launcher: custom GTK app launcher
 - Shell cat command alternative: [bat](https://github.com/sharkdp/bat) with syntax highlighting
 - Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command and [eza](https://github.com/eza-community/eza) for beautiful directory listings
-- Web browser: [Chromium](browser.md) with uBlock Origin Lite content blocker
+- Web browser: [Brave Origin](browser.md) with its built-in Shields content blocker
 - Password management: [KeePassXC](https://keepassxc.org/)
 - Default image viewer: [Ristretto](documents.md#ristretto)
 - PDF editor: [Xournal++](documents.md#xournal)

@@ -58,7 +58,7 @@ Kali Linux (Rolling) is also supported. Once you're connected to the Internet, r
 
 ### Ubuntu
 
-Ubuntu 24.04 LTS and 26.04 LTS (on x86_64 hardware) are also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Ubuntu and continue on with OhMyDebn installation. Chromium is only available as a snap on Ubuntu, so that's how OhMyDebn installs and configures it there - functionally equivalent, though its Appearance settings currently can't follow your OhMyDebn theme's dark/light mode automatically due to a snap packaging limitation.
+Ubuntu 24.04 LTS and 26.04 LTS (on x86_64 hardware) are also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Ubuntu and continue on with OhMyDebn installation. The default browser, Brave Origin, installs from Brave's own repository there just as on Debian. If you install Chromium as an optional browser, note that it's only available as a snap on Ubuntu, so that's how OhMyDebn installs and configures it there - functionally equivalent, though its Appearance settings currently can't follow your OhMyDebn theme's dark/light mode automatically due to a snap packaging limitation.
 
 ### Raspberry Pi
 

@@ -135,7 +135,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Super + Return` | [herdr](terminal.md#herdr)
 | `Super + Alt + Return` | [tmux](terminal.md#tmux) terminal
 
-## Browser (Chromium)
+## Browser (Brave Origin / Chromium)
 
 | Hotkey | Function |
 |--------|----------|
