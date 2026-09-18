@@ -27,6 +27,8 @@ Every update is logged to `~/.local/state/ohmydebn-logs/`, one file per run, wit
 less ~/.local/state/ohmydebn-logs/update-latest.log
 ```
 
+Alongside it, `stages-latest.log` is a short timeline of the same run: one line per stage with the clock time and how long into the run it started, which is the quickest way to see which stage took the time.
+
 ## One update at a time
 
 Only one update can run at a time. If you start a second one, whether from the menu, the hotkey, the notification, or a terminal, it tells you an update is already running and exits. Wait for the first one to finish.
