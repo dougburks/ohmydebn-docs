@@ -33,7 +33,7 @@ Alongside it, `stages-latest.log` is a short timeline of the same run: one line 
 
 Only one update can run at a time. If you start a second one, whether from the menu, the hotkey, the notification, or a terminal, it tells you an update is already running and exits. Wait for the first one to finish.
 
-If the update can't refresh the package lists, for example with no Internet access or a broken third-party repository, it stops before changing anything and tells you which repository failed. Fix or remove that repository, then run the update again.
+If the update can't reach OhMyDebn's own package repository, for example with no Internet access, it stops before changing anything and tells you. Any other repository that fails to refresh, such as a third-party one that is down or no longer exists, is listed in a warning and skipped for that run, and the update continues. If a listed repository is one you no longer need, remove it from `/etc/apt/sources.list.d/`.
 
 ## Checking your installation
 
