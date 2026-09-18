@@ -17,7 +17,7 @@ This will update the base OS packages, our OhMyDebn packages, and any config fil
 
 ## Reboots
 
-If the update installs a new kernel, or a package asks for a reboot, the update finishes with a notice saying so. Nothing is broken in the meantime, the new kernel simply isn't in use until you reboot, so reboot whenever it's convenient.
+If the update installs a new kernel, or a package asks for a reboot, the update finishes with a notice saying so. Nothing is broken in the meantime: a new kernel simply isn't in use until you reboot, and a package that asked for a reboot (such as libc6) is already installed, with programs that were already running keeping its old version loaded until they restart. Reboot whenever it's convenient.
 
 ## Logs
 
