@@ -44,9 +44,13 @@ SSH server is available as an optional installation. You can install via OhMyDeb
 
 OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhMyDebn never opens a port for you, so the server stays unreachable until you allow port 22. The installer and the menu's status window print the two commands: allow from one address or range (recommended), or allow from anywhere.
 
-## Remote Desktop
+## Remote Desktop Client
 
-Remote desktop access over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation via OhMyDebn menu (Apps->Utility->Remote Desktop). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with [Remmina](https://remmina.org/) or any RDP client, using the address the menu shows and port 3389.
+[Remmina](https://remmina.org/), a remote desktop client for RDP and VNC, is available as an optional installation via OhMyDebn menu (Apps->Utility->Remote Desktop Client). Use it to connect to another machine's desktop, such as an OhMyDebn machine running the Remote Desktop Server below.
+
+## Remote Desktop Server
+
+Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation via OhMyDebn menu (Apps->Utility->Remote Desktop Server). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389.
 
 Some things to know:
 
@@ -54,4 +58,4 @@ Some things to know:
 - Log in over RDP as a user who isn't logged into the local desktop. Running one user's Cinnamon desktop both locally and remotely at the same time causes conflicts, so OhMyDebn refuses a remote session for a user who already has a local graphical one. A separate user for remote access is simplest. Give that user a strong password: an account whose password is empty can log in over RDP.
 - A user new to OhMyDebn gets a stock Cinnamon desktop until they run the installer once in their own session, with `bash /usr/share/ohmydebn/install.sh`. After that, each user refreshes their own desktop configuration by running `ohmydebn-update` (which needs sudo), since OhMyDebn applies its configuration per user.
 
-To remove it later, run `ohmydebn-remote-desktop-remove`. It removes the packages and the settings OhMyDebn added, and leaves any firewall rule you created for you to remove.
+To remove it later, run `ohmydebn-remote-desktop-server-remove`. It removes the packages and the settings OhMyDebn added, and leaves any firewall rule you created for you to remove.
