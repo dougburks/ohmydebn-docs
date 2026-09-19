@@ -41,3 +41,17 @@ To test your network or disk speed, open the OhMyDebn menu and choose `Trigger` 
 ## SSH Server
 
 SSH server is available as an optional installation. You can install via OhMyDebn menu (Apps->Utility). You can then SSH to the system from other systems.
+
+OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhMyDebn never opens a port for you, so the server stays unreachable until you allow port 22. The installer and the menu's status window print the two commands: allow from one address or range (recommended), or allow from anywhere.
+
+## Remote Desktop
+
+Remote desktop access over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation via OhMyDebn menu (Apps->Utility->Remote Desktop). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with [Remmina](https://remmina.org/) or any RDP client, using the address the menu shows and port 3389.
+
+Some things to know:
+
+- As with SSH, the firewall stays closed to port 3389 until you allow it. The installer and status window print the commands for allowing one address or range, or anywhere.
+- Log in over RDP as a user who isn't logged into the local desktop. Running one user's Cinnamon desktop both locally and remotely at the same time causes conflicts, so OhMyDebn refuses a remote login for a user who already has a local graphical session. A separate user for remote access is simplest.
+- If you already have your own `~/.xsession`, OhMyDebn leaves it alone and XRDP runs it as your remote session.
+
+To remove it later, run `ohmydebn-remote-desktop-remove`. It removes the packages and the settings OhMyDebn added, and leaves any firewall rule you created for you to remove.
