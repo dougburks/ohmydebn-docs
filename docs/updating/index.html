@@ -80,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#reboots" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -968,6 +973,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updating
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -984,6 +1007,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#reboots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reboots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-update-at-a-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One update at a time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-your-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking your installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1088,6 +1172,58 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#reboots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reboots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-update-at-a-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One update at a time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-your-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking your installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1120,6 +1256,23 @@
 </code></pre></div></li>
 </ul>
 <p>This will update the base OS packages, our OhMyDebn packages, and any config files if necessary.</p>
+<h2 id="reboots">Reboots</h2>
+<p>If the update installs a new kernel, or a package asks for a reboot, the update finishes with a notice saying so. Nothing is broken in the meantime: a new kernel simply isn't in use until you reboot, and a package that asked for a reboot (such as libc6) is already installed, with programs that were already running keeping its old version loaded until they restart. Reboot whenever it's convenient.</p>
+<h2 id="logs">Logs</h2>
+<p>Every update is logged to <code>~/.local/state/ohmydebn-logs/</code>, one file per run, with <code>update-latest.log</code> always pointing at the most recent one. The ten most recent logs are kept. If an update fails, that log is the thing to look at (or to include when asking for help):</p>
+<div class="highlight"><pre><span></span><code>less<span class="w"> </span>~/.local/state/ohmydebn-logs/update-latest.log
+</code></pre></div>
+<p>Alongside it, <code>stages-latest.log</code> is a short timeline of the same run: one line per stage with the clock time and how long into the run it started, which is the quickest way to see which stage took the time.</p>
+<h2 id="one-update-at-a-time">One update at a time</h2>
+<p>Only one update can run at a time. If you start a second one, whether from the menu, the hotkey, the notification, or a terminal, it tells you an update is already running and exits. Wait for the first one to finish.</p>
+<p>If the update can't reach OhMyDebn's own package repository, for example with no Internet access, it stops before changing anything and tells you. Any other repository that fails to refresh, such as a third-party one that is down or no longer exists, is listed in a warning and skipped for that run, and the update continues. If a listed repository is one you no longer need, remove it from <code>/etc/apt/sources.list.d/</code>.</p>
+<h2 id="checking-your-installation">Checking your installation</h2>
+<p>OhMyDebn includes a read-only self-check that looks at everything the installer sets up and reports one line per item: packages and the OhMyDebn apt repository, the Cinnamon extension and its settings, the current theme, the login session default, the update timer, the AI tools and their shell aliases, the custom hotkeys, and the tools other OhMyDebn commands rely on. It changes nothing.</p>
+<p>Run it from the OhMyDebn menu (Update -&gt; Doctor), or from a terminal:</p>
+<div class="highlight"><pre><span></span><code>ohmydebn-doctor
+</code></pre></div>
+<p>Anything marked <code>FAIL</code> is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.</p>
+<p>Run it from a terminal inside your Cinnamon session so it can check the desktop settings too. Over SSH it still runs, but the desktop-specific checks are marked as skipped rather than failed.</p>
 
 
 
