@@ -1,5 +1,29 @@
 Pressing `Super + K` will open the [browser](browser.md) and navigate to this list of keyboard bindings.
 
+## Customizing hotkeys
+
+Your own hotkeys live in `~/.config/ohmydebn/hotkeys.txt`. OhMyDebn applies that file on top of the stock hotkeys below every time `ohmydebn-update` runs, whenever you change it, and whenever you run `ohmydebn-hotkeys-apply`. Copy the file to another OhMyDebn machine and run `ohmydebn-hotkeys-apply` there to get the same hotkeys.
+
+To get started, run `ohmydebn-hotkeys-edit` or choose OhMyDebn Menu → Setup → Hotkeys. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.
+
+Stock hotkeys are addressed by name. Names are the first quoted field in `/usr/share/ohmydebn/install/keybinding/keybinding-custom.txt`, for example `"Browser"`, `"Neovim"` or `"X"`. The file understands three verbs:
+
+```bash
+# Add a hotkey, or change the stock hotkey of that name (command and/or key).
+hotkey "Slack" "/usr/share/ohmydebn/bin/ohmydebn-launch-webapp https://slack.com" "['<Super>S']"
+hotkey "Neovim" "/usr/share/ohmydebn/bin/ohmydebn-neovim" "['<Super>V']"
+
+# Remove a stock hotkey's key.
+hotkey-unbind "X"
+
+# Change one of Cinnamon's own shortcuts (same arguments as keybinding-cinnamon.txt).
+hotkey-cinnamon "wm" "close" "['<Alt>F4']"
+```
+
+A key you use in a `hotkey` line is automatically removed from whichever stock hotkey had it before, and the apply output tells you so. Deleting a line reverts that hotkey to stock on the next apply. Changes take effect immediately; no Cinnamon restart is needed. `ohmydebn-doctor` warns when the file has been edited but not applied.
+
+This page lists the stock hotkeys only. Your own additions are visible in Cinnamon Settings → Keyboard → Shortcuts → Custom Shortcuts.
+
 ## OhMyDebn
 
 | Hotkey | Function |
