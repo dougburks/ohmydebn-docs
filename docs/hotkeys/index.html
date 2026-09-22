@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#customizing-keybindings" class="md-skip">
+        <a href="#ohmydebn" class="md-skip">
           Skip to content
         </a>
       
@@ -1076,17 +1076,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#customizing-keybindings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Customizing keybindings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ohmydebn" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1276,6 +1265,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-keybindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing keybindings
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1339,17 +1339,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#customizing-keybindings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Customizing keybindings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ohmydebn" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1542,6 +1531,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#customizing-keybindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing keybindings
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1565,22 +1565,6 @@
   <h1>Hotkeys</h1>
 
 <p>Pressing <code>Super + K</code> will open the <a href="../browser/">browser</a> and navigate to this list of keyboard bindings.</p>
-<h2 id="customizing-keybindings">Customizing keybindings</h2>
-<p>Your own keybindings live in <code>~/.config/ohmydebn/keybindings.txt</code>. OhMyDebn applies that file on top of the stock keybindings every time <code>ohmydebn-update</code> runs, whenever you change it, and whenever you run <code>ohmydebn-keybindings-apply</code>. Copy the file to another OhMyDebn machine and run <code>ohmydebn-keybindings-apply</code> there to get the same keybindings.</p>
-<p>To get started, run <code>ohmydebn-keybindings-edit</code> or choose OhMyDebn Menu → Setup → Keybindings. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.</p>
-<p>Stock keybindings are addressed by name. Names are the first quoted field in <code>/usr/share/ohmydebn/install/keybinding/keybinding-custom.txt</code>, for example <code>"Browser"</code>, <code>"Neovim"</code> or <code>"X"</code>. The file understands three verbs:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Add a keybinding, or change the stock keybinding of that name (command and/or key).</span>
-keybinding<span class="w"> </span><span class="s2">"Slack"</span><span class="w"> </span><span class="s2">"/usr/share/ohmydebn/bin/ohmydebn-launch-webapp https://slack.com"</span><span class="w"> </span><span class="s2">"['&lt;Super&gt;S']"</span>
-keybinding<span class="w"> </span><span class="s2">"Neovim"</span><span class="w"> </span><span class="s2">"/usr/share/ohmydebn/bin/ohmydebn-neovim"</span><span class="w"> </span><span class="s2">"['&lt;Super&gt;V']"</span>
-
-<span class="c1"># Remove a stock keybinding's key.</span>
-keybinding-unbind<span class="w"> </span><span class="s2">"X"</span>
-
-<span class="c1"># Change one of Cinnamon's own shortcuts (same verb and arguments as keybinding-cinnamon.txt).</span>
-keybinding-cinnamon<span class="w"> </span><span class="s2">"wm"</span><span class="w"> </span><span class="s2">"close"</span><span class="w"> </span><span class="s2">"['&lt;Alt&gt;F4']"</span>
-</code></pre></div>
-<p>A key you use in a <code>keybinding</code> line is automatically removed from whichever stock keybinding had it before, and the apply output tells you so. Deleting a line reverts that keybinding to stock on the next apply. Changes take effect immediately; no Cinnamon restart is needed. <code>ohmydebn-doctor</code> warns when the file has been edited but not applied.</p>
-<p>This page lists the stock hotkeys only. Your own additions are visible in Cinnamon Settings → Keyboard → Shortcuts → Custom Shortcuts.</p>
 <h2 id="ohmydebn">OhMyDebn</h2>
 <table>
 <thead>
@@ -1595,7 +1579,7 @@ keybinding-cinnamon<span class="w"> </span><span class="s2">"wm"</span><span cla
 <td>Cinnamon menu</td>
 </tr>
 <tr>
-<td><code>Super + Space</code> or <code>Super + Alt + Space</code></td>
+<td><code>Super + Space</code></td>
 <td>OhMyDebn menu</td>
 </tr>
 <tr>
@@ -1856,27 +1840,27 @@ keybinding-cinnamon<span class="w"> </span><span class="s2">"wm"</span><span cla
 </thead>
 <tbody>
 <tr>
-<td>Shift + Up</td>
+<td><code>Shift + Up</code></td>
 <td>Select text one line up</td>
 </tr>
 <tr>
-<td>Shift + Down</td>
+<td><code>Shift + Down</code></td>
 <td>Select text one line down</td>
 </tr>
 <tr>
-<td>Shift + Left</td>
+<td><code>Shift + Left</code></td>
 <td>Select text one character to the left</td>
 </tr>
 <tr>
-<td>Shift + Right</td>
+<td><code>Shift + Right</code></td>
 <td>Select text one character to the right</td>
 </tr>
 <tr>
-<td>Ctrl + Shift + Left</td>
+<td><code>Ctrl + Shift + Left</code></td>
 <td>Select text one word to the left</td>
 </tr>
 <tr>
-<td>Ctrl + Shift + Right</td>
+<td><code>Ctrl + Shift + Right</code></td>
 <td>Select text one word to the right</td>
 </tr>
 </tbody>
@@ -1960,7 +1944,7 @@ keybinding-cinnamon<span class="w"> </span><span class="s2">"wm"</span><span cla
 </thead>
 <tbody>
 <tr>
-<td><code>Super + R</code></td>
+<td><code>Super + R</code> or <code>Super + Alt + Space</code></td>
 <td>Application Launcher</td>
 </tr>
 <tr>
@@ -2144,6 +2128,10 @@ keybinding-cinnamon<span class="w"> </span><span class="s2">"wm"</span><span cla
 <td><code>Shift + Super + S</code></td>
 <td>Sound menu</td>
 </tr>
+<tr>
+<td><code>Ctrl + Shift + Super + O</code></td>
+<td>Toggle video rotation lock</td>
+</tr>
 </tbody>
 </table>
 <h2 id="capture">Capture</h2>
@@ -2315,6 +2303,22 @@ keybinding-cinnamon<span class="w"> </span><span class="s2">"wm"</span><span cla
 </tbody>
 </table>
 <p>For the full list of all Neovim hotkeys configured by LazyVim, please see <a href="https://www.lazyvim.org/keymaps">https://www.lazyvim.org/keymaps</a>.</p>
+<h2 id="customizing-keybindings">Customizing keybindings</h2>
+<p>Your own keybindings live in <code>~/.config/ohmydebn/keybindings.txt</code>. OhMyDebn applies that file on top of the stock keybindings every time <code>ohmydebn-update</code> runs, whenever you change it, and whenever you run <code>ohmydebn-keybindings-apply</code>. Copy the file to another OhMyDebn machine and run <code>ohmydebn-keybindings-apply</code> there to get the same keybindings.</p>
+<p>To get started, run <code>ohmydebn-keybindings-edit</code> or choose OhMyDebn Menu → Setup → Keybindings. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.</p>
+<p>Stock keybindings are addressed by name. Names are the first quoted field in <code>/usr/share/ohmydebn/install/keybinding/keybinding-custom.txt</code>, for example <code>"Browser"</code>, <code>"Neovim"</code> or <code>"X"</code>. The file understands three verbs:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add a keybinding, or change the stock keybinding of that name (command and/or key).</span>
+keybinding<span class="w"> </span><span class="s2">"Slack"</span><span class="w"> </span><span class="s2">"/usr/share/ohmydebn/bin/ohmydebn-launch-webapp https://slack.com"</span><span class="w"> </span><span class="s2">"['&lt;Super&gt;S']"</span>
+keybinding<span class="w"> </span><span class="s2">"Neovim"</span><span class="w"> </span><span class="s2">"/usr/share/ohmydebn/bin/ohmydebn-neovim"</span><span class="w"> </span><span class="s2">"['&lt;Super&gt;V']"</span>
+
+<span class="c1"># Remove a stock keybinding's key.</span>
+keybinding-unbind<span class="w"> </span><span class="s2">"X"</span>
+
+<span class="c1"># Change one of Cinnamon's own shortcuts (same verb and arguments as keybinding-cinnamon.txt).</span>
+keybinding-cinnamon<span class="w"> </span><span class="s2">"wm"</span><span class="w"> </span><span class="s2">"close"</span><span class="w"> </span><span class="s2">"['&lt;Alt&gt;F4']"</span>
+</code></pre></div>
+<p>A key you use in a <code>keybinding</code> line is automatically removed from whichever stock keybinding had it before, and the apply output tells you so. Deleting a line reverts that keybinding to stock on the next apply. Changes take effect immediately; no Cinnamon restart is needed. <code>ohmydebn-doctor</code> warns when the file has been edited but not applied.</p>
+<p>This page lists the stock hotkeys only. Your own additions are visible in Cinnamon Settings → Keyboard → Shortcuts → Custom Shortcuts.</p>
 
 
 

@@ -1249,13 +1249,18 @@
 <p>Also make sure that you have stable power and Internet access to avoid any interruptions to the update process.</p>
 <p>In addition to the pop-up notification, there are a few other ways to start the update process:</p>
 <ul>
-<li>open the OhMyDebn menu and select Update - OhMydebn</li>
+<li>open the OhMyDebn menu and select Update &gt; OhMyDebn</li>
 <li>use <a href="../hotkeys/">hotkey</a> Ctrl + Super + U</li>
 <li>if you're already in a <a href="../terminal/">terminal</a> and want to run from there then you can use:
 <div class="highlight"><pre><span></span><code>ohmydebn-update
 </code></pre></div></li>
 </ul>
 <p>This will update the base OS packages, our OhMyDebn packages, and any config files if necessary.</p>
+<p>Before it starts, the update window shows your current OhMyDebn version and whether a newer release is available, so you know in advance whether the run will bring a new OhMyDebn or just OS package updates. The update runs either way.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On <a href="../installation/#devuan-6-excalibur">Devuan and LCOS</a> there is no systemd, so the automatic update check and its notification are not installed. Start updates yourself using any of the methods above.</p>
+</div>
 <h2 id="reboots">Reboots</h2>
 <p>If the update installs a new kernel, or a package asks for a reboot, the update finishes with a notice saying so. Nothing is broken in the meantime: a new kernel simply isn't in use until you reboot, and a package that asked for a reboot (such as libc6) is already installed, with programs that were already running keeping its old version loaded until they restart. Reboot whenever it's convenient.</p>
 <h2 id="logs">Logs</h2>
@@ -1273,6 +1278,7 @@
 </code></pre></div>
 <p>Anything marked <code>FAIL</code> is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.</p>
 <p>Run it from a terminal inside your Cinnamon session so it can check the desktop settings too. Over SSH it still runs, but the desktop-specific checks are marked as skipped rather than failed.</p>
+<p>If you suspect a problem with <a href="../window-tiling/#automatic-tiling">automatic tiling</a>, <code>ohmydebn-doctor --exercise-tiling</code> goes a step further: it switches to an empty workspace, cycles through every tiling mode, opens and closes test windows, and checks that each one lands where it should. It restores your workspace and tiling mode when it finishes.</p>
 
 
 

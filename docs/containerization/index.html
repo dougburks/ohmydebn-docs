@@ -1254,6 +1254,7 @@
 <p>Then log out and back in for the change to take effect.</p>
 <h2 id="podman">Podman</h2>
 <p>To install <a href="https://podman.io/">Podman</a>, launch the OhMyDebn menu and then select <code>Apps</code> - <code>Containers</code> - <code>Podman</code>.</p>
+<p>Podman runs rootless, as your own user. OhMyDebn installs the <code>uidmap</code> and <code>passt</code> packages alongside it and makes sure your user has the subordinate UID and GID ranges rootless containers need, so image pulls and networking work out of the box, including on distros like Devuan and LCOS whose installers don't set those up. If a bare Podman was installed some other way and is missing those pieces, the same menu entry repairs it.</p>
 <h2 id="distrobox">Distrobox</h2>
 <p><a href="https://distrobox.it/">Distrobox</a> allows you to use any Linux distro inside your terminal. It does this using containers and can use either Docker or Podman.</p>
 <p>To install Distrobox, launch the OhMyDebn menu and then select <code>Apps</code> - <code>Containers</code> - <code>Distrobox</code>.</p>
