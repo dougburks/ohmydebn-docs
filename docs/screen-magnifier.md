@@ -1,6 +1,6 @@
 ## Enabling Screen Magnifier
 
-If you need to zoom in on part of your screen, you can do so by enabling the magnifier via the OhMyDebn menu. 
+If you need to zoom in on part of your screen, you can do so by enabling the magnifier via the OhMyDebn menu (Apps > Utility > Screen Magnifier). It is enabled automatically if you install with the [`--power-user` option](installation.md#installation-options).
 
 ## Using Screen Magnifier
 

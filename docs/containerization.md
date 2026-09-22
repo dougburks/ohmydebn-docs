@@ -18,6 +18,8 @@ Then log out and back in for the change to take effect.
 
 To install [Podman](https://podman.io/), launch the OhMyDebn menu and then select `Apps` - `Containers` - `Podman`.
 
+Podman runs rootless, as your own user. OhMyDebn installs the `uidmap` and `passt` packages alongside it and makes sure your user has the subordinate UID and GID ranges rootless containers need, so image pulls and networking work out of the box, including on distros like Devuan and LCOS whose installers don't set those up. If a bare Podman was installed some other way and is missing those pieces, the same menu entry repairs it.
+
 ## Distrobox
 
 [Distrobox](https://distrobox.it/) allows you to use any Linux distro inside your terminal. It does this using containers and can use either Docker or Podman.

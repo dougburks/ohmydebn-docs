@@ -1,6 +1,6 @@
 ## Choosing a base distro
 
-OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), or Ubuntu 24.04/26.04. If you already have a favorite, start there - see the sections below for any distro-specific notes.
+OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Devuan 6 (Excalibur), or LCOS. If you already have a favorite, start there - see the sections below for any distro-specific notes.
 
 If you don't have a favorite, we recommend [Linux Mint Cinnamon Edition](https://linuxmint.com/download.php) on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with [Debian 13](#debian-13-live-cinnamon) or [Raspberry Pi OS](#raspberry-pi) instead.
 
@@ -27,6 +27,7 @@ Our installer will detect Mint and continue on with OhMyDebn installation. It wi
 By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following options:
 
 - `--power-user` - removes optional apps that ship in your base distro (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: [Virtual Machine Manager](virtualization.md#virtual-machine-manager), Brave Origin, GIMP, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3. It also enables the [screen magnifier](screen-magnifier.md). On Kali Linux, Firefox is left in place even with this option since Kali doesn't ship an alternative browser by default.
+- `--skip-upgrade` - skips the full upgrade of every package that the installer normally runs near the end, and nothing else. This makes a first install faster on a test VM, but a fresh ISO can be months behind on security fixes and nothing else applies them until the next `ohmydebn-update`, which does upgrade everything. Not recommended for a machine you'll keep.
 - `--yes` - skips every confirmation prompt for unattended installs (for example, scripted or automated provisioning). Everything the prompts warn about still happens; this only removes the pause to read them, so make sure you understand those warnings before using it.
 
 Example:
@@ -59,6 +60,23 @@ Kali Linux (Rolling) is also supported. Once you're connected to the Internet, r
 ### Ubuntu
 
 Ubuntu 24.04 LTS and 26.04 LTS (on x86_64 hardware) are also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Ubuntu and continue on with OhMyDebn installation. The default browser, Brave Origin, installs from Brave's own repository there just as on Debian. If you install Chromium as an optional browser, note that it's only available as a snap on Ubuntu, so that's how OhMyDebn installs and configures it there - functionally equivalent, though its Appearance settings currently can't follow your OhMyDebn theme's dark/light mode automatically due to a snap packaging limitation.
+
+### Devuan 6 Excalibur
+
+[Devuan](https://www.devuan.org/) is Debian without systemd, and Devuan 6 (Excalibur) is based on Debian 13. Download it from <https://www.devuan.org/get-devuan>, install it with whichever desktop the Devuan installer offers, and run our installer as shown above. It will detect Devuan, install the Cinnamon desktop alongside whatever the ISO shipped (XFCE by default), and leave your Devuan package sources exactly as they are, since replacing them with Debian's would pull systemd back in.
+
+A few things work differently without systemd:
+
+- Cinnamon becomes the default login session. Devuan's SLiM login manager has no session menu, so if you want a different desktop for a single login, press `F1` at the login screen.
+- There is no background timer to check for new OhMyDebn releases, so you won't get update notifications. Check for updates yourself from the OhMyDebn menu (Update > OhMyDebn) or with `Ctrl + Super + U`, as described in [Updating](updating.md).
+- Suspend, Restart, and Shutdown in the System menu, plus the SSH and Remote Desktop server status windows, use Devuan's own tools instead of systemd's. Everything else in OhMyDebn works the same.
+
+### LCOS
+
+[LCOS](https://github.com/BryanLunduke/LCOS) (the Lunduke Computer Operating System) is built on Devuan 6 Excalibur, so everything in the [Devuan section](#devuan-6-excalibur) applies. Run our installer as shown above and it will detect LCOS and continue on with OhMyDebn installation. Two LCOS-specific notes:
+
+- LCOS already ships Brave Origin, OhMyDebn's [default browser](browser.md), so OhMyDebn uses that copy and adds nothing.
+- LCOS uses the LightDM login manager. OhMyDebn makes Cinnamon the default session for anyone who hasn't logged in yet, but LightDM remembers each user's last session, so if you've already logged into XFCE, pick Cinnamon once from the session menu on the login screen and LightDM will remember it from then on.
 
 ### Raspberry Pi
 

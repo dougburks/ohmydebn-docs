@@ -6,8 +6,7 @@ Desktop and window effects are enabled by default.
 
 If you would like to disable desktop effects:
 
-- go to the Cinnamon menu and select System Settings
-- click Effects
+- go to the Cinnamon menu and select System Settings, then click Effects (or open the OhMyDebn menu and select Style > Effects)
 - click the slider next to `Desktop and window effects` to disable
 
 Disabling desktop effects also disables gTile's [automatic tiling animation](window-tiling.md#automatic-tiling).

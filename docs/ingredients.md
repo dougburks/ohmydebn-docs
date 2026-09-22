@@ -1,6 +1,6 @@
 Here's what you get in OhMyDebn by default:
 
-- Base OS: [Debian](https://www.debian.org/)-based distro for stability and compatibility
+- Base OS: [Debian](https://www.debian.org/)-based distro for stability and compatibility (including systemd-free [Devuan and LCOS](installation.md#devuan-6-excalibur))
 - Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
 - Desktop themes: beautiful themes from Omarchy and [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
 - Desktop icons: artfully polished icons from [Linux Mint](https://linuxmint.com/)
@@ -33,4 +33,6 @@ Here are some additional components that you can optionally install:
 - Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)
 - Terminal music player: [cliamp](media.md#cliamp)
 - Image editor: [GIMP](documents.md#gimp)
+- Text editor: [Emacs](text-editor.md#emacs)
+- Remote access: [SSH server, Remote Desktop server and client](utilities.md#ssh-server)
 - anything from the massive [Debian repo](https://packages.debian.org/trixie/)!
