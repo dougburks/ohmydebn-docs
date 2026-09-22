@@ -1,35 +1,11 @@
 Pressing `Super + K` will open the [browser](browser.md) and navigate to this list of keyboard bindings.
 
-## Customizing keybindings
-
-Your own keybindings live in `~/.config/ohmydebn/keybindings.txt`. OhMyDebn applies that file on top of the stock keybindings every time `ohmydebn-update` runs, whenever you change it, and whenever you run `ohmydebn-keybindings-apply`. Copy the file to another OhMyDebn machine and run `ohmydebn-keybindings-apply` there to get the same keybindings.
-
-To get started, run `ohmydebn-keybindings-edit` or choose OhMyDebn Menu → Setup → Keybindings. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.
-
-Stock keybindings are addressed by name. Names are the first quoted field in `/usr/share/ohmydebn/install/keybinding/keybinding-custom.txt`, for example `"Browser"`, `"Neovim"` or `"X"`. The file understands three verbs:
-
-```bash
-# Add a keybinding, or change the stock keybinding of that name (command and/or key).
-keybinding "Slack" "/usr/share/ohmydebn/bin/ohmydebn-launch-webapp https://slack.com" "['<Super>S']"
-keybinding "Neovim" "/usr/share/ohmydebn/bin/ohmydebn-neovim" "['<Super>V']"
-
-# Remove a stock keybinding's key.
-keybinding-unbind "X"
-
-# Change one of Cinnamon's own shortcuts (same verb and arguments as keybinding-cinnamon.txt).
-keybinding-cinnamon "wm" "close" "['<Alt>F4']"
-```
-
-A key you use in a `keybinding` line is automatically removed from whichever stock keybinding had it before, and the apply output tells you so. Deleting a line reverts that keybinding to stock on the next apply. Changes take effect immediately; no Cinnamon restart is needed. `ohmydebn-doctor` warns when the file has been edited but not applied.
-
-This page lists the stock hotkeys only. Your own additions are visible in Cinnamon Settings → Keyboard → Shortcuts → Custom Shortcuts.
-
 ## OhMyDebn
 
 | Hotkey | Function |
 |--------|----------|
 | `Super` | Cinnamon menu |
-| `Super + Space` or `Super + Alt + Space` | OhMyDebn menu |
+| `Super + Space` | OhMyDebn menu |
 | `Ctrl + Shift + G` | gTile window tiling |
 | `Ctrl + Shift + O` | OhMyDebn logo |
 | `Ctrl + Shift + S` | system summary via fastfetch |
@@ -101,12 +77,12 @@ This page lists the stock hotkeys only. Your own additions are visible in Cinnam
 
 | Hotkey | Function |
 |--------|----------|
-| Shift + Up | Select text one line up |
-| Shift + Down | Select text one line down |
-| Shift + Left | Select text one character to the left |
-| Shift + Right | Select text one character to the right |
-| Ctrl + Shift + Left | Select text one word to the left |
-| Ctrl + Shift + Right | Select text one word to the right |
+| `Shift + Up` | Select text one line up |
+| `Shift + Down` | Select text one line down |
+| `Shift + Left` | Select text one character to the left |
+| `Shift + Right` | Select text one character to the right |
+| `Ctrl + Shift + Left` | Select text one word to the left |
+| `Ctrl + Shift + Right` | Select text one word to the right |
 
 ## System
 
@@ -136,7 +112,7 @@ This page lists the stock hotkeys only. Your own additions are visible in Cinnam
 
 | Hotkey | Function |
 |--------|----------|
-| `Super + R` | Application Launcher |
+| `Super + R` or `Super + Alt + Space` | Application Launcher |
 | `Super + Return` | Terminal (Alacritty) |
 | `Super + A` | AI (your default assistant, [configurable](ai.md#default-ai-assistant)) |
 | `Super + B` | Browser |
@@ -189,6 +165,7 @@ This page lists the stock hotkeys only. Your own additions are visible in Cinnam
 |--------|----------|
 | `Shift + Super + N` | Network Manager |
 | `Shift + Super + S` | Sound menu |
+| `Ctrl + Shift + Super + O` | Toggle video rotation lock |
 
 ## Capture
 
@@ -246,3 +223,27 @@ This page lists the stock hotkeys only. Your own additions are visible in Cinnam
 | `?` | Show help for all commands |
 
 For the full list of all Neovim hotkeys configured by LazyVim, please see <https://www.lazyvim.org/keymaps>.
+
+## Customizing keybindings
+
+Your own keybindings live in `~/.config/ohmydebn/keybindings.txt`. OhMyDebn applies that file on top of the stock keybindings every time `ohmydebn-update` runs, whenever you change it, and whenever you run `ohmydebn-keybindings-apply`. Copy the file to another OhMyDebn machine and run `ohmydebn-keybindings-apply` there to get the same keybindings.
+
+To get started, run `ohmydebn-keybindings-edit` or choose OhMyDebn Menu → Setup → Keybindings. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.
+
+Stock keybindings are addressed by name. Names are the first quoted field in `/usr/share/ohmydebn/install/keybinding/keybinding-custom.txt`, for example `"Browser"`, `"Neovim"` or `"X"`. The file understands three verbs:
+
+```bash
+# Add a keybinding, or change the stock keybinding of that name (command and/or key).
+keybinding "Slack" "/usr/share/ohmydebn/bin/ohmydebn-launch-webapp https://slack.com" "['<Super>S']"
+keybinding "Neovim" "/usr/share/ohmydebn/bin/ohmydebn-neovim" "['<Super>V']"
+
+# Remove a stock keybinding's key.
+keybinding-unbind "X"
+
+# Change one of Cinnamon's own shortcuts (same verb and arguments as keybinding-cinnamon.txt).
+keybinding-cinnamon "wm" "close" "['<Alt>F4']"
+```
+
+A key you use in a `keybinding` line is automatically removed from whichever stock keybinding had it before, and the apply output tells you so. Deleting a line reverts that keybinding to stock on the next apply. Changes take effect immediately; no Cinnamon restart is needed. `ohmydebn-doctor` warns when the file has been edited but not applied.
+
+This page lists the stock hotkeys only. Your own additions are visible in Cinnamon Settings → Keyboard → Shortcuts → Custom Shortcuts.

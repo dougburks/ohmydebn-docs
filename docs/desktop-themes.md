@@ -6,11 +6,11 @@ The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
 ## Theme Carousel
 
-You can browse and change your theme by going to the OhMyDebn menu and selecting Style, or via [hotkey](hotkeys.md) `Ctrl + Super + T` (or `Ctrl + Super + B`, which opens the same carousel).
+You can browse and change your theme by going to the OhMyDebn menu and selecting Style > Theme, or via [hotkey](hotkeys.md) `Ctrl + Super + T` (or `Ctrl + Super + B`, which opens the same carousel).
 
 ![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-carousel.png)
 
-This opens a full-screen theme and background browser:
+This opens a full-screen theme and background browser on whichever monitor your mouse pointer is on:
 
 - `Left` / `Right` browse your installed themes.
 - `Up` / `Down` browse the backgrounds included with the theme currently shown, when it has more than one.

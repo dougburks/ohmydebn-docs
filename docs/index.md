@@ -24,10 +24,11 @@ There are several meanings for the name:
 OhMyDebn is designed for many different use cases:
 
 - Power users that want to leverage [AI](ai.md), [containers](containerization.md), and [virtualization](virtualization.md)
-- Folks that want beautiful [Omarchy themes](desktop-themes.md/#themes-included-from-omarchy) on a Debian-based distro
+- Folks that want beautiful [Omarchy themes](desktop-themes.md#themes-included-from-omarchy) on a Debian-based distro
 - Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful [terminal](terminal.md)
 - Folks that prefer to keep hands on keyboard and use [hotkeys](hotkeys.md) as much as possible but still have the option of not having to use those hotkeys
-- Developers who want a beautiful [neovim](text-editor.md/#neovim) or [Visual Studio Code](text-editor.md/#visual-studio-code) experience
-- Folks with [older Windows machines that can't run Windows 11](gallery.md/#2017-dell-precision)
-- Folks with [older Apple machines that can't run the latest version of macOS](gallery.md/#2014-macbook)
+- Developers who want a beautiful [neovim](text-editor.md#neovim) or [Visual Studio Code](text-editor.md#visual-studio-code) experience
+- Folks who want a systemd-free desktop on [Devuan or LCOS](installation.md#devuan-6-excalibur)
+- Folks with [older Windows machines that can't run Windows 11](gallery.md#2017-dell-precision)
+- Folks with [older Apple machines that can't run the latest version of macOS](gallery.md#2014-macbook)
 - Anybody who wants to see 2026 be the year of the Linux desktop!

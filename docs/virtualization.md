@@ -41,10 +41,10 @@ Once you've created a VM, if you want to create a snapshot then we recommend set
 
 ## Networking
 
-Virtual Machine Manager is set up to use an unprivileged, per-user connection (`qemu:///session`) rather than the traditional system-wide one. This means there's no `Virtual network 'default'` (NAT) option when creating a VM — when you reach the network selection step, choose `Usermode networking` instead.
+Virtual Machine Manager is set up to use an unprivileged, per-user connection (`qemu:///session`) rather than the traditional system-wide one. This means there's no `Virtual network 'default'` (NAT) option when creating a VM - when you reach the network selection step, choose `Usermode networking` instead.
 
-By default, `Usermode networking` uses QEMU's older built-in SLIRP driver. The `passt` package is installed automatically alongside Virtual Machine Manager and offers substantially better throughput, but it isn't used automatically — libvirt still defaults to SLIRP even with `passt` installed.
+By default, `Usermode networking` uses QEMU's older built-in SLIRP driver. The `passt` package is installed automatically alongside Virtual Machine Manager and offers substantially better throughput, but it isn't used automatically - libvirt still defaults to SLIRP even with `passt` installed.
 
-To upgrade an existing VM to `passt`, open the OhMyDebn menu and select `Virtualization` - `Virtual Machine Networking`. This lists every VM on the system (whether it was created with Virtual Machine Manager or Boxes) along with its current networking backend, and lets you upgrade any VM that's still using SLIRP with one click. The VM must be shut off first, since a networking backend change only takes effect the next time it starts.
+To upgrade an existing VM to `passt`, open the OhMyDebn menu and select `Apps` - `Virtualization` - `Virtual Machine Networking`. This lists every VM on the system (whether it was created with Virtual Machine Manager or Boxes) along with its current networking backend, and lets you upgrade any VM that's still using SLIRP with one click. The VM must be shut off first, since a networking backend change only takes effect the next time it starts.
 
 Alternatively, if you're creating a new VM from the command line, you can use `virt-install --network type=passt` from the start instead of the graphical wizard.

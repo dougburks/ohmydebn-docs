@@ -37,8 +37,11 @@ Linux Mint Debian Edition (LMDE) splits the difference - it's Debian-based and a
 
 Plain Ubuntu works too - our [installer also supports installing directly onto Ubuntu 24.04/26.04](installation.md#ubuntu) if that's where you're already set up.
 
+## What if I don't want systemd?
+
+Start with [Devuan 6 (Excalibur)](installation.md#devuan-6-excalibur) or [LCOS](installation.md#lcos), which is built on it. Both are Debian 13 underneath but ship without systemd, and our installer supports them directly: it leaves their package sources alone, skips the systemd-only pieces (such as the automatic update check timer), and makes Cinnamon the default login session.
 
 ## What is the relationship between OhMyDebn and Security Onion?
 
-OhMyDebn is not directly related to the [Security Onion](https://github.com/Security-Onion-Solutions/securityonion) project. OhMyDebn is sponsored by [Security Onion Solutions](https://securityonion.com) (SOS); however, SOS does not provide any technical support for it. OhMyDebn is intended to provide a general purpose desktop environment so, of course, you could use the included [Chromium web browser](browser.md) to connect to your [Security Onion Console](https://docs.securityonion.net/en/3/main/security-onion-console/)!
+OhMyDebn is not directly related to the [Security Onion](https://github.com/Security-Onion-Solutions/securityonion) project. OhMyDebn is sponsored by [Security Onion Solutions](https://securityonion.com) (SOS); however, SOS does not provide any technical support for it. OhMyDebn is intended to provide a general purpose desktop environment so, of course, you could use the included [web browser](browser.md) to connect to your [Security Onion Console](https://docs.securityonion.net/en/3/main/security-onion-console/)!
 

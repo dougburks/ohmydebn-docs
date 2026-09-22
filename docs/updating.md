@@ -6,7 +6,7 @@ Also make sure that you have stable power and Internet access to avoid any inter
 
 In addition to the pop-up notification, there are a few other ways to start the update process:
 
-- open the OhMyDebn menu and select Update - OhMydebn
+- open the OhMyDebn menu and select Update > OhMyDebn
 - use [hotkey](hotkeys.md) Ctrl + Super + U
 - if you're already in a [terminal](terminal.md) and want to run from there then you can use:
 ```bash
@@ -14,6 +14,11 @@ ohmydebn-update
 ```
 
 This will update the base OS packages, our OhMyDebn packages, and any config files if necessary.
+
+Before it starts, the update window shows your current OhMyDebn version and whether a newer release is available, so you know in advance whether the run will bring a new OhMyDebn or just OS package updates. The update runs either way.
+
+!!! note
+    On [Devuan and LCOS](installation.md#devuan-6-excalibur) there is no systemd, so the automatic update check and its notification are not installed. Start updates yourself using any of the methods above.
 
 ## Reboots
 
@@ -48,3 +53,5 @@ ohmydebn-doctor
 Anything marked `FAIL` is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.
 
 Run it from a terminal inside your Cinnamon session so it can check the desktop settings too. Over SSH it still runs, but the desktop-specific checks are marked as skipped rather than failed.
+
+If you suspect a problem with [automatic tiling](window-tiling.md#automatic-tiling), `ohmydebn-doctor --exercise-tiling` goes a step further: it switches to an empty workspace, cycles through every tiling mode, opens and closes test windows, and checks that each one lands where it should. It restores your workspace and tiling mode when it finishes.

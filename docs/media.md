@@ -12,14 +12,13 @@ To visualize your system audio, run `cava` in a terminal or use [hotkey](hotkeys
 
 ## cliamp
 
-
-[cliamp](https://github.com/bjarneo/cliamp) is a terminal music player. Hotkey `Ctrl + Alt + M` will check to see if it's installed and install if necessary. Alternatively, you can install via the OhMyDebn menu.
+[cliamp](https://github.com/bjarneo/cliamp) is a terminal music player. Hotkey `Ctrl + Alt + M` will check to see if it's installed and install if necessary. Alternatively, you can install via the OhMyDebn menu (Apps > Media).
 
 ![OhMyDebn cliamp](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cliamp.png)
 
-## Airplay
+## AirPlay
 
-The OhMyDebn menu includes an option to install [Uxplay](https://github.com/FDH2/UxPlay) which is an Airplay receiver. Once installed, you can run it like this to listen on ports starting at 6000:
+The OhMyDebn menu (Apps > Media) includes an option to install [UxPlay](https://github.com/FDH2/UxPlay), which is an AirPlay receiver. Once installed, you can run it like this to listen on ports starting at 6000:
 
 ```bash
 uxplay -p 6000
@@ -27,4 +26,4 @@ uxplay -p 6000
 
 You will need to open [firewall](firewall.md) ports 6000, 6001, and 6002 for both UDP and TCP. You will also need to allow 5353/udp for mdns.
 
-Once the ports are open, any Apple devices on the same network should then see the receiver in their list of Airplay devices.
+Once the ports are open, any Apple devices on the same network should then see the receiver in their list of AirPlay devices.

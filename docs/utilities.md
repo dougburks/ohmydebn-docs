@@ -1,6 +1,6 @@
 ## OhMyDebn Logo
 
-To show the OhMyDebn logo in all of its glory, press `Ctrl + Shift + O`.
+To show the OhMyDebn logo in all of its glory, press `Ctrl + Shift + O`. The logo takes its colors from your current [theme](desktop-themes.md), and an open logo window updates when you change themes.
 
 ![OhMyDebn logo gui](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-logo-gui.png)
 
@@ -30,6 +30,14 @@ To test your network or disk speed, open the OhMyDebn menu and choose `Trigger` 
 
 ![OhMyDebn disk speed test](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-disk-speedtest.png)
 
+## Screenshots, Screen Recording, and Color Picker
+
+Open the OhMyDebn menu and choose `Trigger` - `Capture`:
+
+- `Screenshot` - capture a region, a window, or the whole display (the [Capture hotkeys](hotkeys.md#capture) do the same without the menu)
+- `Screenrecord` - start or stop Cinnamon's built-in screen recorder, or launch [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/) for more control; SimpleScreenRecorder installs itself the first time you pick it
+- `Color` - pick a color from anywhere on screen with gcolor3
+
 ## Deskflow
 
 [Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install via OhMyDebn menu (Apps->Utility). You can then run via menu and share your keyboard and mouse with other systems running Deskflow.
@@ -37,6 +45,10 @@ To test your network or disk speed, open the OhMyDebn menu and choose `Trigger` 
 ## LocalSend
 
 [LocalSend](https://github.com/localsend/localsend) is available as an optional installation. You can install via OhMyDebn menu (Apps->Utility). You can then run via menu and transfer files to other systems running LocalSend.
+
+## rclone
+
+[rclone](https://rclone.org/) syncs files to and from cloud storage from the command line. It is available as an optional installation via OhMyDebn menu (Apps->Utility). Picking it installs rclone if needed and then opens a [terminal](terminal.md) showing its help, ready for whatever remote you want to configure.
 
 ## SSH Server
 
