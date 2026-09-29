@@ -18,7 +18,7 @@ This opens a full-screen theme and background browser on whichever monitor your 
 - `Esc` cancels without changing anything.
 - `S` opens a search box; type to jump the carousel straight to the first matching theme.
 - `B` opens the [Omarchy Themes](https://bjarneo.github.io/omarchy-themes/) gallery in your browser to browse for more themes. Picking one there installs and applies it automatically. Since applying a theme this way is triggered from a link, OhMyDebn always shows a confirmation dialog first with the theme's source before applying it.
-- `C` launches [Aether](https://github.com/bjarneo/aether) so you can build your own theme. You can also launch Aether directly using the hotkey `Ctrl + Shift + A` and use it to search for wallpaper and extract colors to build a desktop theme.
+- `C` launches [Aether](https://github.com/omacom/aether) so you can build your own theme. You can also launch Aether directly using the hotkey `Ctrl + Shift + A` and use it to search for wallpaper and extract colors to build a desktop theme.
 - `R` removes the theme currently shown (only available for themes you've installed yourself, not the themes bundled with OhMyDebn). Press it again to confirm.
 
 OhMyDebn also automatically picks a matching icon color based on each theme's accent color, so icons stay legible on custom and Aether-generated themes, not just the themes bundled with OhMyDebn.

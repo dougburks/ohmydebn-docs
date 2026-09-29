@@ -8,11 +8,19 @@ gedit is a very simple text editor with a graphical user interface. You can laun
 
 ## Neovim
 
-Neovim is a powerful terminal-based text editor. To start it, press `Super + N` or type `nvim` at any terminal prompt. The first time it loads, it will install several plugins. Once that is done, you can press the `Q` key until you get to the main menu. You can then press the space bar and then the `E` key to open Explorer.
+Neovim is a powerful terminal-based text editor. To start it, press `Super + N` or type `nvim` at any terminal prompt. It's set up with [LazyVim](https://www.lazyvim.org), and everything it needs (plugins, language tools, and syntax highlighting) is installed with OhMyDebn, so it's ready to use right away, even offline. Press the space bar and then the `E` key to open Explorer. Its colors follow your [desktop theme](desktop-themes.md) and change when you switch themes; a theme that doesn't include its own Neovim colors gets colors made from its palette. OhMyDebn installs the same current version of Neovim on every supported distro.
 
 ![OhMyDebn Neovim screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-neovim.png)
 
 The [hotkeys](hotkeys.md) section includes more hotkeys for Neovim and a link to additional information.
+
+### Plugin updates
+
+OhMyDebn installs its own current version of Neovim and updates Neovim's plugins with OhMyDebn releases, after testing them together, so a plugin update can't break your editor between releases.
+
+You can still update plugins yourself with `:Lazy update`. The next OhMyDebn release that updates Neovim's plugins puts its own plugins back to the tested versions. Plugins you've added yourself are never changed. Whatever an update replaces is kept in a folder in `~/.local/share/nvim` named `ohmydebn-backup-` followed by the date, until the next plugin update. You can delete it at any time.
+
+To add support for another language, use `:LazyExtras`. The language tools it needs download the first time, so that needs an internet connection.
 
 ## Emacs
 

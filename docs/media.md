@@ -1,6 +1,10 @@
 ## Rhythmbox
 
-OhMyDebn includes [Rhythmbox](https://en.wikipedia.org/wiki/Rhythmbox) music player by default.
+Some distros include the [Rhythmbox](https://en.wikipedia.org/wiki/Rhythmbox) music player. If yours doesn't, you can install it:
+
+```bash
+sudo apt install rhythmbox
+```
 
 ![OhMyDebn Rhythmbox](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-rhythmbox.png)
 
@@ -18,12 +22,18 @@ To visualize your system audio, run `cava` in a terminal or use [hotkey](hotkeys
 
 ## AirPlay
 
-The OhMyDebn menu (Apps > Media) includes an option to install [UxPlay](https://github.com/FDH2/UxPlay), which is an AirPlay receiver. Once installed, you can run it like this to listen on ports starting at 6000:
+The OhMyDebn menu (Apps > Media) includes [UxPlay](https://github.com/FDH2/UxPlay), an AirPlay receiver. Choosing it installs UxPlay if needed, then starts it listening on ports 6000 to 6002. To start it yourself in a terminal, use the same ports:
 
 ```bash
 uxplay -p 6000
 ```
 
-You will need to open [firewall](firewall.md) ports 6000, 6001, and 6002 for both UDP and TCP. You will also need to allow 5353/udp for mdns.
+The [firewall](firewall.md) blocks those ports until you open them, along with 5353/udp, which Apple devices use to find the receiver:
+
+```bash
+sudo ufw allow 6000:6002/tcp
+sudo ufw allow 6000:6002/udp
+sudo ufw allow 5353/udp
+```
 
 Once the ports are open, any Apple devices on the same network should then see the receiver in their list of AirPlay devices.
