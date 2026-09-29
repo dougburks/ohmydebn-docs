@@ -62,5 +62,5 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [cliamp](media.md) updated to version 2.3.0
 - fastfetch updated to version 2.69.0
 - gum updated to version 2.0.2
-- [herdr](terminal.md#herdr) updated to version 0.9.2
+- [herdr](terminal.md#herdr) updated to version 0.9.3
 - ttfx updated to version 0.5.0
