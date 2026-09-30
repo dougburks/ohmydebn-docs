@@ -55,7 +55,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Neovim](text-editor.md#neovim) updated to version 0.12.5
 - LazyVim updated to version 16.0.1
 - [Aether](desktop-themes.md) updated to version 4.31.1
-- [Codex](ai.md#codex) updated to version 0.159.0
+- [Codex](ai.md#codex) updated to version 0.159.2
 - [OpenCode](ai.md#opencode) updated to version 1.18.33
 - [Pi](ai.md#pi) updated to version 0.99.1
 - [SO-CRATES](cybersecurity.md) updated to version 4.3.0
