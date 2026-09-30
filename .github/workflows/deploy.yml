@@ -12,12 +12,9 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.x'
-    - run: pip install mkdocs mkdocs-material mkdocs-glightbox
-    - run: mkdocs build
-    - run: cp index.html dist/index.html
-    - run: cp dist/docs/404.html dist/404.html
+    - run: pip install -r requirements-docs.txt
+    - run: mkdocs build --strict
     - run: cp CNAME dist/CNAME
-    - run: cp -r images dist/images
     - uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}

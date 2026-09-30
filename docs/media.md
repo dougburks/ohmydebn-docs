@@ -6,19 +6,19 @@ Some distros include the [Rhythmbox](https://en.wikipedia.org/wiki/Rhythmbox) mu
 sudo apt install rhythmbox
 ```
 
-![OhMyDebn Rhythmbox](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-rhythmbox.png)
+![OhMyDebn Rhythmbox](images/ohmydebn-rhythmbox.png)
 
 ## Cava
 
 To visualize your system audio, run `cava` in a terminal or use [hotkey](hotkeys.md) `Ctrl + Super + A`.
 
-![OhMyDebn Cava audio visualizer](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cava-audio.png)
+![OhMyDebn Cava audio visualizer](images/ohmydebn-cava-audio.png)
 
 ## cliamp
 
 [cliamp](https://github.com/bjarneo/cliamp) is a terminal music player. Hotkey `Ctrl + Alt + M` will check to see if it's installed and install if necessary. Alternatively, you can install via the OhMyDebn menu (Apps > Media).
 
-![OhMyDebn cliamp](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cliamp.png)
+![OhMyDebn cliamp](images/ohmydebn-cliamp.png)
 
 ## AirPlay
 

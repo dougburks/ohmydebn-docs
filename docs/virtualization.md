@@ -8,15 +8,15 @@ The hotkey for [Boxes](https://apps.gnome.org/Boxes/) is `Ctrl + Alt + B`. This 
 
 At the prompt, press Enter to continue:
 
-![OhMyDebn Boxes Prompt](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-boxes-0-prompt.png)
+![OhMyDebn Boxes Prompt](images/ohmydebn-boxes-0-prompt.png)
 
 Installation complete:
 
-![OhMyDebn Boxes Installed](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-boxes-1-installed.png)
+![OhMyDebn Boxes Installed](images/ohmydebn-boxes-1-installed.png)
 
 You can then start Boxes from the Cinnamon menu or Apps menu or via [hotkey](hotkeys.md) `Ctrl + Alt + B`.
 
-![OhMyDebn Boxes Interface](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-boxes-2-interface.png)
+![OhMyDebn Boxes Interface](images/ohmydebn-boxes-2-interface.png)
 
 
 ## Virtual Machine Manager
@@ -25,19 +25,19 @@ The hotkey for [Virtual Machine Manager](https://virt-manager.org/) is `Ctrl + A
 
 At the prompt, press Enter to continue:
 
-![OhMyDebn Virtualization Prompt](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-virtualization-0-prompt.png)
+![OhMyDebn Virtualization Prompt](images/ohmydebn-virtualization-0-prompt.png)
 
 Installation complete:
 
-![OhMyDebn Virtualization Installed](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-virtualization-1-installed.png)
+![OhMyDebn Virtualization Installed](images/ohmydebn-virtualization-1-installed.png)
 
 You can then start Virtual Machine Manager from the Cinnamon menu or Apps menu or via [hotkey](hotkeys.md) `Ctrl + Alt + V`.
 
-![OhMyDebn Virtualization Machine Manager](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-virtualization-2-vmm.png)
+![OhMyDebn Virtualization Machine Manager](images/ohmydebn-virtualization-2-vmm.png)
 
 Once you've created a VM, if you want to create a snapshot then we recommend setting `Snapshot Mode` to `internal`:
 
-![OhMyDebn Virtualization Snapshots](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-virtualization-3-snapshots.png)
+![OhMyDebn Virtualization Snapshots](images/ohmydebn-virtualization-3-snapshots.png)
 
 ## Networking
 

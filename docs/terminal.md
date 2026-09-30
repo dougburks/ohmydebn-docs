@@ -6,11 +6,11 @@ You can start a terminal session from the Cinnamon menu, Apps menu, or via [hotk
 - [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command
 - [eza](https://github.com/eza-community/eza) for beautiful directory listings via `ls` and `lt`
 
-![OhMyDebn terminal screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-terminal.png)
+![OhMyDebn terminal screenshot](images/ohmydebn-terminal.png)
 
 It also includes [bat](https://github.com/sharkdp/bat), which is a `cat` clone with syntax highlighting and git integration.
 
-![OhMyDebn bat screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-bat.png)
+![OhMyDebn bat screenshot](images/ohmydebn-bat.png)
 
 A few more terminal-focused tools are available from the OhMyDebn menu's Apps->Terminals section:
 

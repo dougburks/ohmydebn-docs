@@ -14,7 +14,7 @@ If you're in a terminal, the `a` alias runs your default assistant directly in t
 
 OpenCode is available as an optional installation. You can install via the OhMyDebn menu (Apps->AI). [OpenCode](https://opencode.ai/) runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md). From an existing terminal session, the `c` alias runs OpenCode directly.
 
-![OhMyDebn opencode-cli](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-cli.png)
+![OhMyDebn opencode-cli](images/ohmydebn-opencode-cli.png)
 
 ## Claude Code
 
@@ -60,10 +60,10 @@ If T3 Code shows one of your installed agents as turned off, turn it on in T3 Co
 
 [Antigravity](https://antigravity.google/) is a fork of Visual Studio Code for Google Agentic AI and is available as an optional installation. You can install via the OhMyDebn menu (Apps->AI or Apps->Editors). You can run via menu or hotkey Ctrl + Super + G. That hotkey checks to see if it's installed first so even on a new installation you can just press Ctrl + Super + G and it will install and then run.
 
-![OhMyDebn antigravity](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-antigravity.png)
+![OhMyDebn antigravity](images/ohmydebn-antigravity.png)
 
 ## OhMyDebn skill
 
 OhMyDebn includes an OhMyDebn skill that all of these AI tools can use to understand more about the underlying platform:
 
-<video src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-opencode-skill.mp4" controls></video>
+<video src="../images/ohmydebn-opencode-skill.mp4" controls></video>
