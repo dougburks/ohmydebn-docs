@@ -22,4 +22,4 @@ After a browser is installed, you'll be asked whether to make it your default br
 
 ## Changing the Default Browser
 
-To change your default browser at any time, go to OhMyDebn Menu > Apps > Browsers > Set Default and pick one of the installed browsers. This sets everything in one step: the desktop-wide default that `Super + B` and links from other apps use, the `x-www-browser` alternative that command-line tools use, and the PDF viewer.
+To change your default browser at any time, go to OhMyDebn Menu > Setup > Defaults > Browser. It lists the browsers you have installed, marks your current default, and makes whichever one you pick the new default. This sets everything in one step: the desktop-wide default that `Super + B` and links from other apps use, the `x-www-browser` alternative that command-line tools use, and the PDF viewer.

@@ -11,7 +11,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Shift + S` | system summary via fastfetch |
 | `Ctrl + Shift + A` | Aether theme builder |
 | `Ctrl + Super + T` | Browse and pick a theme |
-| `Ctrl + Super + B` | Browse and pick a background for the current theme |
+| `Ctrl + Super + B` | Browse and pick a theme or background (same as `Ctrl + Super + T`) |
 | `Ctrl + Super + U` | Update to latest version of OhMyDebn |
 
 ## Windows
@@ -130,6 +130,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Alt + G` | Gestures
 | `Ctrl + Alt + P` | PowerShell
 | `Ctrl + Alt + S` | SO-CRATES
+| `Ctrl + Alt + D` | Animated OhMyDebn logo demo
 | `Ctrl + Alt + W` | Cloudflare Warp
 | `Ctrl + Alt + C` | Claude Code
 | `Ctrl + Super + Return` | [herdr](terminal.md#herdr)
@@ -226,7 +227,7 @@ For the full list of all Neovim hotkeys configured by LazyVim, please see <https
 
 ## Customizing keybindings
 
-Your own keybindings live in `~/.config/ohmydebn/keybindings.txt`. OhMyDebn applies that file on top of the stock keybindings every time `ohmydebn-update` runs, whenever you change it, and whenever you run `ohmydebn-keybindings-apply`. Copy the file to another OhMyDebn machine and run `ohmydebn-keybindings-apply` there to get the same keybindings.
+Your own keybindings live in `~/.config/ohmydebn/keybindings.txt`. OhMyDebn applies that file on top of the stock keybindings every time `ohmydebn-update` runs, when you close the editor opened by `ohmydebn-keybindings-edit`, and whenever you run `ohmydebn-keybindings-apply`. Copy the file to another OhMyDebn machine and run `ohmydebn-keybindings-apply` there to get the same keybindings.
 
 To get started, run `ohmydebn-keybindings-edit` or choose OhMyDebn Menu → Setup → Keybindings. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.
 

@@ -20,8 +20,8 @@ The first option launches the separate Apps menu. The rest of the top level:
 - `Trigger` - screenshots, screen recording, a color picker, and the [network and disk speed tests](utilities.md#speed-test)
 - `Style` - the [theme carousel](desktop-themes.md), [tiling](window-tiling.md) settings, and Cinnamon's effects, notifications, screensaver, windows, and workspaces settings
 - `Install` and `Remove` - add or remove a package from your distro's repos, a web app (a website wrapped as its own desktop app), or a terminal (TUI) app
-- `Update` - [update OhMyDebn](updating.md), run the [doctor](updating.md#checking-your-installation), and change your password or timezone
-- `Setup` - Bluetooth, display, gestures, [keybindings](hotkeys.md#customizing-keybindings), keyboard, mouse, network, power, printers, and sound
+- `Update` - [update OhMyDebn](updating.md), choose your update [channel](updating.md#channels), run the [doctor](updating.md#checking-your-installation), update your [firmware](updating.md#firmware), and change your password or timezone
+- `Setup` - Bluetooth, defaults (your default [AI assistant](ai.md#default-ai-assistant) and [browser](browser.md#changing-the-default-browser)), display, gestures, [keybindings](hotkeys.md#customizing-keybindings), keyboard, mouse, network, power, printers, and sound
 - `About` and `Demo` - the [system summary and animated logo](utilities.md)
 - `System` - lock, suspend, relaunch Cinnamon, restart, or shut down
 

@@ -1,6 +1,6 @@
 OhMyDebn automatically checks for updates every 6 hours by default. If it finds a new version of OhMyDebn, it will pop up a notification. You can click the notification to update to the latest version.
 
-Before updating, please review the [Release Notes](https://github.com/dougburks/ohmydebn/releases) so that you are aware of any changes.
+Before updating, please review the [Release Notes](release-notes.md) so that you are aware of any changes. The complete technical changelog for each release is on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
 Also make sure that you have stable power and Internet access to avoid any interruptions to the update process.
 
@@ -18,7 +18,33 @@ This will update the base OS packages, our OhMyDebn packages, and any config fil
 Before it starts, the update window shows your current OhMyDebn version and whether a newer release is available, so you know in advance whether the run will bring a new OhMyDebn or just OS package updates. The update runs either way.
 
 !!! note
-    On [Devuan and LCOS](installation.md#devuan-6-excalibur) there is no systemd, so the automatic update check and its notification are not installed. Start updates yourself using any of the methods above.
+    On [Devuan, LCOS](installation.md#devuan-6-excalibur), and [MX Linux with sysvinit](installation.md#mx-linux-25) there is no systemd, so the automatic update check and its notification are not installed. Start updates yourself using any of the methods above.
+
+## Channels
+
+OhMyDebn Menu > Update > Channel lets you choose where updates come from. Each list marks the channel you're on now.
+
+**OhMyDebn** has two channels:
+
+- **Stable** is where every installation starts, and it's the right choice for almost everyone. Packages reach stable only after they've been tested and released.
+- **Testing** gets new OhMyDebn packages as soon as they're built, before they're tested and released. They can be broken or incomplete, and an update from testing can leave your desktop needing repair by hand. Only use testing on a machine you can afford to break, such as a virtual machine. Because of the risk, switching to testing asks you to type `testing` to confirm.
+
+Switching the OhMyDebn channel only changes where packages come from. To install them, run Update > OhMyDebn afterwards. Switching back to stable doesn't downgrade anything: packages you got from testing stay installed until stable has the same or a newer version.
+
+**Claude Code** also has two channels, if you've installed [Claude Code](ai.md#claude-code):
+
+- **Stable** is about a week behind and skips releases with serious bugs. This is what OhMyDebn sets up when you install Claude Code.
+- **Latest** gets every release as soon as it ships. You get new features sooner, with a higher chance of running into a problem. Switching to latest asks you to confirm, then upgrades Claude Code right away.
+
+Switching Claude Code back to stable keeps your installed version until stable catches up.
+
+## Firmware
+
+OhMyDebn Menu > Update > Firmware checks your computer's firmware (such as the system BIOS/UEFI, SSDs, docks, and some peripherals) for updates and installs them. It uses [fwupd](https://fwupd.org/), which gets updates from the Linux Vendor Firmware Service (LVFS), so only devices whose makers publish their firmware there are covered. OhMyDebn installs fwupd the first time you use it if it isn't already installed.
+
+fwupd lists the updates it found and asks before installing each one. Keep your computer plugged in and don't turn it off while firmware is updating. Some updates are installed during the next restart, and fwupd tells you when that's the case.
+
+If none of your devices get firmware through LVFS, such as in a virtual machine, it reports that your firmware is up to date.
 
 ## Reboots
 
@@ -42,7 +68,7 @@ If the update can't reach OhMyDebn's own package repository, for example with no
 
 ## Checking your installation
 
-OhMyDebn includes a read-only self-check that looks at everything the installer sets up and reports one line per item: packages and the OhMyDebn apt repository, the Cinnamon extension and its settings, the current theme, the login session default, the update timer, the AI tools and their shell aliases, the custom hotkeys, and the tools other OhMyDebn commands rely on. It changes nothing.
+OhMyDebn includes a read-only self-check that looks at everything the installer sets up and reports one line per item: whether your last update finished, packages and the OhMyDebn apt repository (including the pins that keep third-party repositories to their own packages), free disk space and any half-installed packages, the firewall and the blocks on vulnerable kernel modules, whether your clock is synchronized, whether your terminal and theme settings files are readable, your default browser and AI assistant, the Cinnamon extension and its settings, the current theme, Neovim and its plugins, the login session default, the update timer, the AI tools and their shell aliases, the custom hotkeys, and the tools other OhMyDebn commands rely on, including Oh My Zsh and the OhMyDebn Menu launcher. It also lists any OhMyDebn updates that are waiting. It also tells you when a reboot is needed to finish an update. It changes nothing.
 
 Run it from the OhMyDebn menu (Update -> Doctor), or from a terminal:
 

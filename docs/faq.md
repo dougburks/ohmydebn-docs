@@ -39,7 +39,7 @@ Plain Ubuntu works too - our [installer also supports installing directly onto U
 
 ## What if I don't want systemd?
 
-Start with [Devuan 6 (Excalibur)](installation.md#devuan-6-excalibur) or [LCOS](installation.md#lcos), which is built on it. Both are Debian 13 underneath but ship without systemd, and our installer supports them directly: it leaves their package sources alone, skips the systemd-only pieces (such as the automatic update check timer), and makes Cinnamon the default login session.
+Start with [Devuan 6 (Excalibur)](installation.md#devuan-6-excalibur) or [LCOS](installation.md#lcos), which is built on it. Both are Debian 13 underneath but ship without systemd, and our installer supports them directly: it leaves their package sources alone, skips the systemd-only pieces (such as the automatic update check timer), and makes Cinnamon the default login session. The sysvinit editions of [MX Linux 25](installation.md#mx-linux-25) work the same way.
 
 ## What is the relationship between OhMyDebn and Security Onion?
 
