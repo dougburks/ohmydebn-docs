@@ -744,6 +744,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Neovim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugin-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugin updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1080,6 +1097,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../resetting/" class="md-nav__link">
         
   
@@ -1198,6 +1242,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Neovim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugin-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugin updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1249,9 +1310,13 @@
 <p>gedit is a very simple text editor with a graphical user interface. You can launch it from the Apps menu or by pressing Ctrl + Super + E.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gedit.png" data-desc-position="bottom"><img alt="OhMyDebn gedit screenshot" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gedit.png"></a></p>
 <h2 id="neovim">Neovim</h2>
-<p>Neovim is a powerful terminal-based text editor. To start it, press <code>Super + N</code> or type <code>nvim</code> at any terminal prompt. The first time it loads, it will install several plugins. Once that is done, you can press the <code>Q</code> key until you get to the main menu. You can then press the space bar and then the <code>E</code> key to open Explorer.</p>
+<p>Neovim is a powerful terminal-based text editor. To start it, press <code>Super + N</code> or type <code>nvim</code> at any terminal prompt. It's set up with <a href="https://www.lazyvim.org">LazyVim</a>, and everything it needs (plugins, language tools, and syntax highlighting) is installed with OhMyDebn, so it's ready to use right away, even offline. Press the space bar and then the <code>E</code> key to open Explorer. Its colors follow your <a href="../desktop-themes/">desktop theme</a> and change when you switch themes; a theme that doesn't include its own Neovim colors gets colors made from its palette. OhMyDebn installs the same current version of Neovim on every supported distro.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-neovim.png" data-desc-position="bottom"><img alt="OhMyDebn Neovim screenshot" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-neovim.png"></a></p>
 <p>The <a href="../hotkeys/">hotkeys</a> section includes more hotkeys for Neovim and a link to additional information.</p>
+<h3 id="plugin-updates">Plugin updates</h3>
+<p>OhMyDebn installs its own current version of Neovim and updates Neovim's plugins with OhMyDebn releases, after testing them together, so a plugin update can't break your editor between releases.</p>
+<p>You can still update plugins yourself with <code>:Lazy update</code>. The next OhMyDebn release that updates Neovim's plugins puts its own plugins back to the tested versions. Plugins you've added yourself are never changed. Whatever an update replaces is kept in a folder in <code>~/.local/share/nvim</code> named <code>ohmydebn-backup-</code> followed by the date, until the next plugin update. You can delete it at any time.</p>
+<p>To add support for another language, use <code>:LazyExtras</code>. The language tools it needs download the first time, so that needs an internet connection.</p>
 <h2 id="emacs">Emacs</h2>
 <p><a href="https://www.gnu.org/software/emacs/">Emacs</a> is available as an optional installation. You can install it from the OhMyDebn menu via <code>Apps</code> - <code>Editors</code> - <code>Emacs</code>. That menu option checks to see if it's installed first, so even on a new installation it will install and then run Emacs.</p>
 <h2 id="visual-studio-code">Visual Studio Code</h2>

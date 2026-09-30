@@ -11,7 +11,7 @@
         <link rel="prev" href="../media/">
       
       
-        <link rel="next" href="../resetting/">
+        <link rel="next" href="../release-notes/">
       
       
         
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reboots" class="md-skip">
+        <a href="#channels" class="md-skip">
           Skip to content
         </a>
       
@@ -1022,6 +1022,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reboots" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1069,6 +1091,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1179,6 +1228,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reboots" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1245,7 +1316,7 @@
   <h1>Updating</h1>
 
 <p>OhMyDebn automatically checks for updates every 6 hours by default. If it finds a new version of OhMyDebn, it will pop up a notification. You can click the notification to update to the latest version.</p>
-<p>Before updating, please review the <a href="https://github.com/dougburks/ohmydebn/releases">Release Notes</a> so that you are aware of any changes.</p>
+<p>Before updating, please review the <a href="../release-notes/">Release Notes</a> so that you are aware of any changes. The complete technical changelog for each release is on <a href="https://github.com/dougburks/ohmydebn/releases">GitHub</a>.</p>
 <p>Also make sure that you have stable power and Internet access to avoid any interruptions to the update process.</p>
 <p>In addition to the pop-up notification, there are a few other ways to start the update process:</p>
 <ul>
@@ -1259,8 +1330,26 @@
 <p>Before it starts, the update window shows your current OhMyDebn version and whether a newer release is available, so you know in advance whether the run will bring a new OhMyDebn or just OS package updates. The update runs either way.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>On <a href="../installation/#devuan-6-excalibur">Devuan and LCOS</a> there is no systemd, so the automatic update check and its notification are not installed. Start updates yourself using any of the methods above.</p>
+<p>On <a href="../installation/#devuan-6-excalibur">Devuan, LCOS</a>, and <a href="../installation/#mx-linux-25">MX Linux with sysvinit</a> there is no systemd, so the automatic update check and its notification are not installed. Start updates yourself using any of the methods above.</p>
 </div>
+<h2 id="channels">Channels</h2>
+<p>OhMyDebn Menu &gt; Update &gt; Channel lets you choose where updates come from. Each list marks the channel you're on now.</p>
+<p><strong>OhMyDebn</strong> has two channels:</p>
+<ul>
+<li><strong>Stable</strong> is where every installation starts, and it's the right choice for almost everyone. Packages reach stable only after they've been tested and released.</li>
+<li><strong>Testing</strong> gets new OhMyDebn packages as soon as they're built, before they're tested and released. They can be broken or incomplete, and an update from testing can leave your desktop needing repair by hand. Only use testing on a machine you can afford to break, such as a virtual machine. Because of the risk, switching to testing asks you to type <code>testing</code> to confirm.</li>
+</ul>
+<p>Switching the OhMyDebn channel only changes where packages come from. To install them, run Update &gt; OhMyDebn afterwards. Switching back to stable doesn't downgrade anything: packages you got from testing stay installed until stable has the same or a newer version.</p>
+<p><strong>Claude Code</strong> also has two channels, if you've installed <a href="../ai/#claude-code">Claude Code</a>:</p>
+<ul>
+<li><strong>Stable</strong> is about a week behind and skips releases with serious bugs. This is what OhMyDebn sets up when you install Claude Code.</li>
+<li><strong>Latest</strong> gets every release as soon as it ships. You get new features sooner, with a higher chance of running into a problem. Switching to latest asks you to confirm, then upgrades Claude Code right away.</li>
+</ul>
+<p>Switching Claude Code back to stable keeps your installed version until stable catches up.</p>
+<h2 id="firmware">Firmware</h2>
+<p>OhMyDebn Menu &gt; Update &gt; Firmware checks your computer's firmware (such as the system BIOS/UEFI, SSDs, docks, and some peripherals) for updates and installs them. It uses <a href="https://fwupd.org/">fwupd</a>, which gets updates from the Linux Vendor Firmware Service (LVFS), so only devices whose makers publish their firmware there are covered. OhMyDebn installs fwupd the first time you use it if it isn't already installed.</p>
+<p>fwupd lists the updates it found and asks before installing each one. Keep your computer plugged in and don't turn it off while firmware is updating. Some updates are installed during the next restart, and fwupd tells you when that's the case.</p>
+<p>If none of your devices get firmware through LVFS, such as in a virtual machine, it reports that your firmware is up to date.</p>
 <h2 id="reboots">Reboots</h2>
 <p>If the update installs a new kernel, or a package asks for a reboot, the update finishes with a notice saying so. Nothing is broken in the meantime: a new kernel simply isn't in use until you reboot, and a package that asked for a reboot (such as libc6) is already installed, with programs that were already running keeping its old version loaded until they restart. Reboot whenever it's convenient.</p>
 <h2 id="logs">Logs</h2>
@@ -1272,7 +1361,7 @@
 <p>Only one update can run at a time. If you start a second one, whether from the menu, the hotkey, the notification, or a terminal, it tells you an update is already running and exits. Wait for the first one to finish.</p>
 <p>If the update can't reach OhMyDebn's own package repository, for example with no Internet access, it stops before changing anything and tells you. Any other repository that fails to refresh, such as a third-party one that is down or no longer exists, is listed in a warning and skipped for that run, and the update continues. If a listed repository is one you no longer need, remove it from <code>/etc/apt/sources.list.d/</code>.</p>
 <h2 id="checking-your-installation">Checking your installation</h2>
-<p>OhMyDebn includes a read-only self-check that looks at everything the installer sets up and reports one line per item: packages and the OhMyDebn apt repository, the Cinnamon extension and its settings, the current theme, the login session default, the update timer, the AI tools and their shell aliases, the custom hotkeys, and the tools other OhMyDebn commands rely on. It changes nothing.</p>
+<p>OhMyDebn includes a read-only self-check that looks at everything the installer sets up and reports one line per item: whether your last update finished, packages and the OhMyDebn apt repository (including the pins that keep third-party repositories to their own packages), free disk space and any half-installed packages, the firewall and the blocks on vulnerable kernel modules, whether your clock is synchronized, whether your terminal and theme settings files are readable, your default browser and AI assistant, the Cinnamon extension and its settings, the current theme, Neovim and its plugins, the login session default, the update timer, the AI tools and their shell aliases, the custom hotkeys, and the tools other OhMyDebn commands rely on, including Oh My Zsh and the OhMyDebn Menu launcher. It also lists any OhMyDebn updates that are waiting. It also tells you when a reboot is needed to finish an update. It changes nothing.</p>
 <p>Run it from the OhMyDebn menu (Update -&gt; Doctor), or from a terminal:</p>
 <div class="highlight"><pre><span></span><code>ohmydebn-doctor
 </code></pre></div>
@@ -1325,13 +1414,13 @@
         
         
           
-          <a href="../resetting/" class="md-footer__link md-footer__link--next" aria-label="Next: Resetting">
+          <a href="../release-notes/" class="md-footer__link md-footer__link--next" aria-label="Next: Release Notes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Resetting
+                Release Notes
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -993,6 +993,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../resetting/" class="md-nav__link">
         
   
@@ -1604,7 +1631,7 @@
 </tr>
 <tr>
 <td><code>Ctrl + Super + B</code></td>
-<td>Browse and pick a background for the current theme</td>
+<td>Browse and pick a theme or background (same as <code>Ctrl + Super + T</code>)</td>
 </tr>
 <tr>
 <td><code>Ctrl + Super + U</code></td>
@@ -2016,6 +2043,10 @@
 <td>SO-CRATES</td>
 </tr>
 <tr>
+<td><code>Ctrl + Alt + D</code></td>
+<td>Animated OhMyDebn logo demo</td>
+</tr>
+<tr>
 <td><code>Ctrl + Alt + W</code></td>
 <td>Cloudflare Warp</td>
 </tr>
@@ -2304,7 +2335,7 @@
 </table>
 <p>For the full list of all Neovim hotkeys configured by LazyVim, please see <a href="https://www.lazyvim.org/keymaps">https://www.lazyvim.org/keymaps</a>.</p>
 <h2 id="customizing-keybindings">Customizing keybindings</h2>
-<p>Your own keybindings live in <code>~/.config/ohmydebn/keybindings.txt</code>. OhMyDebn applies that file on top of the stock keybindings every time <code>ohmydebn-update</code> runs, whenever you change it, and whenever you run <code>ohmydebn-keybindings-apply</code>. Copy the file to another OhMyDebn machine and run <code>ohmydebn-keybindings-apply</code> there to get the same keybindings.</p>
+<p>Your own keybindings live in <code>~/.config/ohmydebn/keybindings.txt</code>. OhMyDebn applies that file on top of the stock keybindings every time <code>ohmydebn-update</code> runs, when you close the editor opened by <code>ohmydebn-keybindings-edit</code>, and whenever you run <code>ohmydebn-keybindings-apply</code>. Copy the file to another OhMyDebn machine and run <code>ohmydebn-keybindings-apply</code> there to get the same keybindings.</p>
 <p>To get started, run <code>ohmydebn-keybindings-edit</code> or choose OhMyDebn Menu → Setup → Keybindings. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.</p>
 <p>Stock keybindings are addressed by name. Names are the first quoted field in <code>/usr/share/ohmydebn/install/keybinding/keybinding-custom.txt</code>, for example <code>"Browser"</code>, <code>"Neovim"</code> or <code>"X"</code>. The file understands three verbs:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Add a keybinding, or change the stock keybinding of that name (command and/or key).</span>

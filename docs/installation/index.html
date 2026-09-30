@@ -609,6 +609,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pop_os-2404" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pop!_OS 24.04
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#devuan-6-excalibur" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -624,6 +635,17 @@
     <span class="md-ellipsis">
       
         LCOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mx-linux-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MX Linux 25
       
     </span>
   </a>
@@ -1174,6 +1196,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../resetting/" class="md-nav__link">
         
   
@@ -1373,6 +1422,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pop_os-2404" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pop!_OS 24.04
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#devuan-6-excalibur" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1388,6 +1448,17 @@
     <span class="md-ellipsis">
       
         LCOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mx-linux-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MX Linux 25
       
     </span>
   </a>
@@ -1433,7 +1504,7 @@
   <h1>Installation</h1>
 
 <h2 id="choosing-a-base-distro">Choosing a base distro</h2>
-<p>OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Devuan 6 (Excalibur), or LCOS. If you already have a favorite, start there - see the sections below for any distro-specific notes.</p>
+<p>OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Pop!_OS 24.04, Devuan 6 (Excalibur), LCOS, or MX Linux 25. If you already have a favorite, start there - see the sections below for any distro-specific notes.</p>
 <p>If you don't have a favorite, we recommend <a href="https://linuxmint.com/download.php">Linux Mint Cinnamon Edition</a> on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with <a href="#debian-13-live-cinnamon">Debian 13</a> or <a href="#raspberry-pi">Raspberry Pi OS</a> instead.</p>
 <h2 id="installation-with-linux-mint-cinnamon">Installation with Linux Mint Cinnamon</h2>
 <ol>
@@ -1457,7 +1528,7 @@
 <h2 id="installation-options">Installation Options</h2>
 <p>By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following options:</p>
 <ul>
-<li><code>--power-user</code> - removes optional apps that ship in your base distro (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: <a href="../virtualization/#virtual-machine-manager">Virtual Machine Manager</a>, Brave Origin, GIMP, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3. It also enables the <a href="../screen-magnifier/">screen magnifier</a>. On Kali Linux, Firefox is left in place even with this option since Kali doesn't ship an alternative browser by default.</li>
+<li><code>--power-user</code> - removes optional apps that ship in your base distro (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: <a href="../virtualization/#virtual-machine-manager">Virtual Machine Manager</a>, Brave Origin, GIMP, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3 (keepassxc-minimal is skipped on Ubuntu 24.04, Linux Mint 22, and Pop!_OS 24.04, which don't have it). It also enables the <a href="../screen-magnifier/">screen magnifier</a>. On Kali Linux, Firefox is left in place even with this option since Kali doesn't ship an alternative browser by default.</li>
 <li><code>--skip-upgrade</code> - skips the full upgrade of every package that the installer normally runs near the end, and nothing else. This makes a first install faster on a test VM, but a fresh ISO can be months behind on security fixes and nothing else applies them until the next <code>ohmydebn-update</code>, which does upgrade everything. Not recommended for a machine you'll keep.</li>
 <li><code>--yes</code> - skips every confirmation prompt for unattended installs (for example, scripted or automated provisioning). Everything the prompts warn about still happens; this only removes the pause to read them, so make sure you understand those warnings before using it.</li>
 </ul>
@@ -1478,6 +1549,10 @@
 <p>Kali Linux (Rolling) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Kali and continue on with OhMyDebn installation.</p>
 <h3 id="ubuntu">Ubuntu</h3>
 <p>Ubuntu 24.04 LTS and 26.04 LTS (on x86_64 hardware) are also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Ubuntu and continue on with OhMyDebn installation. The default browser, Brave Origin, installs from Brave's own repository there just as on Debian. If you install Chromium as an optional browser, note that it's only available as a snap on Ubuntu, so that's how OhMyDebn installs and configures it there - functionally equivalent, though its Appearance settings currently can't follow your OhMyDebn theme's dark/light mode automatically due to a snap packaging limitation.</p>
+<h3 id="pop_os-2404">Pop!_OS 24.04</h3>
+<p><a href="https://system76.com/pop/">Pop!_OS</a> 24.04 is based on Ubuntu 24.04 and is also supported on x86_64 hardware. Once you're connected to the Internet, run our installer as shown above and it will detect Pop!_OS, install the Cinnamon desktop alongside Pop's own COSMIC desktop, and leave Pop's package sources exactly as they are.</p>
+<p>Pop!_OS uses COSMIC's own login screen, which starts COSMIC unless you choose otherwise. After the installer finishes, log out, choose Cinnamon from the session list on the login screen, and log in. The login screen remembers your choice from then on.</p>
+<p>As on <a href="#ubuntu">Ubuntu</a>, the optional Chromium browser is only available as a snap. Pop!_OS doesn't include snap support, so installing Chromium adds it.</p>
 <h3 id="devuan-6-excalibur">Devuan 6 Excalibur</h3>
 <p><a href="https://www.devuan.org/">Devuan</a> is Debian without systemd, and Devuan 6 (Excalibur) is based on Debian 13. Download it from <a href="https://www.devuan.org/get-devuan">https://www.devuan.org/get-devuan</a>, install it with whichever desktop the Devuan installer offers, and run our installer as shown above. It will detect Devuan, install the Cinnamon desktop alongside whatever the ISO shipped (XFCE by default), and leave your Devuan package sources exactly as they are, since replacing them with Debian's would pull systemd back in.</p>
 <p>A few things work differently without systemd:</p>
@@ -1492,6 +1567,14 @@
 <li>LCOS already ships Brave Origin, OhMyDebn's <a href="../browser/">default browser</a>, so OhMyDebn uses that copy and adds nothing.</li>
 <li>LCOS uses the LightDM login manager. OhMyDebn makes Cinnamon the default session for anyone who hasn't logged in yet, but LightDM remembers each user's last session, so if you've already logged into XFCE, pick Cinnamon once from the session menu on the login screen and LightDM will remember it from then on.</li>
 </ul>
+<h3 id="mx-linux-25">MX Linux 25</h3>
+<p><a href="https://mxlinux.org/">MX Linux</a> 25 is based on Debian 13, and our installer treats it just like Debian. Install MX with any of its desktops (Xfce, KDE Plasma, or Fluxbox) and run our installer as shown above. It installs the Cinnamon desktop alongside the one MX shipped and leaves MX's own package repository in place. MX Linux is only available for x86_64.</p>
+<p>MX offers each desktop with either systemd or sysvinit. Both work:</p>
+<ul>
+<li>With systemd, OhMyDebn works exactly as on Debian 13.</li>
+<li>With sysvinit, OhMyDebn works as on <a href="#devuan-6-excalibur">Devuan</a>: there's no background timer to check for new OhMyDebn releases, so check for updates yourself from the OhMyDebn menu (Update &gt; OhMyDebn) or with <code>Ctrl + Super + U</code>.</li>
+</ul>
+<p>MX uses the LightDM login manager. OhMyDebn makes Cinnamon the default session, but LightDM remembers each user's last session, so if you've already logged into MX's own desktop, pick Cinnamon once from the session menu on the login screen and LightDM will remember it from then on. If you turned on automatic login when installing MX, log out once to reach the login screen and pick Cinnamon there.</p>
 <h3 id="raspberry-pi">Raspberry Pi</h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>

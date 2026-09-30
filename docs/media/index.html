@@ -1080,6 +1080,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../resetting/" class="md-nav__link">
         
   
@@ -1245,7 +1272,9 @@
   <h1>Media</h1>
 
 <h2 id="rhythmbox">Rhythmbox</h2>
-<p>OhMyDebn includes <a href="https://en.wikipedia.org/wiki/Rhythmbox">Rhythmbox</a> music player by default.</p>
+<p>Some distros include the <a href="https://en.wikipedia.org/wiki/Rhythmbox">Rhythmbox</a> music player. If yours doesn't, you can install it:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>rhythmbox
+</code></pre></div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-rhythmbox.png" data-desc-position="bottom"><img alt="OhMyDebn Rhythmbox" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-rhythmbox.png"></a></p>
 <h2 id="cava">Cava</h2>
 <p>To visualize your system audio, run <code>cava</code> in a terminal or use <a href="../hotkeys/">hotkey</a> <code>Ctrl + Super + A</code>.</p>
@@ -1254,10 +1283,14 @@
 <p><a href="https://github.com/bjarneo/cliamp">cliamp</a> is a terminal music player. Hotkey <code>Ctrl + Alt + M</code> will check to see if it's installed and install if necessary. Alternatively, you can install via the OhMyDebn menu (Apps &gt; Media).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cliamp.png" data-desc-position="bottom"><img alt="OhMyDebn cliamp" src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cliamp.png"></a></p>
 <h2 id="airplay">AirPlay</h2>
-<p>The OhMyDebn menu (Apps &gt; Media) includes an option to install <a href="https://github.com/FDH2/UxPlay">UxPlay</a>, which is an AirPlay receiver. Once installed, you can run it like this to listen on ports starting at 6000:</p>
+<p>The OhMyDebn menu (Apps &gt; Media) includes <a href="https://github.com/FDH2/UxPlay">UxPlay</a>, an AirPlay receiver. Choosing it installs UxPlay if needed, then starts it listening on ports 6000 to 6002. To start it yourself in a terminal, use the same ports:</p>
 <div class="highlight"><pre><span></span><code>uxplay<span class="w"> </span>-p<span class="w"> </span><span class="m">6000</span>
 </code></pre></div>
-<p>You will need to open <a href="../firewall/">firewall</a> ports 6000, 6001, and 6002 for both UDP and TCP. You will also need to allow 5353/udp for mdns.</p>
+<p>The <a href="../firewall/">firewall</a> blocks those ports until you open them, along with 5353/udp, which Apple devices use to find the receiver:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">6000</span>:6002/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">6000</span>:6002/udp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">5353</span>/udp
+</code></pre></div>
 <p>Once the ports are open, any Apple devices on the same network should then see the receiver in their list of AirPlay devices.</p>
 
 
