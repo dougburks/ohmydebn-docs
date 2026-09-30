@@ -2,33 +2,33 @@
 
 To show the OhMyDebn logo in all of its glory, press `Ctrl + Shift + O`. The logo takes its colors from your current [theme](desktop-themes.md), and an open logo window updates when you change themes.
 
-![OhMyDebn logo gui](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-logo-gui.png)
+![OhMyDebn logo gui](images/ohmydebn-logo-gui.png)
 
 ## OhMyDebn Demo
 
 To show an animated OhMyDebn logo demo, open the OhMyDebn menu and choose the Demo option or just use [hotkey](hotkeys.md) `Ctrl + Alt + D`.
 
-![OhMyDebn animated logo demo](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-demo.gif)
+![OhMyDebn animated logo demo](images/ohmydebn-demo.gif)
 
 ## System Summary
 
 To see a system summary, open the OhMyDebn menu and choose the About option or just use [hotkey](hotkeys.md) `Ctrl + Shift + S`.
 
-![OhMyDebn system summary via fastfetch](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-fastfetch-gui.png)
+![OhMyDebn system summary via fastfetch](images/ohmydebn-fastfetch-gui.png)
 
 ## System Monitoring
 
 To monitor your system performance, launch btop via Cinnamon menu or via [hotkey](hotkeys.md) `Super + T`.
 
-![OhMyDebn btop](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-btop.png)
+![OhMyDebn btop](images/ohmydebn-btop.png)
 
 ## Speed Test
 
 To test your network or disk speed, open the OhMyDebn menu and choose `Trigger` - `Speed Test` - `Network Speed Test` or `Disk Speed Test`. Each shows a live dial readout while it measures, running a download/read pass followed by an upload/write pass. If you'd rather see the results in a [terminal](terminal.md) instead, run `ohmydebn-network-speedtest` or `ohmydebn-disk-speedtest`.
 
-![OhMyDebn network speed test](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-network-speedtest.png)
+![OhMyDebn network speed test](images/ohmydebn-network-speedtest.png)
 
-![OhMyDebn disk speed test](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-disk-speedtest.png)
+![OhMyDebn disk speed test](images/ohmydebn-disk-speedtest.png)
 
 ## Screenshots, Screen Recording, and Color Picker
 

@@ -4,13 +4,13 @@ There are multiple options for text editors depending on your needs.
 
 gedit is a very simple text editor with a graphical user interface. You can launch it from the Apps menu or by pressing Ctrl + Super + E.
 
-![OhMyDebn gedit screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gedit.png)
+![OhMyDebn gedit screenshot](images/ohmydebn-gedit.png)
 
 ## Neovim
 
 Neovim is a powerful terminal-based text editor. To start it, press `Super + N` or type `nvim` at any terminal prompt. It's set up with [LazyVim](https://www.lazyvim.org), and everything it needs (plugins, language tools, and syntax highlighting) is installed with OhMyDebn, so it's ready to use right away, even offline. Press the space bar and then the `E` key to open Explorer. Its colors follow your [desktop theme](desktop-themes.md) and change when you switch themes; a theme that doesn't include its own Neovim colors gets colors made from its palette. OhMyDebn installs the same current version of Neovim on every supported distro.
 
-![OhMyDebn Neovim screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-neovim.png)
+![OhMyDebn Neovim screenshot](images/ohmydebn-neovim.png)
 
 The [hotkeys](hotkeys.md) section includes more hotkeys for Neovim and a link to additional information.
 
@@ -30,4 +30,4 @@ To add support for another language, use `:LazyExtras`. The language tools it ne
 
 Visual Studio Code (VS Code) is a powerful text editor with a graphical user interface. You can install it from the OhMyDebn menu via `Apps` - `Editors` - `VSCode`. Once installed, you can launch it from the Apps menu or by pressing `Ctrl + Super + S`.
 
-![OhMyDebn VSCode screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-vscode.png)
+![OhMyDebn VSCode screenshot](images/ohmydebn-vscode.png)

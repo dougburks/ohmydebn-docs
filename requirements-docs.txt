@@ -1,0 +1,5 @@
+# MkDocs 2.0 drops plugins and theme overrides (overrides/home.html is one)
+# with no migration path, so stay on 1.x and Material 9.x until that's sorted.
+mkdocs>=1.6,<2
+mkdocs-material>=9.5,<10
+mkdocs-glightbox

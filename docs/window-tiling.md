@@ -9,7 +9,7 @@ The Cinnamon desktop environment includes basic window tiling:
 - You can tile to a corner by combining these options. For example, to tile to the upper right corner, hold the `Super` key and then press the Up arrow and then the Right arrow.
 - Cinnamon's basic window tiling has no window gaps so it maximizes your screen area and is especially helpful when working on smaller screens like laptops.
 
-![OhMyDebn Cinnamon window tiling](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-cinnamon-tiling.png)
+![OhMyDebn Cinnamon window tiling](images/ohmydebn-cinnamon-tiling.png)
 
 ## Advanced Window Tiling
 
@@ -20,7 +20,7 @@ For more advanced window tiling options, we've included a custom version of the 
 - Select the starting tile by pressing the letter associated with that tile and then select the ending tile by pressing the letter associated with that tile. For example, to tile the window to the left half of the screen in a 4x4 grid, press `a` and then `n`.
 - To set the window to a single tile, press the letter twice. For example, to tile to the upper left corner, press `a` twice.
 
-![OhMyDebn gTile window tiling](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile.png)
+![OhMyDebn gTile window tiling](images/ohmydebn-gtile.png)
 
 To configure gTile:
 
@@ -28,7 +28,7 @@ To configure gTile:
 - click the Behavior tab
 - from here you can adjust the window gap size, enable Maximize with gaps, and choose an Automatic tiling mode (see below)
 
-![OhMyDebn gTile settings](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-settings.png)
+![OhMyDebn gTile settings](images/ohmydebn-gtile-settings.png)
 
 There are also hotkeys for common tiling options that leverage gTile for window gaps:
 
@@ -49,7 +49,7 @@ For example, to lay out windows like in the following screenshot:
 - Press `Super + T` to start btop and then `Ctrl + Shift + 9 (numeric keypad)` to tile to the upper right corner.
 - Press `Super + F` to start the file manager and then press `Ctrl + Shift + 3 (numeric keypad)` to tile to the lower right corner.
 
-![OhMyDebn gTile window tiling with gaps](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-tiling.png)
+![OhMyDebn gTile window tiling with gaps](images/ohmydebn-tiling.png)
 
 ## Automatic Tiling
 
@@ -67,8 +67,8 @@ Windows placed by automatic tiling glide smoothly into place, Hyprland-style. Yo
 
 Here's automatic tiling in action - rule-based, traditional (3 windows), traditional (unlimited), and scrollable modes, cycled with `Super + L`:
 
-<video controls muted playsinline preload="metadata" style="max-width: 100%;" poster="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-automatic-tiling-poster.jpg">
-  <source src="https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-gtile-automatic-tiling.mp4" type="video/mp4">
+<video controls muted playsinline preload="metadata" style="max-width: 100%;" poster="../images/ohmydebn-gtile-automatic-tiling-poster.jpg">
+  <source src="../images/ohmydebn-gtile-automatic-tiling.mp4" type="video/mp4">
 </video>
 
 ## Scrollable Tiling

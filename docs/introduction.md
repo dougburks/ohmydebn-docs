@@ -1,0 +1,34 @@
+## OhMyDebn
+
+OhMyDebn is a debonair Linux desktop for power users. It gives you the stability of the Debian or Ubuntu distros, the ease of use of the Cinnamon desktop, and the power of AI, containers, and virtualization.
+
+![OhMyDebn screenshot](images/ohmydebn.png)
+
+## Debonair Haiku
+
+*Debonair strides bold,*  
+*Elegance in every step,*  
+*Stars bow to its charm.*  
+  -- AI, probably
+
+## Why is it called OhMyDebn?
+
+There are several meanings for the name:
+
+- [AI](ai.md) and [VMs](virtualization.md) and [containers](containerization.md), oh my!
+- It's so debonair, it will make your friends say "Oh! My Debian installations never looked this good!"
+- Obligatory [recursive acronym](https://en.wikipedia.org/wiki/Recursive_acronym) OHMYDEBN: OhMyDebn Heals My Yearning for a Desktop Environment Beautifully Now!
+
+## Who is this for?
+
+OhMyDebn is designed for many different use cases:
+
+- Power users that want to leverage [AI](ai.md), [containers](containerization.md), and [virtualization](virtualization.md)
+- Folks that want beautiful [Omarchy themes](desktop-themes.md#themes-included-from-omarchy) on a Debian-based distro
+- Cybersecurity engineers, IT administrators, or anybody that wants a beautiful and powerful [terminal](terminal.md)
+- Folks that prefer to keep hands on keyboard and use [hotkeys](hotkeys.md) as much as possible but still have the option of not having to use those hotkeys
+- Developers who want a beautiful [neovim](text-editor.md#neovim) or [Visual Studio Code](text-editor.md#visual-studio-code) experience
+- Folks who want a systemd-free desktop on [Devuan, LCOS](installation.md#devuan-6-excalibur), or [MX Linux](installation.md#mx-linux-25)
+- Folks with [older Windows machines that can't run Windows 11](gallery.md#2017-dell-precision)
+- Folks with [older Apple machines that can't run the latest version of macOS](gallery.md#2014-macbook)
+- Anybody who wants to see 2026 be the year of the Linux desktop!

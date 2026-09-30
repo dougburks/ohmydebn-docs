@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OhMyDebn: A Debonair Linux Desktop for Power Users</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Geist+Mono:wght@400;500;600&display=swap');
+{% extends "base.html" %}
 
+{#- The site's home page (ohmydebn.org/), selected by docs/index.md's front
+    matter. A full-bleed page in Material's header and footer, the same way
+    so-crates.org does it. Its styles are scoped to .omd so they never reach
+    Material's own header, footer or the docs pages; sizes go through --r so
+    the page matches its old 16px scale at Material's larger root size. -#}
+
+{% block htmltitle %}<title>OhMyDebn: A Debonair Linux Desktop for Power Users</title>{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+  
   :root {
     /* No invented palette, no invented atmosphere - these are the
        real Ohmydebn theme's own colors from its colors.toml, the
@@ -53,16 +61,16 @@
     color-scheme: dark;
   }
 
-  * { box-sizing: border-box; }
+  .omd, .omd * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-  body {
+  .omd {
     margin: 0;
     background: var(--void);
     color: var(--text);
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: calc(1 * var(--r));
     line-height: 1.65;
     overflow-x: hidden;
     position: relative;
@@ -71,22 +79,22 @@
   /* Applying a palette reassigns the custom properties above at
      :root - this is what makes the swap read as a transition
      instead of a jump cut. */
-  body, .glass, .btn, a, code {
+  .omd, .omd .glass, .omd .btn, .omd a, .omd code {
     transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
   }
   @media (prefers-reduced-motion: reduce) {
-    body, .glass, .btn, a, code { transition: none; }
+    .omd, .omd .glass, .omd .btn, .omd a, .omd code { transition: none; }
   }
 
-  a { color: var(--text); text-decoration-color: var(--edge-bright); text-underline-offset: 0.2em; }
-  a:hover { color: var(--cyan); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+  .omd a { color: var(--text); text-decoration-color: var(--edge-bright); text-underline-offset: 0.2em; }
+  .omd a:hover { color: var(--cyan); }
+  .omd a:focus-visible, .omd button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 
-  .wrap { max-width: 68rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 3rem); }
+  .wrap { max-width: calc(68 * var(--r)); margin-inline: auto; padding-inline: clamp(calc(1.25 * var(--r)), 4vw, calc(3 * var(--r))); }
 
   .eyebrow {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: calc(0.72 * var(--r));
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--emerald);
@@ -122,45 +130,14 @@
   }
   .glass:hover::before { opacity: 1; }
 
-  /* ---------- nav ---------- */
-  .topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 1.6rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .topbar-mark {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.05rem;
-    letter-spacing: -0.01em;
-  }
-  .topbar-mark .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: linear-gradient(135deg, var(--violet), var(--cyan)); box-shadow: 0 0 12px var(--cyan); }
-  .version-pill {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--text-dim);
-    border: 1px solid var(--edge);
-    padding: 0.15rem 0.6rem;
-    margin-left: 0.3rem;
-  }
-  .topbar-links { display: flex; gap: clamp(1rem, 3vw, 2rem); font-size: 0.85rem; }
-  .topbar-links a { text-decoration: none; color: var(--text-dim); }
-  .topbar-links a:hover { color: var(--text); }
-
   /* ---------- hero ---------- */
-  .hero { padding-block: clamp(2rem, 6vh, 3.5rem) clamp(2.5rem, 7vh, 4.5rem); text-align: center; }
+  .hero { padding-block: clamp(calc(2 * var(--r)), 6vh, calc(3.5 * var(--r))) clamp(calc(2.5 * var(--r)), 7vh, calc(4.5 * var(--r))); text-align: center; }
 
   h1.wordmark {
     margin: 0.6em auto 0;
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(2.6rem, 9vw, 5.4rem);
+    font-size: clamp(calc(2.6 * var(--r)), 9vw, calc(5.4 * var(--r)));
     line-height: 1.02;
     letter-spacing: -0.02em;
     max-width: 20ch;
@@ -172,48 +149,48 @@
   }
 
   .tagline {
-    margin: 1.3rem auto 0;
-    max-width: 36rem;
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    margin: calc(1.3 * var(--r)) auto 0;
+    max-width: calc(36 * var(--r));
+    font-size: clamp(calc(1.05 * var(--r)), 2vw, calc(1.25 * var(--r)));
     color: var(--text-dim);
     text-wrap: balance;
   }
 
   .distro-row {
-    margin: 1.4rem auto 0;
+    margin: calc(1.4 * var(--r)) auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem 1rem;
+    gap: calc(0.5 * var(--r)) calc(1 * var(--r));
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: calc(0.78 * var(--r));
     color: var(--text-dim);
   }
   .distro-row span { white-space: nowrap; }
   .distro-row a { color: inherit; text-decoration-color: transparent; }
   .distro-row a:hover { color: var(--text); text-decoration-color: var(--edge-bright); }
 
-  .install-cta { max-width: 40rem; margin: 2.2rem auto 0; text-align: left; padding: 1.1rem 1.2rem; }
+  .install-cta { max-width: calc(40 * var(--r)); margin: calc(2.2 * var(--r)) auto 0; text-align: left; padding: calc(1.1 * var(--r)) calc(1.2 * var(--r)); }
   .term-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
+    gap: calc(1 * var(--r));
+    margin-bottom: calc(0.8 * var(--r));
   }
-  .term-bar span { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+  .term-bar span { font-family: var(--font-mono); font-size: calc(0.7 * var(--r)); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
   .copy-btn {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: calc(0.7 * var(--r));
     letter-spacing: 0.04em;
     color: var(--text-dim);
     background: transparent;
     border: 1px solid var(--edge);
-    padding: 0.35rem 0.65rem;
+    padding: calc(0.35 * var(--r)) calc(0.65 * var(--r));
     cursor: pointer;
   }
   .copy-btn:hover { color: var(--text); border-color: var(--edge-bright); }
-  .term-line { font-family: var(--font-mono); font-size: 0.95rem; color: var(--text); margin: 0; word-break: break-word; }
+  .term-line { font-family: var(--font-mono); font-size: calc(0.95 * var(--r)); color: var(--text); margin: 0; word-break: break-word; }
   .term-line .prompt { color: var(--emerald); }
   .cursor {
     display: inline-block;
@@ -227,7 +204,7 @@
   @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
   @keyframes blink { 50% { opacity: 0; } }
 
-  .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1.8rem; }
+  .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: calc(1 * var(--r)); margin-top: calc(1.8 * var(--r)); }
 
   /* The real desktop, not a mockup - same aspect ratio as the theme
      screenshots used elsewhere on the page (2540x1374). Crossfades on
@@ -239,8 +216,8 @@
      announced as interactive for free. */
   .hero-shot-btn {
     display: block;
-    width: min(100%, 46rem);
-    margin: 2.6rem auto;
+    width: min(100%, calc(46 * var(--r)));
+    margin: calc(2.6 * var(--r)) auto;
     padding: 0;
     border: none;
     background: none;
@@ -259,7 +236,7 @@
   .hero-shot-btn:focus-visible .hero-shot { border-color: var(--edge-bright); }
   @media (prefers-reduced-motion: reduce) { .hero-shot { transition: none; } }
 
-  .demo-video-wrap { width: min(100%, 46rem); margin: 2.4rem auto 0; }
+  .demo-video-wrap { width: min(100%, calc(46 * var(--r))); margin: calc(2.4 * var(--r)) auto 0; }
   .demo-video {
     display: block;
     width: 100%;
@@ -267,7 +244,7 @@
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
     background: var(--void);
   }
-  .demo-video-caption { margin: 0.9rem 0 0; text-align: center; font-size: 0.9rem; color: var(--text-dim); }
+  .demo-video-caption { margin: calc(0.9 * var(--r)) 0 0; text-align: center; font-size: calc(0.9 * var(--r)); color: var(--text-dim); }
 
   /* ---------- lightbox: the hero shot, enlarged, without leaving the page ---------- */
   .lightbox {
@@ -277,7 +254,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(1.5rem, 6vw, 4rem);
+    padding: clamp(calc(1.5 * var(--r)), 6vw, calc(4 * var(--r)));
     background: rgba(0, 0, 0, 0.8);
     opacity: 0;
     pointer-events: none;
@@ -293,12 +270,12 @@
   }
   .lightbox-close {
     position: absolute;
-    top: clamp(0.8rem, 3vw, 1.6rem);
-    right: clamp(0.8rem, 3vw, 1.6rem);
-    width: 2.4rem;
-    height: 2.4rem;
+    top: clamp(calc(0.8 * var(--r)), 3vw, calc(1.6 * var(--r)));
+    right: clamp(calc(0.8 * var(--r)), 3vw, calc(1.6 * var(--r)));
+    width: calc(2.4 * var(--r));
+    height: calc(2.4 * var(--r));
     font-family: var(--font-body);
-    font-size: 1.3rem;
+    font-size: calc(1.3 * var(--r));
     line-height: 1;
     color: var(--text);
     background: var(--surface);
@@ -311,10 +288,10 @@
   .btn {
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 0.92rem;
+    font-size: calc(0.92 * var(--r));
     text-decoration: none;
     text-shadow: none;
-    padding: 0.85rem 1.5rem;
+    padding: calc(0.85 * var(--r)) calc(1.5 * var(--r));
     display: inline-flex;
     align-items: center;
     gap: 0.6em;
@@ -333,18 +310,18 @@
   .btn.ghost:hover { border-color: var(--edge-bright); }
 
   ol.install-steps {
-    margin: 1rem auto 0;
-    max-width: 40rem;
-    padding: 0 0 0 1.4rem;
-    font-size: 0.85rem;
+    margin: calc(1 * var(--r)) auto 0;
+    max-width: calc(40 * var(--r));
+    padding: 0 0 0 calc(1.4 * var(--r));
+    font-size: calc(0.85 * var(--r));
     color: var(--text-dim);
     text-align: left;
   }
-  ol.install-steps li { margin-bottom: 0.3rem; }
+  ol.install-steps li { margin-bottom: calc(0.3 * var(--r)); }
   ol.install-steps li::marker { color: var(--emerald); font-family: var(--font-mono); font-size: 0.9em; }
   ol.install-steps a { color: var(--text-dim); }
 
-  code {
+  .omd code {
     font-family: var(--font-mono);
     font-size: 0.88em;
     color: var(--emerald);
@@ -355,41 +332,41 @@
   }
 
   /* ---------- sections, revealed on scroll ---------- */
-  section { padding-block: clamp(2.5rem, 6vh, 4.5rem); }
-  .reveal { opacity: 0; transform: translateY(1rem); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+  .omd section { padding-block: clamp(calc(2.5 * var(--r)), 6vh, calc(4.5 * var(--r))); }
+  .reveal { opacity: 0; transform: translateY(calc(1 * var(--r))); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-  .section-head { max-width: 38rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .section-head { max-width: calc(38 * var(--r)); margin-bottom: clamp(calc(2 * var(--r)), 5vw, calc(3 * var(--r))); }
   .section-head h2 {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    font-size: clamp(calc(1.6 * var(--r)), 4vw, calc(2.3 * var(--r)));
     line-height: 1.15;
     margin: 0.4em 0 0;
     color: var(--text);
     text-wrap: balance;
   }
-  .section-head p { margin: 0.9rem 0 0; font-size: 1rem; color: var(--text-dim); max-width: 46ch; }
+  .section-head p { margin: calc(0.9 * var(--r)) 0 0; font-size: calc(1 * var(--r)); color: var(--text-dim); max-width: 46ch; }
 
   /* ---------- feature grid ---------- */
-  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr)); gap: 1.25rem; }
-  .feature { padding: 1.4rem 1.5rem 1.6rem; }
-  .feature .icon { width: 2.4rem; height: 2.4rem; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 600; font-size: 0.8rem; color: var(--void); margin-bottom: 1rem; }
-  .feature h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: var(--text); margin: 0 0 0.5em; }
-  .feature p { margin: 0; font-size: 0.95rem; color: var(--text-dim); }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(calc(15.5 * var(--r)), 1fr)); gap: calc(1.25 * var(--r)); }
+  .feature { padding: calc(1.4 * var(--r)) calc(1.5 * var(--r)) calc(1.6 * var(--r)); }
+  .feature .icon { width: calc(2.4 * var(--r)); height: calc(2.4 * var(--r)); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 600; font-size: calc(0.8 * var(--r)); color: var(--void); margin-bottom: calc(1 * var(--r)); }
+  .feature h3 { font-family: var(--font-body); font-weight: 700; font-size: calc(1.05 * var(--r)); color: var(--text); margin: 0 0 0.5em; }
+  .feature p { margin: 0; font-size: calc(0.95 * var(--r)); color: var(--text-dim); }
 
   /* ---------- theme swatches - live, clickable ---------- */
-  .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); gap: 1rem; }
-  .theme-chip { padding: 0.9rem; cursor: pointer; }
+  .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(calc(12.5 * var(--r)), 1fr)); gap: calc(1 * var(--r)); }
+  .theme-chip { padding: calc(0.9 * var(--r)); cursor: pointer; }
   .theme-chip:hover { border-color: var(--edge-bright); }
   .theme-chip:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
   .theme-chip.current { border-color: var(--violet); }
-  .theme-swatches { display: flex; height: 1.8rem; overflow: hidden; }
+  .theme-swatches { display: flex; height: calc(1.8 * var(--r)); overflow: hidden; }
   .theme-swatches span { flex: 1; }
-  .theme-name { margin: 0.65rem 0 0; font-size: 0.82rem; color: var(--text); font-weight: 600; }
-  .theme-name .tag { display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ember); margin-bottom: 0.2rem; visibility: hidden; }
+  .theme-name { margin: calc(0.65 * var(--r)) 0 0; font-size: calc(0.82 * var(--r)); color: var(--text); font-weight: 600; }
+  .theme-name .tag { display: block; font-family: var(--font-mono); font-size: calc(0.62 * var(--r)); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ember); margin-bottom: calc(0.2 * var(--r)); visibility: hidden; }
   .theme-chip.current .theme-name .tag { visibility: visible; }
-  .theme-more { margin-top: 1.3rem; font-size: 0.92rem; color: var(--text-dim); }
+  .theme-more { margin-top: calc(1.3 * var(--r)); font-size: calc(0.92 * var(--r)); color: var(--text-dim); }
   /* A real desktop screenshot, shown on hover/focus so the small
      wallpaper thumbnail above isn't the only preview a theme gets.
      Fixed-positioned and JS-placed rather than a child of the chip,
@@ -400,7 +377,7 @@
   .theme-preview {
     position: fixed;
     z-index: 50;
-    width: min(26rem, 82vw);
+    width: min(calc(26 * var(--r)), 82vw);
     aspect-ratio: 2540 / 1374;
     background: var(--void);
     border: 1px solid var(--edge-bright);
@@ -418,34 +395,49 @@
 
   /* ---------- closing ---------- */
   .closing { text-align: center; }
-  .closing h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 5vw, 2.8rem); color: var(--text); margin: 0.3em auto 0; max-width: 20ch; text-wrap: balance; }
-  .closing p.sponsor { max-width: 42rem; margin: 1.4rem auto 0; font-size: 0.92rem; color: var(--text-dim); }
+  .closing h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(calc(1.8 * var(--r)), 5vw, calc(2.8 * var(--r))); color: var(--text); margin: 0.3em auto 0; max-width: 20ch; text-wrap: balance; }
+  .closing p.sponsor { max-width: calc(42 * var(--r)); margin: calc(1.4 * var(--r)) auto 0; font-size: calc(0.92 * var(--r)); color: var(--text-dim); }
 
   .colophon {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
+    margin-top: calc(3 * var(--r));
+    padding-top: calc(1.5 * var(--r));
     border-top: 1px solid var(--edge);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.2rem;
+    gap: calc(1.2 * var(--r));
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: calc(0.72 * var(--r));
     color: var(--text-dim);
   }
   .colophon a { color: var(--text-dim); }
-</style>
-</head>
-<body>
+
+
+  /* ---- page-scoped: full-bleed home page inside Material ---- */
+  :root { --r: 0.8rem; }  /* the page's old 1rem (16px) at Material's 125% root size; grows with it on wide screens */
+  body { background: var(--void); }
+  .md-main__inner { max-width: none; margin: 0; }
+  .md-content { padding: 0; }
+  .md-header {
+    background: color-mix(in srgb, var(--void) 78%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text);
+    box-shadow: 0 1px 0 var(--edge);
+  }
+  .md-footer, .md-footer-meta { background: var(--void); color: var(--text-dim); }
+  .md-footer-meta__inner a, .md-footer__link { color: var(--text-dim); }
+  .omd { width: 100%; }  /* .md-main__inner is a flex row; without this the page shrinks to its content */
+  </style>
+{% endblock %}
+
+{% block site_nav %}{% endblock %}
+
+{% block container %}
+<div class="omd">
+
 
 <div class="wrap">
-  <div class="topbar">
-    <span class="topbar-mark"><span class="dot" aria-hidden="true"></span>OhMyDebn<span class="version-pill">v4.9</span></span>
-    <nav class="topbar-links">
-      <a href="/docs">Docs</a>
-      <a href="https://github.com/dougburks/ohmydebn">GitHub</a>
-    </nav>
-  </div>
 
   <div class="hero">
     <p class="eyebrow" style="justify-content: center;">A debonair linux desktop for power users</p>
@@ -700,7 +692,7 @@
       <p class="term-line"><span class="prompt">$</span> <span id="typedCmd"></span><span class="cursor" id="cmdCursor"></span></p>
     </div>
     <div class="cta-row">
-      <a class="btn primary" href="/docs">Read the Docs</a>
+      <a class="btn primary" href="{{ 'introduction/' | url }}">Read the Docs</a>
       <a class="btn ghost" href="https://github.com/dougburks/ohmydebn">View on GitHub</a>
     </div>
     <p class="sponsor">Everything above is free, open source, and reviewable.</p>
@@ -716,7 +708,12 @@
   <img id="lightboxImg" src="" alt="">
 </div>
 
-<script>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
   (function () {
     "use strict";
 
@@ -979,5 +976,4 @@
     }
   })();
 </script>
-</body>
-</html>
+{% endblock %}

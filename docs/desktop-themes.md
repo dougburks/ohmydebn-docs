@@ -2,13 +2,13 @@
 
 The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
-![OhMyDebn screenshot](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn.png)
+![OhMyDebn screenshot](images/ohmydebn.png)
 
 ## Theme Carousel
 
 You can browse and change your theme by going to the OhMyDebn menu and selecting Style > Theme, or via [hotkey](hotkeys.md) `Ctrl + Super + T` (or `Ctrl + Super + B`, which opens the same carousel).
 
-![OhMyDebn desktop themes](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-carousel.png)
+![OhMyDebn desktop themes](images/ohmydebn-theme-carousel.png)
 
 This opens a full-screen theme and background browser on whichever monitor your mouse pointer is on:
 
@@ -29,90 +29,90 @@ Here are some screenshots of the themes included from Omarchy.
 
 ### Catppuccin
 
-![OhMyDebn with catppuccin theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-catppuccin.png)
+![OhMyDebn with catppuccin theme](images/ohmydebn-theme-catppuccin.png)
 
 ### Catppuccin Latte
 
-![OhMyDebn with catppuccin latte theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-catppuccin-latte.png)
+![OhMyDebn with catppuccin latte theme](images/ohmydebn-theme-catppuccin-latte.png)
 
 ### Ethereal
 
-![OhMyDebn with ethereal theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-ethereal.png)
+![OhMyDebn with ethereal theme](images/ohmydebn-theme-ethereal.png)
 
 ### Everforest
 
-![OhMyDebn with everforest theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-everforest.png)
+![OhMyDebn with everforest theme](images/ohmydebn-theme-everforest.png)
 
 ### Flexoki Light
 
-![OhMyDebn with flexoki light theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-flexoki-light.png)
+![OhMyDebn with flexoki light theme](images/ohmydebn-theme-flexoki-light.png)
 
 ### Gruvbox
 
-![OhMyDebn with gruvbox theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-gruvbox.png)
+![OhMyDebn with gruvbox theme](images/ohmydebn-theme-gruvbox.png)
 
 ### Hackerman
 
-![OhMyDebn with hackerman theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-hackerman.png)
+![OhMyDebn with hackerman theme](images/ohmydebn-theme-hackerman.png)
 
 ### Kanagawa
 
-![OhMyDebn with kanagawa theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-kanagawa.png)
+![OhMyDebn with kanagawa theme](images/ohmydebn-theme-kanagawa.png)
 
 ### Last Horizon
 
-![OhMyDebn with last horizon theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-last-horizon.png)
+![OhMyDebn with last horizon theme](images/ohmydebn-theme-last-horizon.png)
 
 ### Lumon
 
-![OhMyDebn with lumon theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-lumon.png)
+![OhMyDebn with lumon theme](images/ohmydebn-theme-lumon.png)
 
 ### Lupine
 
-![OhMyDebn with lupine theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-lupine.png)
+![OhMyDebn with lupine theme](images/ohmydebn-theme-lupine.png)
 
 ### Matte Black
 
-![OhMyDebn with matte black theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-matte-black.png)
+![OhMyDebn with matte black theme](images/ohmydebn-theme-matte-black.png)
 
 ### Miasma
 
-![OhMyDebn with miasma theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-miasma.png)
+![OhMyDebn with miasma theme](images/ohmydebn-theme-miasma.png)
 
 ### Nord
 
-![OhMyDebn with nord theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-nord.png)
+![OhMyDebn with nord theme](images/ohmydebn-theme-nord.png)
 
 ### Osaka Jade
 
-![OhMyDebn with osaka jade theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-osaka-jade.png)
+![OhMyDebn with osaka jade theme](images/ohmydebn-theme-osaka-jade.png)
 
 ### Retro 82
 
-![OhMyDebn with retro 82 theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-retro-82.png)
+![OhMyDebn with retro 82 theme](images/ohmydebn-theme-retro-82.png)
 
 ### Ristretto
 
-![OhMyDebn with ristretto theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-ristretto.png)
+![OhMyDebn with ristretto theme](images/ohmydebn-theme-ristretto.png)
 
 ### Rose Pine
 
-![OhMyDebn with rose pine theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-rose-pine.png)
+![OhMyDebn with rose pine theme](images/ohmydebn-theme-rose-pine.png)
 
 ### Solitude
 
-![OhMyDebn with solitude theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-solitude.png)
+![OhMyDebn with solitude theme](images/ohmydebn-theme-solitude.png)
 
 ### Tokyo Night
 
-![OhMyDebn with tokyo night theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-tokyo-night.png)
+![OhMyDebn with tokyo night theme](images/ohmydebn-theme-tokyo-night.png)
 
 ### Vantablack
 
-![OhMyDebn with vantablack theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-vantablack.png)
+![OhMyDebn with vantablack theme](images/ohmydebn-theme-vantablack.png)
 
 ### White
 
-![OhMyDebn with white theme](https://raw.githubusercontent.com/dougburks/ohmydebn-docs/refs/heads/main/images/ohmydebn-theme-white.png)
+![OhMyDebn with white theme](images/ohmydebn-theme-white.png)
 
 
