@@ -1,12 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OhMyDebn: A Debonair Linux Desktop for Power Users</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Geist+Mono:wght@400;500;600&display=swap');
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ohmydebn.org/">
+      
+      
+      
+        <link rel="next" href="introduction/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    <title>OhMyDebn: A Debonair Linux Desktop for Power Users</title>
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+  
   :root {
     /* No invented palette, no invented atmosphere - these are the
        real Ohmydebn theme's own colors from its colors.toml, the
@@ -53,16 +100,16 @@
     color-scheme: dark;
   }
 
-  * { box-sizing: border-box; }
+  .omd, .omd * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-  body {
+  .omd {
     margin: 0;
     background: var(--void);
     color: var(--text);
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: calc(1 * var(--r));
     line-height: 1.65;
     overflow-x: hidden;
     position: relative;
@@ -71,22 +118,22 @@
   /* Applying a palette reassigns the custom properties above at
      :root - this is what makes the swap read as a transition
      instead of a jump cut. */
-  body, .glass, .btn, a, code {
+  .omd, .omd .glass, .omd .btn, .omd a, .omd code {
     transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
   }
   @media (prefers-reduced-motion: reduce) {
-    body, .glass, .btn, a, code { transition: none; }
+    .omd, .omd .glass, .omd .btn, .omd a, .omd code { transition: none; }
   }
 
-  a { color: var(--text); text-decoration-color: var(--edge-bright); text-underline-offset: 0.2em; }
-  a:hover { color: var(--cyan); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+  .omd a { color: var(--text); text-decoration-color: var(--edge-bright); text-underline-offset: 0.2em; }
+  .omd a:hover { color: var(--cyan); }
+  .omd a:focus-visible, .omd button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 
-  .wrap { max-width: 68rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 3rem); }
+  .wrap { max-width: calc(68 * var(--r)); margin-inline: auto; padding-inline: clamp(calc(1.25 * var(--r)), 4vw, calc(3 * var(--r))); }
 
   .eyebrow {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: calc(0.72 * var(--r));
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--emerald);
@@ -122,45 +169,14 @@
   }
   .glass:hover::before { opacity: 1; }
 
-  /* ---------- nav ---------- */
-  .topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 1.6rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .topbar-mark {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.05rem;
-    letter-spacing: -0.01em;
-  }
-  .topbar-mark .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: linear-gradient(135deg, var(--violet), var(--cyan)); box-shadow: 0 0 12px var(--cyan); }
-  .version-pill {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--text-dim);
-    border: 1px solid var(--edge);
-    padding: 0.15rem 0.6rem;
-    margin-left: 0.3rem;
-  }
-  .topbar-links { display: flex; gap: clamp(1rem, 3vw, 2rem); font-size: 0.85rem; }
-  .topbar-links a { text-decoration: none; color: var(--text-dim); }
-  .topbar-links a:hover { color: var(--text); }
-
   /* ---------- hero ---------- */
-  .hero { padding-block: clamp(2rem, 6vh, 3.5rem) clamp(2.5rem, 7vh, 4.5rem); text-align: center; }
+  .hero { padding-block: clamp(calc(2 * var(--r)), 6vh, calc(3.5 * var(--r))) clamp(calc(2.5 * var(--r)), 7vh, calc(4.5 * var(--r))); text-align: center; }
 
   h1.wordmark {
     margin: 0.6em auto 0;
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(2.6rem, 9vw, 5.4rem);
+    font-size: clamp(calc(2.6 * var(--r)), 9vw, calc(5.4 * var(--r)));
     line-height: 1.02;
     letter-spacing: -0.02em;
     max-width: 20ch;
@@ -172,48 +188,48 @@
   }
 
   .tagline {
-    margin: 1.3rem auto 0;
-    max-width: 36rem;
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    margin: calc(1.3 * var(--r)) auto 0;
+    max-width: calc(36 * var(--r));
+    font-size: clamp(calc(1.05 * var(--r)), 2vw, calc(1.25 * var(--r)));
     color: var(--text-dim);
     text-wrap: balance;
   }
 
   .distro-row {
-    margin: 1.4rem auto 0;
+    margin: calc(1.4 * var(--r)) auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem 1rem;
+    gap: calc(0.5 * var(--r)) calc(1 * var(--r));
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: calc(0.78 * var(--r));
     color: var(--text-dim);
   }
   .distro-row span { white-space: nowrap; }
   .distro-row a { color: inherit; text-decoration-color: transparent; }
   .distro-row a:hover { color: var(--text); text-decoration-color: var(--edge-bright); }
 
-  .install-cta { max-width: 40rem; margin: 2.2rem auto 0; text-align: left; padding: 1.1rem 1.2rem; }
+  .install-cta { max-width: calc(40 * var(--r)); margin: calc(2.2 * var(--r)) auto 0; text-align: left; padding: calc(1.1 * var(--r)) calc(1.2 * var(--r)); }
   .term-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
+    gap: calc(1 * var(--r));
+    margin-bottom: calc(0.8 * var(--r));
   }
-  .term-bar span { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+  .term-bar span { font-family: var(--font-mono); font-size: calc(0.7 * var(--r)); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
   .copy-btn {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: calc(0.7 * var(--r));
     letter-spacing: 0.04em;
     color: var(--text-dim);
     background: transparent;
     border: 1px solid var(--edge);
-    padding: 0.35rem 0.65rem;
+    padding: calc(0.35 * var(--r)) calc(0.65 * var(--r));
     cursor: pointer;
   }
   .copy-btn:hover { color: var(--text); border-color: var(--edge-bright); }
-  .term-line { font-family: var(--font-mono); font-size: 0.95rem; color: var(--text); margin: 0; word-break: break-word; }
+  .term-line { font-family: var(--font-mono); font-size: calc(0.95 * var(--r)); color: var(--text); margin: 0; word-break: break-word; }
   .term-line .prompt { color: var(--emerald); }
   .cursor {
     display: inline-block;
@@ -227,7 +243,7 @@
   @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
   @keyframes blink { 50% { opacity: 0; } }
 
-  .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1.8rem; }
+  .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: calc(1 * var(--r)); margin-top: calc(1.8 * var(--r)); }
 
   /* The real desktop, not a mockup - same aspect ratio as the theme
      screenshots used elsewhere on the page (2540x1374). Crossfades on
@@ -239,8 +255,8 @@
      announced as interactive for free. */
   .hero-shot-btn {
     display: block;
-    width: min(100%, 46rem);
-    margin: 2.6rem auto;
+    width: min(100%, calc(46 * var(--r)));
+    margin: calc(2.6 * var(--r)) auto;
     padding: 0;
     border: none;
     background: none;
@@ -259,7 +275,7 @@
   .hero-shot-btn:focus-visible .hero-shot { border-color: var(--edge-bright); }
   @media (prefers-reduced-motion: reduce) { .hero-shot { transition: none; } }
 
-  .demo-video-wrap { width: min(100%, 46rem); margin: 2.4rem auto 0; }
+  .demo-video-wrap { width: min(100%, calc(46 * var(--r))); margin: calc(2.4 * var(--r)) auto 0; }
   .demo-video {
     display: block;
     width: 100%;
@@ -267,7 +283,7 @@
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
     background: var(--void);
   }
-  .demo-video-caption { margin: 0.9rem 0 0; text-align: center; font-size: 0.9rem; color: var(--text-dim); }
+  .demo-video-caption { margin: calc(0.9 * var(--r)) 0 0; text-align: center; font-size: calc(0.9 * var(--r)); color: var(--text-dim); }
 
   /* ---------- lightbox: the hero shot, enlarged, without leaving the page ---------- */
   .lightbox {
@@ -277,7 +293,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(1.5rem, 6vw, 4rem);
+    padding: clamp(calc(1.5 * var(--r)), 6vw, calc(4 * var(--r)));
     background: rgba(0, 0, 0, 0.8);
     opacity: 0;
     pointer-events: none;
@@ -293,12 +309,12 @@
   }
   .lightbox-close {
     position: absolute;
-    top: clamp(0.8rem, 3vw, 1.6rem);
-    right: clamp(0.8rem, 3vw, 1.6rem);
-    width: 2.4rem;
-    height: 2.4rem;
+    top: clamp(calc(0.8 * var(--r)), 3vw, calc(1.6 * var(--r)));
+    right: clamp(calc(0.8 * var(--r)), 3vw, calc(1.6 * var(--r)));
+    width: calc(2.4 * var(--r));
+    height: calc(2.4 * var(--r));
     font-family: var(--font-body);
-    font-size: 1.3rem;
+    font-size: calc(1.3 * var(--r));
     line-height: 1;
     color: var(--text);
     background: var(--surface);
@@ -311,10 +327,10 @@
   .btn {
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 0.92rem;
+    font-size: calc(0.92 * var(--r));
     text-decoration: none;
     text-shadow: none;
-    padding: 0.85rem 1.5rem;
+    padding: calc(0.85 * var(--r)) calc(1.5 * var(--r));
     display: inline-flex;
     align-items: center;
     gap: 0.6em;
@@ -333,18 +349,18 @@
   .btn.ghost:hover { border-color: var(--edge-bright); }
 
   ol.install-steps {
-    margin: 1rem auto 0;
-    max-width: 40rem;
-    padding: 0 0 0 1.4rem;
-    font-size: 0.85rem;
+    margin: calc(1 * var(--r)) auto 0;
+    max-width: calc(40 * var(--r));
+    padding: 0 0 0 calc(1.4 * var(--r));
+    font-size: calc(0.85 * var(--r));
     color: var(--text-dim);
     text-align: left;
   }
-  ol.install-steps li { margin-bottom: 0.3rem; }
+  ol.install-steps li { margin-bottom: calc(0.3 * var(--r)); }
   ol.install-steps li::marker { color: var(--emerald); font-family: var(--font-mono); font-size: 0.9em; }
   ol.install-steps a { color: var(--text-dim); }
 
-  code {
+  .omd code {
     font-family: var(--font-mono);
     font-size: 0.88em;
     color: var(--emerald);
@@ -355,41 +371,41 @@
   }
 
   /* ---------- sections, revealed on scroll ---------- */
-  section { padding-block: clamp(2.5rem, 6vh, 4.5rem); }
-  .reveal { opacity: 0; transform: translateY(1rem); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+  .omd section { padding-block: clamp(calc(2.5 * var(--r)), 6vh, calc(4.5 * var(--r))); }
+  .reveal { opacity: 0; transform: translateY(calc(1 * var(--r))); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-  .section-head { max-width: 38rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .section-head { max-width: calc(38 * var(--r)); margin-bottom: clamp(calc(2 * var(--r)), 5vw, calc(3 * var(--r))); }
   .section-head h2 {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    font-size: clamp(calc(1.6 * var(--r)), 4vw, calc(2.3 * var(--r)));
     line-height: 1.15;
     margin: 0.4em 0 0;
     color: var(--text);
     text-wrap: balance;
   }
-  .section-head p { margin: 0.9rem 0 0; font-size: 1rem; color: var(--text-dim); max-width: 46ch; }
+  .section-head p { margin: calc(0.9 * var(--r)) 0 0; font-size: calc(1 * var(--r)); color: var(--text-dim); max-width: 46ch; }
 
   /* ---------- feature grid ---------- */
-  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr)); gap: 1.25rem; }
-  .feature { padding: 1.4rem 1.5rem 1.6rem; }
-  .feature .icon { width: 2.4rem; height: 2.4rem; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 600; font-size: 0.8rem; color: var(--void); margin-bottom: 1rem; }
-  .feature h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: var(--text); margin: 0 0 0.5em; }
-  .feature p { margin: 0; font-size: 0.95rem; color: var(--text-dim); }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(calc(15.5 * var(--r)), 1fr)); gap: calc(1.25 * var(--r)); }
+  .feature { padding: calc(1.4 * var(--r)) calc(1.5 * var(--r)) calc(1.6 * var(--r)); }
+  .feature .icon { width: calc(2.4 * var(--r)); height: calc(2.4 * var(--r)); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 600; font-size: calc(0.8 * var(--r)); color: var(--void); margin-bottom: calc(1 * var(--r)); }
+  .feature h3 { font-family: var(--font-body); font-weight: 700; font-size: calc(1.05 * var(--r)); color: var(--text); margin: 0 0 0.5em; }
+  .feature p { margin: 0; font-size: calc(0.95 * var(--r)); color: var(--text-dim); }
 
   /* ---------- theme swatches - live, clickable ---------- */
-  .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); gap: 1rem; }
-  .theme-chip { padding: 0.9rem; cursor: pointer; }
+  .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(calc(12.5 * var(--r)), 1fr)); gap: calc(1 * var(--r)); }
+  .theme-chip { padding: calc(0.9 * var(--r)); cursor: pointer; }
   .theme-chip:hover { border-color: var(--edge-bright); }
   .theme-chip:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
   .theme-chip.current { border-color: var(--violet); }
-  .theme-swatches { display: flex; height: 1.8rem; overflow: hidden; }
+  .theme-swatches { display: flex; height: calc(1.8 * var(--r)); overflow: hidden; }
   .theme-swatches span { flex: 1; }
-  .theme-name { margin: 0.65rem 0 0; font-size: 0.82rem; color: var(--text); font-weight: 600; }
-  .theme-name .tag { display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ember); margin-bottom: 0.2rem; visibility: hidden; }
+  .theme-name { margin: calc(0.65 * var(--r)) 0 0; font-size: calc(0.82 * var(--r)); color: var(--text); font-weight: 600; }
+  .theme-name .tag { display: block; font-family: var(--font-mono); font-size: calc(0.62 * var(--r)); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ember); margin-bottom: calc(0.2 * var(--r)); visibility: hidden; }
   .theme-chip.current .theme-name .tag { visibility: visible; }
-  .theme-more { margin-top: 1.3rem; font-size: 0.92rem; color: var(--text-dim); }
+  .theme-more { margin-top: calc(1.3 * var(--r)); font-size: calc(0.92 * var(--r)); color: var(--text-dim); }
   /* A real desktop screenshot, shown on hover/focus so the small
      wallpaper thumbnail above isn't the only preview a theme gets.
      Fixed-positioned and JS-placed rather than a child of the chip,
@@ -400,7 +416,7 @@
   .theme-preview {
     position: fixed;
     z-index: 50;
-    width: min(26rem, 82vw);
+    width: min(calc(26 * var(--r)), 82vw);
     aspect-ratio: 2540 / 1374;
     background: var(--void);
     border: 1px solid var(--edge-bright);
@@ -418,42 +434,196 @@
 
   /* ---------- closing ---------- */
   .closing { text-align: center; }
-  .closing h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 5vw, 2.8rem); color: var(--text); margin: 0.3em auto 0; max-width: 20ch; text-wrap: balance; }
-  .closing p.sponsor { max-width: 42rem; margin: 1.4rem auto 0; font-size: 0.92rem; color: var(--text-dim); }
+  .closing h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(calc(1.8 * var(--r)), 5vw, calc(2.8 * var(--r))); color: var(--text); margin: 0.3em auto 0; max-width: 20ch; text-wrap: balance; }
+  .closing p.sponsor { max-width: calc(42 * var(--r)); margin: calc(1.4 * var(--r)) auto 0; font-size: calc(0.92 * var(--r)); color: var(--text-dim); }
 
   .colophon {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
+    margin-top: calc(3 * var(--r));
+    padding-top: calc(1.5 * var(--r));
     border-top: 1px solid var(--edge);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.2rem;
+    gap: calc(1.2 * var(--r));
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: calc(0.72 * var(--r));
     color: var(--text-dim);
   }
   .colophon a { color: var(--text-dim); }
-</style>
-</head>
-<body>
+
+
+  /* ---- page-scoped: full-bleed home page inside Material ---- */
+  :root { --r: 0.8rem; }  /* the page's old 1rem (16px) at Material's 125% root size; grows with it on wide screens */
+  body { background: var(--void); }
+  .md-main__inner { max-width: none; margin: 0; }
+  .md-content { padding: 0; }
+  .md-header {
+    background: color-mix(in srgb, var(--void) 78%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text);
+    box-shadow: 0 1px 0 var(--edge);
+  }
+  .md-footer, .md-footer-meta { background: var(--void); color: var(--text-dim); }
+  .md-footer-meta__inner a, .md-footer__link { color: var(--text-dim); }
+  .omd { width: 100%; }  /* .md-main__inner is a flex row; without this the page shrinks to its content */
+  </style>
+
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ohmydebn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="OhMyDebn" class="md-header__button md-logo" aria-label="OhMyDebn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OhMyDebn
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dougburks/ohmydebn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+          
+<div class="omd">
+
 
 <div class="wrap">
-  <div class="topbar">
-    <span class="topbar-mark"><span class="dot" aria-hidden="true"></span>OhMyDebn<span class="version-pill">v4.9</span></span>
-    <nav class="topbar-links">
-      <a href="/docs">Docs</a>
-      <a href="https://github.com/dougburks/ohmydebn">GitHub</a>
-    </nav>
-  </div>
 
   <div class="hero">
     <p class="eyebrow" style="justify-content: center;">A debonair linux desktop for power users</p>
     <h1 class="wordmark">Linux, refined.</h1>
-    <p class="tagline">The stability of a Debian-based distro, the ease of Cinnamon desktop, and the power of AI, containers, and virtualization &mdash; one hotkey away.</p>
+    <p class="tagline">The stability of a Debian-based distro, the ease of Cinnamon desktop, and the power of AI, containers, and virtualization — one hotkey away.</p>
 
     <div class="distro-row">
-      <span><a href="https://linuxmint.com/download.php">Linux Mint</a></span><span>&middot;</span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span>&middot;</span><span><a href="https://mxlinux.org/download-links/">MX Linux 25</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span>&middot;</span><span><a href="https://system76.com/pop/download/">Pop!_OS 24.04</a></span><span>&middot;</span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali</a></span><span>&middot;</span><span><a href="https://www.devuan.org/get-devuan">Devuan 6</a></span><span>&middot;</span><span><a href="https://github.com/BryanLunduke/LCOS">LCOS</a></span>
+      <span><a href="https://linuxmint.com/download.php">Linux Mint</a></span><span>·</span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span>·</span><span><a href="https://mxlinux.org/download-links/">MX Linux 25</a></span><span>·</span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span>·</span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span>·</span><span><a href="https://system76.com/pop/download/">Pop!_OS 24.04</a></span><span>·</span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali</a></span><span>·</span><span><a href="https://www.devuan.org/get-devuan">Devuan 6</a></span><span>·</span><span><a href="https://github.com/BryanLunduke/LCOS">LCOS</a></span>
     </div>
 
     <div class="cta-row">
@@ -467,7 +637,7 @@
   <div class="section-head reveal">
     <p class="eyebrow">Bundled themes</p>
     <h2>A look for every mood</h2>
-    <p>Browse a growing gallery of Omarchy-inspired looks, or build your own with Aether. This page runs on the same palette system &mdash; click any swatch below to preview it live, and the screenshot will follow along.</p>
+    <p>Browse a growing gallery of Omarchy-inspired looks, or build your own with Aether. This page runs on the same palette system — click any swatch below to preview it live, and the screenshot will follow along.</p>
   </div>
 
   <button class="hero-shot-btn" id="themeShotBtn" type="button" aria-label="View larger screenshot">
@@ -549,7 +719,7 @@
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="rosepine" data-shot="images/ohmydebn-theme-rose-pine.png">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#faf4ed"></span><span style="background:#56949f"></span><span style="background:#286983"></span><span style="background:#cf8057"></span><span style="background:#d7827e"></span></div>
-      <p class="theme-name"><span class="tag">Current</span>Ros&eacute; Pine</p>
+      <p class="theme-name"><span class="tag">Current</span>Rosé Pine</p>
     </div>
     <div class="theme-chip glass reveal" role="button" tabindex="0" data-theme="solitude" data-shot="images/ohmydebn-theme-solitude.png">
       <div class="theme-swatches" aria-hidden="true"><span style="background:#101315"></span><span style="background:#798186"></span><span style="background:#9fa5a9"></span><span style="background:#d9dbdc"></span><span style="background:#707070"></span></div>
@@ -576,18 +746,18 @@
   <div class="section-head reveal">
     <p class="eyebrow">What you choose</p>
     <h2>Pick your combination</h2>
-    <p>Every layer below is independent &mdash; mix a base distro, a window management style, and a navigation style however you like.</p>
+    <p>Every layer below is independent — mix a base distro, a window management style, and a navigation style however you like.</p>
   </div>
   <div class="features">
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--violet), var(--cyan));">01</div>
       <h3>Base Distro</h3>
-      <p>Linux Mint, LMDE, Debian 13, MX Linux, Ubuntu, Pop!_OS, Kali, or systemd-free Devuan and LCOS &mdash; pick the one you already trust from the list above.</p>
+      <p>Linux Mint, LMDE, Debian 13, MX Linux, Ubuntu, Pop!_OS, Kali, or systemd-free Devuan and LCOS — pick the one you already trust from the list above.</p>
     </div>
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--cyan), var(--emerald));">02</div>
       <h3>Window Management</h3>
-      <p>A traditional menu and taskbar, or automatic window tiling &mdash; your call.</p>
+      <p>A traditional menu and taskbar, or automatic window tiling — your call.</p>
     </div>
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--emerald), var(--ember));">03</div>
@@ -596,12 +766,11 @@
     </div>
   </div>
   <div class="demo-video-wrap reveal">
-    <video class="demo-video" controls muted playsinline preload="metadata"
-           poster="images/ohmydebn-gtile-automatic-tiling-poster.jpg">
+    <video class="demo-video" controls="" muted="" playsinline="" preload="metadata" poster="images/ohmydebn-gtile-automatic-tiling-poster.jpg">
       <source src="images/ohmydebn-gtile-automatic-tiling.mp4" type="video/mp4">
       Your browser doesn't support embedded video.
     </video>
-    <p class="demo-video-caption">gTile automatic tiling in action &mdash; rule-based, traditional, and scrollable modes, cycled with Super + L.</p>
+    <p class="demo-video-caption">gTile automatic tiling in action — rule-based, traditional, and scrollable modes, cycled with Super + L.</p>
   </div>
 </section>
 
@@ -620,12 +789,12 @@
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--ember), var(--violet));">02</div>
       <h3>Themeable to the Bone</h3>
-      <p>A theme carousel, an Aether theme builder, and a gallery of Omarchy-inspired looks &mdash; change your whole desktop's mood in seconds.</p>
+      <p>A theme carousel, an Aether theme builder, and a gallery of Omarchy-inspired looks — change your whole desktop's mood in seconds.</p>
     </div>
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--violet), var(--emerald));">03</div>
       <h3>Containers and VMs, on Tap</h3>
-      <p>Docker, Podman, Distrobox, Boxes, and Virtual Machine Manager &mdash; install only the ones you actually use.</p>
+      <p>Docker, Podman, Distrobox, Boxes, and Virtual Machine Manager — install only the ones you actually use.</p>
     </div>
   </div>
 </section>
@@ -640,7 +809,7 @@
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--violet), var(--cyan));">01</div>
       <h3>Pick Your Assistant</h3>
-      <p>OpenCode, Claude Code, Pi, and more &mdash; install whichever ones you use and set your favorite as default.</p>
+      <p>OpenCode, Claude Code, Pi, and more — install whichever ones you use and set your favorite as default.</p>
     </div>
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--cyan), var(--emerald));">02</div>
@@ -650,7 +819,7 @@
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--emerald), var(--ember));">03</div>
       <h3>Herd Your Agents</h3>
-      <p><a href="https://herdr.dev/">Herdr</a> keeps agents running in the background across every project and machine &mdash; close the lid, and they're still working when you check back.</p>
+      <p><a href="https://herdr.dev/">Herdr</a> keeps agents running in the background across every project and machine — close the lid, and they're still working when you check back.</p>
     </div>
   </div>
 </section>
@@ -659,13 +828,13 @@
   <div class="section-head reveal">
     <p class="eyebrow">Security</p>
     <h2>Locked down by default</h2>
-    <p>None of this is optional or something you have to remember to turn on &mdash; it's already on, out of the box.</p>
+    <p>None of this is optional or something you have to remember to turn on — it's already on, out of the box.</p>
   </div>
   <div class="features">
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--cyan), var(--violet));">01</div>
       <h3>Firewall by Default</h3>
-      <p>ufw denies all inbound connections out of the box &mdash; no ports open unless you open them.</p>
+      <p>ufw denies all inbound connections out of the box — no ports open unless you open them.</p>
     </div>
     <div class="feature glass reveal">
       <div class="icon" style="background: linear-gradient(135deg, var(--emerald), var(--violet));">02</div>
@@ -685,7 +854,7 @@
     <p class="eyebrow" style="justify-content: center;">Get started</p>
     <h2>Read the docs, star the repo, or just run the install.</h2>
     <div class="distro-row">
-      <span><a href="https://linuxmint.com/download.php">Linux Mint</a></span><span>&middot;</span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span>&middot;</span><span><a href="https://mxlinux.org/download-links/">MX Linux 25</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span>&middot;</span><span><a href="https://system76.com/pop/download/">Pop!_OS 24.04</a></span><span>&middot;</span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali</a></span><span>&middot;</span><span><a href="https://www.devuan.org/get-devuan">Devuan 6</a></span><span>&middot;</span><span><a href="https://github.com/BryanLunduke/LCOS">LCOS</a></span>
+      <span><a href="https://linuxmint.com/download.php">Linux Mint</a></span><span>·</span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span>·</span><span><a href="https://mxlinux.org/download-links/">MX Linux 25</a></span><span>·</span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span>·</span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span>·</span><span><a href="https://system76.com/pop/download/">Pop!_OS 24.04</a></span><span>·</span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali</a></span><span>·</span><span><a href="https://www.devuan.org/get-devuan">Devuan 6</a></span><span>·</span><span><a href="https://github.com/BryanLunduke/LCOS">LCOS</a></span>
     </div>
     <ol class="install-steps">
       <li>Pick your favorite distro from the list above (if you don't have a favorite, try <a href="https://linuxmint.com/download.php">Linux Mint</a>).</li>
@@ -700,23 +869,91 @@
       <p class="term-line"><span class="prompt">$</span> <span id="typedCmd"></span><span class="cursor" id="cmdCursor"></span></p>
     </div>
     <div class="cta-row">
-      <a class="btn primary" href="/docs">Read the Docs</a>
+      <a class="btn primary" href="introduction/">Read the Docs</a>
       <a class="btn ghost" href="https://github.com/dougburks/ohmydebn">View on GitHub</a>
     </div>
     <p class="sponsor">Everything above is free, open source, and reviewable.</p>
   </div>
   <div class="colophon">
-    <span>&copy; Doug Burks</span>
+    <span>© Doug Burks</span>
     <span><a href="https://github.com/dougburks/ohmydebn">github.com/dougburks/ohmydebn</a></span>
   </div>
 </section>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged desktop screenshot">
-  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">×</button>
   <img id="lightboxImg" src="" alt="">
 </div>
 
-<script>
+</div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+        
+          
+          <a href="introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "navigation.footer"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  <script>
   (function () {
     "use strict";
 
@@ -979,5 +1216,8 @@
     }
   })();
 </script>
-</body>
-</html>
+
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
