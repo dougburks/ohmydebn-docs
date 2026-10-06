@@ -8,6 +8,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
 
+- [Aether](desktop-themes.md) updated to version 4.32.0
 - [Codex](ai.md#codex) updated to version 0.160.1
 - [OpenCode](ai.md#opencode) updated to version 1.18.34
 - [Pi](ai.md#pi) updated to version 1.0.4
