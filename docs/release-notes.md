@@ -6,6 +6,9 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Updated components
 
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Pi](ai.md#pi) updated to version 1.0.4
 - [SO-CRATES](cybersecurity.md) updated to version 4.4.0
 
 ## 4.9.0
