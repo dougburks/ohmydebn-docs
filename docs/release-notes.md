@@ -11,6 +11,18 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### Fixes
 
 - On Raspberry Pi OS, the installer now tells you to reboot to start Cinnamon. It used to tell you to log out and pick Cinnamon, but on Raspberry Pi OS the switch to Cinnamon only takes effect after a reboot.
+- If the installer couldn't download the OhMyDebn repository key, for example during a network outage, running it again now works. It used to keep failing until a leftover file was deleted by hand.
+- Changing your [desktop theme](desktop-themes.md) no longer stops partway when Claude Code's settings file isn't valid or your cava setup has no color section. The rest of the desktop used to keep its old colors.
+- Switching to the next theme now moves on from your current theme. It used to pick the same theme every time.
+- If installing an AI tool, cliamp or SO-CRATES from its hotkey or menu item fails, the window now stays open so you can read why.
+- Cancelling an update at its first prompt, or starting one while another is already running, no longer makes `ohmydebn-doctor` report a failed update.
+- `Ctrl + Shift + K` now opens KeePassXC even while a browser is using the KeePassXC extension.
+- Installing Chromium from the menu now refreshes the package lists first, so it no longer fails when they're out of date.
+- If installing a theme from a git repository fails, the copy of that theme you already had is kept.
+- Reinstalling the Helium browser no longer resets your Helium settings.
+- Resetting your configuration now keeps your update logs, and stops at a step that fails instead of carrying on.
+- SO-CRATES now tells you when it can't start because your account has no subordinate user IDs, instead of failing partway through the download.
+- On new installs, removing an applet from the panel takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted.
 
 ### Updated components
 
