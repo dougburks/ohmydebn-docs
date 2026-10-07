@@ -18,6 +18,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 
 - [Aether](desktop-themes.md) updated to version 4.32.0
 - [Codex](ai.md#codex) updated to version 0.160.1
+- [Grok Build](ai.md#grok-build) updated to version 1.0.46
 - [OpenCode](ai.md#opencode) updated to version 1.18.34
 - [Pi](ai.md#pi) updated to version 1.0.4
 - [SO-CRATES](cybersecurity.md) updated to version 4.4.0
