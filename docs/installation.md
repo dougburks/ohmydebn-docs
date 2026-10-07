@@ -101,7 +101,7 @@ MX uses the LightDM login manager. OhMyDebn makes Cinnamon the default session, 
 
 [Raspberry Pi OS](https://www.raspberrypi.com/software/) is based on Debian 13 and runs on Raspberry Pi hardware as well as on regular x86_64 PCs and virtual machines. Once you're running it and are connected to the Internet, you can run our installer as shown above.
 
-Raspberry Pi OS logs you in automatically, so there's no login screen to pick a session from. Our installer switches that automatic login to Cinnamon instead, so once it's complete, reboot and enjoy your new OhMyDebn desktop!
+Our installer switches Raspberry Pi OS's login to Cinnamon, which takes effect after a reboot. Once the installer is complete, reboot and enjoy your new OhMyDebn desktop!
 
 !!! tip
     On Raspberry Pi hardware, we recommend a Raspberry Pi 5 with SSD and at least 4GB RAM for best results.

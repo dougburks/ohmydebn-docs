@@ -10,7 +10,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Fixes
 
-- On Raspberry Pi OS, the installer now tells you to reboot to start Cinnamon. It used to tell you to log out and pick Cinnamon at a login screen that Raspberry Pi OS doesn't show.
+- On Raspberry Pi OS, the installer now tells you to reboot to start Cinnamon. It used to tell you to log out and pick Cinnamon, but on Raspberry Pi OS the switch to Cinnamon only takes effect after a reboot.
 
 ### Updated components
 
