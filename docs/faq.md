@@ -30,7 +30,7 @@ Either works great, and our installer supports both. If you're on x86_64 hardwar
 That said, Debian remains the project's foundation, and there are cases where it's the right choice:
 
 - Linux Mint is only available for x86 architecture. If you're on ARM, you need a distro compiled for ARM that can run Cinnamon (like Debian).
-- Raspberry Pi OS is based on Debian 13. You can use this repo to turn it into OhMyDebn!
+- Raspberry Pi OS is based on Debian 13 and runs on both Raspberry Pi hardware and x86_64 PCs. You can use this repo to turn it into OhMyDebn!
 - You want the most vanilla base possible - for fun and for science!
 
 Linux Mint Debian Edition (LMDE) splits the difference - it's Debian-based and already ships Cinnamon. Our [installer supports installing directly onto LMDE 7](installation.md#linux-mint-debian-edition-7) if you'd rather have Mint's extras on a Debian base.
