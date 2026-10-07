@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#490" class="md-skip">
+        <a href="#4100" class="md-skip">
           Skip to content
         </a>
       
@@ -1076,6 +1076,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#4100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.10.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-distros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported distros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updated-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#490" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1088,7 +1138,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#supported-distros" class="md-nav__link">
+  <a href="#supported-distros_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Supported distros
@@ -1121,7 +1171,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fixes" class="md-nav__link">
+  <a href="#fixes_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fixes
@@ -1132,7 +1182,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#updated-components" class="md-nav__link">
+  <a href="#updated-components_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Updated components
@@ -1261,6 +1311,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#4100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.10.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-distros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported distros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updated-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#490" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1273,7 +1373,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#supported-distros" class="md-nav__link">
+  <a href="#supported-distros_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Supported distros
@@ -1306,7 +1406,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fixes" class="md-nav__link">
+  <a href="#fixes_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fixes
@@ -1317,7 +1417,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#updated-components" class="md-nav__link">
+  <a href="#updated-components_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Updated components
@@ -1356,8 +1456,43 @@
 
 <p>This page lists what's new in each OhMyDebn release, newest first. To get the latest release, see <a href="../updating/">Updating</a>.</p>
 <p>Release notes for 4.8.0 and earlier are on <a href="https://github.com/dougburks/ohmydebn/releases">GitHub</a>.</p>
-<h2 id="490">4.9.0</h2>
+<h2 id="4100">4.10.0</h2>
 <h3 id="supported-distros">Supported distros</h3>
+<ul>
+<li><a href="../installation/#raspberry-pi-os">Raspberry Pi OS</a> is now supported on regular x86_64 PCs and virtual machines, not just on Raspberry Pi hardware.</li>
+</ul>
+<h3 id="fixes">Fixes</h3>
+<ul>
+<li>On Raspberry Pi OS, the installer now tells you to reboot to start Cinnamon. It used to tell you to log out and pick Cinnamon, but on Raspberry Pi OS the switch to Cinnamon only takes effect after a reboot.</li>
+<li>If the installer couldn't download the OhMyDebn repository key, for example during a network outage, running it again now works. It used to keep failing until a leftover file was deleted by hand.</li>
+<li>Changing your <a href="../desktop-themes/">desktop theme</a> no longer stops partway when Claude Code's settings file isn't valid or your cava setup has no color section. The rest of the desktop used to keep its old colors.</li>
+<li>Switching to the next theme now moves on from your current theme. It used to pick the same theme every time.</li>
+<li>If installing an AI tool, cliamp or SO-CRATES from its hotkey or menu item fails, the window now stays open so you can read why.</li>
+<li>Cancelling an update at its first prompt, or starting one while another is already running, no longer makes <code>ohmydebn-doctor</code> report a failed update.</li>
+<li><code>Ctrl + Shift + K</code> now opens KeePassXC even while a browser is using the KeePassXC extension.</li>
+<li>Installing Chromium from the menu now refreshes the package lists first, so it no longer fails when they're out of date.</li>
+<li>If installing a theme from a git repository fails, the copy of that theme you already had is kept.</li>
+<li>Reinstalling the Helium browser no longer resets your Helium settings.</li>
+<li>Resetting your configuration now keeps your update logs, and stops at a step that fails instead of carrying on.</li>
+<li>SO-CRATES now tells you when it can't start because your account has no subordinate user IDs, instead of failing partway through the download.</li>
+<li>On new installs, removing an applet from the panel takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted.</li>
+</ul>
+<h3 id="updated-components">Updated components</h3>
+<p>Updating OhMyDebn brings you these new versions automatically. The <a href="../ai/">AI tools</a> are updated if you've installed them.</p>
+<ul>
+<li><a href="../desktop-themes/">Aether</a> updated to version 4.32.0</li>
+<li><a href="../ai/#codex">Codex</a> updated to version 0.160.1</li>
+<li><a href="../ai/#grok-build">Grok Build</a> updated to version 1.0.46</li>
+<li><a href="../utilities/#localsend">LocalSend</a> updated to version 1.18.2</li>
+<li><a href="../ai/#oh-my-pi">Oh My Pi</a> updated to version 18.8.0</li>
+<li><a href="../ai/#opencode">OpenCode</a> updated to version 1.18.35</li>
+<li><a href="../ai/#pi">Pi</a> updated to version 1.0.4</li>
+<li><a href="../cybersecurity/">SO-CRATES</a> updated to version 4.4.0</li>
+<li><a href="../ai/#t3-code">T3 Code</a> updated to version 0.0.45</li>
+<li>lazygit updated to version 0.66.0</li>
+</ul>
+<h2 id="490">4.9.0</h2>
+<h3 id="supported-distros_1">Supported distros</h3>
 <ul>
 <li><a href="../installation/#mx-linux-25">MX Linux 25</a> is now supported, with either systemd or sysvinit.</li>
 <li><a href="../installation/#pop_os-2404">Pop!_OS 24.04</a> is now supported. OhMyDebn installs Cinnamon alongside Pop's own COSMIC desktop.</li>
@@ -1382,7 +1517,7 @@
 <li><a href="../text-editor/#neovim">Neovim</a> now matches every <a href="../desktop-themes/">desktop theme</a>. Themes that don't include their own Neovim colors, such as Ethereal, Vantablack, and White, and themes you install from elsewhere, now get Neovim colors made from the theme's own palette instead of Neovim's default colors.</li>
 <li>The <a href="../updating/#checking-your-installation">doctor</a> (Update &gt; Doctor) checks more: whether your last update finished, free disk space, half-installed packages, the firewall, your clock, your default browser and AI assistant, whether your terminal settings are readable, Neovim and its plugins, and whether UxPlay and Podman have everything they need to run. It also tells you when a reboot is needed, and it checks for problems fixed in this release, such as a virtual machine's display not resizing.</li>
 </ul>
-<h3 id="fixes">Fixes</h3>
+<h3 id="fixes_1">Fixes</h3>
 <ul>
 <li>Fixed an error when opening a file in <a href="../text-editor/#neovim">Neovim</a>, caused by a plugin update that no longer supported the version of Neovim included in Debian 13.</li>
 <li>Two <a href="../window-tiling/">window tiling</a> settings, "UI always centered on monitor" and "Show UI on all monitors", could act as turned on while their settings showed them off, with no way to turn them off. Updating fixes them.</li>
@@ -1401,7 +1536,7 @@
 <li>The theme carousel no longer shows empty boxes above and below a theme that has only one background, or the same background twice for a theme that has two.</li>
 <li>When a website asks Aether to apply a theme, the confirmation now has Cancel selected, so pressing Enter doesn't apply it. Links that could show one theme source in the confirmation while Aether downloads another are refused.</li>
 </ul>
-<h3 id="updated-components">Updated components</h3>
+<h3 id="updated-components_1">Updated components</h3>
 <p>Updating OhMyDebn brings you these new versions automatically. The <a href="../ai/">AI tools</a> are updated if you've installed them.</p>
 <ul>
 <li><a href="../text-editor/#neovim">Neovim</a> updated to version 0.12.5</li>

@@ -1348,7 +1348,7 @@
 <p>In addition to the pop-up notification, there are a few other ways to start the update process:</p>
 <ul>
 <li>open the OhMyDebn menu and select Update &gt; OhMyDebn</li>
-<li>use <a href="../hotkeys/">hotkey</a> Ctrl + Super + U</li>
+<li>use <a href="../hotkeys/">hotkey</a> <code>Ctrl + Super + U</code></li>
 <li>if you're already in a <a href="../terminal/">terminal</a> and want to run from there then you can use:
 <div class="highlight"><pre><span></span><code>ohmydebn-update
 </code></pre></div></li>
@@ -1388,8 +1388,8 @@
 <p>Only one update can run at a time. If you start a second one, whether from the menu, the hotkey, the notification, or a terminal, it tells you an update is already running and exits. Wait for the first one to finish.</p>
 <p>If the update can't reach OhMyDebn's own package repository, for example with no Internet access, it stops before changing anything and tells you. Any other repository that fails to refresh, such as a third-party one that is down or no longer exists, is listed in a warning and skipped for that run, and the update continues. If a listed repository is one you no longer need, remove it from <code>/etc/apt/sources.list.d/</code>.</p>
 <h2 id="checking-your-installation">Checking your installation</h2>
-<p>OhMyDebn includes a read-only self-check that looks at everything the installer sets up and reports one line per item: whether your last update finished, packages and the OhMyDebn apt repository (including the pins that keep third-party repositories to their own packages), free disk space and any half-installed packages, the firewall and the blocks on vulnerable kernel modules, whether your clock is synchronized, whether your terminal and theme settings files are readable, your default browser and AI assistant, the Cinnamon extension and its settings, the current theme, Neovim and its plugins, the login session default, the update timer, the AI tools and their shell aliases, the custom hotkeys, and the tools other OhMyDebn commands rely on, including Oh My Zsh and the OhMyDebn Menu launcher. It also lists any OhMyDebn updates that are waiting. It also tells you when a reboot is needed to finish an update. It changes nothing.</p>
-<p>Run it from the OhMyDebn menu (Update -&gt; Doctor), or from a terminal:</p>
+<p>OhMyDebn includes a read-only self-check that looks at everything the installer sets up and reports one line per item: whether your last update finished, packages and the OhMyDebn apt repository (including the pins that keep third-party repositories to their own packages), free disk space and any half-installed packages, the firewall and the blocks on vulnerable kernel modules, whether your clock is synchronized, whether your terminal and theme settings files are readable, your default browser and AI assistant, the Cinnamon extension and its settings, the current theme, Neovim and its plugins, the login session default, the update timer, the AI tools and their shell aliases, the custom hotkeys, and the tools other OhMyDebn commands rely on, including Oh My Zsh and the OhMyDebn Menu launcher. If you've installed optional apps such as UxPlay or Podman, it checks that they have everything they need too. It also lists any OhMyDebn updates that are waiting and tells you when a reboot is needed to finish an update. It changes nothing.</p>
+<p>Run it from the OhMyDebn menu (Update &gt; Doctor), or from a terminal:</p>
 <div class="highlight"><pre><span></span><code>ohmydebn-doctor
 </code></pre></div>
 <p>Anything marked <code>FAIL</code> is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.</p>
