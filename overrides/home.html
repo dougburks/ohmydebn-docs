@@ -157,7 +157,12 @@
   }
 
   .distro-row {
-    margin: calc(1.4 * var(--r)) auto 0;
+    /* Wider than .wrap's text column (still centered, never wider than the
+       screen), so the whole supported-distro list fits on one line on a
+       desktop instead of leaving its last name alone on a second. */
+    width: min(calc(78 * var(--r)), 100vw - calc(2.5 * var(--r)));
+    margin: calc(1.4 * var(--r)) 0 0 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
