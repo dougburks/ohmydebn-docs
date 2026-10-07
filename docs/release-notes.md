@@ -19,9 +19,11 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Aether](desktop-themes.md) updated to version 4.32.0
 - [Codex](ai.md#codex) updated to version 0.160.1
 - [Grok Build](ai.md#grok-build) updated to version 1.0.46
+- [LocalSend](utilities.md#localsend) updated to version 1.18.2
 - [OpenCode](ai.md#opencode) updated to version 1.18.34
 - [Pi](ai.md#pi) updated to version 1.0.4
 - [SO-CRATES](cybersecurity.md) updated to version 4.4.0
+- [T3 Code](ai.md#t3-code) updated to version 0.0.45
 - lazygit updated to version 0.66.0
 
 ## 4.9.0
