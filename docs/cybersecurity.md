@@ -1,10 +1,11 @@
-If you're in cybersecurity or networking, then you may need to analyze pcap files. The OhMyDebn menu's Apps -> Cybersecurity section allows you to install standard libpcap utilities like [tcpdump](https://www.tcpdump.org/), [tshark](https://www.wireshark.org/docs/man-pages/tshark.html), and [wireshark](https://www.wireshark.org/). It also allows you to install our new [SO-CRATES](https://so-crates.org) tool. Alternatively, you can run `ohmydebn-socrates` or just use hotkey `Ctrl + Alt + S`. Any of these methods will check to see if SO-CRATES is installed and install it if necessary.
+If you're in cybersecurity or networking, then you may need to analyze pcap files. The OhMyDebn menu's Apps > Cybersecurity section allows you to install standard libpcap utilities like [tcpdump](https://www.tcpdump.org/), [tshark](https://www.wireshark.org/docs/man-pages/tshark.html), and [wireshark](https://www.wireshark.org/). It also allows you to install our new [SO-CRATES](https://so-crates.org) tool. Alternatively, you can run `ohmydebn-socrates` or just use hotkey `Ctrl + Alt + S`. Any of these methods will install Podman if necessary and then download and start SO-CRATES.
 
 Once SO-CRATES starts just click the hyperlink at the bottom of the terminal window to open the SO-CRATES web interface in your browser.
 
 The welcome screen gives you an overview of SO-CRATES:
 
 ![SO-CRATES welcome screen](https://raw.githubusercontent.com/dougburks/ohmypcap/refs/heads/main/docs/images/so-crates-welcome.png)
+
 The main screen allows you to upload a pcap file, log file, or binary file:
 
 ![SO-CRATES main screen](https://raw.githubusercontent.com/dougburks/ohmypcap/refs/heads/main/docs/images/so-crates-main.png)

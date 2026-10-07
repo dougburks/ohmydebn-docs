@@ -2,7 +2,7 @@ There are multiple options for text editors depending on your needs.
 
 ## gedit
 
-gedit is a very simple text editor with a graphical user interface. You can launch it from the Apps menu or by pressing Ctrl + Super + E.
+gedit is a very simple text editor with a graphical user interface. You can launch it from the OhMyDebn menu (Apps > Other Apps, or just type its name) or by pressing `Ctrl + Super + E`.
 
 ![OhMyDebn gedit screenshot](images/ohmydebn-gedit.png)
 
@@ -24,10 +24,10 @@ To add support for another language, use `:LazyExtras`. The language tools it ne
 
 ## Emacs
 
-[Emacs](https://www.gnu.org/software/emacs/) is available as an optional installation. You can install it from the OhMyDebn menu via `Apps` - `Editors` - `Emacs`. That menu option checks to see if it's installed first, so even on a new installation it will install and then run Emacs.
+[Emacs](https://www.gnu.org/software/emacs/) is available as an optional installation. You can install it from the OhMyDebn menu via Apps > Editors > Emacs. That menu option checks to see if it's installed first, so even on a new installation it will install and then run Emacs.
 
 ## Visual Studio Code
 
-Visual Studio Code (VS Code) is a powerful text editor with a graphical user interface. You can install it from the OhMyDebn menu via `Apps` - `Editors` - `VSCode`. Once installed, you can launch it from the Apps menu or by pressing `Ctrl + Super + S`.
+Visual Studio Code (VS Code) is a powerful text editor with a graphical user interface. You can install it from the OhMyDebn menu via Apps > Editors > VSCode. Once installed, you can launch it from the Apps menu or by pressing `Ctrl + Super + S`.
 
 ![OhMyDebn VSCode screenshot](images/ohmydebn-vscode.png)

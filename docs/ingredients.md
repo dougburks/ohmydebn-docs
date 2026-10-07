@@ -27,7 +27,7 @@ Your base distro may add more. For example, most of them turn on [AppArmor](http
 
 Here are some additional components that you can optionally install:
 
-- AI: [OpenCode](ai.md#opencode) with free and paid models, [Claude Code](ai.md#claude-code), [ChatGPT](ai.md#chatgpt), [Codex](ai.md#codex), [Pi](ai.md#pi), [Oh My Pi](ai.md#oh-my-pi), [Grok Build](ai.md#grok-build), [T3 Code](ai.md#t3-code), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with Github Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
+- AI: [OpenCode](ai.md#opencode) with free and paid models, [Claude Code](ai.md#claude-code), [ChatGPT](ai.md#chatgpt), [Codex](ai.md#codex), [Pi](ai.md#pi), [Oh My Pi](ai.md#oh-my-pi), [Grok Build](ai.md#grok-build), [T3 Code](ai.md#t3-code), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with GitHub Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
 - VPN: [Cloudflare Warp](vpn.md#cloudflare-warp) or [Tailscale](vpn.md#tailscale)
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)

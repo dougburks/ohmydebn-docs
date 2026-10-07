@@ -98,15 +98,15 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 
 | Hotkey | Function |
 |--------|----------|
-| `Ctrl + Alt + B` | Boxes Virtualization
-| `Ctrl + Alt + V` | Virtual Machine Manager
+| `Ctrl + Alt + B` | Boxes Virtualization |
+| `Ctrl + Alt + V` | Virtual Machine Manager |
 
 ## Media
 
 | Hotkey | Function |
 |--------|----------|
-| `Ctrl + Super + A` | audio visualizer (cava)
-| `Ctrl + Alt + M` | cliamp terminal music player
+| `Ctrl + Super + A` | audio visualizer (cava) |
+| `Ctrl + Alt + M` | cliamp terminal music player |
 
 ## Apps
 
@@ -120,21 +120,21 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Super + G` | Google search |
 | `Super + T` | btop |
 | `Super + O` | ohmydebn.org |
-| `Super + E` | Email (GMail) |
+| `Super + E` | Email (Gmail) |
 | `Super + C` | Calendar (Google Calendar) |
 | `Super + X` | X.com |
 | `Alt + F2` | Run dialog |
-| `Shift + Super + C` | Cinnamon calendar
-| `Ctrl + Super + C` | Calculator (galculator)
-| `Ctrl + Super + L` | LocalSend
-| `Ctrl + Alt + G` | Gestures
-| `Ctrl + Alt + P` | PowerShell
-| `Ctrl + Alt + S` | SO-CRATES
-| `Ctrl + Alt + D` | Animated OhMyDebn logo demo
-| `Ctrl + Alt + W` | Cloudflare Warp
-| `Ctrl + Alt + C` | Claude Code
-| `Ctrl + Super + Return` | [herdr](terminal.md#herdr)
-| `Super + Alt + Return` | [tmux](terminal.md#tmux) terminal
+| `Shift + Super + C` | Cinnamon calendar |
+| `Ctrl + Super + C` | Calculator (galculator) |
+| `Ctrl + Super + L` | LocalSend |
+| `Ctrl + Alt + G` | Gestures |
+| `Ctrl + Alt + P` | PowerShell |
+| `Ctrl + Alt + S` | SO-CRATES |
+| `Ctrl + Alt + D` | Animated OhMyDebn logo demo |
+| `Ctrl + Alt + W` | Cloudflare Warp |
+| `Ctrl + Alt + C` | Claude Code |
+| `Ctrl + Super + Return` | [herdr](terminal.md#herdr) |
+| `Super + Alt + Return` | [tmux](terminal.md#tmux) terminal |
 
 ## Browser (Brave Origin / Chromium)
 
@@ -190,9 +190,9 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 
 | Hotkey | Function |
 |--------|----------|
-| `Ctrl + Super + E` | Simple Text Editor (gedit)
-| `Ctrl + Super + G` | Antigravity
-| `Ctrl + Super + S` | Visual Studio Code
+| `Ctrl + Super + E` | Simple Text Editor (gedit) |
+| `Ctrl + Super + G` | Antigravity |
+| `Ctrl + Super + S` | Visual Studio Code |
 | `Super + N` | Neovim |
 
 ## Neovim (with LazyVim)
@@ -203,11 +203,11 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 |--------|----------|
 | `Space` | Show command options |
 | `Space Space` | Open file via fuzzy search |
-| `Space E` |	Toggle sidebar |
+| `Space E` | Toggle sidebar |
 | `Space G G` | Show git controls |
 | `Space S G` | Search file content |
 | `Ctrl + W W` | Jump between sidebar and editor |
-| `Ctrl + Left/right arrow` | Change size of sidebar |
+| `Ctrl + Left/Right arrow` | Change size of sidebar |
 | `Shift + H` | Go to left file tab |
 | `Shift + L` | Go to right file tab |
 | `Space B D` | Close file tab |
@@ -229,7 +229,7 @@ For the full list of all Neovim hotkeys configured by LazyVim, please see <https
 
 Your own keybindings live in `~/.config/ohmydebn/keybindings.txt`. OhMyDebn applies that file on top of the stock keybindings every time `ohmydebn-update` runs, when you close the editor opened by `ohmydebn-keybindings-edit`, and whenever you run `ohmydebn-keybindings-apply`. Copy the file to another OhMyDebn machine and run `ohmydebn-keybindings-apply` there to get the same keybindings.
 
-To get started, run `ohmydebn-keybindings-edit` or choose OhMyDebn Menu → Setup → Keybindings. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.
+To get started, run `ohmydebn-keybindings-edit` or choose OhMyDebn Menu > Setup > Keybindings. That creates the file from a commented template, opens it in the editor, and applies it when you close the editor.
 
 Stock keybindings are addressed by name. Names are the first quoted field in `/usr/share/ohmydebn/install/keybinding/keybinding-custom.txt`, for example `"Browser"`, `"Neovim"` or `"X"`. The file understands three verbs:
 
@@ -245,6 +245,6 @@ keybinding-unbind "X"
 keybinding-cinnamon "wm" "close" "['<Alt>F4']"
 ```
 
-A key you use in a `keybinding` line is automatically removed from whichever stock keybinding had it before, and the apply output tells you so. Deleting a line reverts that keybinding to stock on the next apply. Changes take effect immediately; no Cinnamon restart is needed. `ohmydebn-doctor` warns when the file has been edited but not applied.
+A key you use in a `keybinding` line is automatically removed from whichever of OhMyDebn's own stock keybindings had it before, and the apply output tells you so. This doesn't apply to Cinnamon's own shortcuts: if the key is one of those, change that shortcut with a `keybinding-cinnamon` line, and for gTile's hotkeys use the Hotkeys tab of gTile's settings. Deleting a line reverts that keybinding to stock on the next apply. Changes take effect immediately; no Cinnamon restart is needed. `ohmydebn-doctor` reports a FAIL when the file has been edited but not applied.
 
-This page lists the stock hotkeys only. Your own additions are visible in Cinnamon Settings → Keyboard → Shortcuts → Custom Shortcuts.
+This page lists the stock hotkeys only. Your own additions are visible in Cinnamon Settings > Keyboard > Shortcuts > Custom Shortcuts.

@@ -36,4 +36,4 @@ sudo ufw allow 6000:6002/udp
 sudo ufw allow 5353/udp
 ```
 
-Once the ports are open, any Apple devices on the same network should then see the receiver in their list of AirPlay devices.
+Once the ports are open, any Apple devices on the same network should see the receiver in their list of AirPlay devices.

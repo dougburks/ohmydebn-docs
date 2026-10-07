@@ -1,8 +1,8 @@
 ## Choosing a base distro
 
-OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Pop!_OS 24.04, Devuan 6 (Excalibur), LCOS, or MX Linux 25. If you already have a favorite, start there - see the sections below for any distro-specific notes.
+OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Pop!_OS 24.04, Devuan 6 (Excalibur), LCOS, MX Linux 25, or Raspberry Pi OS. If you already have a favorite, start there - see the sections below for any distro-specific notes.
 
-If you don't have a favorite, we recommend [Linux Mint Cinnamon Edition](https://linuxmint.com/download.php) on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with [Debian 13](#debian-13-live-cinnamon) or [Raspberry Pi OS](#raspberry-pi) instead.
+If you don't have a favorite, we recommend [Linux Mint Cinnamon Edition](https://linuxmint.com/download.php) on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with [Debian 13](#debian-13-live-cinnamon) or [Raspberry Pi OS](#raspberry-pi-os) instead.
 
 ## Installation with Linux Mint Cinnamon
 
@@ -97,11 +97,13 @@ MX offers each desktop with either systemd or sysvinit. Both work:
 
 MX uses the LightDM login manager. OhMyDebn makes Cinnamon the default session, but LightDM remembers each user's last session, so if you've already logged into MX's own desktop, pick Cinnamon once from the session menu on the login screen and LightDM will remember it from then on. If you turned on automatic login when installing MX, log out once to reach the login screen and pick Cinnamon there.
 
-### Raspberry Pi
+### Raspberry Pi OS
+
+[Raspberry Pi OS](https://www.raspberrypi.com/software/) is based on Debian 13 and runs on Raspberry Pi hardware as well as on regular x86_64 PCs and virtual machines. Once you're running it and are connected to the Internet, you can run our installer as shown above.
+
+Our installer switches Raspberry Pi OS's login to Cinnamon, which takes effect after a reboot. Once the installer is complete, reboot and enjoy your new OhMyDebn desktop!
 
 !!! tip
-    For best results, we recommend a Raspberry Pi 5 with SSD and at least 4GB RAM.
-
-The default OS for Raspberry Pi is Raspberry Pi OS and the latest version is based on Debian 13. Once you're running this version and are connected to the Internet, you can run our installer as shown above. It will automatically update /etc/lightdm/lightdm.conf to log into our Cinnamon desktop. Once our installer is complete, reboot and enjoy your new OhMyDebn desktop!
+    On Raspberry Pi hardware, we recommend a Raspberry Pi 5 with SSD and at least 4GB RAM for best results.
 
 If you are running an older Raspberry Pi or the desktop otherwise feels sluggish, consider disabling desktop effects. Instructions can be found in the [Desktop Effects](desktop-effects.md) section.

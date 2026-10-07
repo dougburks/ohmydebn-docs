@@ -2,6 +2,43 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.10.0
+
+### Supported distros
+
+- [Raspberry Pi OS](installation.md#raspberry-pi-os) is now supported on regular x86_64 PCs and virtual machines, not just on Raspberry Pi hardware.
+
+### Fixes
+
+- On Raspberry Pi OS, the installer now tells you to reboot to start Cinnamon. It used to tell you to log out and pick Cinnamon, but on Raspberry Pi OS the switch to Cinnamon only takes effect after a reboot.
+- If the installer couldn't download the OhMyDebn repository key, for example during a network outage, running it again now works. It used to keep failing until a leftover file was deleted by hand.
+- Changing your [desktop theme](desktop-themes.md) no longer stops partway when Claude Code's settings file isn't valid or your cava setup has no color section. The rest of the desktop used to keep its old colors.
+- Switching to the next theme now moves on from your current theme. It used to pick the same theme every time.
+- If installing an AI tool, cliamp or SO-CRATES from its hotkey or menu item fails, the window now stays open so you can read why.
+- Cancelling an update at its first prompt, or starting one while another is already running, no longer makes `ohmydebn-doctor` report a failed update.
+- `Ctrl + Shift + K` now opens KeePassXC even while a browser is using the KeePassXC extension.
+- Installing Chromium from the menu now refreshes the package lists first, so it no longer fails when they're out of date.
+- If installing a theme from a git repository fails, the copy of that theme you already had is kept.
+- Reinstalling the Helium browser no longer resets your Helium settings.
+- Resetting your configuration now keeps your update logs, and stops at a step that fails instead of carrying on.
+- SO-CRATES now tells you when it can't start because your account has no subordinate user IDs, instead of failing partway through the download.
+- On new installs, removing an applet from the panel takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Aether](desktop-themes.md) updated to version 4.32.0
+- [Codex](ai.md#codex) updated to version 0.160.1
+- [Grok Build](ai.md#grok-build) updated to version 1.0.46
+- [LocalSend](utilities.md#localsend) updated to version 1.18.2
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.8.0
+- [OpenCode](ai.md#opencode) updated to version 1.18.35
+- [Pi](ai.md#pi) updated to version 1.0.4
+- [SO-CRATES](cybersecurity.md) updated to version 4.4.0
+- [T3 Code](ai.md#t3-code) updated to version 0.0.45
+- lazygit updated to version 0.66.0
+
 ## 4.9.0
 
 ### Supported distros

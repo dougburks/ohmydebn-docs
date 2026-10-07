@@ -7,4 +7,4 @@ If you need to zoom in on part of your screen, you can do so by enabling the mag
 Once enabled, there are two different ways to magnify the screen:
 
 - hold down the Alt key and then use your scroll wheel to zoom in and out
-- if you prefer to use the keyboard, you can use `Super + Alt + Plus` to zoom in and `Super + Alt + Minus` to zoom out
+- if you prefer to use the keyboard, you can use `Super + Alt + =` to zoom in and `Super + Alt + Minus` to zoom out
