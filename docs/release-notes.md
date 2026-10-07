@@ -21,7 +21,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Grok Build](ai.md#grok-build) updated to version 1.0.46
 - [LocalSend](utilities.md#localsend) updated to version 1.18.2
 - [Oh My Pi](ai.md#oh-my-pi) updated to version 18.8.0
-- [OpenCode](ai.md#opencode) updated to version 1.18.34
+- [OpenCode](ai.md#opencode) updated to version 1.18.35
 - [Pi](ai.md#pi) updated to version 1.0.4
 - [SO-CRATES](cybersecurity.md) updated to version 4.4.0
 - [T3 Code](ai.md#t3-code) updated to version 0.0.45
