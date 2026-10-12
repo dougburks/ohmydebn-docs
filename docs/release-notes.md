@@ -13,12 +13,11 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Fixes
 
-- Updating no longer loses your Zsh configuration. If Oh My Zsh couldn't be downloaded during your first install, the update that later installed it moved OhMyDebn's `~/.zshrc` aside, leaving Zsh without its prompt and aliases. Updating now puts it back if that happened to you.
 - On HiDPI screens (such as a laptop set to 200% scaling), the [window tiling](window-tiling.md) grid now fits its contents instead of spilling out of its panel, and the gaps between tiled windows are the same size as on other screens instead of half as wide.
 - Aborting an update (closing the update window and choosing Abort update) now really stops it: the package being installed finishes, then the update stops. Before, the window said the update was aborted while it carried on in the background.
 - Installing ChatGPT, Visual Studio Code, Google Chrome or PowerShell now also installs any libraries they need, and stops with a clear message if the download fails instead of carrying on. The Visual Studio Code download is also checked against Microsoft's published checksum.
 - The apt repository ChatGPT adds when you install it is now limited to ChatGPT itself, as OhMyDebn already does for the repositories other apps add. Updating OhMyDebn applies this to existing installs.
-- On installs from before 4.10.0, removing an applet from the panel now takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted. 4.10.0 fixed this for new installs, and updating now fixes existing panels.
+- On installs from before 4.10.0, removing an applet from the panel now takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted. 4.10.0 fixed this for new installs, and updating now fixes existing panels. Cinnamon restarts once at the end of that update, so a second network icon that may appear while it runs goes away.
 - Switching themes no longer leaves files behind. Each switch kept a full copy of every theme you had applied (over 100 MB on some machines), a new backup of your cava settings, and a Claude Code theme file. Now only the current theme's files are kept, plus one backup of your cava settings from before OhMyDebn first changed them. Your next theme switch clears out the ones left by earlier switches.
 - Switching themes no longer creates Claude Code's settings when Claude Code isn't installed. Installing Claude Code now gives it your current theme right away.
 - Switching themes no longer deletes a theme you've linked into your themes folder (one you're working on elsewhere, for example).
@@ -45,6 +44,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Update > Firmware now asks before installing the tools it needs.
 - The terminal speed tests (`ohmydebn-network-speedtest` and `ohmydebn-disk-speedtest`) now simply end when done, instead of leaving you in a second shell.
 - SO-CRATES no longer leaves a stopped container behind each time you close it.
+- If Oh My Zsh couldn't be downloaded during your first install, the update that later installed it could replace OhMyDebn's `~/.zshrc`, so Zsh started without its prompt and aliases. That no longer happens, and updating puts the file back on any system where it did.
 
 ### Updated components
 
