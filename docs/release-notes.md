@@ -11,6 +11,8 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### Fixes
 
 - On HiDPI screens (such as a laptop set to 200% scaling), the [window tiling](window-tiling.md) grid now fits its contents instead of spilling out of its panel, and the gaps between tiled windows are the same size as on other screens instead of half as wide.
+- Stopping an update from the update window no longer risks cutting off a package halfway through installing. It now lets the package in progress finish, then stops.
+- Installing ChatGPT, Visual Studio Code, Google Chrome or PowerShell now also installs any libraries they need, and stops with a clear message if the download fails instead of carrying on. The Visual Studio Code download is also checked against Microsoft's published checksum.
 
 ### Updated components
 
