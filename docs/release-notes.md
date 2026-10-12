@@ -17,6 +17,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Installing ChatGPT, Visual Studio Code, Google Chrome or PowerShell now also installs any libraries they need, and stops with a clear message if the download fails instead of carrying on. The Visual Studio Code download is also checked against Microsoft's published checksum.
 - The apt repository ChatGPT adds when you install it is now limited to ChatGPT itself, as OhMyDebn already does for the repositories other apps add. Updating OhMyDebn applies this to existing installs.
 - On installs from before 4.10.0, removing an applet from the panel now takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted. 4.10.0 fixed this for new installs, and updating now fixes existing panels.
+- Switching themes no longer leaves files behind. Each switch kept a full copy of every theme you had applied (over 100 MB on some machines), a new backup of your cava settings, and a Claude Code theme file. Now only the current theme's files are kept, plus one backup of your cava settings from before OhMyDebn first changed them. Your next theme switch clears out the ones left by earlier switches.
 
 ### Updated components
 
