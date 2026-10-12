@@ -5,3 +5,5 @@ ohmydebn-reset-config
 ```
 
 It changes only those config files. Your desktop settings, panel, Cinnamon extensions, keybindings, theme, firewall and default apps stay as they are, and your current theme is applied to the fresh configs.
+
+It works offline too. Oh My Zsh is downloaded rather than included with OhMyDebn, so when there's no internet connection your current copy of it is kept.
