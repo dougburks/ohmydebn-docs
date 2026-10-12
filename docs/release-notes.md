@@ -21,6 +21,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Oh My Pi](ai.md#oh-my-pi) updated to version 18.10.1
 - [OpenCode](ai.md#opencode) updated to version 1.19.0
 - [Pi](ai.md#pi) updated to version 1.1.0
+- lazygit updated to version 0.66.1
 
 ## 4.10.0
 
