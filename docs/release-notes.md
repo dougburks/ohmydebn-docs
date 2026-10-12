@@ -17,6 +17,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
 
 - [Codex](ai.md#codex) updated to version 0.162.1
+- [Grok Build](ai.md#grok-build) updated to version 1.0.50
 - [OpenCode](ai.md#opencode) updated to version 1.19.0
 - [Pi](ai.md#pi) updated to version 1.1.0
 
