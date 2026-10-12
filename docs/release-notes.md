@@ -14,6 +14,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Aborting an update (closing the update window and choosing Abort update) now really stops it: the package being installed finishes, then the update stops. Before, the window said the update was aborted while it carried on in the background.
 - Installing ChatGPT, Visual Studio Code, Google Chrome or PowerShell now also installs any libraries they need, and stops with a clear message if the download fails instead of carrying on. The Visual Studio Code download is also checked against Microsoft's published checksum.
 - The apt repository ChatGPT adds when you install it is now limited to ChatGPT itself, as OhMyDebn already does for the repositories other apps add. Updating OhMyDebn applies this to existing installs.
+- On installs from before 4.10.0, removing an applet from the panel now takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted. 4.10.0 fixed this for new installs, and updating now fixes existing panels.
 
 ### Updated components
 
