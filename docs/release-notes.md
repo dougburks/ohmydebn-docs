@@ -22,6 +22,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Switching themes no longer creates Claude Code's settings when Claude Code isn't installed. Installing Claude Code now gives it your current theme right away.
 - Switching themes no longer deletes a theme you've linked into your themes folder (one you're working on elsewhere, for example).
 - On installs from before 4.9.0, Cinnamon's keyboard settings now list the Super + K shortcut as "Keybindings" instead of its old name, "Hotkeys".
+- On a computer with more than one OhMyDebn user, a new user's first install or update no longer turns the firewall back on if someone has turned it off. OhMyDebn now sets up the firewall once per computer instead of once per user.
 
 ### Updated components
 
