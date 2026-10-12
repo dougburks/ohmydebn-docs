@@ -9,6 +9,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - The [doctor](updating.md#checking-your-installation) (Update > Doctor) now shows your display scale (such as 2 on a HiDPI screen at 200%) at the top of its report, which helps when reporting a problem.
 - Applying the power-user profile to an existing install (`ohmydebn-power-user-install`) now removes only the optional apps your distro came with, and keeps the apps you installed from the OhMyDebn menu. It lists exactly which apps it will remove and asks first. Before, it also removed every AI tool, VPN and browser you'd installed from the menu.
 - Resetting your config files (`ohmydebn-reset-config`) now resets only the app config files it lists, and keeps your current theme. Before, it also reset your panel, keybindings, theme and default apps, switched off other Cinnamon extensions, and turned the firewall back on.
+- Removing a package from the menu (Remove > Package) now shows everything apt will remove and asks before going ahead. Before, it removed the packages you picked straight away, along with any other packages that depend on them.
 
 ### Fixes
 
@@ -18,6 +19,9 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - The apt repository ChatGPT adds when you install it is now limited to ChatGPT itself, as OhMyDebn already does for the repositories other apps add. Updating OhMyDebn applies this to existing installs.
 - On installs from before 4.10.0, removing an applet from the panel now takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted. 4.10.0 fixed this for new installs, and updating now fixes existing panels.
 - Switching themes no longer leaves files behind. Each switch kept a full copy of every theme you had applied (over 100 MB on some machines), a new backup of your cava settings, and a Claude Code theme file. Now only the current theme's files are kept, plus one backup of your cava settings from before OhMyDebn first changed them. Your next theme switch clears out the ones left by earlier switches.
+- Switching themes no longer creates Claude Code's settings when Claude Code isn't installed. Installing Claude Code now gives it your current theme right away.
+- Switching themes no longer deletes a theme you've linked into your themes folder (one you're working on elsewhere, for example).
+- On installs from before 4.9.0, Cinnamon's keyboard settings now list the Super + K shortcut as "Keybindings" instead of its old name, "Hotkeys".
 
 ### Updated components
 
