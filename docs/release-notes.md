@@ -12,6 +12,12 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 - On HiDPI screens (such as a laptop set to 200% scaling), the [window tiling](window-tiling.md) grid now fits its contents instead of spilling out of its panel, and the gaps between tiled windows are the same size as on other screens instead of half as wide.
 
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Codex](ai.md#codex) updated to version 0.162.1
+
 ## 4.10.0
 
 ### Supported distros
