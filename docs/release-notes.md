@@ -2,6 +2,8 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.11.0
+
 ## 4.10.0
 
 ### Supported distros
