@@ -1,4 +1,4 @@
-To reset OhMyDebn's app config files to their defaults, run `ohmydebn-reset-config`. It resets the configs for Aether, Alacritty, bat, btop, cava, Neovim, Starship, Oh My Zsh and your `~/.zshrc`, and keeps your current ones as backups (each renamed to `<name>-backup-<date>`), so nothing you changed is lost.
+To reset OhMyDebn's app config files to their defaults, run `ohmydebn-reset-config`. It resets the configs for Alacritty, bat, btop, cava, Neovim, Starship, Oh My Zsh and your `~/.zshrc`, and keeps your current ones as backups (each renamed to `<name>-backup-<date and time>`), so nothing you changed is lost.
 
 ```bash
 ohmydebn-reset-config

@@ -31,6 +31,8 @@ Installation complete:
 
 ![OhMyDebn Virtualization Installed](images/ohmydebn-virtualization-1-installed.png)
 
+If it also says to log out and back in, do that before starting a virtual machine: until then your virtual machines can't use hardware acceleration and run much more slowly.
+
 You can then start Virtual Machine Manager from the Cinnamon menu or OhMyDebn menu or via [hotkey](hotkeys.md) `Ctrl + Alt + V`.
 
 ![OhMyDebn Virtualization Machine Manager](images/ohmydebn-virtualization-2-vmm.png)

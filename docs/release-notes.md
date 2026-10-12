@@ -7,12 +7,13 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### Improvements
 
 - The [doctor](updating.md#checking-your-installation) (Update > Doctor) now shows your display scale (such as 2 on a HiDPI screen at 200%) at the top of its report, which helps when reporting a problem.
-- Applying the power-user profile to an existing install (`ohmydebn-power-user-install`) now removes only the optional apps your distro came with, and keeps the apps you installed from the OhMyDebn menu. It lists exactly which apps it will remove and asks first. Before, it also removed every AI tool, VPN and browser you'd installed from the menu.
-- Resetting your config files (`ohmydebn-reset-config`) now resets only the app config files it lists, and keeps your current theme. Before, it also reset your panel, keybindings, theme and default apps, switched off other Cinnamon extensions, and turned the firewall back on.
+- Applying the power-user profile to an existing install (`ohmydebn-power-user-install`) now removes only the optional apps your distro came with, and keeps apps that only come from the OhMyDebn menu, such as AI tools, VPNs and other browsers. It lists exactly which apps it will remove and asks first. Before, it also removed every AI tool, VPN and browser you'd installed from the menu.
+- Resetting your config files (`ohmydebn-reset-config`) now resets only the app config files it lists, and keeps your current theme. Before, it also reset your panel, keybindings, theme and default apps, switched off other Cinnamon extensions, turned the firewall back on, and upgraded every package on your system. It also no longer moves your Aether folder aside, since OhMyDebn has no default to replace it with.
 - Removing a package from the menu (Remove > Package) now shows everything apt will remove and asks before going ahead. Before, it removed the packages you picked straight away, along with any other packages that depend on them.
 
 ### Fixes
 
+- Updating no longer loses your Zsh configuration. If Oh My Zsh couldn't be downloaded during your first install, the update that later installed it moved OhMyDebn's `~/.zshrc` aside, leaving Zsh without its prompt and aliases. Updating now puts it back if that happened to you.
 - On HiDPI screens (such as a laptop set to 200% scaling), the [window tiling](window-tiling.md) grid now fits its contents instead of spilling out of its panel, and the gaps between tiled windows are the same size as on other screens instead of half as wide.
 - Aborting an update (closing the update window and choosing Abort update) now really stops it: the package being installed finishes, then the update stops. Before, the window said the update was aborted while it carried on in the background.
 - Installing ChatGPT, Visual Studio Code, Google Chrome or PowerShell now also installs any libraries they need, and stops with a clear message if the download fails instead of carrying on. The Visual Studio Code download is also checked against Microsoft's published checksum.
@@ -34,6 +35,16 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Cleaning up old SO-CRATES images now keeps the version SO-CRATES starts by default, so the next launch doesn't download it again.
 - Installing or removing a package from the menu now says when it didn't finish.
 - Shell completions for the `ttfx` command now work on ARM64.
+- Applying a theme from the online theme gallery no longer silently does nothing when the current theme's color settings file is damaged.
+- Virtual Machine Networking (Apps > Virtualization) now explains when Virtual Machine Manager isn't installed or there are no virtual machines, instead of not opening at all. Its Upgrade button also works when your system isn't in English.
+- Install > Package no longer lists apt's "Listing..." line as if it were a package.
+- With two logo windows open, both now update when you change theme.
+- Removing a line from your keybindings file now also restores Cinnamon keys like Looking Glass's, not just the others.
+- Installing Helium now stops with a clear message, and leaves no package source behind, when its repository can't be reached.
+- Visual Studio Code no longer tries to install an extension named "null" for themes that don't name one.
+- Update > Firmware now asks before installing the tools it needs.
+- The terminal speed tests (`ohmydebn-network-speedtest` and `ohmydebn-disk-speedtest`) now simply end when done, instead of leaving you in a second shell.
+- SO-CRATES no longer leaves a stopped container behind each time you close it.
 
 ### Updated components
 

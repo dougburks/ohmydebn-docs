@@ -39,7 +39,8 @@ If you didn't use `--power-user` during installation but want to apply that same
 ```
 ohmydebn-power-user-install
 ```
-On an already-installed system, it removes only the optional apps your distro came with. Apps you installed from the OhMyDebn menu (AI tools, VPNs, extra browsers and so on) are kept. It lists exactly which apps it will remove and asks before changing anything.
+On an already-installed system, it removes only the optional apps your distro came with. Apps that only come from the OhMyDebn menu (AI tools, VPNs, other browsers and so on) are kept. Some of your distro's apps, such as LibreOffice, Wireshark and Remmina, are in the OhMyDebn menu too, and those are removed even if you installed them from the menu. It lists exactly which apps it will remove and asks before changing anything.
+
 ## Alternative installations
 
 ### Linux Mint Debian Edition 7

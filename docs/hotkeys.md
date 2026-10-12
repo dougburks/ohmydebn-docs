@@ -1,4 +1,4 @@
-Pressing `Super + K` will open the [browser](browser.md) and navigate to this list of keyboard bindings.
+Pressing `Super + K` opens this list of keyboard bindings in its own [browser](browser.md) window.
 
 ## OhMyDebn
 

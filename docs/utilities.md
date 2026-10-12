@@ -58,11 +58,11 @@ OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhM
 
 ## Remote Desktop Client
 
-[Remmina](https://remmina.org/), a remote desktop client for RDP and VNC, is available as an optional installation via OhMyDebn menu (Apps > Utility > Remote Desktop Client). Use it to connect to another machine's desktop, such as an OhMyDebn machine running the Remote Desktop Server below.
+[Remmina](https://remmina.org/), a remote desktop client for RDP and VNC, is available as an optional installation via OhMyDebn menu (Apps > Utility > Remote Desktop Client (Remmina)). Use it to connect to another machine's desktop, such as an OhMyDebn machine running the Remote Desktop Server below.
 
 ## Remote Desktop Server
 
-Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation via OhMyDebn menu (Apps > Utility > Remote Desktop Server). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389.
+Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation via OhMyDebn menu (Apps > Utility > Remote Desktop Server (XRDP)). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389.
 
 Some things to know:
 

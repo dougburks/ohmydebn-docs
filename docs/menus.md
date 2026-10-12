@@ -19,11 +19,17 @@ The first option launches the separate Apps menu. The rest of the top level:
 - `Learn` - documentation links (see below)
 - `Trigger` - screenshots, screen recording, a color picker, and the [network and disk speed tests](utilities.md#speed-test)
 - `Style` - the [theme carousel](desktop-themes.md), [tiling](window-tiling.md) settings, and Cinnamon's effects, notifications, screensaver, windows, and workspaces settings
-- `Install` and `Remove` - add or remove a package from your distro's repos, a web app (a website wrapped as its own desktop app), or a terminal (TUI) app
+- `Install` and `Remove` - add or remove a package from your distro's repos (see [below](#installing-and-removing-packages)), a web app (a website wrapped as its own desktop app), or a terminal (TUI) app
 - `Update` - [update OhMyDebn](updating.md), choose your update [channel](updating.md#channels), run the [doctor](updating.md#checking-your-installation), update your [firmware](updating.md#firmware), and change your password or timezone
 - `Setup` - Bluetooth, defaults (your default [AI assistant](ai.md#default-ai-assistant) and [browser](browser.md#changing-the-default-browser)), display, gestures, [keybindings](hotkeys.md#customizing-keybindings), keyboard, mouse, network, power, printers, and sound
 - `About` and `Demo` - the [system summary and animated logo](utilities.md)
 - `System` - lock, suspend, relaunch Cinnamon, restart, or shut down
+
+## Installing and removing packages
+
+Install > Package and Remove > Package open a searchable list: every package your distro's repos offer, or every package that's installed. Type to search, press `Tab` to pick more than one, and `Enter` to go ahead. A preview below the list describes the highlighted package.
+
+Removing shows everything apt will remove before it does anything (which can include other packages that depend on the ones you picked) and asks you to confirm. It removes the packages' system-wide settings too, not just the programs. Either way, the window tells you if the install or removal didn't finish.
 
 ## Apps Menu
 
