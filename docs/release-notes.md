@@ -16,6 +16,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
 
+- [Neovim](text-editor.md#neovim) updated to version 0.12.6
 - [Codex](ai.md#codex) updated to version 0.162.1
 - [Grok Build](ai.md#grok-build) updated to version 1.0.50
 - [Oh My Pi](ai.md#oh-my-pi) updated to version 18.10.1
