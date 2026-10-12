@@ -23,6 +23,17 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Switching themes no longer deletes a theme you've linked into your themes folder (one you're working on elsewhere, for example).
 - On installs from before 4.9.0, Cinnamon's keyboard settings now list the Super + K shortcut as "Keybindings" instead of its old name, "Hotkeys".
 - On a computer with more than one OhMyDebn user, a new user's first install or update no longer turns the firewall back on if someone has turned it off. OhMyDebn now sets up the firewall once per computer instead of once per user.
+- Installing Virtual Machine Manager no longer restarts your desktop partway through. When your virtual machines can't use hardware acceleration until you log out and back in, it now tells you so.
+- Web apps whose address contains `%` (such as `%20`) now open correctly, and a TUI app whose name contains quotes now gets the right window title. If the icon can't be downloaded, no launcher is created, instead of one with a broken icon.
+- Removing a web app or TUI app by name no longer deletes an app launcher you made yourself with the same name.
+- In the theme picker, choosing a background now always applies the one shown. With your own backgrounds whose names mixed upper and lower case, it could apply a different one.
+- With two system info windows open (About), both now update when you change theme.
+- The network speed test no longer hangs on "Fetching speed test endpoints..." when the connection stalls.
+- Stopping the logo demo no longer stops the logo animation in another open window.
+- Removing the remote desktop server now also removes its login check when the server was already removed some other way.
+- Cleaning up old SO-CRATES images now keeps the version SO-CRATES starts by default, so the next launch doesn't download it again.
+- Installing or removing a package from the menu now says when it didn't finish.
+- Shell completions for the `ttfx` command now work on ARM64.
 
 ### Updated components
 

@@ -131,7 +131,7 @@ Pressing `Super + K` will open the [browser](browser.md) and navigate to this li
 | `Ctrl + Alt + P` | PowerShell |
 | `Ctrl + Alt + S` | SO-CRATES |
 | `Ctrl + Alt + D` | Animated OhMyDebn logo demo |
-| `Ctrl + Alt + W` | Cloudflare Warp |
+| `Ctrl + Alt + W` | Cloudflare WARP |
 | `Ctrl + Alt + C` | Claude Code |
 | `Ctrl + Super + Return` | [herdr](terminal.md#herdr) |
 | `Super + Alt + Return` | [tmux](terminal.md#tmux) terminal |
