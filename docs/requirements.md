@@ -8,3 +8,5 @@ OhMyDebn requires the following:
 - curl
 - ability to connect to GitHub, package repos, and other Internet sites
 
+OhMyDebn runs on any hardware your base distro supports. For tips on specific machines, see [Hardware Notes](hardware-notes.md).
+

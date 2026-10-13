@@ -25,7 +25,7 @@ Cinnamon satisfies these requirements and has some nice eye candy!
 
 ## Should I start with Debian or Linux Mint?
 
-Either works great, and our installer supports both. If you're on x86_64 hardware and don't have a favorite, we recommend [Linux Mint Cinnamon Edition](installation.md#installation-with-linux-mint-cinnamon) - Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, plus a friendly installer, a driver manager, and multimedia codecs out of the box. If your hardware is very new, Mint also offers an [HWE ISO](https://www.linuxmint.com/hwe.php) with a newer kernel.
+Either works great, and our installer supports both. If you're on x86_64 hardware and don't have a favorite, we recommend [Linux Mint Cinnamon Edition](installation.md#installation-with-linux-mint-cinnamon) - Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, plus a friendly installer, a driver manager, and multimedia codecs out of the box. If your hardware is very new, Mint also offers an [HWE ISO](https://www.linuxmint.com/hwe.php) with a newer kernel, and our [Hardware Notes](hardware-notes.md) have tips for specific machines.
 
 That said, Debian remains the project's foundation, and there are cases where it's the right choice:
 

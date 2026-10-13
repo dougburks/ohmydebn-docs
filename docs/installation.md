@@ -9,7 +9,7 @@ If you don't have a favorite, we recommend [Linux Mint Cinnamon Edition](https:/
 1. Download the latest Linux Mint Cinnamon Edition ISO image from <https://linuxmint.com/download.php> and install it.
 
     !!! tip
-        If your hardware is very new and the standard ISO won't boot or is missing drivers, use the [Linux Mint HWE ISO](https://www.linuxmint.com/hwe.php) instead - it's the same Mint with a newer kernel for hardware enablement. Otherwise, stick with the standard ISO as Mint recommends, since proprietary drivers and third-party modules (NVIDIA, Broadcom, VirtualBox, etc.) may have limited support with newer kernels.
+        If your hardware is very new and the standard ISO won't boot or is missing drivers, use the [Linux Mint HWE ISO](https://www.linuxmint.com/hwe.php) instead - it's the same Mint with a newer kernel for hardware enablement. Otherwise, stick with the standard ISO as Mint recommends, since proprietary drivers and third-party modules (NVIDIA, Broadcom, VirtualBox, etc.) may have limited support with newer kernels. See [Hardware Notes](hardware-notes.md) for tips on specific machines.
 
 2. In your new Linux Mint Cinnamon desktop, download the installation script:
 ```
