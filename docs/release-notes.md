@@ -11,6 +11,18 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Resetting your config files (`ohmydebn-reset-config`) now resets only the app config files it lists, and keeps your current theme. Before, it also reset your panel, keybindings, theme and default apps, switched off other Cinnamon extensions, turned the firewall back on, and upgraded every package on your system. It also no longer moves your Aether folder aside, since OhMyDebn has no default to replace it with. It now also works without an internet connection.
 - Removing a package from the menu (Remove > Package) now shows everything apt will remove and asks before going ahead. Before, it removed the packages you picked straight away, along with any other packages that depend on them.
 
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Neovim](text-editor.md#neovim) updated to version 0.12.6
+- [Codex](ai.md#codex) updated to version 0.162.1
+- [Grok Build](ai.md#grok-build) updated to version 1.0.50
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.10.1
+- [OpenCode](ai.md#opencode) updated to version 1.19.0
+- [Pi](ai.md#pi) updated to version 1.1.0
+- lazygit updated to version 0.66.1
+
 ### Fixes
 
 - On HiDPI screens (such as a laptop set to 200% scaling), the [window tiling](window-tiling.md) grid now fits its contents instead of spilling out of its panel, and the gaps between tiled windows are the same size as on other screens instead of half as wide.
@@ -46,23 +58,26 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - SO-CRATES no longer leaves a stopped container behind each time you close it.
 - If Oh My Zsh couldn't be downloaded during your first install, the update that later installed it could replace OhMyDebn's `~/.zshrc`, so Zsh started without its prompt and aliases. That no longer happens, and updating puts the file back on any system where it did.
 
-### Updated components
-
-Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
-
-- [Neovim](text-editor.md#neovim) updated to version 0.12.6
-- [Codex](ai.md#codex) updated to version 0.162.1
-- [Grok Build](ai.md#grok-build) updated to version 1.0.50
-- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.10.1
-- [OpenCode](ai.md#opencode) updated to version 1.19.0
-- [Pi](ai.md#pi) updated to version 1.1.0
-- lazygit updated to version 0.66.1
-
 ## 4.10.0
 
 ### Supported distros
 
 - [Raspberry Pi OS](installation.md#raspberry-pi-os) is now supported on regular x86_64 PCs and virtual machines, not just on Raspberry Pi hardware.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Aether](desktop-themes.md) updated to version 4.32.0
+- [Codex](ai.md#codex) updated to version 0.160.1
+- [Grok Build](ai.md#grok-build) updated to version 1.0.46
+- [LocalSend](utilities.md#localsend) updated to version 1.18.2
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.8.0
+- [OpenCode](ai.md#opencode) updated to version 1.18.35
+- [Pi](ai.md#pi) updated to version 1.0.4
+- [SO-CRATES](cybersecurity.md) updated to version 4.4.0
+- [T3 Code](ai.md#t3-code) updated to version 0.0.45
+- lazygit updated to version 0.66.0
 
 ### Fixes
 
@@ -79,21 +94,6 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - Resetting your configuration now keeps your update logs, and stops at a step that fails instead of carrying on.
 - SO-CRATES now tells you when it can't start because your account has no subordinate user IDs, instead of failing partway through the download.
 - On new installs, removing an applet from the panel takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted.
-
-### Updated components
-
-Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
-
-- [Aether](desktop-themes.md) updated to version 4.32.0
-- [Codex](ai.md#codex) updated to version 0.160.1
-- [Grok Build](ai.md#grok-build) updated to version 1.0.46
-- [LocalSend](utilities.md#localsend) updated to version 1.18.2
-- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.8.0
-- [OpenCode](ai.md#opencode) updated to version 1.18.35
-- [Pi](ai.md#pi) updated to version 1.0.4
-- [SO-CRATES](cybersecurity.md) updated to version 4.4.0
-- [T3 Code](ai.md#t3-code) updated to version 0.0.45
-- lazygit updated to version 0.66.0
 
 ## 4.9.0
 
@@ -122,6 +122,23 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Neovim](text-editor.md#neovim) now matches every [desktop theme](desktop-themes.md). Themes that don't include their own Neovim colors, such as Ethereal, Vantablack, and White, and themes you install from elsewhere, now get Neovim colors made from the theme's own palette instead of Neovim's default colors.
 - The [doctor](updating.md#checking-your-installation) (Update > Doctor) checks more: whether your last update finished, free disk space, half-installed packages, the firewall, your clock, your default browser and AI assistant, whether your terminal settings are readable, Neovim and its plugins, and whether UxPlay and Podman have everything they need to run. It also tells you when a reboot is needed, and it checks for problems fixed in this release, such as a virtual machine's display not resizing.
 
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Neovim](text-editor.md#neovim) updated to version 0.12.5
+- LazyVim updated to version 16.0.1
+- [Aether](desktop-themes.md) updated to version 4.31.1
+- [Codex](ai.md#codex) updated to version 0.159.2
+- [OpenCode](ai.md#opencode) updated to version 1.18.33
+- [Pi](ai.md#pi) updated to version 0.99.1
+- [SO-CRATES](cybersecurity.md) updated to version 4.3.0
+- [cliamp](media.md) updated to version 2.3.0
+- fastfetch updated to version 2.69.0
+- gum updated to version 2.0.2
+- [herdr](terminal.md#herdr) updated to version 0.9.3
+- ttfx updated to version 0.5.0
+
 ### Fixes
 
 - Fixed an error when opening a file in [Neovim](text-editor.md#neovim), caused by a plugin update that no longer supported the version of Neovim included in Debian 13.
@@ -140,20 +157,3 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - The theme carousel (`Ctrl + Super + T`) now shows the accent color of themes made with [Aether](desktop-themes.md), instead of plain white.
 - The theme carousel no longer shows empty boxes above and below a theme that has only one background, or the same background twice for a theme that has two.
 - When a website asks Aether to apply a theme, the confirmation now has Cancel selected, so pressing Enter doesn't apply it. Links that could show one theme source in the confirmation while Aether downloads another are refused.
-
-### Updated components
-
-Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
-
-- [Neovim](text-editor.md#neovim) updated to version 0.12.5
-- LazyVim updated to version 16.0.1
-- [Aether](desktop-themes.md) updated to version 4.31.1
-- [Codex](ai.md#codex) updated to version 0.159.2
-- [OpenCode](ai.md#opencode) updated to version 1.18.33
-- [Pi](ai.md#pi) updated to version 0.99.1
-- [SO-CRATES](cybersecurity.md) updated to version 4.3.0
-- [cliamp](media.md) updated to version 2.3.0
-- fastfetch updated to version 2.69.0
-- gum updated to version 2.0.2
-- [herdr](terminal.md#herdr) updated to version 0.9.3
-- ttfx updated to version 0.5.0
