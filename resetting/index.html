@@ -1162,9 +1162,11 @@
 
   <h1>Resetting</h1>
 
-<p>To reset your config files to OhMyDebn defaults, run <code>ohmydebn-reset-config</code>. This will automatically create backup copies of your current config files and then write new ones.</p>
+<p>To reset OhMyDebn's app config files to their defaults, run <code>ohmydebn-reset-config</code>. It resets the configs for Alacritty, bat, btop, cava, Neovim, Starship, Oh My Zsh and your <code>~/.zshrc</code>, and keeps your current ones as backups (each renamed to <code>&lt;name&gt;-backup-&lt;date and time&gt;</code>), so nothing you changed is lost.</p>
 <div class="highlight"><pre><span></span><code>ohmydebn-reset-config
 </code></pre></div>
+<p>It changes only those config files. Your desktop settings, panel, Cinnamon extensions, keybindings, theme, firewall and default apps stay as they are, and your current theme is applied to the fresh configs.</p>
+<p>It works offline too. Oh My Zsh is downloaded rather than included with OhMyDebn, so when there's no internet connection your current copy of it is kept.</p>
 
 
 

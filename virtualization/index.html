@@ -1302,22 +1302,17 @@
 <p>If you'd like to run a virtual machine (VM) on your OhMyDebn installation, you can use Boxes or Virtual Machine Manager. <a href="https://apps.gnome.org/Boxes/">Boxes</a> is the simpler of the two, but that simplicity comes from deliberately limited control - it's a good fit for spinning up a single VM every now and then, not much more. For anything beyond that (multiple VMs, snapshot management, custom hardware configuration, or any other fine-grained control), use <a href="https://virt-manager.org/">Virtual Machine Manager</a> instead.</p>
 <h2 id="boxes">Boxes</h2>
 <p>The hotkey for <a href="https://apps.gnome.org/Boxes/">Boxes</a> is <code>Ctrl + Alt + B</code>. This will check to see if Boxes is installed and install it if necessary. Alternatively, you can install Boxes by running <code>ohmydebn-boxes-install</code> or launch the OhMyDebn menu and then select Apps &gt; Virtualization &gt; Boxes (Simple).</p>
-<p>At the prompt, press Enter to continue:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-boxes-0-prompt.png" data-desc-position="bottom"><img alt="OhMyDebn Boxes Prompt" src="../images/ohmydebn-boxes-0-prompt.png"></a></p>
-<p>Installation complete:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-boxes-1-installed.png" data-desc-position="bottom"><img alt="OhMyDebn Boxes Installed" src="../images/ohmydebn-boxes-1-installed.png"></a></p>
+<p>When asked, press Enter to continue, and wait for the installation to finish.</p>
 <p>You can then start Boxes from the Cinnamon menu or OhMyDebn menu or via <a href="../hotkeys/">hotkey</a> <code>Ctrl + Alt + B</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-boxes-2-interface.png" data-desc-position="bottom"><img alt="OhMyDebn Boxes Interface" src="../images/ohmydebn-boxes-2-interface.png"></a></p>
 <h2 id="virtual-machine-manager">Virtual Machine Manager</h2>
 <p>The hotkey for <a href="https://virt-manager.org/">Virtual Machine Manager</a> is <code>Ctrl + Alt + V</code>. This will check to see if Virtual Machine Manager is installed and install it if necessary. Alternatively, you can install Virtual Machine Manager by running <code>ohmydebn-virtmanager-install</code> or launch the OhMyDebn menu and then select Apps &gt; Virtualization &gt; Virtual Machine Manager (Advanced).</p>
-<p>At the prompt, press Enter to continue:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-virtualization-0-prompt.png" data-desc-position="bottom"><img alt="OhMyDebn Virtualization Prompt" src="../images/ohmydebn-virtualization-0-prompt.png"></a></p>
-<p>Installation complete:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-virtualization-1-installed.png" data-desc-position="bottom"><img alt="OhMyDebn Virtualization Installed" src="../images/ohmydebn-virtualization-1-installed.png"></a></p>
+<p>When asked, press Enter to continue, and wait for the installation to finish. If it then says to log out and back in, do that before starting a virtual machine: until then your virtual machines can't use hardware acceleration and run much more slowly.</p>
 <p>You can then start Virtual Machine Manager from the Cinnamon menu or OhMyDebn menu or via <a href="../hotkeys/">hotkey</a> <code>Ctrl + Alt + V</code>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-virtualization-2-vmm.png" data-desc-position="bottom"><img alt="OhMyDebn Virtualization Machine Manager" src="../images/ohmydebn-virtualization-2-vmm.png"></a></p>
-<p>Once you've created a VM, if you want to create a snapshot then we recommend setting <code>Snapshot Mode</code> to <code>internal</code>:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-virtualization-3-snapshots.png" data-desc-position="bottom"><img alt="OhMyDebn Virtualization Snapshots" src="../images/ohmydebn-virtualization-3-snapshots.png"></a></p>
+<p>Once you've created a VM, you can take snapshots of it: open the VM, choose View &gt; Snapshots, then click <code>+</code> at the bottom left.</p>
+<div class="admonition warning">
+<p class="admonition-title">Set Snapshot Mode to internal</p>
+<p>In the Create snapshot window, make sure <code>Snapshot Mode</code> is set to <code>internal</code> before you click Finish. Internal snapshots are stored inside the VM's disk image, so they're much simpler to revert to and delete later. Check this every time you create a snapshot.</p>
+</div>
 <h2 id="networking">Networking</h2>
 <p>Virtual Machine Manager is set up to use an unprivileged, per-user connection (<code>qemu:///session</code>) rather than the traditional system-wide one. This means there's no <code>Virtual network 'default'</code> (NAT) option when creating a VM - when you reach the network selection step, choose <code>Usermode networking</code> instead.</p>
 <p>By default, <code>Usermode networking</code> uses QEMU's older built-in SLIRP driver. The <code>passt</code> package is installed automatically alongside Virtual Machine Manager and offers substantially better throughput, but it isn't used automatically - libvirt still defaults to SLIRP even with <code>passt</code> installed.</p>

@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#channels" class="md-skip">
+        <a href="#stopping-an-update" class="md-skip">
           Skip to content
         </a>
       
@@ -1049,6 +1049,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#stopping-an-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stopping an update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#channels" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1255,6 +1266,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#stopping-an-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stopping an update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#channels" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1359,6 +1381,8 @@
 <p class="admonition-title">Note</p>
 <p>On <a href="../installation/#devuan-6-excalibur">Devuan, LCOS</a>, and <a href="../installation/#mx-linux-25">MX Linux with sysvinit</a> there is no systemd, so the automatic update check and its notification are not installed. Start updates yourself using any of the methods above.</p>
 </div>
+<h2 id="stopping-an-update">Stopping an update</h2>
+<p>To stop an update that's running, close the update window and choose Abort update (or Keep updating to carry on). If a package is being installed at that moment, it finishes first, so your system isn't left with a half-installed package; then the update stops. Run the update again later to finish it.</p>
 <h2 id="channels">Channels</h2>
 <p>OhMyDebn Menu &gt; Update &gt; Channel lets you choose where updates come from. Each list marks the channel you're on now.</p>
 <p><strong>OhMyDebn</strong> has two channels:</p>
@@ -1374,7 +1398,7 @@
 </ul>
 <p>Switching Claude Code back to stable keeps your installed version until stable catches up.</p>
 <h2 id="firmware">Firmware</h2>
-<p>OhMyDebn Menu &gt; Update &gt; Firmware checks your computer's firmware (such as the system BIOS/UEFI, SSDs, docks, and some peripherals) for updates and installs them. It uses <a href="https://fwupd.org/">fwupd</a>, which gets updates from the Linux Vendor Firmware Service (LVFS), so only devices whose makers publish their firmware there are covered. OhMyDebn installs fwupd the first time you use it if it isn't already installed.</p>
+<p>OhMyDebn Menu &gt; Update &gt; Firmware checks your computer's firmware (such as the system BIOS/UEFI, SSDs, docks, and some peripherals) for updates and installs them. It uses <a href="https://fwupd.org/">fwupd</a>, which gets updates from the Linux Vendor Firmware Service (LVFS), so only devices whose makers publish their firmware there are covered. If fwupd isn't installed yet, it says so and asks before installing it.</p>
 <p>fwupd lists the updates it found and asks before installing each one. Keep your computer plugged in and don't turn it off while firmware is updating. Some updates are installed during the next restart, and fwupd tells you when that's the case.</p>
 <p>If none of your devices get firmware through LVFS, such as in a virtual machine, it reports that your firmware is up to date.</p>
 <h2 id="reboots">Reboots</h2>
@@ -1392,7 +1416,7 @@
 <p>Run it from the OhMyDebn menu (Update &gt; Doctor), or from a terminal:</p>
 <div class="highlight"><pre><span></span><code>ohmydebn-doctor
 </code></pre></div>
-<p>Anything marked <code>FAIL</code> is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.</p>
+<p>The top of its report shows your user, desktop and display scale (such as 2 on a HiDPI screen at 200%). Anything marked <code>FAIL</code> is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.</p>
 <p>Run it from a terminal inside your Cinnamon session so it can check the desktop settings too. Over SSH it still runs, but the desktop-specific checks are marked as skipped rather than failed.</p>
 <p>If you suspect a problem with <a href="../window-tiling/#automatic-tiling">automatic tiling</a>, <code>ohmydebn-doctor --exercise-tiling</code> goes a step further: it switches to an empty workspace, cycles through every tiling mode, opens and closes test windows, and checks that each one lands where it should. It restores your workspace and tiling mode when it finishes.</p>
 
