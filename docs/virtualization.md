@@ -6,38 +6,22 @@ If you'd like to run a virtual machine (VM) on your OhMyDebn installation, you c
 
 The hotkey for [Boxes](https://apps.gnome.org/Boxes/) is `Ctrl + Alt + B`. This will check to see if Boxes is installed and install it if necessary. Alternatively, you can install Boxes by running `ohmydebn-boxes-install` or launch the OhMyDebn menu and then select Apps > Virtualization > Boxes (Simple).
 
-At the prompt, press Enter to continue:
-
-![OhMyDebn Boxes Prompt](images/ohmydebn-boxes-0-prompt.png)
-
-Installation complete:
-
-![OhMyDebn Boxes Installed](images/ohmydebn-boxes-1-installed.png)
+When asked, press Enter to continue, and wait for the installation to finish.
 
 You can then start Boxes from the Cinnamon menu or OhMyDebn menu or via [hotkey](hotkeys.md) `Ctrl + Alt + B`.
-
-![OhMyDebn Boxes Interface](images/ohmydebn-boxes-2-interface.png)
-
 
 ## Virtual Machine Manager
 
 The hotkey for [Virtual Machine Manager](https://virt-manager.org/) is `Ctrl + Alt + V`. This will check to see if Virtual Machine Manager is installed and install it if necessary. Alternatively, you can install Virtual Machine Manager by running `ohmydebn-virtmanager-install` or launch the OhMyDebn menu and then select Apps > Virtualization > Virtual Machine Manager (Advanced).
 
-At the prompt, press Enter to continue:
-
-![OhMyDebn Virtualization Prompt](images/ohmydebn-virtualization-0-prompt.png)
-
-Installation complete:
-
-![OhMyDebn Virtualization Installed](images/ohmydebn-virtualization-1-installed.png)
+When asked, press Enter to continue, and wait for the installation to finish. If it then says to log out and back in, do that before starting a virtual machine: until then your virtual machines can't use hardware acceleration and run much more slowly.
 
 You can then start Virtual Machine Manager from the Cinnamon menu or OhMyDebn menu or via [hotkey](hotkeys.md) `Ctrl + Alt + V`.
 
-![OhMyDebn Virtualization Machine Manager](images/ohmydebn-virtualization-2-vmm.png)
+Once you've created a VM, you can take snapshots of it: open the VM, choose View > Snapshots, then click `+` at the bottom left.
 
-Once you've created a VM, if you want to create a snapshot then we recommend setting `Snapshot Mode` to `internal`:
-
-![OhMyDebn Virtualization Snapshots](images/ohmydebn-virtualization-3-snapshots.png)
+!!! warning "Set Snapshot Mode to internal"
+    In the Create snapshot window, make sure `Snapshot Mode` is set to `internal` before you click Finish. Internal snapshots are stored inside the VM's disk image, so they're much simpler to revert to and delete later. Check this every time you create a snapshot.
 
 ## Networking
 

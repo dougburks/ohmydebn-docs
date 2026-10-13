@@ -2,6 +2,62 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.11.0
+
+### Improvements
+
+- The [doctor](updating.md#checking-your-installation) (Update > Doctor) now shows your display scale (such as 2 on a HiDPI screen at 200%) at the top of its report, which helps when reporting a problem.
+- Applying the power-user profile to an existing install (`ohmydebn-power-user-install`) now removes only the optional apps your distro came with, and keeps apps that only come from the OhMyDebn menu, such as AI tools, VPNs and other browsers. It lists exactly which apps it will remove and asks first. Before, it also removed every AI tool, VPN and browser you'd installed from the menu.
+- Resetting your config files (`ohmydebn-reset-config`) now resets only the app config files it lists, and keeps your current theme. Before, it also reset your panel, keybindings, theme and default apps, switched off other Cinnamon extensions, turned the firewall back on, and upgraded every package on your system. It also no longer moves your Aether folder aside, since OhMyDebn has no default to replace it with. It now also works without an internet connection.
+- Removing a package from the menu (Remove > Package) now shows everything apt will remove and asks before going ahead. Before, it removed the packages you picked straight away, along with any other packages that depend on them.
+
+### Fixes
+
+- On HiDPI screens (such as a laptop set to 200% scaling), the [window tiling](window-tiling.md) grid now fits its contents instead of spilling out of its panel, and the gaps between tiled windows are the same size as on other screens instead of half as wide.
+- Aborting an update (closing the update window and choosing Abort update) now really stops it: the package being installed finishes, then the update stops. Before, the window said the update was aborted while it carried on in the background.
+- Installing ChatGPT, Visual Studio Code, Google Chrome or PowerShell now also installs any libraries they need, and stops with a clear message if the download fails instead of carrying on. The Visual Studio Code download is also checked against Microsoft's published checksum.
+- The apt repository ChatGPT adds when you install it is now limited to ChatGPT itself, as OhMyDebn already does for the repositories other apps add. Updating OhMyDebn applies this to existing installs.
+- On installs from before 4.10.0, removing an applet from the panel now takes effect right away. Two pairs of panel applets shared an ID, so removing one could leave it running until Cinnamon restarted. 4.10.0 fixed this for new installs, and updating now fixes existing panels. Cinnamon restarts once at the end of that update, so a second network icon that may appear while it runs goes away.
+- Switching themes no longer leaves files behind. Each switch kept a full copy of every theme you had applied (over 100 MB on some machines), a new backup of your cava settings, and a Claude Code theme file. Now only the current theme's files are kept, plus one backup of your cava settings from before OhMyDebn first changed them. Your next theme switch clears out the ones left by earlier switches.
+- Switching themes no longer creates Claude Code's settings when Claude Code isn't installed. Installing Claude Code now gives it your current theme right away.
+- Switching themes no longer deletes a theme you've linked into your themes folder (one you're working on elsewhere, for example).
+- On installs from before 4.9.0, Cinnamon's keyboard settings now list the Super + K shortcut as "Keybindings" instead of its old name, "Hotkeys".
+- On a computer with more than one OhMyDebn user, a new user's first install or update no longer turns the firewall back on if someone has turned it off. OhMyDebn now sets up the firewall once per computer instead of once per user.
+- Installing Virtual Machine Manager no longer restarts your desktop partway through. When your virtual machines can't use hardware acceleration until you log out and back in, it now tells you so.
+- Web apps whose address contains `%` (such as `%20`) now open correctly, and a TUI app whose name contains quotes now gets the right window title. If the icon can't be downloaded, no launcher is created, instead of one with a broken icon.
+- Removing a web app or TUI app by name no longer deletes an app launcher you made yourself with the same name.
+- In the theme picker, choosing a background now always applies the one shown. With your own backgrounds whose names mixed upper and lower case, it could apply a different one.
+- With two system info windows open (About), both now update when you change theme.
+- The network speed test no longer hangs on "Fetching speed test endpoints..." when the connection stalls.
+- Stopping the logo demo no longer stops the logo animation in another open window.
+- Removing the remote desktop server now also removes its login check when the server was already removed some other way.
+- Cleaning up old SO-CRATES images now keeps the version SO-CRATES starts by default, so the next launch doesn't download it again.
+- Installing or removing a package from the menu now says when it didn't finish.
+- Shell completions for the `ttfx` command now work on ARM64.
+- Applying a theme from the online theme gallery no longer silently does nothing when the current theme's color settings file is damaged.
+- Virtual Machine Networking (Apps > Virtualization) now explains when Virtual Machine Manager isn't installed or there are no virtual machines, instead of not opening at all. Its Upgrade button also works when your system isn't in English.
+- Install > Package no longer lists apt's "Listing..." line as if it were a package.
+- With two logo windows open, both now update when you change theme.
+- Removing a line from your keybindings file now also restores Cinnamon keys like Looking Glass's, not just the others.
+- Installing Helium now stops with a clear message, and leaves no package source behind, when its repository can't be reached.
+- Visual Studio Code no longer tries to install an extension named "null" for themes that don't name one.
+- Update > Firmware now asks before installing the tools it needs.
+- The terminal speed tests (`ohmydebn-network-speedtest` and `ohmydebn-disk-speedtest`) now simply end when done, instead of leaving you in a second shell.
+- SO-CRATES no longer leaves a stopped container behind each time you close it.
+- If Oh My Zsh couldn't be downloaded during your first install, the update that later installed it could replace OhMyDebn's `~/.zshrc`, so Zsh started without its prompt and aliases. That no longer happens, and updating puts the file back on any system where it did.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Neovim](text-editor.md#neovim) updated to version 0.12.6
+- [Codex](ai.md#codex) updated to version 0.162.1
+- [Grok Build](ai.md#grok-build) updated to version 1.0.50
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.10.1
+- [OpenCode](ai.md#opencode) updated to version 1.19.0
+- [Pi](ai.md#pi) updated to version 1.1.0
+- lazygit updated to version 0.66.1
+
 ## 4.10.0
 
 ### Supported distros

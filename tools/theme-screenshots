@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# theme-screenshots: a maintainer tool for the docs' theme screenshots
+# (docs/images/ohmydebn-theme-<name>.png). Run on an OhMyDebn desktop: it
+# applies every installed theme in turn and saves a screenshot of each to
+# ~/Pictures. Moved here from the ohmydebn package's bin/ (as
+# ohmydebn-theme-screenshots), where it shipped to every user but only the
+# maintainer ever ran it - and it needed gnome-screenshot, which OhMyDebn
+# doesn't install. Not part of the published site (MkDocs builds docs/ only).
+
+set -euo pipefail
+
+THEME_SET=/usr/share/ohmydebn/bin/ohmydebn-theme-set
+for TOOL in "$THEME_SET" /usr/bin/gnome-screenshot /usr/bin/xdotool; do
+  if [ ! -x "$TOOL" ]; then
+    echo "Needs $TOOL. Run this on an OhMyDebn desktop, with: sudo apt install gnome-screenshot xdotool" >&2
+    exit 1
+  fi
+done
+
+cat <<INTRO
+Continuing will iterate through all installed themes and take a screenshot of each.
+
+Please arrange all windows as you like. For example:
+- upper left - terminal running lt
+- upper right - file manager
+- lower left - fastfetch
+- lower right - btop
+
+This current window will automatically minimize.
+
+Press Enter to continue or Ctrl-C to cancel.
+INTRO
+
+read -r
+
+/usr/bin/xdotool getactivewindow windowminimize
+
+mkdir -p ~/Pictures
+cd /usr/share/ohmydebn-themes/
+for THEME in *; do
+  "$THEME_SET" "$THEME"
+  sleep 3s
+  /usr/bin/gnome-screenshot -f ~/Pictures/"ohmydebn-theme-$THEME.png"
+done

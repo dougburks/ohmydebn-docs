@@ -20,6 +20,10 @@ Before it starts, the update window shows your current OhMyDebn version and whet
 !!! note
     On [Devuan, LCOS](installation.md#devuan-6-excalibur), and [MX Linux with sysvinit](installation.md#mx-linux-25) there is no systemd, so the automatic update check and its notification are not installed. Start updates yourself using any of the methods above.
 
+## Stopping an update
+
+To stop an update that's running, close the update window and choose Abort update (or Keep updating to carry on). If a package is being installed at that moment, it finishes first, so your system isn't left with a half-installed package; then the update stops. Run the update again later to finish it.
+
 ## Channels
 
 OhMyDebn Menu > Update > Channel lets you choose where updates come from. Each list marks the channel you're on now.
@@ -40,7 +44,7 @@ Switching Claude Code back to stable keeps your installed version until stable c
 
 ## Firmware
 
-OhMyDebn Menu > Update > Firmware checks your computer's firmware (such as the system BIOS/UEFI, SSDs, docks, and some peripherals) for updates and installs them. It uses [fwupd](https://fwupd.org/), which gets updates from the Linux Vendor Firmware Service (LVFS), so only devices whose makers publish their firmware there are covered. OhMyDebn installs fwupd the first time you use it if it isn't already installed.
+OhMyDebn Menu > Update > Firmware checks your computer's firmware (such as the system BIOS/UEFI, SSDs, docks, and some peripherals) for updates and installs them. It uses [fwupd](https://fwupd.org/), which gets updates from the Linux Vendor Firmware Service (LVFS), so only devices whose makers publish their firmware there are covered. If fwupd isn't installed yet, it says so and asks before installing it.
 
 fwupd lists the updates it found and asks before installing each one. Keep your computer plugged in and don't turn it off while firmware is updating. Some updates are installed during the next restart, and fwupd tells you when that's the case.
 
@@ -76,7 +80,7 @@ Run it from the OhMyDebn menu (Update > Doctor), or from a terminal:
 ohmydebn-doctor
 ```
 
-Anything marked `FAIL` is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.
+The top of its report shows your user, desktop and display scale (such as 2 on a HiDPI screen at 200%). Anything marked `FAIL` is worth a look, and the summary at the end lists them. If something on your system seems off after an update, running the doctor and including its output when asking for help is the quickest way to get a useful answer.
 
 Run it from a terminal inside your Cinnamon session so it can check the desktop settings too. Over SSH it still runs, but the desktop-specific checks are marked as skipped rather than failed.
 
