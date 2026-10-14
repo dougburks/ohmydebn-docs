@@ -2,6 +2,12 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.12.0
+
+### Fixes
+
+- The OhMyDebn Menu has a new icon, which takes the theme's colors like the other icons on the panel. The old icon was missing on LMDE 7, so the menu showed up there with no icon.
+
 ## 4.11.0
 
 ### Improvements
