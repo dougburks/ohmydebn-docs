@@ -4,9 +4,13 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.12.0
 
+### Improvements
+
+- OhMyDebn's notifications now show the OhMyDebn icon, and so do its own windows, such as the menu and the update window, in the window list and window switcher. The icon follows your theme's colors.
+
 ### Fixes
 
-- The OhMyDebn Menu has a new icon, which takes the theme's colors like the other icons on the panel. The old icon was missing on LMDE 7, so the menu showed up there with no icon.
+- The OhMyDebn Menu has a new icon, a grinning face that takes the theme's colors like the other icons on the panel: solid on dark themes and an outline on light themes. The old icon was missing on LMDE 7, so the menu showed up there with no icon.
 
 ## 4.11.0
 
