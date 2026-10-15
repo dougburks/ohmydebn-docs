@@ -15,6 +15,12 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - On a distro OhMyDebn doesn't support, such as Ubuntu 26.10, updating no longer stops at the unsupported-distro warning every time. It asks once, and asks again only if you move to another unsupported release.
 - Installing Cloudflare WARP on a new Ubuntu release that Cloudflare doesn't have packages for yet, such as Ubuntu 26.10, now uses its packages for Ubuntu 26.04 instead of failing.
 
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically.
+
+- fastfetch updated to version 2.70.0
+
 ## 4.11.0
 
 ### Improvements
