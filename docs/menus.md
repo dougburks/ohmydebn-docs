@@ -8,7 +8,7 @@ The Cinnamon menu includes an entry to launch the OhMyDebn menu.
 
 ## OhMyDebn Menu
 
-The OhMyDebn menu allows you to launch apps, learn about OhMyDebn, and configure and control the system. You can activate this menu from the Cinnamon menu or by pressing `Super + Space`.
+The OhMyDebn menu allows you to launch apps, learn about OhMyDebn, and configure and control the system. You can activate this menu by clicking the grinning face on the panel, right next to the Cinnamon menu, by pressing `Super + Space`, or from the Cinnamon menu.
 
 ![OhMyDebn Menu](images/ohmydebn-menu.png)
 
