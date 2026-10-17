@@ -46,7 +46,7 @@ Grok Build needs either a SuperGrok or X Premium+ subscription, which you sign i
 
 ## T3 Code
 
-[T3 Code](https://github.com/pingdotgg/t3code) is a desktop app that runs your AI coding agents side by side in one window. It isn't an AI assistant itself: it works with the agents you already have installed, such as OpenCode, Claude Code, Codex, and Grok Build, so install at least one of those first. T3 Code is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI), where it's listed as "T3 Code (agent GUI)". You can then run via menu.
+[T3 Code](https://github.com/pingdotgg/t3code) is a desktop app that runs your AI coding agents side by side in one window. It isn't an AI assistant itself: it works with the agents you already have installed, such as OpenCode, Claude Code, Codex, Grok Build, and Pi, so install at least one of those first. T3 Code is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI), where it's listed as "T3 Code (agent GUI)". You can then run via menu.
 
 T3 Code automatically adapts to our [desktop themes](desktop-themes.md). If you pick a different theme in T3 Code's own Settings > Appearance, it keeps that choice instead. To follow your OhMyDebn theme again, select the OhMyDebn theme there.
 

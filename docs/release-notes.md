@@ -26,6 +26,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Oh My Pi](ai.md#oh-my-pi) updated to version 18.11.3
 - [OpenCode](ai.md#opencode) updated to version 1.19.3
 - [Pi](ai.md#pi) updated to version 1.3.0
+- [T3 Code](ai.md#t3-code) updated to version 0.1.0. It now works with Pi too. The first time it starts, it copies your existing threads into its new format, so they carry over. You may need to sign in again to websites you opened inside T3 Code.
 - The terminal's Caskaydia Nerd Fonts updated to version 3.5.1
 - [Starship](terminal.md), the shell prompt, updated to version 1.27.0, which includes security fixes
 - [herdr](terminal.md#herdr) updated to version 0.9.5
