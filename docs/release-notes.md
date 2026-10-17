@@ -14,6 +14,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 - The OhMyDebn Menu has a new icon, a grinning face that takes the theme's colors like the other icons on the panel: solid on dark themes and an outline on light themes. The old icon was missing on LMDE 7, so the menu showed up there with no icon.
 - Automatic tiling no longer animates windows into place when you turn off Desktop and window effects in System Settings > Effects. It also stays still if you turn off just Window effects or Resizing and tiling windows there.
+- Neovim's start screen no longer has a dark bar along the bottom of the window.
 - On a distro OhMyDebn doesn't support, such as Ubuntu 26.10, updating no longer stops at the unsupported-distro warning every time. It asks once, and asks again only if you move to another unsupported release.
 - Installing Cloudflare WARP on a new Ubuntu release that Cloudflare doesn't have packages for yet, such as Ubuntu 26.10, now uses its packages for Ubuntu 26.04 instead of failing.
 
