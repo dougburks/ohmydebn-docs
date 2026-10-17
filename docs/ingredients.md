@@ -20,7 +20,7 @@ Here's what you get in OhMyDebn by default:
 - System summary: [fastfetch](utilities.md#system-summary)
 - Window automation: [xdotool](https://github.com/jordansissel/xdotool)
 - Firewall: [ufw](firewall.md) with default deny for inbound traffic
-- Eye candy: dazzling terminal effects via [ttfx](https://github.com/omacom-io/ttfx) for demoscene nostalgia
+- Eye candy: dazzling terminal effects via [ttfx](https://github.com/omacom/ttfx) for demoscene nostalgia
 - Audio visualizer: [Cava](media.md#cava)
 
 Your base distro may add more. For example, most of them turn on [AppArmor](https://wiki.debian.org/AppArmor/HowToUse) mandatory access control (LCOS doesn't), and some include the [Rhythmbox](media.md#rhythmbox) music player.
