@@ -75,6 +75,8 @@ If T3 Code shows one of your installed agents as turned off, turn it on in T3 Co
 
 [Antigravity](https://antigravity.google/) is a fork of Visual Studio Code for Google Agentic AI and is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI or Apps > Editors). You can run via menu or hotkey Ctrl + Super + G. That hotkey checks to see if it's installed first, so even on a new installation you can just press Ctrl + Super + G and it will install and then run.
 
+OhMyDebn installs Antigravity 1.x, the last version Google released as a Debian package. Google no longer updates it, and it may stop working at any time. The newer Antigravity 2 app and Antigravity IDE come as separate downloads from [Google's download page](https://antigravity.google/download?os=linux) and aren't managed by OhMyDebn.
+
 ![OhMyDebn antigravity](images/ohmydebn-antigravity.png)
 
 ## OhMyDebn skill

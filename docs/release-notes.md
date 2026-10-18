@@ -16,6 +16,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - The system summary (`Ctrl + Shift + S`) now shows the OhMyDebn grin, in your theme's colors, instead of your distro's logo. The first line of the summary still names your distro. Every few seconds a shimmer of light crosses the grin, and then it winks. It stays still if you turn off Desktop and window effects in System Settings > Effects.
 - The terminal prompt now starts with the OhMyDebn grin instead of your distro's logo, and each new prompt appears about three times faster, so holding down Enter no longer lags. If you changed the prompt's layout yourself, your version is kept as it is.
 - On a laptop with AMD's Radeon 890M graphics, such as the Framework Laptop 13 Pro (AMD), the [doctor](updating.md#checking-your-installation) now checks two settings that laptop needs. On Linux kernel 7, it checks that TearFree is on. Without it, small parts of the screen can briefly flash corrupted. On any kernel, it checks the boot setting that stops the laptop from freezing. The doctor links to the [Hardware Notes](hardware-notes.md#framework-laptop-13-pro-amd-ryzen-ai-300-series) steps for both.
+- Installing Antigravity now tells you that it's Antigravity 1.x, the last version Google released for Debian-based systems. Google no longer updates it, and it may stop working. The newer Antigravity 2 is a separate download from Google. See [Antigravity](ai.md#antigravity-with-google-agentic-ai).
 
 ### Fixes
 
