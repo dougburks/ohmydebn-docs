@@ -37,6 +37,8 @@ xrandr --prop | grep -i tearfree
 ```
 TearFree makes the graphics driver copy each frame into its own buffer before showing it, which avoids the bug. The extra copy costs very little on this graphics chip.
 
+The [doctor](updating.md#checking-your-installation) checks this too: on kernel 7 it reports a `FAIL` for TearFree until it's on.
+
 To undo it, delete the file with `sudo rm /etc/X11/xorg.conf.d/20-amdgpu-tearfree.conf`, then log out and back in.
 
 ### 3. Install OhMyDebn
