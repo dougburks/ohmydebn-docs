@@ -26,6 +26,14 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Removing an app that comes from its vendor's own repository, such as Claude Code, Google Chrome or Claude Desktop, with Remove > Package or `apt` now removes that repository too, so updates stop checking it. Before, only removing the app from a terminal with its own remove command did this. Updating cleans up repositories left behind before.
 - On a distro OhMyDebn doesn't support, such as Ubuntu 26.10, updating no longer stops at the unsupported-distro warning every time. It asks once, and asks again only if you move to another unsupported release.
 - Installing Cloudflare WARP on a new Ubuntu release that Cloudflare doesn't have packages for yet, such as Ubuntu 26.10, now uses its packages for Ubuntu 26.04 instead of failing.
+- Installing Claude Code now checks Anthropic's signing key against the fingerprint Anthropic publishes before trusting it, so a key that was tampered with on the way is refused.
+- A theme installed from a git repository can no longer use a link in place of its color file to copy another of your files into the theme.
+- Switching to a theme you made yourself no longer stops partway when one of its colors isn't written as `#rrggbb`. Claude Code keeps its current colors for that theme, and the rest of the theme is applied.
+- The SO-CRATES image cleanup no longer stops partway when an old image is in use but podman doesn't say by which container. It reports that image and removes the rest.
+- If updating the package lists fails while installing Tailscale, the install now stops there with apt's error, instead of skipping the install and failing later with a confusing message.
+- When your login session has no runtime directory, as in some `su` and SSH sessions, updates now keep their lock file in your home folder, where another user on the same computer can't block them.
+- The Gmail and Cloudflare WARP keybindings now show those names in Cinnamon's keyboard settings on installs from before 4.11.0, which still showed "GMail" and "Cloudflare Warp".
+- The installers for touchpad gestures, LocalSend and SimpleScreenRecorder now say where they install from, and the unsupported-distro warning now lists Raspberry Pi OS among the supported distros.
 
 ### Updated components
 

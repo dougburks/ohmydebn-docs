@@ -12,7 +12,7 @@ Here's what you get in OhMyDebn by default:
 - Performance monitoring: [btop](utilities.md#system-monitoring)
 - Application launcher: custom GTK app launcher
 - Shell cat command alternative: [bat](https://github.com/sharkdp/bat) with syntax highlighting
-- Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command and [eza](https://github.com/eza-community/eza) for beautiful directory listings
+- Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for `z`, a smarter `cd` that jumps to directories you've used before, and [eza](https://github.com/eza-community/eza) for beautiful directory listings
 - Web browser: [Brave Origin](browser.md) with its built-in Shields content blocker
 - Password management: [KeePassXC](https://keepassxc.org/)
 - Default image viewer: [Ristretto](documents.md#ristretto)

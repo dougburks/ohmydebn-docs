@@ -1,4 +1,4 @@
-OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, ChatGPT, Codex, Grok Build, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.
+OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.
 
 ## Default AI Assistant
 
