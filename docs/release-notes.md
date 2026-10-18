@@ -22,7 +22,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Neovim's start screen no longer has a dark bar along the bottom of the window.
 - When you uninstall your default browser, another installed browser now becomes the default, Brave Origin first. Before, `Super + B` and links could open in whichever browser happened to be left, such as Firefox. Removing a browser with Remove > Package in the OhMyDebn Menu switches right away, and the next update fixes a browser you removed some other way. See [Default Browser](browser.md#changing-the-default-browser).
 - If your default browser has been uninstalled, web apps now open in whichever browser handles web links instead of not opening at all.
-- Removing an app that comes from its vendor's own repository, such as Google Chrome or Claude Desktop, with Remove > Package or `apt` no longer leaves OhMyDebn's setting for that repository behind. Updating cleans up any that were left before.
+- Removing an app that comes from its vendor's own repository, such as Claude Code, Google Chrome or Claude Desktop, with Remove > Package or `apt` now removes that repository too, so updates stop checking it. Before, only removing the app from a terminal with its own remove command did this. Updating cleans up repositories left behind before.
 - On a distro OhMyDebn doesn't support, such as Ubuntu 26.10, updating no longer stops at the unsupported-distro warning every time. It asks once, and asks again only if you move to another unsupported release.
 - Installing Cloudflare WARP on a new Ubuntu release that Cloudflare doesn't have packages for yet, such as Ubuntu 26.10, now uses its packages for Ubuntu 26.04 instead of failing.
 
