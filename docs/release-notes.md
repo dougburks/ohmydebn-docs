@@ -7,6 +7,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### New
 
 - [Claude Desktop](ai.md#claude-desktop), Anthropic's desktop app for Claude with Claude Code built in, is available as an optional installation in Apps > AI. Its updates come with OhMyDebn's.
+- A new [Hardware Notes](hardware-notes.md) page collects tips for machines that need a little extra work. It starts with the Framework Laptop 13 Pro (AMD): how to stop the screen briefly flashing corrupted on Linux kernel 7, and how to stop the laptop freezing.
 
 ### Improvements
 
@@ -25,8 +26,9 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - If your default browser has been uninstalled, web apps now open in whichever browser handles web links instead of not opening at all.
 - Removing an app that comes from its vendor's own repository, such as Claude Code, Google Chrome or Claude Desktop, with Remove > Package or `apt` now removes that repository too, so updates stop checking it. Before, only removing the app from a terminal with its own remove command did this. Updating cleans up repositories left behind before.
 - On a distro OhMyDebn doesn't support, such as Ubuntu 26.10, updating no longer stops at the unsupported-distro warning every time. It asks once, and asks again only if you move to another unsupported release.
+- Installing Chromium could occasionally look for the wrong package and fail, on distros where Chromium comes straight from the distro's own repository, such as Debian. That no longer happens.
 - Installing Cloudflare WARP on a new Ubuntu release that Cloudflare doesn't have packages for yet, such as Ubuntu 26.10, now uses its packages for Ubuntu 26.04 instead of failing.
-- Installing Claude Code now checks Anthropic's signing key against the fingerprint Anthropic publishes before trusting it, so a key that was tampered with on the way is refused.
+- Installing Claude Code or a Brave browser now checks the vendor's signing keys against the ones the vendor publishes before trusting them, so keys that were tampered with on the way are refused.
 - A theme installed from a git repository can no longer use a link in place of its color file to copy another of your files into the theme.
 - Switching to a theme you made yourself no longer stops partway when one of its colors isn't written as `#rrggbb`. Claude Code keeps its current colors for that theme, and the rest of the theme is applied.
 - The SO-CRATES image cleanup no longer stops partway when an old image is in use but podman doesn't say by which container. It reports that image and removes the rest.
