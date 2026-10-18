@@ -28,7 +28,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - On a distro OhMyDebn doesn't support, such as Ubuntu 26.10, updating no longer stops at the unsupported-distro warning every time. It asks once, and asks again only if you move to another unsupported release.
 - Installing Chromium could occasionally look for the wrong package and fail, on distros where Chromium comes straight from the distro's own repository, such as Debian. That no longer happens.
 - Installing Cloudflare WARP on a new Ubuntu release that Cloudflare doesn't have packages for yet, such as Ubuntu 26.10, now uses its packages for Ubuntu 26.04 instead of failing.
-- Installing Claude Code or a Brave browser now checks the vendor's signing keys against the ones the vendor publishes before trusting them, so keys that were tampered with on the way are refused.
+- Installing Claude Code, a Brave browser or PowerShell now checks the vendor's signing keys against the ones the vendor publishes before trusting them, so keys that were tampered with on the way are refused. Existing PowerShell installs are moved to the checked setup on update.
 - A theme installed from a git repository can no longer use a link in place of its color file to copy another of your files into the theme.
 - Switching to a theme you made yourself no longer stops partway when one of its colors isn't written as `#rrggbb`. Claude Code keeps its current colors for that theme, and the rest of the theme is applied.
 - The SO-CRATES image cleanup no longer stops partway when an old image is in use but podman doesn't say by which container. It reports that image and removes the rest.
