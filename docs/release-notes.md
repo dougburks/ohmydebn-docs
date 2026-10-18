@@ -6,7 +6,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### New
 
-- [Claude Desktop](ai.md#claude-desktop), Anthropic's desktop app with Chat, Cowork and Claude Code, is available as an optional installation in Apps > AI. Its updates come with OhMyDebn's.
+- [Claude Desktop](ai.md#claude-desktop), Anthropic's desktop app for Claude with Claude Code built in, is available as an optional installation in Apps > AI. Its updates come with OhMyDebn's.
 
 ### Improvements
 

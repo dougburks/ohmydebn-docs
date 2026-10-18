@@ -24,11 +24,16 @@ Claude Code installs on its stable release channel, which is about a week behind
 
 ## Claude Desktop
 
-[Claude Desktop](https://claude.com/download) is Anthropic's desktop app, with Chat, Cowork and Claude Code in one window, and is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI), where it's listed as "Claude Desktop (Anthropic GUI)" to distinguish it from the Claude Code terminal app above. You can then run via menu. It follows your theme's light or dark mode.
+[Claude Desktop](https://claude.com/download) is Anthropic's desktop app for Claude, with Claude Code built in, and is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI), where it's listed as "Claude Desktop (Anthropic GUI)" to distinguish it from the Claude Code terminal app above. You can then run via menu. It follows your theme's light or dark mode.
 
-You sign in with your Claude account. Chat works on any plan, while the Code and Cowork tabs need a paid plan (Pro, Max, Team or Enterprise). Anthropic's Linux version is still in beta: Computer Use and dictation aren't available on Linux yet.
+You sign in with your Claude account. Chat works on any plan, while Claude Code and some other features need a paid plan (Pro, Max, Team or Enterprise). Anthropic's Linux version is still in beta: Computer Use and dictation aren't available on Linux yet.
 
-Cowork runs its tasks in a virtual machine, so it needs hardware virtualization turned on in your computer's firmware settings, and your user in the `kvm` group. To join the group, run `sudo usermod -aG kvm $USER`, then log out and back in. If the Cowork tab says something else is missing, it shows the command that installs it.
+Larger tasks, which Claude Desktop used to keep in a separate Cowork tab, now start from any chat. Claude can run them in a virtual machine on your computer, and OhMyDebn installs the software that virtual machine needs along with Claude Desktop. If those tasks won't start, check that your computer has what that virtual machine needs:
+
+- Hardware virtualization turned on in your computer's firmware (BIOS or UEFI) settings. If OhMyDebn itself runs in a virtual machine, that virtual machine needs nested virtualization turned on.
+- Your user in the `kvm` group. To join it, run `sudo usermod -aG kvm $USER`, then log out and back in.
+- At least 8 GB of memory. The virtual machine uses 4 GB of it while it runs.
+- About 25 GB of free disk space.
 
 Claude Desktop updates come from Anthropic's own repository whenever you update OhMyDebn.
 
