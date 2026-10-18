@@ -8,7 +8,7 @@ When you install one of these AI tools from the OhMyDebn menu, you'll be asked w
 
 To change your default AI assistant at any time, go to OhMyDebn Menu > Setup > Defaults > Agent. It lists the AI tools you have installed, marks your current default, and makes whichever one you pick the new default.
 
-If you're in a terminal, the `a` alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT, VS Code, and Antigravity).
+If you're in a terminal, the `a` alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT, VS Code, and Antigravity; Claude Desktop and T3 Code just open).
 
 ## OpenCode
 
@@ -21,6 +21,16 @@ OpenCode is available as an optional installation. You can install via the OhMyD
 [Claude Code](https://claude.com/claude-code) is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI). You can run in an existing terminal session with the `claude` command. Alternatively, you can use hotkey Ctrl + Alt + C to start a terminal and run Claude. That hotkey checks to see if it's installed first, so even on a new installation you can just press Ctrl + Alt + C and it will install and then run. Claude Code automatically adapts to our [desktop themes](desktop-themes.md).
 
 Claude Code installs on its stable release channel, which is about a week behind the newest release and skips releases with serious bugs. To get every release as soon as it ships, switch to the latest channel in OhMyDebn Menu > Update > Channel > Claude Code. See [Channels](updating.md#channels).
+
+## Claude Desktop
+
+[Claude Desktop](https://claude.com/download) is Anthropic's desktop app, with Chat, Cowork and Claude Code in one window, and is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI), where it's listed as "Claude Desktop (Anthropic GUI)" to distinguish it from the Claude Code terminal app above. You can then run via menu. It follows your theme's light or dark mode.
+
+You sign in with your Claude account. Chat works on any plan, while the Code and Cowork tabs need a paid plan (Pro, Max, Team or Enterprise). Anthropic's Linux version is still in beta: Computer Use and dictation aren't available on Linux yet.
+
+Cowork runs its tasks in a virtual machine, so it needs hardware virtualization turned on in your computer's firmware settings, and your user in the `kvm` group. To join the group, run `sudo usermod -aG kvm $USER`, then log out and back in. If the Cowork tab says something else is missing, it shows the command that installs it.
+
+Claude Desktop updates come from Anthropic's own repository whenever you update OhMyDebn.
 
 ## ChatGPT
 

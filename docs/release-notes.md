@@ -4,6 +4,10 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.12.0
 
+### New
+
+- [Claude Desktop](ai.md#claude-desktop), Anthropic's desktop app with Chat, Cowork and Claude Code, is available as an optional installation in Apps > AI. Its updates come with OhMyDebn's.
+
 ### Improvements
 
 - The OhMyDebn Menu now has its own button on the panel, the grinning face right next to the Cinnamon menu. You can still open it with `Super + Space`. If you remove the button, updates won't put it back.
