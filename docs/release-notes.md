@@ -36,6 +36,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - If updating the package lists fails while installing Tailscale, the install now stops there with apt's error, instead of skipping the install and failing later with a confusing message.
 - When your login session has no runtime directory, as in some `su` and SSH sessions, updates now keep their lock file in your home folder, where another user on the same computer can't block them.
 - The Gmail and Cloudflare WARP keybindings now show those names in Cinnamon's keyboard settings on installs from before 4.11.0, which still showed "GMail" and "Cloudflare Warp".
+- When OhMyDebn switches your login screen's default session to Cinnamon, the backup it keeps of the original login screen settings is now made only once. Before, if the setting changed again later, the next update replaced that backup with a copy OhMyDebn had already edited, so the original was lost.
 - The installers for touchpad gestures, LocalSend and SimpleScreenRecorder now say where they install from, and the unsupported-distro warning now lists Raspberry Pi OS among the supported distros.
 
 ### Updated components
