@@ -538,10 +538,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-optional-if-your-laptop-freezes" class="md-nav__link">
+  <a href="#4-prevent-freezes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Optional: if your laptop freezes
+        4. Prevent freezes
       
     </span>
   </a>
@@ -1355,10 +1355,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-optional-if-your-laptop-freezes" class="md-nav__link">
+  <a href="#4-prevent-freezes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Optional: if your laptop freezes
+        4. Prevent freezes
       
     </span>
   </a>
@@ -1408,6 +1408,7 @@
 <h2 id="framework-laptop-13-pro-amd-ryzen-ai-300-series">Framework Laptop 13 Pro (AMD Ryzen AI 300 Series)</h2>
 <p>Tested in October 2026 on Linux Mint 22.3, on a <a href="https://frame.work/laptop13pro">Framework Laptop 13 Pro</a> with AMD Ryzen AI 300 Series and Radeon 890M graphics. These steps are for the AMD model, not the Intel one. To check whether your laptop has the same graphics chip, run <code>lspci -nn | grep 1002:150e</code>. Other laptops with this chip may need the same steps.</p>
 <p><strong>The problem:</strong> on Linux kernel 7, small rectangles of the screen briefly flash corrupted, for example when you open or close terminal windows or change themes. Kernel 6.17 doesn't do this. It's a bug in the kernel's AMD graphics driver, not in OhMyDebn, Cinnamon or Linux Mint, and it shows up on other distros too (upstream reports: <a href="https://gitlab.freedesktop.org/drm/amd/-/work_items/5950">drm/amd #5950</a>, <a href="https://gitlab.freedesktop.org/drm/amd/-/work_items/5524">drm/amd #5524</a>). Turning on the graphics driver's TearFree setting avoids it, so you can keep getting kernel updates.</p>
+<p><strong>A second problem:</strong> the laptop can freeze completely, so that you have to hold the power button to turn it off. A boot setting that turns off some of the display's power saving prevents this (step 4).</p>
 <h3 id="1-install-linux-mint-223-from-the-hwe-iso">1. Install Linux Mint 22.3 from the HWE ISO</h3>
 <p>Linux Mint's regular 22.3 ISO comes with kernel 6.14, which is too old for this laptop. Download the <a href="https://www.linuxmint.com/hwe.php">Linux Mint HWE ISO</a> instead, which comes with a newer kernel, and install it.</p>
 <h3 id="2-turn-on-tearfree">2. Turn on TearFree</h3>
@@ -1429,17 +1430,22 @@ Log out and back in (or reboot). To check that it's on, run this command. It sho
 <div class="highlight"><pre><span></span><code>xrandr --prop | grep -i tearfree
 </code></pre></div>
 TearFree makes the graphics driver copy each frame into its own buffer before showing it, which avoids the bug. The extra copy costs very little on this graphics chip.<p></p>
+<p>The <a href="../updating/#checking-your-installation">doctor</a> checks this too: on kernel 7 it reports a <code>FAIL</code> for TearFree until it's on.</p>
 <p>To undo it, delete the file with <code>sudo rm /etc/X11/xorg.conf.d/20-amdgpu-tearfree.conf</code>, then log out and back in.</p>
 <h3 id="3-install-ohmydebn">3. Install OhMyDebn</h3>
 <p>Follow the <a href="../installation/#installation-with-linux-mint-cinnamon">installation steps</a> as usual. The installer's system upgrade moves you to kernel 7, which is fine with TearFree on.</p>
-<h3 id="4-optional-if-your-laptop-freezes">4. Optional: if your laptop freezes</h3>
-<p>If the screen freezes and you have to hold the power button to turn the laptop off, try adding this boot setting for the graphics driver. Edit <code>/etc/default/grub</code> so this line reads:
+<h3 id="4-prevent-freezes">4. Prevent freezes</h3>
+<p>Add this boot setting for the graphics driver. Edit <code>/etc/default/grub</code> so this line reads:
 </p><div class="highlight"><pre><span></span><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash amdgpu.dcdebugmask=0xC10"
 </code></pre></div>
 Then run this command and reboot:
 <div class="highlight"><pre><span></span><code>sudo update-grub
 </code></pre></div>
-It turns off three of the display's power-saving features: Panel Self Refresh, Panel Replay and Idle Power States. Battery life may be a little shorter, so only add it if you've had a freeze. Our test laptop froze once and hasn't frozen since we added it, but one freeze isn't enough to be sure it was the fix.<p></p>
+It turns off three of the display's power-saving features: Panel Self Refresh, Panel Replay and Idle Power States. Our test laptop froze several times before we added it and hasn't frozen since. The cost is battery life, which may be a little shorter.<p></p>
+<p>To check that it's on after the reboot, run this command. It should show <code>3088</code> (0xC10 in decimal):
+</p><div class="highlight"><pre><span></span><code>cat /sys/module/amdgpu/parameters/dcdebugmask
+</code></pre></div>
+The <a href="../updating/#checking-your-installation">doctor</a> checks this too, on any kernel.<p></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you dual boot with another Linux install, the change only takes effect if this install's boot menu is the one that starts the laptop. Otherwise, add the setting in the other install's <code>/etc/default/grub</code>.</p>
