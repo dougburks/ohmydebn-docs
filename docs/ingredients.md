@@ -12,7 +12,7 @@ Here's what you get in OhMyDebn by default:
 - Performance monitoring: [btop](utilities.md#system-monitoring)
 - Application launcher: custom GTK app launcher
 - Shell cat command alternative: [bat](https://github.com/sharkdp/bat) with syntax highlighting
-- Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command and [eza](https://github.com/eza-community/eza) for beautiful directory listings
+- Shell commands for directories: [Zoxide](https://github.com/ajeetdsouza/zoxide) for `z`, a smarter `cd` that jumps to directories you've used before, and [eza](https://github.com/eza-community/eza) for beautiful directory listings
 - Web browser: [Brave Origin](browser.md) with its built-in Shields content blocker
 - Password management: [KeePassXC](https://keepassxc.org/)
 - Default image viewer: [Ristretto](documents.md#ristretto)
@@ -20,14 +20,14 @@ Here's what you get in OhMyDebn by default:
 - System summary: [fastfetch](utilities.md#system-summary)
 - Window automation: [xdotool](https://github.com/jordansissel/xdotool)
 - Firewall: [ufw](firewall.md) with default deny for inbound traffic
-- Eye candy: dazzling terminal effects via [ttfx](https://github.com/omacom-io/ttfx) for demoscene nostalgia
+- Eye candy: dazzling terminal effects via [ttfx](https://github.com/omacom/ttfx) for demoscene nostalgia
 - Audio visualizer: [Cava](media.md#cava)
 
 Your base distro may add more. For example, most of them turn on [AppArmor](https://wiki.debian.org/AppArmor/HowToUse) mandatory access control (LCOS doesn't), and some include the [Rhythmbox](media.md#rhythmbox) music player.
 
 Here are some additional components that you can optionally install:
 
-- AI: [OpenCode](ai.md#opencode) with free and paid models, [Claude Code](ai.md#claude-code), [ChatGPT](ai.md#chatgpt), [Codex](ai.md#codex), [Pi](ai.md#pi), [Oh My Pi](ai.md#oh-my-pi), [Grok Build](ai.md#grok-build), [T3 Code](ai.md#t3-code), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with GitHub Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
+- AI: [OpenCode](ai.md#opencode) with free and paid models, [Claude Code](ai.md#claude-code), [Claude Desktop](ai.md#claude-desktop), [ChatGPT](ai.md#chatgpt), [Codex](ai.md#codex), [Pi](ai.md#pi), [Oh My Pi](ai.md#oh-my-pi), [Grok Build](ai.md#grok-build), [T3 Code](ai.md#t3-code), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with GitHub Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
 - VPN: [Cloudflare WARP](vpn.md#cloudflare-warp) or [Tailscale](vpn.md#tailscale)
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)

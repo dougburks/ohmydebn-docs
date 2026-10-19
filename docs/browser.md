@@ -2,7 +2,7 @@
 
 The default browser is [Brave Origin](https://brave.com/), the minimal edition of Brave: the same Chromium engine with Brave's Shields content blocker built in, without the extras of the full Brave Browser.
 
-Brave Origin is the default for new OhMyDebn installs. If you installed OhMyDebn before this change, you keep [Chromium](https://www.chromium.org/Home/) (with the uBlock Origin Lite content blocker) as your default browser - OhMyDebn never changes the default browser of an existing install. Brave Origin is one selection away in the Browsers menu if you'd like to try it. If your distribution already ships Brave Origin (LCOS does), OhMyDebn uses that copy and adds nothing.
+Brave Origin is the default for new OhMyDebn installs. If you installed OhMyDebn before this change, you keep [Chromium](https://www.chromium.org/Home/) (with the uBlock Origin Lite content blocker) as your default browser - OhMyDebn never changes the default browser of an existing install, unless that browser has been uninstalled (see below). Brave Origin is one selection away in the Browsers menu if you'd like to try it. If your distribution already ships Brave Origin (LCOS does), OhMyDebn uses that copy and adds nothing.
 
 Brave Origin is free on Linux, with an optional purchase to support Brave. OhMyDebn pre-accepts the free tier for you, so the first launch opens straight to the browser instead of Brave's buy-or-proceed dialog. You can still buy it later from Brave's settings. The first launch also skips Brave's welcome tour, since OhMyDebn has already made Brave Origin your default browser, leaves its theme following your system light/dark setting, and leaves diagnostic (crash) reports off. Brave's own privacy-preserving analytics stay at Brave's default; both can be changed under Settings > Privacy and security.
 
@@ -23,3 +23,5 @@ After a browser is installed, you'll be asked whether to make it your default br
 ## Changing the Default Browser
 
 To change your default browser at any time, go to OhMyDebn Menu > Setup > Defaults > Browser. It lists the browsers you have installed, marks your current default, and makes whichever one you pick the new default. This sets everything in one step: the desktop-wide default that `Super + B` and links from other apps use, the `x-www-browser` alternative that command-line tools use, and the PDF viewer.
+
+If you uninstall your default browser, another installed browser takes over as the default: Brave Origin if you have it, then Chromium, then any other. Removing it with OhMyDebn Menu > Remove > Package does this right away and tells you which browser is now the default. If you remove it some other way, such as with `apt` in a terminal, the next OhMyDebn update does it. The PDF viewer moves too, unless you had picked a different app for PDFs.

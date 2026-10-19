@@ -2,6 +2,61 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.12.0
+
+### New
+
+- [Claude Desktop](ai.md#claude-desktop), Anthropic's desktop app for Claude with Claude Code built in, is available as an optional installation in Apps > AI. Its updates come with OhMyDebn's.
+- A new [Hardware Notes](hardware-notes.md) page collects tips for machines that need a little extra work. It starts with the Framework Laptop 13 Pro (AMD): how to stop the screen briefly flashing corrupted on Linux kernel 7, and how to stop the laptop freezing.
+
+### Improvements
+
+- The OhMyDebn Menu now has its own button on the panel, the grinning face right next to the Cinnamon menu. You can still open it with `Super + Space`. If you remove the button, updates won't put it back.
+- OhMyDebn's notifications now show the OhMyDebn icon, and so do its own windows, such as the menu and the update window, in the window list and window switcher. The icon follows your theme's colors.
+- The system summary (`Ctrl + Shift + S`) now shows the OhMyDebn grin, in your theme's colors, instead of your distro's logo. The first line of the summary still names your distro. Every few seconds a shimmer of light crosses the grin, and then it winks. It stays still if you turn off Desktop and window effects in System Settings > Effects.
+- The terminal prompt now starts with the OhMyDebn grin instead of your distro's logo, and each new prompt appears about three times faster, so holding down Enter no longer lags. If you changed the prompt's layout yourself, your version is kept as it is.
+- On a laptop with AMD's Radeon 890M graphics, such as the Framework Laptop 13 Pro (AMD), the [doctor](updating.md#checking-your-installation) now checks two settings that laptop needs. On Linux kernel 7, it checks that TearFree is on. Without it, small parts of the screen can briefly flash corrupted. On any kernel, it checks the boot setting that stops the laptop from freezing. The doctor links to the [Hardware Notes](hardware-notes.md#framework-laptop-13-pro-amd-ryzen-ai-300-series) steps for both.
+- Installing Antigravity now tells you that it's Antigravity 1.x, the last version Google released for Debian-based systems. Google no longer updates it, and it may stop working. The newer Antigravity 2 is a separate download from Google. See [Antigravity](ai.md#antigravity-with-google-agentic-ai).
+
+### Fixes
+
+- The OhMyDebn Menu has a new icon, a grinning face that takes the theme's colors like the other icons on the panel: solid on dark themes and an outline on light themes. The old icon was missing on LMDE 7, so the menu showed up there with no icon.
+- Automatic tiling no longer animates windows into place when you turn off Desktop and window effects in System Settings > Effects. It also stays still if you turn off just Window effects or Resizing and tiling windows there.
+- Neovim's start screen no longer has a dark bar along the bottom of the window.
+- When you uninstall your default browser, another installed browser now becomes the default, Brave Origin first. Before, `Super + B` and links could open in whichever browser happened to be left, such as Firefox. Removing a browser with Remove > Package in the OhMyDebn Menu switches right away, and the next update fixes a browser you removed some other way. See [Default Browser](browser.md#changing-the-default-browser).
+- If your default browser has been uninstalled, web apps now open in whichever browser handles web links instead of not opening at all.
+- Removing an app that comes from its vendor's own repository, such as Claude Code, Google Chrome or Claude Desktop, with Remove > Package or `apt` now removes that repository too, so updates stop checking it. Before, only removing the app from a terminal with its own remove command did this. Updating cleans up repositories left behind before.
+- On a distro OhMyDebn doesn't support, such as Ubuntu 26.10, updating no longer stops at the unsupported-distro warning every time. It asks once, and asks again only if you move to another unsupported release.
+- Installing Chromium could occasionally look for the wrong package and fail, on distros where Chromium comes straight from the distro's own repository, such as Debian. That no longer happens.
+- Installing Cloudflare WARP on a new Ubuntu release that Cloudflare doesn't have packages for yet, such as Ubuntu 26.10, now uses its packages for Ubuntu 26.04 instead of failing.
+- Installing Claude Code, a Brave browser or PowerShell now checks the vendor's signing keys against the ones the vendor publishes before trusting them, so keys that were tampered with on the way are refused. Existing PowerShell installs are moved to the checked setup on update.
+- A theme installed from a git repository can no longer use a link in place of its color file to copy another of your files into the theme.
+- Switching to a theme you made yourself no longer stops partway when one of its colors isn't written as `#rrggbb`. Claude Code keeps its current colors for that theme, and the rest of the theme is applied.
+- The SO-CRATES image cleanup no longer stops partway when an old image is in use but podman doesn't say by which container. It reports that image and removes the rest.
+- If updating the package lists fails while installing Tailscale, the install now stops there with apt's error, instead of skipping the install and failing later with a confusing message.
+- When your login session has no runtime directory, as in some `su` and SSH sessions, updates now keep their lock file in your home folder, where another user on the same computer can't block them.
+- The Gmail and Cloudflare WARP keybindings now show those names in Cinnamon's keyboard settings on installs from before 4.11.0, which still showed "GMail" and "Cloudflare Warp".
+- When OhMyDebn switches your login screen's default session to Cinnamon, the backup it keeps of the original login screen settings is now made only once. Before, if the setting changed again later, the next update replaced that backup with a copy OhMyDebn had already edited, so the original was lost.
+- `Ctrl + Super + L` and LocalSend in the OhMyDebn Menu open LocalSend again. Since LocalSend moved where it installs, they did nothing.
+- The installers for touchpad gestures, LocalSend and SimpleScreenRecorder now say where they install from, and the unsupported-distro warning now lists Raspberry Pi OS among the supported distros.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Codex](ai.md#codex) updated to version 0.163.0
+- [Grok Build](ai.md#grok-build) updated to version 1.0.63
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.11.3
+- [OpenCode](ai.md#opencode) updated to version 1.19.3
+- [Pi](ai.md#pi) updated to version 1.3.0
+- [T3 Code](ai.md#t3-code) updated to version 0.1.0. It now works with Pi too. The first time it starts, it copies your existing threads into its new format, so they carry over. You may need to sign in again to websites you opened inside T3 Code.
+- The terminal's Caskaydia Nerd Fonts updated to version 3.5.1
+- [Starship](terminal.md), the shell prompt, updated to version 1.27.0, which includes security fixes
+- [herdr](terminal.md#herdr) updated to version 0.9.5
+- The tree-sitter tool that comes with [Neovim](text-editor.md#neovim) updated to version 0.27.1
+- fastfetch updated to version 2.70.0
+- lazygit updated to version 0.66.2
+
 ## 4.11.0
 
 ### Improvements

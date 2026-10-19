@@ -2,8 +2,8 @@ You can start a terminal session from the Cinnamon menu, Apps menu, or via [hotk
 
 - Caskaydia Nerd Fonts
 - [Zsh](https://en.wikipedia.org/wiki/Z_shell) shell with [Oh My Zsh](https://ohmyz.sh/)
-- [Starship](https://starship.rs/) shell prompt
-- [Zoxide](https://github.com/ajeetdsouza/zoxide) for a smarter `cd` command
+- [Starship](https://starship.rs/) shell prompt, which starts with the OhMyDebn grin
+- [Zoxide](https://github.com/ajeetdsouza/zoxide) for `z`, a smarter `cd` that jumps to directories you've used before
 - [eza](https://github.com/eza-community/eza) for beautiful directory listings via `ls` and `lt`
 
 ![OhMyDebn terminal screenshot](images/ohmydebn-terminal.png)

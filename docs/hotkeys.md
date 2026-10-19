@@ -6,6 +6,7 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 |--------|----------|
 | `Super` | Cinnamon menu |
 | `Super + Space` | OhMyDebn menu |
+| `Super + K` | This list of keybindings |
 | `Ctrl + Shift + G` | gTile window tiling |
 | `Ctrl + Shift + O` | OhMyDebn logo |
 | `Ctrl + Shift + S` | system summary via fastfetch |
@@ -113,7 +114,7 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 | Hotkey | Function |
 |--------|----------|
 | `Super + R` or `Super + Alt + Space` | Application Launcher |
-| `Super + Return` | Terminal (Alacritty) |
+| `Super + Return` or `Ctrl + Alt + T` | Terminal (Alacritty) |
 | `Super + A` | AI (your default assistant, [configurable](ai.md#default-ai-assistant)) |
 | `Super + B` | Browser |
 | `Super + F` | File Manager (Nemo) |

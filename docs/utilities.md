@@ -14,6 +14,8 @@ To show an animated OhMyDebn logo demo, open the OhMyDebn menu and choose the De
 
 To see a system summary, open the OhMyDebn menu and choose the About option or just use [hotkey](hotkeys.md) `Ctrl + Shift + S`.
 
+The OhMyDebn grin next to the summary takes your theme's colors. Every few seconds a shimmer of light crosses it and it winks; to keep it still, turn off Desktop and window effects in System Settings > Effects.
+
 ![OhMyDebn system summary via fastfetch](images/ohmydebn-fastfetch-gui.png)
 
 ## System Monitoring
