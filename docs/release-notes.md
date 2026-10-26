@@ -23,7 +23,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Oh My Pi](ai.md#oh-my-pi) updated to version 18.12.6
 - [OpenCode](ai.md#opencode) updated to version 1.19.4
 - [Pi](ai.md#pi) updated to version 1.4.0
-- [SO-CRATES](cybersecurity.md) updated to version 5.0.0
+- [SO-CRATES](cybersecurity.md) updated to version 5.0.1
 - [T3 Code](ai.md#t3-code) updated to version 0.1.2
 - ttfx updated to version 0.5.1
 
