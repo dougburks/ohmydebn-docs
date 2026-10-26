@@ -12,6 +12,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 - Backgrounds you add for a theme yourself are now included when you cycle through backgrounds, and picking one of them in the theme carousel applies it. Before, the carousel showed them but applied a different background.
 - Backgrounds in the WebP image format now display on the desktop and in the theme carousel. Before, they could fail to display unless an image viewer that supports WebP happened to be installed.
+- On Kali, the clock is now kept in sync. Kali leaves newly installed network services turned off, including the time service OhMyDebn installs, so the clock could drift and cause errors when updating. Installing or updating turns it on once; if you turn it off yourself later, it stays off.
 
 ### Updated components
 
