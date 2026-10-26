@@ -23,6 +23,23 @@ This opens a full-screen theme and background browser on whichever monitor your 
 
 OhMyDebn also automatically picks a matching icon color based on each theme's accent color, so icons stay legible on custom and Aether-generated themes, not just the themes bundled with OhMyDebn.
 
+## Theme Intros
+
+When you switch themes, a short, silent intro plays full screen and then fades into the background you chose. It also plays when you log in. Click or press any key to skip it.
+
+Every background has an intro. Most show the background itself at twilight: the light arrives from the top of the picture down, like a sunrise, and then a band of light crosses the scene, the same shimmer that crosses the OhMyDebn grin. That works for any background, including ones you add yourself and themes you install.
+
+Some of the themes included from Omarchy have their own animated intros, made by Omarchy for one of their backgrounds. With that background selected, its intro plays instead: Catppuccin (three of its backgrounds), Catppuccin Latte, Ethereal, Everforest, Flexoki Light, Hackerman, Last Horizon, Lumon, Matte Black, Miasma, Nord, Osaka Jade, Retro 82, Ristretto, Rose Pine, Vantablack and White.
+
+To turn intros off, or back on, go to the OhMyDebn menu and select Style > Theme Intros.
+
+Intros don't play:
+
+- when Desktop and window effects are off in System Settings > Effects
+- on a Raspberry Pi
+
+You can give one of your own backgrounds an animated intro of its own. Put the background in `~/.config/ohmydebn/backgrounds/<theme>/`, where `<theme>` is the theme's name in lowercase with dashes for spaces, such as `catppuccin-latte`, and the video in an `intros` folder inside that, with the same name as the image: `beach.png` plays `intros/beach.mp4` (or `intros/beach.webm`). Any sound in the video is left out. Make the last frame match the image, since the intro fades into it.
+
 ## Themes Included from Omarchy
 
 Here are some screenshots of the themes included from Omarchy.

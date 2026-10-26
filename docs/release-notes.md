@@ -2,6 +2,17 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.13.0
+
+### New
+
+- Switching themes now plays a short intro that fades into the background you chose, and so does logging in. The background starts at twilight, the light arrives from the top down like a sunrise, and the shimmer from the OhMyDebn grin crosses the scene. Seventeen of the themes included from Omarchy play Omarchy's own animated intros for some of their backgrounds instead. A click or any key skips an intro, and Style > Theme Intros in the OhMyDebn Menu turns them off. See [Theme Intros](desktop-themes.md#theme-intros).
+
+### Fixes
+
+- Backgrounds you add for a theme yourself are now included when you cycle through backgrounds, and picking one of them in the theme carousel applies it. Before, the carousel showed them but applied a different background.
+- Backgrounds in the WebP image format now display on the desktop and in the theme carousel. Before, they could fail to display unless an image viewer that supports WebP happened to be installed.
+
 ## 4.12.0
 
 ### New
