@@ -20,7 +20,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 
 - [Codex](ai.md#codex) updated to version 0.164.0
 - [Grok Build](ai.md#grok-build) updated to version 1.0.70
-- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.12.6
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.13.0
 - [OpenCode](ai.md#opencode) updated to version 1.19.4
 - [Pi](ai.md#pi) updated to version 1.4.0
 - [SO-CRATES](cybersecurity.md) updated to version 5.0.1
