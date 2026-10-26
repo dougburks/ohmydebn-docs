@@ -13,7 +13,7 @@ You can browse and change your theme by going to the OhMyDebn menu and selecting
 This opens a full-screen theme and background browser on whichever monitor your mouse pointer is on:
 
 - `Left` / `Right` browse your installed themes.
-- `Up` / `Down` browse the backgrounds included with the theme currently shown, when it has more than one.
+- `Up` / `Down` browse the backgrounds for the theme currently shown, including any you've added yourself, when it has more than one.
 - `Enter` applies the theme and background currently shown.
 - `Esc` cancels without changing anything.
 - `S` opens a search box; type to jump the carousel straight to the first matching theme.
@@ -22,6 +22,8 @@ This opens a full-screen theme and background browser on whichever monitor your 
 - `R` removes the theme currently shown (only available for themes you've installed yourself, not the themes bundled with OhMyDebn). Press it again to confirm.
 
 OhMyDebn also automatically picks a matching icon color based on each theme's accent color, so icons stay legible on custom and Aether-generated themes, not just the themes bundled with OhMyDebn.
+
+To add your own backgrounds to a theme, put the images in `~/.config/ohmydebn/backgrounds/<theme>/`, where `<theme>` is the theme's name in lowercase with dashes for spaces, such as `catppuccin-latte`. They show up in the carousel and in background cycling alongside the theme's own backgrounds.
 
 ## Theme Intros
 
@@ -36,9 +38,10 @@ To turn intros off, or back on, go to the OhMyDebn menu and select Style > Theme
 Intros don't play:
 
 - when Desktop and window effects are off in System Settings > Effects
+- when animations are turned off for accessibility
 - on a Raspberry Pi
 
-You can give one of your own backgrounds an animated intro of its own. Put the background in `~/.config/ohmydebn/backgrounds/<theme>/`, where `<theme>` is the theme's name in lowercase with dashes for spaces, such as `catppuccin-latte`, and the video in an `intros` folder inside that, with the same name as the image: `beach.png` plays `intros/beach.mp4` (or `intros/beach.webm`). Any sound in the video is left out. Make the last frame match the image, since the intro fades into it.
+You can give one of your own backgrounds an animated intro of its own. Put the background in `~/.config/ohmydebn/backgrounds/<theme>/` (see [adding your own backgrounds](#theme-carousel) above), and the video in an `intros` folder inside that, with the same name as the image: `beach.png` plays `intros/beach.webm`. The video must be WebM (VP9), the format the included intros use; convert another format with, for example, `ffmpeg -i beach.mp4 -c:v libvpx-vp9 -an intros/beach.webm`. Any sound in the video is left out. Make the last frame match the image, since the intro fades into it. If the video can't be played, the background gets the usual intro instead.
 
 ## Themes Included from Omarchy
 

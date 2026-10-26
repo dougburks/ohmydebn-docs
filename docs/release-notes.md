@@ -13,6 +13,19 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - Backgrounds you add for a theme yourself are now included when you cycle through backgrounds, and picking one of them in the theme carousel applies it. Before, the carousel showed them but applied a different background.
 - Backgrounds in the WebP image format now display on the desktop and in the theme carousel. Before, they could fail to display unless an image viewer that supports WebP happened to be installed.
 
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Codex](ai.md#codex) updated to version 0.164.0
+- [Grok Build](ai.md#grok-build) updated to version 1.0.70
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.12.6
+- [OpenCode](ai.md#opencode) updated to version 1.19.4
+- [Pi](ai.md#pi) updated to version 1.4.0
+- [SO-CRATES](cybersecurity.md) updated to version 5.0.0
+- [T3 Code](ai.md#t3-code) updated to version 0.1.2
+- ttfx updated to version 0.5.1
+
 ## 4.12.0
 
 ### New
