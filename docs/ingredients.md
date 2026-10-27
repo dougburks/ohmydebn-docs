@@ -32,6 +32,7 @@ Here are some additional components that you can optionally install:
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)
 - Terminal music player: [cliamp](media.md#cliamp)
+- Terminal speed test with bufferbloat: [velo](utilities.md#velo)
 - Image editor: [GIMP](documents.md#gimp)
 - Text editor: [Emacs](text-editor.md#emacs)
 - Remote access: [SSH server, Remote Desktop server and client](utilities.md#ssh-server)

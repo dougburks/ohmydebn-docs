@@ -32,6 +32,12 @@ To test your network or disk speed, open the OhMyDebn menu and choose Trigger > 
 
 ![OhMyDebn disk speed test](images/ohmydebn-disk-speedtest.png)
 
+### velo
+
+For a closer look at your connection, choose Trigger > Speed Test > Speed and Bufferbloat (velo). [velo](https://github.com/bjarneo/velo) is a terminal speed test: it finds the nearest [speedtest.net](https://www.speedtest.net) server and measures latency and jitter, download and upload, and bufferbloat (how much your connection slows down while it's busy, which is what makes video calls and games lag during a big download), with a grade from A+ to D. It installs the first time you choose it. When you quit with `q`, the result of the last run stays on screen until you press Enter. You can also run `velo` in any terminal.
+
+velo counts only its own test traffic, while the Network Speed Test above counts everything on your connection, so the two read differently if something else is downloading at the same time. They also test against different servers (speedtest.net and Netflix's fast.com).
+
 ## Screenshots, Screen Recording, and Color Picker
 
 Open the OhMyDebn menu and choose Trigger > Capture:

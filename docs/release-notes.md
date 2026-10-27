@@ -4,6 +4,10 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.14.0
 
+### New
+
+- [velo](utilities.md#velo), a terminal speed test that also measures latency and bufferbloat (how much your connection slows down while it's busy), is now in the OhMyDebn Menu under Trigger > Speed Test > Speed and Bufferbloat (velo), next to the existing speed tests. It installs the first time you choose it.
+
 ### Improvements
 
 - Oh My Zsh now comes with OhMyDebn instead of being downloaded for each user, and it's updated along with OhMyDebn to a version that's been tested, rather than updating itself from the newest code on its own. Updating switches your Zsh setup over once, keeping a backup of your previous settings, and your own Oh My Zsh plugins and themes keep working. Installing OhMyDebn and resetting its config files no longer need an internet connection for it. See [Terminal](terminal.md).
