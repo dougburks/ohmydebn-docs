@@ -4,6 +4,10 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.14.0
 
+### Improvements
+
+- Installing Antigravity, Cloudflare WARP, Helium or Tailscale now checks that the key their packages are signed with is the vendor's own before your system trusts it, as installing Brave, Claude Code and PowerShell already did. A key that doesn't match stops the install, so packages signed by anyone else can't be installed in their place.
+
 ### Fixes
 
 - Installing OhMyDebn on a distro it doesn't officially support no longer replaces that distro's own package sources with Debian's. Before, going ahead on a distro such as Parrot OS or PureOS could swap its package sources for Debian's, which could break it.
