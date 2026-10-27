@@ -12,6 +12,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Fixes
 
+- On displays with 2x scaling, the theme intro drawn for backgrounds without an animated intro of their own now fills the screen. Before, the background showed only in the top left quarter while the light and shimmer played.
 - Your own Neovim and btop color themes are now kept when OhMyDebn updates. Before, a theme file you put in place of the one that follows OhMyDebn's theme was replaced on every update.
 - Neovim settings files that OhMyDebn adds, such as the one that turns off animated scrolling, now stay deleted if you delete them. Before, each update put them back.
 - Installing OhMyDebn on a distro it doesn't officially support no longer replaces that distro's own package sources with Debian's. Before, going ahead on a distro such as Parrot OS or PureOS could swap its package sources for Debian's, which could break it.
