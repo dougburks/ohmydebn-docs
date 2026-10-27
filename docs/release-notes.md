@@ -2,6 +2,12 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.14.0
+
+### Fixes
+
+- Installing OhMyDebn on a distro it doesn't officially support no longer replaces that distro's own package sources with Debian's. Before, going ahead on a distro such as Parrot OS or PureOS could swap its package sources for Debian's, which could break it.
+
 ## 4.13.0
 
 ### New
