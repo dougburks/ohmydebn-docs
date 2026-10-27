@@ -1,7 +1,7 @@
 You can start a terminal session from the Cinnamon menu, Apps menu, or via [hotkey](hotkeys.md) `Super + Enter`. This launches a beautiful and powerful [Alacritty](https://alacritty.org) terminal window that includes:
 
 - Caskaydia Nerd Fonts
-- [Zsh](https://en.wikipedia.org/wiki/Z_shell) shell with [Oh My Zsh](https://ohmyz.sh/)
+- [Zsh](https://en.wikipedia.org/wiki/Z_shell) shell with [Oh My Zsh](https://ohmyz.sh/), which comes with OhMyDebn and is updated with it (so `omz update` isn't needed). Your own Oh My Zsh plugins and themes go in `~/.oh-my-zsh/custom/plugins` and `~/.oh-my-zsh/custom/themes`.
 - [Starship](https://starship.rs/) shell prompt, which starts with the OhMyDebn grin
 - [Zoxide](https://github.com/ajeetdsouza/zoxide) for `z`, a smarter `cd` that jumps to directories you've used before
 - [eza](https://github.com/eza-community/eza) for beautiful directory listings via `ls` and `lt`

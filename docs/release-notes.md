@@ -6,6 +6,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Improvements
 
+- Oh My Zsh now comes with OhMyDebn instead of being downloaded for each user, and it's updated along with OhMyDebn to a version that's been tested, rather than updating itself from the newest code on its own. Updating switches your Zsh setup over once, keeping a backup of your previous settings, and your own Oh My Zsh plugins and themes keep working. Installing OhMyDebn and resetting its config files no longer need an internet connection for it. See [Terminal](terminal.md).
 - Installing Antigravity, Cloudflare WARP, Helium or Tailscale now checks that the key their packages are signed with is the vendor's own before your system trusts it, as installing Brave, Claude Code and PowerShell already did. A key that doesn't match stops the install, so packages signed by anyone else can't be installed in their place.
 
 ### Fixes
