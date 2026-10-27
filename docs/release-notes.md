@@ -2,6 +2,12 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.15.0
+
+### New
+
+- [Sign a PDF](documents.md#sign-a-pdf), in the OhMyDebn Menu under Apps > Office and under Open With for PDFs in the file manager, lets you place your signature, text and today's date on a PDF and saves a signed copy next to the original, which stays unchanged. Add your signature once from a scan or photo of it on white paper: the paper is removed and the ink keeps its color. Undo, redo and hotkeys make it quick, and its commands let scripts and AI tools sign PDFs with your saved signatures too.
+
 ## 4.14.0
 
 ### New

@@ -17,6 +17,7 @@ Here's what you get in OhMyDebn by default:
 - Password management: [KeePassXC](https://keepassxc.org/)
 - Default image viewer: [Ristretto](documents.md#ristretto)
 - PDF editor: [Xournal++](documents.md#xournal)
+- PDF signer: [Sign a PDF](documents.md#sign-a-pdf)
 - System summary: [fastfetch](utilities.md#system-summary)
 - Window automation: [xdotool](https://github.com/jordansissel/xdotool)
 - Firewall: [ufw](firewall.md) with default deny for inbound traffic
