@@ -2,6 +2,31 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.13.0
+
+### New
+
+- Switching themes now plays a short intro that fades into the background you chose, and so does logging in. The background starts at twilight, the light arrives from the top down like a sunrise, and the shimmer from the OhMyDebn grin crosses the scene. Seventeen of the themes included from Omarchy play Omarchy's own animated intros for some of their backgrounds instead. A click or any key skips an intro, and Style > Theme Intros in the OhMyDebn Menu turns them off. See [Theme Intros](desktop-themes.md#theme-intros).
+
+### Fixes
+
+- Backgrounds you add for a theme yourself are now included when you cycle through backgrounds, and picking one of them in the theme carousel applies it. Before, the carousel showed them but applied a different background.
+- Backgrounds in the WebP image format now display on the desktop and in the theme carousel. Before, they could fail to display unless an image viewer that supports WebP happened to be installed.
+- On Kali, the clock is now kept in sync. Kali leaves newly installed network services turned off, including the time service OhMyDebn installs, so the clock could drift and cause errors when updating. Installing or updating turns it on once; if you turn it off yourself later, it stays off.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Codex](ai.md#codex) updated to version 0.164.0
+- [Grok Build](ai.md#grok-build) updated to version 1.0.70
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.13.0
+- [OpenCode](ai.md#opencode) updated to version 1.19.4
+- [Pi](ai.md#pi) updated to version 1.4.0
+- [SO-CRATES](cybersecurity.md) updated to version 5.0.1
+- [T3 Code](ai.md#t3-code) updated to version 0.1.2
+- ttfx updated to version 0.5.1
+
 ## 4.12.0
 
 ### New
