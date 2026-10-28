@@ -34,7 +34,9 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
 
-- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.13.1
+- [Codex](ai.md#codex) updated to version 0.165.0
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.13.3
+- [OpenCode](ai.md#opencode) updated to version 1.19.5
 - [T3 Code](ai.md#t3-code) updated to version 0.1.3
 
 ## 4.13.0
