@@ -6,7 +6,7 @@ The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
 ## Theme Carousel
 
-You can browse and change your theme by going to the OhMyDebn menu and selecting Style > Theme, or via [hotkey](hotkeys.md) `Ctrl + Super + T` (or `Ctrl + Super + B`, which opens the same carousel).
+You can browse and change your theme by going to the OhMyDebn menu and selecting Appearance > Theme (or Appearance > Background), or via [hotkey](hotkeys.md) `Ctrl + Super + T` (or `Ctrl + Super + B`, which opens the same carousel).
 
 ![OhMyDebn desktop themes](images/ohmydebn-theme-carousel.png)
 
@@ -33,7 +33,7 @@ Every background has an intro. Most show the background itself at twilight: the 
 
 Some of the themes included from Omarchy have their own animated intros, made by Omarchy for one of their backgrounds. With that background selected, its intro plays instead: Catppuccin (three of its backgrounds), Catppuccin Latte, Ethereal, Everforest, Flexoki Light, Hackerman, Last Horizon, Lumon, Matte Black, Miasma, Nord, Osaka Jade, Retro 82, Ristretto, Rose Pine, Vantablack and White.
 
-To turn intros off, or back on, go to the OhMyDebn menu and select Style > Theme Intros.
+To turn intros off, or back on, go to the OhMyDebn menu and select Appearance > Theme Intros.
 
 Intros don't play:
 
