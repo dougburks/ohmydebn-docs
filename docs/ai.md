@@ -57,7 +57,7 @@ Grok Build needs either a SuperGrok or X Premium+ subscription, which you sign i
 
 To choose a model, press `Ctrl + L` in Crush, pick a provider, and paste your API key for it. Charm also offers its own subscription, Hyper, which you can choose there and sign in to.
 
-Crush installs from Charm's own package repository, and updates come from there whenever you update OhMyDebn. If you already use Charm's repository for its other tools, Crush comes from that.
+Crush updates come from the OhMyDebn repository whenever you update OhMyDebn.
 
 ## Pi
 
