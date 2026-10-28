@@ -13,7 +13,7 @@ You can browse and change your theme by going to the OhMyDebn menu and selecting
 This opens a full-screen theme and background browser on whichever monitor your mouse pointer is on:
 
 - `Left` / `Right` browse your installed themes.
-- `Up` / `Down` browse the backgrounds for the theme currently shown, including any you've added yourself, when it has more than one.
+- `Up` / `Down` browse the backgrounds for the theme currently shown, including any you've added yourself, when it has more than one. Each theme starts on the background it had when you last used it.
 - `Enter` applies the theme and background currently shown.
 - `Esc` cancels without changing anything.
 - `S` opens a search box; type to jump the carousel straight to the first matching theme.
