@@ -75,7 +75,7 @@ As on [Ubuntu](#ubuntu), the optional Chromium browser is only available as a sn
 
 [Zorin OS](https://zorin.com/os/) 18 is based on Ubuntu 24.04 and is also supported on x86_64 hardware. Once you're connected to the Internet, run our installer as shown above and it will detect Zorin OS, install the Cinnamon desktop alongside Zorin's own desktop, and leave Zorin's package sources exactly as they are. Zorin OS already sets up Brave's package repository, so the default browser, Brave Origin, installs from that and OhMyDebn adds no repository of its own for it.
 
-Zorin OS's login screen starts Zorin's own desktop unless you choose otherwise. After the installer finishes, log out, choose Cinnamon from the session menu on the login screen (the gear button after you pick your name), and log in. The login screen remembers your choice from then on.
+Zorin OS's login screen starts Zorin's own desktop unless you choose otherwise. After the installer finishes, log out, choose Cinnamon from the session menu on the login screen (the gear button in the lower right corner, after you click your name), and log in. The login screen remembers your choice from then on.
 
 As on [Ubuntu](#ubuntu), the optional Chromium browser is only available as a snap.
 
