@@ -1,4 +1,4 @@
-OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Crush, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.
+OhMyDebn includes several different options for your AI needs: OpenCode, OpenCode Desktop, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Crush, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.
 
 ## Default AI Assistant
 
@@ -8,7 +8,7 @@ When you install one of these AI tools from the OhMyDebn menu, you'll be asked w
 
 To change your default AI assistant at any time, go to OhMyDebn Menu > Setup > Defaults > Agent. It lists the AI tools you have installed, marks your current default, and makes whichever one you pick the new default.
 
-If you're in a terminal, the `a` alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT, VS Code, and Antigravity; Claude Desktop and T3 Code just open).
+If you're in a terminal, the `a` alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT, VS Code, and Antigravity; Claude Desktop, OpenCode Desktop and T3 Code just open).
 
 ## OpenCode
 
@@ -17,6 +17,12 @@ OpenCode is available as an optional installation. You can install via the OhMyD
 ![OhMyDebn opencode-cli](images/ohmydebn-opencode-cli.png)
 
 OhMyDebn installs OpenCode 2. If you used OpenCode 1 before, your settings, sign-ins and conversations carry over: OpenCode converts its data to its new format the first time it starts, so it can't go back to version 1 afterwards. Plugins written for OpenCode 1 don't run in OpenCode 2 and need porting; see OpenCode's [guide to moving from version 1](https://opencode.ai/v2/docs/migrate-v1). OpenCode updates come with OhMyDebn's, so OpenCode's own `/update` command just tells you to update with your package manager.
+
+## OpenCode Desktop
+
+OpenCode Desktop is OpenCode's desktop app: the same OpenCode, in a window of its own instead of a terminal. It's available as an optional installation on x86_64 and arm64. You can install via the OhMyDebn menu (Apps > AI), where it's listed as "OpenCode App (desktop GUI)". You can then run via menu.
+
+It uses the same settings, sign-ins and conversations as the [OpenCode](#opencode) terminal app. OhMyDebn keeps the two on the same version, and updates come with OhMyDebn's, so the app's own "Check for updates" always says you're up to date.
 
 ## Claude Code
 
@@ -91,6 +97,6 @@ OhMyDebn installs Antigravity 1.x, the last version Google released as a Debian 
 
 ## OhMyDebn skill
 
-OhMyDebn includes an OhMyDebn skill that most of these AI tools, including Claude Code, OpenCode, Codex, Crush, Pi, and Antigravity, can use to understand more about the underlying platform:
+OhMyDebn includes an OhMyDebn skill that most of these AI tools, including Claude Code, OpenCode, OpenCode Desktop, Codex, Crush, Pi, and Antigravity, can use to understand more about the underlying platform:
 
 <video src="../images/ohmydebn-opencode-skill.mp4" controls></video>
