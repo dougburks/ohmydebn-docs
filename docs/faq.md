@@ -35,7 +35,7 @@ That said, Debian remains the project's foundation, and there are cases where it
 
 Linux Mint Debian Edition (LMDE) splits the difference - it's Debian-based and already ships Cinnamon. Our [installer supports installing directly onto LMDE 7](installation.md#linux-mint-debian-edition-7) if you'd rather have Mint's extras on a Debian base.
 
-Plain Ubuntu works too - our [installer also supports installing directly onto Ubuntu 24.04/26.04](installation.md#ubuntu) if that's where you're already set up.
+Plain Ubuntu works too - our [installer also supports installing directly onto Ubuntu 24.04/26.04](installation.md#ubuntu) if that's where you're already set up, as well as onto the Ubuntu-based [Pop!_OS 24.04](installation.md#pop_os-2404) and [Zorin OS 18](installation.md#zorin-os-18).
 
 ## What if I don't want systemd?
 

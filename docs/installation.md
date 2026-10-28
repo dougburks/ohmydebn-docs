@@ -1,6 +1,6 @@
 ## Choosing a base distro
 
-OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Pop!_OS 24.04, Devuan 6 (Excalibur), LCOS, MX Linux 25, or Raspberry Pi OS. If you already have a favorite, start there - see the sections below for any distro-specific notes.
+OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Pop!_OS 24.04, Zorin OS 18, Devuan 6 (Excalibur), LCOS, MX Linux 25, or Raspberry Pi OS. If you already have a favorite, start there - see the sections below for any distro-specific notes.
 
 If you don't have a favorite, we recommend [Linux Mint Cinnamon Edition](https://linuxmint.com/download.php) on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with [Debian 13](#debian-13-live-cinnamon) or [Raspberry Pi OS](#raspberry-pi-os) instead.
 
@@ -26,7 +26,7 @@ Our installer will detect Mint and continue on with OhMyDebn installation. It wi
 
 By default, the installation script leaves existing packages like Firefox, Thunderbird, and LibreOffice in place. The installation script supports the following options:
 
-- `--power-user` - removes optional apps that ship in your base distro (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: [Virtual Machine Manager](virtualization.md#virtual-machine-manager), Brave Origin, GIMP, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3 (keepassxc-minimal is skipped on Ubuntu 24.04, Linux Mint 22, and Pop!_OS 24.04, which don't have it). It also enables the [screen magnifier](screen-magnifier.md). On Kali Linux, Firefox is left in place even with this option since Kali doesn't ship an alternative browser by default.
+- `--power-user` - removes optional apps that ship in your base distro (Firefox, LibreOffice, etc.) and installs a curated set of power-user extras: [Virtual Machine Manager](virtualization.md#virtual-machine-manager), Brave Origin, GIMP, Podman, keepassxc-minimal, rclone, openssh-server, pdftk-java, rsync, ethtool, traceroute, lshw, shellcheck, and iperf3 (keepassxc-minimal is skipped on Ubuntu 24.04, Linux Mint 22, Pop!_OS 24.04, and Zorin OS 18, which don't have it). It also enables the [screen magnifier](screen-magnifier.md). On Kali Linux, Firefox is left in place even with this option since Kali doesn't ship an alternative browser by default.
 - `--skip-upgrade` - skips the full upgrade of every package that the installer normally runs near the end, and nothing else. This makes a first install faster on a test VM, but a fresh ISO can be months behind on security fixes and nothing else applies them until the next `ohmydebn-update`, which does upgrade everything. Not recommended for a machine you'll keep.
 - `--yes` - skips every confirmation prompt for unattended installs (for example, scripted or automated provisioning). Everything the prompts warn about still happens; this only removes the pause to read them, so make sure you understand those warnings before using it.
 
@@ -70,6 +70,14 @@ Ubuntu 24.04 LTS and 26.04 LTS (on x86_64 hardware) are also supported. Once you
 Pop!_OS uses COSMIC's own login screen, which starts COSMIC unless you choose otherwise. After the installer finishes, log out, choose Cinnamon from the session list on the login screen, and log in. The login screen remembers your choice from then on.
 
 As on [Ubuntu](#ubuntu), the optional Chromium browser is only available as a snap. Pop!_OS doesn't include snap support, so installing Chromium adds it.
+
+### Zorin OS 18
+
+[Zorin OS](https://zorin.com/os/) 18 is based on Ubuntu 24.04 and is also supported on x86_64 hardware. Once you're connected to the Internet, run our installer as shown above and it will detect Zorin OS, install the Cinnamon desktop alongside Zorin's own desktop, and leave Zorin's package sources exactly as they are. Zorin OS already sets up Brave's package repository, so the default browser, Brave Origin, installs from that and OhMyDebn adds no repository of its own for it.
+
+Zorin OS's login screen starts Zorin's own desktop unless you choose otherwise. After the installer finishes, log out, choose Cinnamon from the session menu on the login screen (the gear button after you pick your name), and log in. The login screen remembers your choice from then on.
+
+As on [Ubuntu](#ubuntu), the optional Chromium browser is only available as a snap.
 
 ### Devuan 6 Excalibur
 

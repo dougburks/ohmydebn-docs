@@ -4,6 +4,10 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.14.0
 
+### Supported distros
+
+- [Zorin OS 18](installation.md#zorin-os-18) is now supported. OhMyDebn installs Cinnamon alongside Zorin's own desktop and leaves Zorin's package sources as they are.
+
 ### New
 
 - [Sign a PDF](documents.md#sign-a-pdf), in the OhMyDebn Menu under Apps > Office and under Open With for PDFs in the file manager, lets you place your signature, text and today's date on a PDF and saves a signed copy next to the original, which stays unchanged. Add your signature once from a scan or photo of it on white paper: the paper is removed and the ink keeps its color. Undo, redo and hotkeys make it quick, and its commands let scripts and AI tools sign PDFs with your saved signatures too.
@@ -19,6 +23,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Fixes
 
+- If your distro set up Brave's package repository itself, as Zorin OS does, the OhMyDebn doctor no longer reports it as missing its pin, and removing Brave no longer deletes that repository and its signing key.
 - On displays with 2x scaling, the theme intro drawn for backgrounds without an animated intro of their own now fills the screen. Before, the background showed only in the top left quarter while the light and shimmer played.
 - Your own Neovim and btop color themes are now kept when OhMyDebn updates. Before, a theme file you put in place of the one that follows OhMyDebn's theme was replaced on every update.
 - Neovim settings files that OhMyDebn adds, such as the one that turns off animated scrolling, now stay deleted if you delete them. Before, each update put them back.
