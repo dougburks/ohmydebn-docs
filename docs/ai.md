@@ -16,6 +16,8 @@ OpenCode is available as an optional installation. You can install via the OhMyD
 
 ![OhMyDebn opencode-cli](images/ohmydebn-opencode-cli.png)
 
+OhMyDebn installs OpenCode 2. If you used OpenCode 1 before, your settings, sign-ins and conversations carry over: OpenCode converts its data to its new format the first time it starts, so it can't go back to version 1 afterwards. Plugins written for OpenCode 1 don't run in OpenCode 2 and need porting; see OpenCode's [guide to moving from version 1](https://opencode.ai/v2/docs/migrate-v1). OpenCode updates come with OhMyDebn's, so OpenCode's own `/update` command just tells you to update with your package manager.
+
 ## Claude Code
 
 [Claude Code](https://claude.com/claude-code) is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI). You can run in an existing terminal session with the `claude` command. Alternatively, you can use hotkey Ctrl + Alt + C to start a terminal and run Claude. That hotkey checks to see if it's installed first, so even on a new installation you can just press Ctrl + Alt + C and it will install and then run. Claude Code automatically adapts to our [desktop themes](desktop-themes.md).

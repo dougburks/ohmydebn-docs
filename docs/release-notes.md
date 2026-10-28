@@ -16,6 +16,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Improvements
 
+- [OpenCode](ai.md#opencode) is now version 2, which also works fully with T3 Code. Your settings, sign-ins and conversations carry over, but OpenCode converts its data the first time it starts, so there's no going back to version 1. If you've written your own OpenCode plugins, they need porting to version 2.
 - The Style menu in the OhMyDebn Menu is now called Appearance, and it gathers everything about how the desktop looks. It adds Background, which opens the theme carousel to pick a background, and Fonts and Panel, which open those Cinnamon settings. See [Menus](menus.md).
 - Each theme now remembers its background. When you switch back to a theme you've used before, it shows the background you last had with it, instead of starting over at its first, and the theme carousel starts there too.
 - Oh My Zsh now comes with OhMyDebn instead of being downloaded for each user, and it's updated along with OhMyDebn to a version that's been tested, rather than updating itself from the newest code on its own. Updating switches your Zsh setup over once, keeping a backup of your previous settings, and your own Oh My Zsh plugins and themes keep working. Installing OhMyDebn and resetting its config files no longer need an internet connection for it. See [Terminal](terminal.md).
@@ -36,7 +37,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 
 - [Codex](ai.md#codex) updated to version 0.165.0
 - [Oh My Pi](ai.md#oh-my-pi) updated to version 18.13.3
-- [OpenCode](ai.md#opencode) updated to version 1.19.5
+- [OpenCode](ai.md#opencode) updated to version 2.2.0
 - [T3 Code](ai.md#t3-code) updated to version 0.1.3
 
 ## 4.13.0
