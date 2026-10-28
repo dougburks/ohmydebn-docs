@@ -1,4 +1,4 @@
-OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.
+OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Crush, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.
 
 ## Default AI Assistant
 
@@ -51,6 +51,14 @@ Claude Desktop updates come from Anthropic's own repository whenever you update 
 
 Grok Build needs either a SuperGrok or X Premium+ subscription, which you sign in with by running `grok login`, or an xAI API key from [console.x.ai](https://console.x.ai), which you set as the `XAI_API_KEY` environment variable.
 
+## Crush
+
+[Crush](https://github.com/charmbracelet/crush) is Charm's terminal-based coding agent and is available as an optional installation. Like OpenCode, it isn't tied to one AI company: it works with models from Anthropic, OpenAI, Google, OpenRouter and many other providers, including models you run yourself, and you can switch models in the middle of a session. You can install via the OhMyDebn menu (Apps > AI), where it's listed as "Crush (Charm, any model)". From an existing terminal session, the `crush` alias runs it directly.
+
+To choose a model, press `Ctrl + L` in Crush, pick a provider, and paste your API key for it. Charm also offers its own subscription, Hyper, which you can choose there and sign in to.
+
+Crush installs from Charm's own package repository, and updates come from there whenever you update OhMyDebn. If you already use Charm's repository for its other tools, Crush comes from that.
+
 ## Pi
 
 [Pi](https://github.com/earendil-works/pi) is a terminal-based coding agent from earendil-works and is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI). From an existing terminal session, the `pi` alias runs it directly.
@@ -81,6 +89,6 @@ OhMyDebn installs Antigravity 1.x, the last version Google released as a Debian 
 
 ## OhMyDebn skill
 
-OhMyDebn includes an OhMyDebn skill that most of these AI tools, including Claude Code, OpenCode, Codex, Pi, and Antigravity, can use to understand more about the underlying platform:
+OhMyDebn includes an OhMyDebn skill that most of these AI tools, including Claude Code, OpenCode, Codex, Crush, Pi, and Antigravity, can use to understand more about the underlying platform:
 
 <video src="../images/ohmydebn-opencode-skill.mp4" controls></video>
