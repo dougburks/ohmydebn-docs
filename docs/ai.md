@@ -67,6 +67,8 @@ Grok Build needs either a SuperGrok or X Premium+ subscription, which you sign i
 
 To choose a model, press `Ctrl + L` in Crush, pick a provider, and paste your API key for it. Charm also offers its own subscription, Hyper, which you can choose there and sign in to.
 
+Crush adapts to our [desktop themes](desktop-themes.md): a new theme shows the next time Crush starts. If you pick a different theme in Crush itself, it keeps that choice instead. To follow your OhMyDebn theme again, pick the ohmydebn theme there.
+
 Crush updates come from the OhMyDebn repository whenever you update OhMyDebn.
 
 ## Pi
