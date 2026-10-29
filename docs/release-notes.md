@@ -42,6 +42,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Codex](ai.md#codex) updated to version 0.165.0
 - [Oh My Pi](ai.md#oh-my-pi) updated to version 18.13.3
 - [OpenCode](ai.md#opencode) updated to version 2.2.1
+- [SO-CRATES](cybersecurity.md) updated to version 5.1.0
 - [T3 Code](ai.md#t3-code) updated to version 0.1.5
 
 ## 4.13.0
