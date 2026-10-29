@@ -12,7 +12,7 @@ If you're in a terminal, the `a` alias runs your default assistant directly in t
 
 ## OpenCode
 
-OpenCode is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI). [OpenCode](https://opencode.ai/) runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md). From an existing terminal session, the `c` alias runs OpenCode directly.
+OpenCode is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI). [OpenCode](https://opencode.ai/) runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md). If you pick a different theme in OpenCode, it keeps that choice instead. To follow your OhMyDebn theme again, pick the system theme there. From an existing terminal session, the `c` alias runs OpenCode directly.
 
 ![OhMyDebn opencode-cli](images/ohmydebn-opencode-cli.png)
 
