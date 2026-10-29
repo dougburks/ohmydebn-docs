@@ -26,6 +26,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Fixes
 
+- Updating from OhMyDebn 4.5.0, 4.6.0 or 4.7.0 now finishes when another program, such as the software updater, is using the package manager as the update starts. Before, the update could stop partway with a "No such file or directory" error.
 - Picking an app from a search in the OhMyDebn Menu now just opens the app. Before, it could open an unrelated menu as well: on Linux Mint, for example, picking Update Manager also opened the Update menu.
 - If your distro set up Brave's package repository itself, as Zorin OS does, the OhMyDebn doctor no longer reports it as missing its pin, and removing Brave no longer deletes that repository and its signing key.
 - On displays with 2x scaling, the theme intro drawn for backgrounds without an animated intro of their own now fills the screen. Before, the background showed only in the top left quarter while the light and shimmer played.
