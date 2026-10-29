@@ -24,6 +24,8 @@ OpenCode Desktop is OpenCode's desktop app: the same OpenCode, in a window of it
 
 It uses the same settings, sign-ins and conversations as the [OpenCode](#opencode) terminal app. OhMyDebn keeps the two on the same version, and updates come with OhMyDebn's, so the app's own "Check for updates" always says you're up to date.
 
+Unlike the terminal app, it doesn't take its colors from your [desktop theme](desktop-themes.md): it has its own themes, which you choose in its Settings > General. It does switch between light and dark along with your OhMyDebn theme.
+
 ## Claude Code
 
 [Claude Code](https://claude.com/claude-code) is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI). You can run in an existing terminal session with the `claude` command. Alternatively, you can use hotkey Ctrl + Alt + C to start a terminal and run Claude. That hotkey checks to see if it's installed first, so even on a new installation you can just press Ctrl + Alt + C and it will install and then run. Claude Code automatically adapts to our [desktop themes](desktop-themes.md).
