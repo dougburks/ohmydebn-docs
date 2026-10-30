@@ -774,6 +774,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#opencode-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenCode Desktop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#claude-code" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -822,6 +833,17 @@
     <span class="md-ellipsis">
       
         Grok Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crush" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crush
       
     </span>
   </a>
@@ -1381,6 +1403,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#opencode-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenCode Desktop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#claude-code" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1429,6 +1462,17 @@
     <span class="md-ellipsis">
       
         Grok Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crush" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crush
       
     </span>
   </a>
@@ -1523,15 +1567,20 @@
 
   <h1>AI</h1>
 
-<p>OhMyDebn includes several different options for your AI needs: OpenCode, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.</p>
+<p>OhMyDebn includes several different options for your AI needs: OpenCode, OpenCode Desktop, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Crush, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.</p>
 <h2 id="default-ai-assistant">Default AI Assistant</h2>
 <p>Hotkey Super + A always launches your <em>default</em> AI assistant, so whichever one you use most is just a keypress away. Until you pick one yourself, the default is OpenCode.</p>
 <p>When you install one of these AI tools from the OhMyDebn menu, you'll be asked whether to make it your default. The default answer is no, so your current default stays unless you type <code>y</code>.</p>
 <p>To change your default AI assistant at any time, go to OhMyDebn Menu &gt; Setup &gt; Defaults &gt; Agent. It lists the AI tools you have installed, marks your current default, and makes whichever one you pick the new default.</p>
-<p>If you're in a terminal, the <code>a</code> alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT, VS Code, and Antigravity; Claude Desktop and T3 Code just open).</p>
+<p>If you're in a terminal, the <code>a</code> alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT, VS Code, and Antigravity; Claude Desktop, OpenCode Desktop and T3 Code just open).</p>
 <h2 id="opencode">OpenCode</h2>
-<p>OpenCode is available as an optional installation. You can install via the OhMyDebn menu (Apps &gt; AI). <a href="https://opencode.ai/">OpenCode</a> runs in a terminal and automatically adapts to our <a href="../desktop-themes/">desktop themes</a>. From an existing terminal session, the <code>c</code> alias runs OpenCode directly.</p>
+<p>OpenCode is available as an optional installation. You can install via the OhMyDebn menu (Apps &gt; AI). <a href="https://opencode.ai/">OpenCode</a> runs in a terminal and automatically adapts to our <a href="../desktop-themes/">desktop themes</a>. If you pick a different theme in OpenCode, it keeps that choice instead. To follow your OhMyDebn theme again, pick the system theme there. From an existing terminal session, the <code>c</code> alias runs OpenCode directly.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-opencode-cli.png" data-desc-position="bottom"><img alt="OhMyDebn opencode-cli" src="../images/ohmydebn-opencode-cli.png"></a></p>
+<p>OhMyDebn installs OpenCode 2. If you used OpenCode 1 before, your settings, sign-ins and conversations carry over: OpenCode converts its data to its new format the first time it starts, so it can't go back to version 1 afterwards. Plugins written for OpenCode 1 don't run in OpenCode 2 and need porting; see OpenCode's <a href="https://opencode.ai/v2/docs/migrate-v1">guide to moving from version 1</a>. OpenCode updates come with OhMyDebn's, so OpenCode's own <code>/update</code> command just tells you to update with your package manager.</p>
+<h2 id="opencode-desktop">OpenCode Desktop</h2>
+<p>OpenCode Desktop is OpenCode's desktop app: the same OpenCode, in a window of its own instead of a terminal. It's available as an optional installation on x86_64 and arm64. You can install via the OhMyDebn menu (Apps &gt; AI), where it's listed as "OpenCode App (desktop GUI)". You can then run via menu.</p>
+<p>It uses the same settings, sign-ins and conversations as the <a href="#opencode">OpenCode</a> terminal app. OhMyDebn keeps the two on the same version, and updates come with OhMyDebn's, so the app's own "Check for updates" always says you're up to date.</p>
+<p>Unlike the terminal app, it doesn't take its colors from your <a href="../desktop-themes/">desktop theme</a>: it has its own themes, which you choose in its File &gt; Settings &gt; Appearance. With its Color scheme left on System, it switches between light and dark along with your OhMyDebn theme.</p>
 <h2 id="claude-code">Claude Code</h2>
 <p><a href="https://claude.com/claude-code">Claude Code</a> is available as an optional installation. You can install via the OhMyDebn menu (Apps &gt; AI). You can run in an existing terminal session with the <code>claude</code> command. Alternatively, you can use hotkey Ctrl + Alt + C to start a terminal and run Claude. That hotkey checks to see if it's installed first, so even on a new installation you can just press Ctrl + Alt + C and it will install and then run. Claude Code automatically adapts to our <a href="../desktop-themes/">desktop themes</a>.</p>
 <p>Claude Code installs on its stable release channel, which is about a week behind the newest release and skips releases with serious bugs. To get every release as soon as it ships, switch to the latest channel in OhMyDebn Menu &gt; Update &gt; Channel &gt; Claude Code. See <a href="../updating/#channels">Channels</a>.</p>
@@ -1553,6 +1602,11 @@
 <h2 id="grok-build">Grok Build</h2>
 <p><a href="https://x.ai/cli">Grok Build</a> is xAI's terminal-based coding agent and is available as an optional installation. You can install via the OhMyDebn menu (Apps &gt; AI), where it's listed as "Grok Build (xAI CLI)". From an existing terminal session, the <code>grok</code> alias runs it directly. Grok Build automatically adapts to our <a href="../desktop-themes/">desktop themes</a>.</p>
 <p>Grok Build needs either a SuperGrok or X Premium+ subscription, which you sign in with by running <code>grok login</code>, or an xAI API key from <a href="https://console.x.ai">console.x.ai</a>, which you set as the <code>XAI_API_KEY</code> environment variable.</p>
+<h2 id="crush">Crush</h2>
+<p><a href="https://github.com/charmbracelet/crush">Crush</a> is Charm's terminal-based coding agent and is available as an optional installation. Like OpenCode, it isn't tied to one AI company: it works with models from Anthropic, OpenAI, Google, OpenRouter and many other providers, including models you run yourself, and you can switch models in the middle of a session. You can install via the OhMyDebn menu (Apps &gt; AI), where it's listed as "Crush (Charm, any model)". From an existing terminal session, the <code>crush</code> alias runs it directly.</p>
+<p>To choose a model, press <code>Ctrl + L</code> in Crush, pick a provider, and paste your API key for it. Charm also offers its own subscription, Hyper, which you can choose there and sign in to.</p>
+<p>Crush adapts to our <a href="../desktop-themes/">desktop themes</a>: a new theme shows the next time Crush starts. If you pick a different theme in Crush itself, it keeps that choice instead. To follow your OhMyDebn theme again, pick the ohmydebn theme there.</p>
+<p>Crush updates come from the OhMyDebn repository whenever you update OhMyDebn.</p>
 <h2 id="pi">Pi</h2>
 <p><a href="https://github.com/earendil-works/pi">Pi</a> is a terminal-based coding agent from earendil-works and is available as an optional installation. You can install via the OhMyDebn menu (Apps &gt; AI). From an existing terminal session, the <code>pi</code> alias runs it directly.</p>
 <h2 id="oh-my-pi">Oh My Pi</h2>
@@ -1568,7 +1622,7 @@
 <p>OhMyDebn installs Antigravity 1.x, the last version Google released as a Debian package. Google no longer updates it, and it may stop working at any time. The newer Antigravity 2 app and Antigravity IDE come as separate downloads from <a href="https://antigravity.google/download?os=linux">Google's download page</a> and aren't managed by OhMyDebn.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-antigravity.png" data-desc-position="bottom"><img alt="OhMyDebn antigravity" src="../images/ohmydebn-antigravity.png"></a></p>
 <h2 id="ohmydebn-skill">OhMyDebn skill</h2>
-<p>OhMyDebn includes an OhMyDebn skill that most of these AI tools, including Claude Code, OpenCode, Codex, Pi, and Antigravity, can use to understand more about the underlying platform:</p>
+<p>OhMyDebn includes an OhMyDebn skill that most of these AI tools, including Claude Code, OpenCode, OpenCode Desktop, Codex, Crush, Pi, and Antigravity, can use to understand more about the underlying platform:</p>
 <video src="../images/ohmydebn-opencode-skill.mp4" controls=""></video>
 
 

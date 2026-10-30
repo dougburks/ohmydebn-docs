@@ -1825,12 +1825,12 @@
 <p>The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn.png" data-desc-position="bottom"><img alt="OhMyDebn screenshot" src="../images/ohmydebn.png"></a></p>
 <h2 id="theme-carousel">Theme Carousel</h2>
-<p>You can browse and change your theme by going to the OhMyDebn menu and selecting Style &gt; Theme, or via <a href="../hotkeys/">hotkey</a> <code>Ctrl + Super + T</code> (or <code>Ctrl + Super + B</code>, which opens the same carousel).</p>
+<p>You can browse and change your theme by going to the OhMyDebn menu and selecting Appearance &gt; Theme (or Appearance &gt; Background), or via <a href="../hotkeys/">hotkey</a> <code>Ctrl + Super + T</code> (or <code>Ctrl + Super + B</code>, which opens the same carousel).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ohmydebn-theme-carousel.png" data-desc-position="bottom"><img alt="OhMyDebn desktop themes" src="../images/ohmydebn-theme-carousel.png"></a></p>
 <p>This opens a full-screen theme and background browser on whichever monitor your mouse pointer is on:</p>
 <ul>
 <li><code>Left</code> / <code>Right</code> browse your installed themes.</li>
-<li><code>Up</code> / <code>Down</code> browse the backgrounds for the theme currently shown, including any you've added yourself, when it has more than one.</li>
+<li><code>Up</code> / <code>Down</code> browse the backgrounds for the theme currently shown, including any you've added yourself, when it has more than one. Each theme starts on the background it had when you last used it.</li>
 <li><code>Enter</code> applies the theme and background currently shown.</li>
 <li><code>Esc</code> cancels without changing anything.</li>
 <li><code>S</code> opens a search box; type to jump the carousel straight to the first matching theme.</li>
@@ -1844,14 +1844,14 @@
 <p>When you switch themes, a short, silent intro plays full screen and then fades into the background you chose. It also plays when you log in. Click or press any key to skip it.</p>
 <p>Every background has an intro. Most show the background itself at twilight: the light arrives from the top of the picture down, like a sunrise, and then a band of light crosses the scene, the same shimmer that crosses the OhMyDebn grin. That works for any background, including ones you add yourself and themes you install.</p>
 <p>Some of the themes included from Omarchy have their own animated intros, made by Omarchy for one of their backgrounds. With that background selected, its intro plays instead: Catppuccin (three of its backgrounds), Catppuccin Latte, Ethereal, Everforest, Flexoki Light, Hackerman, Last Horizon, Lumon, Matte Black, Miasma, Nord, Osaka Jade, Retro 82, Ristretto, Rose Pine, Vantablack and White.</p>
-<p>To turn intros off, or back on, go to the OhMyDebn menu and select Style &gt; Theme Intros.</p>
+<p>To turn intros off, or back on, go to the OhMyDebn menu and select Appearance &gt; Theme Intros.</p>
 <p>Intros don't play:</p>
 <ul>
 <li>when Desktop and window effects are off in System Settings &gt; Effects</li>
 <li>when animations are turned off for accessibility</li>
 <li>on a Raspberry Pi</li>
 </ul>
-<p>You can give one of your own backgrounds an animated intro of its own. Put the background in <code>~/.config/ohmydebn/backgrounds/&lt;theme&gt;/</code> (see <a href="#theme-carousel">adding your own backgrounds</a> above), and the video in an <code>intros</code> folder inside that, with the same name as the image: <code>beach.png</code> plays <code>intros/beach.webm</code>. The video must be WebM (VP9), the format the included intros use; convert another format with, for example, <code>ffmpeg -i beach.mp4 -c:v libvpx-vp9 -an intros/beach.webm</code>. Any sound in the video is left out. Make the last frame match the image, since the intro fades into it. If the video can't be played, the background gets the usual intro instead.</p>
+<p>You can give one of your own backgrounds an animated intro of its own. Put the background in <code>~/.config/ohmydebn/backgrounds/&lt;theme&gt;/</code> (see <a href="#theme-carousel">adding your own backgrounds</a> above), and the video in an <code>intros</code> folder inside that, with the same name as the image: <code>beach.png</code> plays <code>intros/beach.webm</code>. Use WebM (VP9), the format the included intros use, since other formats such as MP4 may not play; convert another format with, for example, <code>ffmpeg -i beach.mp4 -c:v libvpx-vp9 -an intros/beach.webm</code>. Any sound in the video is left out. Make the last frame match the image, since the intro fades into it. If the video can't be played, the background gets the usual intro instead.</p>
 <h2 id="themes-included-from-omarchy">Themes Included from Omarchy</h2>
 <p>Here are some screenshots of the themes included from Omarchy.</p>
 <h3 id="catppuccin">Catppuccin</h3>
