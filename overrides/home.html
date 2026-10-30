@@ -157,21 +157,28 @@
   }
 
   .distro-row {
-    /* Wider than .wrap's text column (still centered, never wider than the
-       screen), so the whole supported-distro list fits on one line on a
-       desktop instead of leaving its last name alone on a second. */
-    width: min(calc(78 * var(--r)), 100vw - calc(2.5 * var(--r)));
-    margin: calc(1.4 * var(--r)) 0 0 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: calc(0.5 * var(--r)) calc(1 * var(--r));
+    /* Balanced, so a list too long for one line splits into even lines
+       rather than leaving its last name alone on a second, at any width
+       and however many distros it lists. */
+    margin: calc(1.4 * var(--r)) 0 0;
+    text-align: center;
+    text-wrap: balance;
+    line-height: 1.9;
     font-family: var(--font-mono);
     font-size: calc(0.78 * var(--r));
     color: var(--text-dim);
   }
-  .distro-row span { white-space: nowrap; }
+  .distro-row span { display: inline-block; position: relative; margin-inline: calc(1 * var(--r)); white-space: nowrap; }
+  /* The dot between two names sits in the gap and takes no space, so the
+     script can drop it from a line's first name (.line-start) without
+     moving anything: dots only ever go between names on the same line. */
+  .distro-row span + span::before {
+    content: "\00b7";
+    position: absolute;
+    left: calc(-1 * var(--r));
+    transform: translateX(-50%);
+  }
+  .distro-row span.line-start::before { content: none; }
   .distro-row a { color: inherit; text-decoration-color: transparent; }
   .distro-row a:hover { color: var(--text); text-decoration-color: var(--edge-bright); }
 
@@ -450,7 +457,7 @@
     <p class="tagline">The stability of a Debian-based distro, the ease of Cinnamon desktop, and the power of AI, containers, and virtualization &mdash; one hotkey away.</p>
 
     <div class="distro-row">
-      <span><a href="https://linuxmint.com/download.php">Linux Mint 22</a></span><span>&middot;</span><span><a href="https://linuxmint.com/download_lmde.php">LMDE 7</a></span><span>&middot;</span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span>&middot;</span><span><a href="https://mxlinux.org/download-links/">MX Linux 25</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span>&middot;</span><span><a href="https://system76.com/pop/download/">Pop!_OS 24.04</a></span><span>&middot;</span><span><a href="https://zorin.com/os/download/">Zorin OS 18</a></span><span>&middot;</span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali Linux</a></span><span>&middot;</span><span><a href="https://www.devuan.org/get-devuan">Devuan 6</a></span><span>&middot;</span><span><a href="https://github.com/BryanLunduke/LCOS">LCOS</a></span><span>&middot;</span><span><a href="https://www.raspberrypi.com/software/">Raspberry Pi OS</a></span>
+      <span><a href="https://linuxmint.com/download.php">Linux Mint 22</a></span><span><a href="https://linuxmint.com/download_lmde.php">LMDE 7</a></span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span><a href="https://mxlinux.org/download-links/">MX Linux 25</a></span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span><a href="https://system76.com/pop/download/">Pop!_OS 24.04</a></span><span><a href="https://zorin.com/os/download/">Zorin OS 18</a></span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali Linux</a></span><span><a href="https://www.devuan.org/get-devuan">Devuan 6</a></span><span><a href="https://github.com/BryanLunduke/LCOS">LCOS</a></span><span><a href="https://www.raspberrypi.com/software/">Raspberry Pi OS</a></span>
     </div>
 
     <div class="cta-row">
@@ -682,7 +689,7 @@
     <p class="eyebrow" style="justify-content: center;">Get started</p>
     <h2>Read the docs, star the repo, or just run the install.</h2>
     <div class="distro-row">
-      <span><a href="https://linuxmint.com/download.php">Linux Mint 22</a></span><span>&middot;</span><span><a href="https://linuxmint.com/download_lmde.php">LMDE 7</a></span><span>&middot;</span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span>&middot;</span><span><a href="https://mxlinux.org/download-links/">MX Linux 25</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span>&middot;</span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span>&middot;</span><span><a href="https://system76.com/pop/download/">Pop!_OS 24.04</a></span><span>&middot;</span><span><a href="https://zorin.com/os/download/">Zorin OS 18</a></span><span>&middot;</span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali Linux</a></span><span>&middot;</span><span><a href="https://www.devuan.org/get-devuan">Devuan 6</a></span><span>&middot;</span><span><a href="https://github.com/BryanLunduke/LCOS">LCOS</a></span><span>&middot;</span><span><a href="https://www.raspberrypi.com/software/">Raspberry Pi OS</a></span>
+      <span><a href="https://linuxmint.com/download.php">Linux Mint 22</a></span><span><a href="https://linuxmint.com/download_lmde.php">LMDE 7</a></span><span><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/">Debian 13</a></span><span><a href="https://mxlinux.org/download-links/">MX Linux 25</a></span><span><a href="https://releases.ubuntu.com/noble/">Ubuntu 24.04</a></span><span><a href="https://releases.ubuntu.com/resolute/">Ubuntu 26.04</a></span><span><a href="https://system76.com/pop/download/">Pop!_OS 24.04</a></span><span><a href="https://zorin.com/os/download/">Zorin OS 18</a></span><span><a href="https://www.kali.org/get-kali/#kali-installer-images">Kali Linux</a></span><span><a href="https://www.devuan.org/get-devuan">Devuan 6</a></span><span><a href="https://github.com/BryanLunduke/LCOS">LCOS</a></span><span><a href="https://www.raspberrypi.com/software/">Raspberry Pi OS</a></span>
     </div>
     <ol class="install-steps">
       <li>Pick your favorite distro from the list above (if you don't have a favorite, try <a href="https://linuxmint.com/download.php">Linux Mint</a>).</li>
@@ -963,6 +970,23 @@
         chip.addEventListener("blur", hidePreview);
       });
     }
+
+    // Marks each distro name that starts a line after the first, so its dot
+    // (CSS) is left off; rechecked whenever a row's width or font changes.
+    document.querySelectorAll(".distro-row").forEach(function (row) {
+      var names = row.querySelectorAll("span");
+      function markLineStarts() {
+        var prevTop = null;
+        names.forEach(function (name) {
+          var top = name.offsetTop;
+          name.classList.toggle("line-start", prevTop !== null && top !== prevTop);
+          prevTop = top;
+        });
+      }
+      markLineStarts();
+      if ("ResizeObserver" in window) new ResizeObserver(markLineStarts).observe(row);
+      if (document.fonts) document.fonts.ready.then(markLineStarts);
+    });
 
     // One restrained settle-in per section as it enters view.
     var revealEls = document.querySelectorAll(".reveal");
