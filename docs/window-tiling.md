@@ -24,7 +24,7 @@ For more advanced window tiling options, we've included a custom version of the 
 
 To configure gTile:
 
-- press `Super + Shift + G`, open the OhMyDebn menu and select Style > Tiling, or go to System Settings > Extensions and click the Configure button next to gTile
+- press `Super + Shift + G`, open the OhMyDebn menu and select Appearance > Tiling, or go to System Settings > Extensions and click the Configure button next to gTile
 - click the Behavior tab
 - from here you can adjust the window gap size, enable Maximize with gaps, and choose an Automatic tiling mode (see below)
 

@@ -17,6 +17,7 @@ Here's what you get in OhMyDebn by default:
 - Password management: [KeePassXC](https://keepassxc.org/)
 - Default image viewer: [Ristretto](documents.md#ristretto)
 - PDF editor: [Xournal++](documents.md#xournal)
+- PDF signer: [Sign a PDF](documents.md#sign-a-pdf)
 - System summary: [fastfetch](utilities.md#system-summary)
 - Window automation: [xdotool](https://github.com/jordansissel/xdotool)
 - Firewall: [ufw](firewall.md) with default deny for inbound traffic
@@ -27,11 +28,12 @@ Your base distro may add more. For example, most of them turn on [AppArmor](http
 
 Here are some additional components that you can optionally install:
 
-- AI: [OpenCode](ai.md#opencode) with free and paid models, [Claude Code](ai.md#claude-code), [Claude Desktop](ai.md#claude-desktop), [ChatGPT](ai.md#chatgpt), [Codex](ai.md#codex), [Pi](ai.md#pi), [Oh My Pi](ai.md#oh-my-pi), [Grok Build](ai.md#grok-build), [T3 Code](ai.md#t3-code), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with GitHub Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
+- AI: [OpenCode](ai.md#opencode) with free and paid models, [OpenCode Desktop](ai.md#opencode-desktop), [Claude Code](ai.md#claude-code), [Claude Desktop](ai.md#claude-desktop), [ChatGPT](ai.md#chatgpt), [Codex](ai.md#codex), [Pi](ai.md#pi), [Oh My Pi](ai.md#oh-my-pi), [Grok Build](ai.md#grok-build), [Crush](ai.md#crush), [T3 Code](ai.md#t3-code), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with GitHub Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
 - VPN: [Cloudflare WARP](vpn.md#cloudflare-warp) or [Tailscale](vpn.md#tailscale)
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)
 - Terminal music player: [cliamp](media.md#cliamp)
+- Terminal speed test with bufferbloat: [velo](utilities.md#velo)
 - Image editor: [GIMP](documents.md#gimp)
 - Text editor: [Emacs](text-editor.md#emacs)
 - Remote access: [SSH server, Remote Desktop server and client](utilities.md#ssh-server)

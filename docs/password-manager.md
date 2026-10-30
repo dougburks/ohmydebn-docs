@@ -6,7 +6,7 @@ By default, you get the `keepassxc-full` package which includes browser extensio
 sudo apt install keepassxc-minimal
 ```
 
-Ubuntu 24.04, Linux Mint 22, and Pop!_OS 24.04 have a single `keepassxc` package with every feature, so there's no minimal version to switch to.
+Ubuntu 24.04, Linux Mint 22, Pop!_OS 24.04, and Zorin OS 18 have a single `keepassxc` package with every feature, so there's no minimal version to switch to.
 
 You can launch KeePassXC from the Cinnamon menu or via hotkey `Ctrl + Shift + K`.
 

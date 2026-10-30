@@ -2,6 +2,50 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.14.0
+
+### Supported distros
+
+- [Zorin OS 18](installation.md#zorin-os-18) is now supported. OhMyDebn installs Cinnamon alongside Zorin's own desktop and leaves Zorin's package sources as they are.
+
+### New
+
+- [Sign a PDF](documents.md#sign-a-pdf), in the OhMyDebn Menu under Apps > Office and under Open With for PDFs in the file manager, lets you place your signature, text and today's date on a PDF and saves a signed copy next to the original, which stays unchanged. Add your signature once from a scan or photo of it on white paper: the paper is removed and the ink keeps its color. Undo, redo and hotkeys make it quick, and its commands let scripts and AI tools sign PDFs with your saved signatures too.
+- [OpenCode Desktop](ai.md#opencode-desktop), OpenCode's desktop app, is now in the OhMyDebn Menu under Apps > AI as "OpenCode App (desktop GUI)". It shares your settings, sign-ins and conversations with the OpenCode terminal app, and updates along with it. It installs the first time you choose it.
+- [Crush](ai.md#crush), Charm's terminal coding agent, is now in the OhMyDebn Menu under Apps > AI. Like OpenCode, it works with models from many AI companies, and you can switch models in the middle of a session. It installs the first time you choose it, updates with OhMyDebn, and takes its colors from your OhMyDebn theme.
+- [velo](utilities.md#velo), a terminal speed test that also measures latency and bufferbloat (how much your connection slows down while it's busy), is now in the OhMyDebn Menu under Trigger > Speed Test > Speed and Bufferbloat (velo), next to the existing speed tests. It installs the first time you choose it.
+
+### Improvements
+
+- [OpenCode](ai.md#opencode) is now version 2, which also works fully with T3 Code. Your settings, sign-ins and conversations carry over, but OpenCode converts its data the first time it starts, so there's no going back to version 1. If you've written your own OpenCode plugins, they need porting to version 2. Its terminal app still takes its colors from your OhMyDebn theme, unless you've picked a theme of your own in OpenCode, and changes them as soon as you switch themes without interrupting conversations running in T3 Code or OpenCode Desktop.
+- The Style menu in the OhMyDebn Menu is now called Appearance, and it gathers everything about how the desktop looks. It adds Background, which opens the theme carousel to pick a background, and Fonts and Panel, which open those Cinnamon settings. See [Menus](menus.md).
+- Each theme now remembers its background. When you switch back to a theme you've used before, it shows the background you last had with it, instead of starting over at its first, and the theme carousel starts there too. See [Theme Carousel](desktop-themes.md#theme-carousel).
+- Oh My Zsh now comes with OhMyDebn instead of being downloaded for each user, and it's updated along with OhMyDebn to a version that's been tested, rather than updating itself from the newest code on its own. Updating switches your Zsh setup over once, keeping a backup of your previous settings, and your own Oh My Zsh plugins and themes keep working. Installing OhMyDebn and resetting its config files no longer need an internet connection for it. See [Terminal](terminal.md).
+- Installing Antigravity, Cloudflare WARP, Helium or Tailscale now checks that the key their packages are signed with is the vendor's own before your system trusts it, as installing Brave, Claude Code and PowerShell already did. A key that doesn't match stops the install, so packages signed by anyone else can't be installed in their place.
+- Google Chrome and ChatGPT are now installed from their makers' own package repositories, so your system checks each package's signature before installing it, including the very first one. Before, the first install downloaded the package directly and installed it without any check.
+
+### Fixes
+
+- Updating from OhMyDebn 4.5.0, 4.6.0 or 4.7.0 now finishes when another program, such as the software updater, is using the package manager as the update starts. Before, the update could stop partway with a "No such file or directory" error.
+- Picking an app from a search in the OhMyDebn Menu now just opens the app. Before, it could open an unrelated menu as well: on Linux Mint, for example, picking Update Manager also opened the Update menu.
+- If your distro set up Brave's package repository itself, as Zorin OS does, the OhMyDebn doctor no longer reports it as missing its pin, and removing Brave no longer deletes that repository and its signing key.
+- On displays with 2x scaling, the theme intro drawn for backgrounds without an animated intro of their own now fills the screen. Before, the background showed only in the top left quarter while the light and shimmer played.
+- Your own Neovim and btop color themes are now kept when OhMyDebn updates. Before, a theme file you put in place of the one that follows OhMyDebn's theme was replaced on every update.
+- Your own fastfetch configuration and eza color theme are now kept too. Before, your fastfetch configuration was replaced on every update and theme switch, and switching to a theme without eza colors deleted your eza theme.
+- Switching to a theme that writes a color in short form, such as `#f80`, now works. Before, the switch stopped partway and left the desktop half changed.
+- Neovim settings files that OhMyDebn adds, such as the one that turns off animated scrolling, now stay deleted if you delete them. Before, each update put them back.
+- Installing OhMyDebn on a distro it doesn't officially support no longer replaces that distro's own package sources with Debian's. Before, going ahead on a distro such as Parrot OS or PureOS could swap its package sources for Debian's, which could break it.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Codex](ai.md#codex) updated to version 0.165.0
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.13.3
+- [OpenCode](ai.md#opencode) updated to version 2.2.1
+- [SO-CRATES](cybersecurity.md) updated to version 5.1.0
+- [T3 Code](ai.md#t3-code) updated to version 0.1.5
+
 ## 4.13.0
 
 ### New

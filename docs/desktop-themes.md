@@ -6,14 +6,14 @@ The default OhMyDebn theme is based on a modified Catppuccin Mocha theme.
 
 ## Theme Carousel
 
-You can browse and change your theme by going to the OhMyDebn menu and selecting Style > Theme, or via [hotkey](hotkeys.md) `Ctrl + Super + T` (or `Ctrl + Super + B`, which opens the same carousel).
+You can browse and change your theme by going to the OhMyDebn menu and selecting Appearance > Theme (or Appearance > Background), or via [hotkey](hotkeys.md) `Ctrl + Super + T` (or `Ctrl + Super + B`, which opens the same carousel).
 
 ![OhMyDebn desktop themes](images/ohmydebn-theme-carousel.png)
 
 This opens a full-screen theme and background browser on whichever monitor your mouse pointer is on:
 
 - `Left` / `Right` browse your installed themes.
-- `Up` / `Down` browse the backgrounds for the theme currently shown, including any you've added yourself, when it has more than one.
+- `Up` / `Down` browse the backgrounds for the theme currently shown, including any you've added yourself, when it has more than one. Each theme starts on the background it had when you last used it.
 - `Enter` applies the theme and background currently shown.
 - `Esc` cancels without changing anything.
 - `S` opens a search box; type to jump the carousel straight to the first matching theme.
@@ -33,7 +33,7 @@ Every background has an intro. Most show the background itself at twilight: the 
 
 Some of the themes included from Omarchy have their own animated intros, made by Omarchy for one of their backgrounds. With that background selected, its intro plays instead: Catppuccin (three of its backgrounds), Catppuccin Latte, Ethereal, Everforest, Flexoki Light, Hackerman, Last Horizon, Lumon, Matte Black, Miasma, Nord, Osaka Jade, Retro 82, Ristretto, Rose Pine, Vantablack and White.
 
-To turn intros off, or back on, go to the OhMyDebn menu and select Style > Theme Intros.
+To turn intros off, or back on, go to the OhMyDebn menu and select Appearance > Theme Intros.
 
 Intros don't play:
 
@@ -41,7 +41,7 @@ Intros don't play:
 - when animations are turned off for accessibility
 - on a Raspberry Pi
 
-You can give one of your own backgrounds an animated intro of its own. Put the background in `~/.config/ohmydebn/backgrounds/<theme>/` (see [adding your own backgrounds](#theme-carousel) above), and the video in an `intros` folder inside that, with the same name as the image: `beach.png` plays `intros/beach.webm`. The video must be WebM (VP9), the format the included intros use; convert another format with, for example, `ffmpeg -i beach.mp4 -c:v libvpx-vp9 -an intros/beach.webm`. Any sound in the video is left out. Make the last frame match the image, since the intro fades into it. If the video can't be played, the background gets the usual intro instead.
+You can give one of your own backgrounds an animated intro of its own. Put the background in `~/.config/ohmydebn/backgrounds/<theme>/` (see [adding your own backgrounds](#theme-carousel) above), and the video in an `intros` folder inside that, with the same name as the image: `beach.png` plays `intros/beach.webm`. Use WebM (VP9), the format the included intros use, since other formats such as MP4 may not play; convert another format with, for example, `ffmpeg -i beach.mp4 -c:v libvpx-vp9 -an intros/beach.webm`. Any sound in the video is left out. Make the last frame match the image, since the intro fades into it. If the video can't be played, the background gets the usual intro instead.
 
 ## Themes Included from Omarchy
 
