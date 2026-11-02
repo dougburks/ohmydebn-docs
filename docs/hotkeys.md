@@ -116,6 +116,7 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 | `Super + R` or `Super + Alt + Space` | Application Launcher |
 | `Super + Return` or `Ctrl + Alt + T` | Terminal (Alacritty) |
 | `Super + A` | AI (your default assistant, [configurable](ai.md#default-ai-assistant)) |
+| `Super` + the key left of `1` | [Drop-down console](ai.md#drop-down-console) with your default AI assistant, or a shell (press again to hide it) |
 | `Super + B` | Browser |
 | `Super + F` | File Manager (Nemo) |
 | `Super + G` | Google search |

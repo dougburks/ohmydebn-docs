@@ -10,6 +10,12 @@ To change your default AI assistant at any time, go to OhMyDebn Menu > Setup > D
 
 If you're in a terminal, the `a` alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT, VS Code, and Antigravity; Claude Desktop, OpenCode Desktop and T3 Code just open).
 
+## Drop-down Console
+
+Hotkey `Super` + the key left of `1` (`` ` `` on a US keyboard) drops down a console: a terminal in the middle of your screen, above your other windows, running your [default AI assistant](#default-ai-assistant). Press the same keys again to hide it. Whatever runs in it keeps running while it's hidden, so you can ask your assistant something, hide the console, and come back to the same conversation from any workspace. It opens on the monitor your mouse is on, and stays floating even when [window tiling](window-tiling.md) arranges your other windows.
+
+When your assistant exits, the console carries on as a shell. If your default assistant is a desktop app (Claude Desktop, ChatGPT, OpenCode Desktop, T3 Code, VS Code or Antigravity), or a terminal one you haven't installed yet, the console opens a shell and says so. Closing the console ends what was running in it; the next press starts a fresh one.
+
 ## OpenCode
 
 OpenCode is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI). [OpenCode](https://opencode.ai/) runs in a terminal and automatically adapts to our [desktop themes](desktop-themes.md). If you pick a different theme in OpenCode, it keeps that choice instead. To follow your OhMyDebn theme again, pick the system theme there. From an existing terminal session, the `c` alias runs OpenCode directly.

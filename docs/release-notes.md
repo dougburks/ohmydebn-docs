@@ -2,6 +2,12 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.15.0
+
+### New
+
+- A [drop-down console](ai.md#drop-down-console): press `Super` and the key left of `1` (`` ` `` on a US keyboard) for a terminal in the middle of your screen, above your other windows, running your default AI assistant. Press the same keys again to hide it; your assistant keeps working while it's hidden, and the console comes back with the same conversation on whichever workspace you're on. It stays floating when window tiling is on, and opens a shell when your default assistant is a desktop app.
+
 ## 4.14.0
 
 ### Supported distros
