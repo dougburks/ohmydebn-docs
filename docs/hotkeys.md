@@ -193,7 +193,6 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 | Hotkey | Function |
 |--------|----------|
 | `Ctrl + Super + E` | Simple Text Editor (gedit) |
-| `Ctrl + Super + G` | Antigravity |
 | `Ctrl + Super + S` | Visual Studio Code |
 | `Super + N` | Neovim |
 

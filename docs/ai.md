@@ -1,4 +1,4 @@
-OhMyDebn includes several different options for your AI needs: OpenCode, OpenCode Desktop, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Crush, Pi, Oh My Pi, T3 Code, Visual Studio Code with GitHub Copilot AI, and Antigravity with Google Agentic AI.
+OhMyDebn includes several different options for your AI needs: OpenCode, OpenCode Desktop, Claude Code, Claude Desktop, ChatGPT, Codex, Grok Build, Crush, Pi, Oh My Pi, T3 Code, and Visual Studio Code with GitHub Copilot AI.
 
 ## Default AI Assistant
 
@@ -8,13 +8,13 @@ When you install one of these AI tools from the OhMyDebn menu, you'll be asked w
 
 To change your default AI assistant at any time, go to OhMyDebn Menu > Setup > Defaults > Agent. It lists the AI tools you have installed, marks your current default, and makes whichever one you pick the new default.
 
-If you're in a terminal, the `a` alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT, VS Code, and Antigravity; Claude Desktop, OpenCode Desktop and T3 Code just open).
+If you're in a terminal, the `a` alias runs your default assistant directly in that terminal (or opens it on the current directory for GUI options like ChatGPT and VS Code; Claude Desktop, OpenCode Desktop and T3 Code just open).
 
 ## Drop-down Console
 
 Hotkey `Super` + the key left of `1` (`` ` `` on a US keyboard) drops down a console: a terminal in the middle of your screen, above your other windows, running your [default AI assistant](#default-ai-assistant). Press the same keys again to hide it. Whatever runs in it keeps running while it's hidden, so you can ask your assistant something, hide the console, and come back to the same conversation from any workspace. It opens on the monitor your mouse is on, and stays floating even when [window tiling](window-tiling.md) arranges your other windows.
 
-When your assistant exits, the console carries on as a shell. If your default assistant is a desktop app (Claude Desktop, ChatGPT, OpenCode Desktop, T3 Code, VS Code or Antigravity), or a terminal one you haven't installed yet, the console opens a shell and says so. Closing the console ends what was running in it; the next press starts a fresh one.
+When your assistant exits, the console carries on as a shell. If your default assistant is a desktop app (Claude Desktop, ChatGPT, OpenCode Desktop, T3 Code or VS Code), or a terminal one you haven't installed yet, the console opens a shell and says so. Closing the console ends what was running in it; the next press starts a fresh one.
 
 ## OpenCode
 
@@ -97,16 +97,8 @@ If T3 Code shows one of your installed agents as turned off, turn it on in T3 Co
 
 [Visual Studio Code](https://code.visualstudio.com/) with [GitHub Copilot](https://github.com/features/copilot) is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI or Apps > Editors). You can run via menu or hotkey Ctrl + Super + S. That hotkey checks to see if it's installed first, so even on a new installation you can just press Ctrl + Super + S and it will install and then run.
 
-## Antigravity with Google Agentic AI
-
-[Antigravity](https://antigravity.google/) is a fork of Visual Studio Code for Google Agentic AI and is available as an optional installation. You can install via the OhMyDebn menu (Apps > AI or Apps > Editors). You can run via menu or hotkey Ctrl + Super + G. That hotkey checks to see if it's installed first, so even on a new installation you can just press Ctrl + Super + G and it will install and then run.
-
-OhMyDebn installs Antigravity 1.x, the last version Google released as a Debian package. Google no longer updates it, and it may stop working at any time. The newer Antigravity 2 app and Antigravity IDE come as separate downloads from [Google's download page](https://antigravity.google/download?os=linux) and aren't managed by OhMyDebn.
-
-![OhMyDebn antigravity](images/ohmydebn-antigravity.png)
-
 ## OhMyDebn skill
 
-OhMyDebn includes an OhMyDebn skill that most of these AI tools, including Claude Code, OpenCode, OpenCode Desktop, Codex, Crush, Pi, and Antigravity, can use to understand more about the underlying platform:
+OhMyDebn includes an OhMyDebn skill that most of these AI tools, including Claude Code, OpenCode, OpenCode Desktop, Codex, Crush and Pi, can use to understand more about the underlying platform. OhMyDebn also links it where Google Antigravity looks, so it works there too if you install Antigravity yourself:
 
 <video src="../images/ohmydebn-opencode-skill.mp4" controls></video>
