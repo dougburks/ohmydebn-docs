@@ -11,6 +11,11 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### New
 
 - A [drop-down console](ai.md#drop-down-console): press `Super` and the key left of `1` (`` ` `` on a US keyboard) for a terminal in the middle of your screen, above your other windows, running your default AI assistant. Press the same keys again to hide it; your assistant keeps working while it's hidden, and the console comes back with the same conversation on whichever workspace you're on. It stays floating when window tiling is on, and opens a shell when your default assistant is a desktop app.
+- [Jade Horse](desktop-themes.md#jade-horse), a theme in jade greens from Omarchy, with three backgrounds.
+
+### Improvements
+
+- The [themes included from Omarchy](desktop-themes.md#themes-included-from-omarchy) are updated to Omarchy 4.5's, which adds a background to Ethereal and one to Tokyo Night. The first time you switch back to a theme after updating, it starts at its first background rather than the one you last had with it, unless that was one of your own.
 
 ### Fixes
 
@@ -19,6 +24,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### Removed
 
 - Antigravity is no longer offered. Google ends support for 1.x, the last version it released as a Debian package, on November 6, 2026, and newer versions aren't available as one. If you have it installed, it stays until you remove it (Remove > Package), and if it was your default AI assistant, OpenCode is now. Its hotkey, `Ctrl + Super + G`, is free again.
+- The Osaka Jade theme is no longer included, since Omarchy replaced it with Jade Horse. If you were using Osaka Jade, updating switches you to Jade Horse.
 
 ### Updated components
 
