@@ -12,6 +12,18 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 - A [drop-down console](ai.md#drop-down-console): press `Super` and the key left of `1` (`` ` `` on a US keyboard) for a terminal in the middle of your screen, above your other windows, running your default AI assistant. Press the same keys again to hide it; your assistant keeps working while it's hidden, and the console comes back with the same conversation on whichever workspace you're on. It stays floating when window tiling is on, and opens a shell when your default assistant is a desktop app.
 
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Codex](ai.md#codex) updated to version 0.166.0
+- [Crush](ai.md#crush) updated to version 0.99.0
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.15.0
+- [OpenCode](ai.md#opencode) updated to version 2.2.5
+- [Pi](ai.md#pi) updated to version 1.5.0
+- [SO-CRATES](cybersecurity.md) updated to version 5.2.0
+- [T3 Code](ai.md#t3-code) updated to version 0.1.6
+
 ## 4.14.0
 
 ### Supported distros
