@@ -79,6 +79,8 @@ Here are some screenshots of the themes included from Omarchy.
 
 Omarchy's replacement for Osaka Jade, painted in jade greens. If you were using Osaka Jade, updating to OhMyDebn 4.15.0 switches you to Jade Horse.
 
+![OhMyDebn with jade horse theme](images/ohmydebn-theme-jade-horse.png)
+
 ### Kanagawa
 
 ![OhMyDebn with kanagawa theme](images/ohmydebn-theme-kanagawa.png)
