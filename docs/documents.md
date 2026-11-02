@@ -49,4 +49,4 @@ ohmydebn-pdf-sign sign lease.pdf lease-signed.pdf --items items.json
 
 ## GIMP
 
-[GIMP](https://www.gimp.org/) is available as an optional installation. You can install via OhMyDebn menu (Apps > Editors). That menu option checks to see if it's installed first, so even on a new installation it will install and then run GIMP.
+[GIMP](https://www.gimp.org/) is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Editors). That menu option checks to see if it's installed first, so even on a new installation it will install and then run GIMP.

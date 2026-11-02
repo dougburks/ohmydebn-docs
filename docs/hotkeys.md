@@ -155,7 +155,7 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 |--------|----------|
 | `Ctrl + Shift + K` | Open or activate KeePassXC |
 | `Ctrl + Shift + U` | Open browser tab to selected URL |
-| `Ctrl + Shift + P` | Auto-type username and password for selected site |
+| `Ctrl + Shift + P` | Auto-type the matching username and password into the current window |
 | `Ctrl + N` | Create a new entry in KeePassXC |
 | `Ctrl + E` | Edit entry |
 | `Ctrl + B` | Copy username |

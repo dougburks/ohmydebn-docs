@@ -6,7 +6,7 @@ Brave Origin is the default for new OhMyDebn installs. If you installed OhMyDebn
 
 Brave Origin is free on Linux, with an optional purchase to support Brave. OhMyDebn pre-accepts the free tier for you, so the first launch opens straight to the browser instead of Brave's buy-or-proceed dialog. You can still buy it later from Brave's settings. The first launch also skips Brave's welcome tour, since OhMyDebn has already made Brave Origin your default browser, leaves its theme following your system light/dark setting, and leaves diagnostic (crash) reports off. Brave's own privacy-preserving analytics stay at Brave's default; both can be changed under Settings > Privacy and security.
 
-To launch the browser, you can open it from the Cinnamon menu, from the Apps menu, or via [hotkey](hotkeys.md) `Super + B`.
+To launch the browser, you can open it from the Cinnamon menu, from the OhMyDebn menu (Apps > Browsers), or via [hotkey](hotkeys.md) `Super + B`.
 
 ## Installing Other Browsers
 

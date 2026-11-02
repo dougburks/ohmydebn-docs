@@ -20,6 +20,12 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### Fixes
 
 - If OhMyDebn set up Brave's package repository before version 4.5.0, updating now limits that repository to Brave's own packages, as newer installs already do. Before, it could supply any package, and the OhMyDebn doctor reported it as missing its pin.
+- If installing Claude Code, Claude Desktop, Brave or Brave Origin can't refresh the vendor's package repository, that repository is now taken out again, as the other installers already do. Before, it stayed behind and made every later update fail.
+- Installing OhMyDebn over SSH, if the firewall's question about SSH connections is answered no, now leaves the firewall to the next update to turn on. Before, it stayed off for good.
+- Switching themes now keeps gedit's own light, dark or system setting. Before, every switch set it back to light.
+- Switching themes now keeps an Alacritty or cava config that's a link into your own dotfiles, and changes the file it points to. Before, the link was replaced with a plain file.
+- Remote Desktop Server, when XRDP was installed some other way, now says what it will change and asks before setting it up.
+- Cleaning up old SO-CRATES images no longer tries to remove the newest one when it has more than one tag.
 
 ### Removed
 

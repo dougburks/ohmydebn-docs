@@ -12,9 +12,9 @@ The OhMyDebn menu allows you to launch apps, learn about OhMyDebn, and configure
 
 ![OhMyDebn Menu](images/ohmydebn-menu.png)
 
-Once open, you can browse categories with the arrow keys or start typing to instantly search across every option in the menu, not just the current category. Categories that lead to a further submenu are marked with a `>` on the right.
+Once open, you can browse categories with the arrow keys or start typing to search. From the top of the menu, search covers every option in every category, however deep; inside a category, it covers everything under that category. Categories that lead to a further submenu are marked with a `>` on the right.
 
-The first option launches the separate Apps menu. The rest of the top level:
+The first option, Apps, opens the apps menu (see below). The rest of the top level:
 
 - `Learn` - documentation links (see below)
 - `Trigger` - screenshots, screen recording, a color picker, and [speed tests](utilities.md#speed-test) for your network and disk, including velo's bufferbloat test

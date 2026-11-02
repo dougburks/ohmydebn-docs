@@ -23,7 +23,7 @@ This opens a full-screen theme and background browser on whichever monitor your 
 
 OhMyDebn also automatically picks a matching icon color based on each theme's accent color, so icons stay legible on custom and Aether-generated themes, not just the themes bundled with OhMyDebn.
 
-To add your own backgrounds to a theme, put the images in `~/.config/ohmydebn/backgrounds/<theme>/`, where `<theme>` is the theme's name in lowercase with dashes for spaces, such as `catppuccin-latte`. They show up in the carousel and in background cycling alongside the theme's own backgrounds.
+To add your own backgrounds to a theme, put the images in `~/.config/ohmydebn/backgrounds/<theme>/`, where `<theme>` is the theme's name in lowercase with dashes for spaces, such as `catppuccin-latte`. They show up in the carousel alongside the theme's own backgrounds.
 
 ## Theme Intros
 
