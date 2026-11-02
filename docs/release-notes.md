@@ -4,6 +4,10 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.15.0
 
+### Supported distros
+
+- [Parrot OS 7](installation.md#parrot-os-7) is now supported. OhMyDebn leaves Parrot's package sources as they are, and installs packages that need a library at the version Parrot ships from its backports.
+
 ### New
 
 - A [drop-down console](ai.md#drop-down-console): press `Super` and the key left of `1` (`` ` `` on a US keyboard) for a terminal in the middle of your screen, above your other windows, running your default AI assistant. Press the same keys again to hide it; your assistant keeps working while it's hidden, and the console comes back with the same conversation on whichever workspace you're on. It stays floating when window tiling is on, and opens a shell when your default assistant is a desktop app.

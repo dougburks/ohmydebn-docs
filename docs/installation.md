@@ -1,6 +1,6 @@
 ## Choosing a base distro
 
-OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Pop!_OS 24.04, Zorin OS 18, Devuan 6 (Excalibur), LCOS, MX Linux 25, or Raspberry Pi OS. If you already have a favorite, start there - see the sections below for any distro-specific notes.
+OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Parrot OS 7, Ubuntu 24.04/26.04, Pop!_OS 24.04, Zorin OS 18, Devuan 6 (Excalibur), LCOS, MX Linux 25, or Raspberry Pi OS. If you already have a favorite, start there - see the sections below for any distro-specific notes.
 
 If you don't have a favorite, we recommend [Linux Mint Cinnamon Edition](https://linuxmint.com/download.php) on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with [Debian 13](#debian-13-live-cinnamon) or [Raspberry Pi OS](#raspberry-pi-os) instead.
 
@@ -58,6 +58,10 @@ Instead of starting from a Debian Live 13 Cinnamon ISO image, an alternative is 
 ### Kali Linux
 
 Kali Linux (Rolling) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Kali and continue on with OhMyDebn installation.
+
+### Parrot OS 7
+
+[Parrot OS](https://parrotsec.org/download/) 7 "Echo" is based on Debian 13 and is also supported, in both its Security and Home editions. Once you're connected to the Internet, run our installer as shown above and it will detect Parrot, leave Parrot's package sources exactly as they are, and continue on with OhMyDebn installation.
 
 ### Ubuntu
 
