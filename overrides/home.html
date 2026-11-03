@@ -368,7 +368,9 @@
   .feature p { margin: 0; font-size: calc(0.95 * var(--r)); color: var(--text-dim); }
 
   /* ---------- theme swatches - live, clickable ---------- */
-  .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(calc(12.5 * var(--r)), 1fr)); gap: calc(1 * var(--r)); }
+  /* 9.4 fits six chips across the page's widest column (62 --r after
+     padding), with the longest name, Catppuccin Mocha, on one line. */
+  .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(calc(9.4 * var(--r)), 1fr)); gap: calc(1 * var(--r)); }
   .theme-chip { padding: calc(0.9 * var(--r)); cursor: pointer; }
   .theme-chip:hover { border-color: var(--edge-bright); }
   .theme-chip:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
