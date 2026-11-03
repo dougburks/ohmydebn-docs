@@ -2,7 +2,7 @@ Here's what you get in OhMyDebn by default:
 
 - Base OS: [Debian](https://www.debian.org/)-based distro for stability and compatibility (including systemd-free [Devuan and LCOS](installation.md#devuan-6-excalibur))
 - Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
-- Desktop themes: beautiful themes from Omarchy and [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
+- Desktop themes: OhMyDebn's own and Omarchy's, with window and panel styling built on [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)'s Gruvbox GTK theme
 - Desktop icons: artfully polished icons from [Linux Mint](https://linuxmint.com/)
 - Theme builder: [Aether](https://github.com/omacom/aether) by [Bjarne Øverli](https://x.com/iamdothash)
 - Terminal emulator: [Alacritty](https://alacritty.org/) with Caskaydia Nerd Fonts
