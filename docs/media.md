@@ -16,7 +16,7 @@ To visualize your system audio, run `cava` in a terminal or use [hotkey](hotkeys
 
 ## cliamp
 
-[cliamp](https://github.com/bjarneo/cliamp) is a terminal music player. Hotkey `Ctrl + Alt + M` will check to see if it's installed and install if necessary. Alternatively, you can install via the OhMyDebn menu (Apps > Media).
+[cliamp](https://github.com/bjarneo/cliamp) is a terminal music player. Hotkey `Ctrl + Alt + M` will check to see if it's installed and install if necessary. Alternatively, you can install it from the OhMyDebn menu (Apps > Media).
 
 ![OhMyDebn cliamp](images/ohmydebn-cliamp.png)
 

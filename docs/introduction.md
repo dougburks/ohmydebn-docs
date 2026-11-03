@@ -26,7 +26,7 @@ OhMyDebn is designed for many different use cases:
 - Power users who want to leverage [AI](ai.md), [containers](containerization.md), and [virtualization](virtualization.md)
 - Folks who want beautiful [Omarchy themes](desktop-themes.md#themes-included-from-omarchy) on a Debian-based distro
 - Cybersecurity engineers, IT administrators, or anybody who wants a beautiful and powerful [terminal](terminal.md)
-- Folks who prefer to keep hands on keyboard and use [hotkeys](hotkeys.md) as much as possible but still have the option of not having to use those hotkeys
+- Folks who prefer to keep their hands on the keyboard and use [hotkeys](hotkeys.md) as much as possible, with the mouse always there when they want it
 - Developers who want a beautiful [neovim](text-editor.md#neovim) or [Visual Studio Code](text-editor.md#visual-studio-code) experience
 - Folks who want a systemd-free desktop on [Devuan, LCOS](installation.md#devuan-6-excalibur), or [MX Linux with sysvinit](installation.md#mx-linux-25)
 - Folks with [older Windows machines that can't run Windows 11](gallery.md#2017-dell-precision)

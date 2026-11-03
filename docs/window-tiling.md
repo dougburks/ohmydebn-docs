@@ -63,6 +63,8 @@ In addition to the manual tiling options above, gTile can automatically place wi
 
 You can change the mode at any time from the Behavior tab, or just press `Super + L` to cycle through the modes (`Super + Shift + L` cycles backward) - an on-screen display shows the newly selected mode, similar to Omarchy's layout toggle. Switching modes affects windows you open afterwards; existing windows stay where they are.
 
+No mode tiles the [drop-down console](ai.md#drop-down-console): it always floats above your tiled windows.
+
 Windows placed by automatic tiling glide smoothly into place, Hyprland-style. You can adjust the animation duration - or set it to 0 to disable the animation - on the same Behavior tab, and [disabling desktop effects](desktop-effects.md) disables it as well.
 
 Here's automatic tiling in action - rule-based, traditional (3 windows), traditional (unlimited), and scrollable modes, cycled with `Super + L`:

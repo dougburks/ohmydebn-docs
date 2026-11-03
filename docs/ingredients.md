@@ -2,9 +2,9 @@ Here's what you get in OhMyDebn by default:
 
 - Base OS: [Debian](https://www.debian.org/)-based distro for stability and compatibility (including systemd-free [Devuan and LCOS](installation.md#devuan-6-excalibur))
 - Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
-- Desktop themes: beautiful themes from Omarchy and [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
+- Desktop themes: OhMyDebn's own and Omarchy's, with window and panel styling built on [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)'s Gruvbox GTK theme
 - Desktop icons: artfully polished icons from [Linux Mint](https://linuxmint.com/)
-- Theme builder: [Aether](https://github.com/omacom/aether) by [Bjarne Øverli](https://x.com/iamdothash)
+- Theme builder: [Aether](https://github.com/omacom/aether) by [Bjarne Øverli](https://github.com/bjarneo)
 - Terminal emulator: [Alacritty](https://alacritty.org/) with Caskaydia Nerd Fonts
 - Shell: [Zsh](https://en.wikipedia.org/wiki/Z_shell) with [Oh My Zsh](https://ohmyz.sh/)
 - Shell prompt: [Starship](https://starship.rs/)
@@ -28,7 +28,7 @@ Your base distro may add more. For example, most of them turn on [AppArmor](http
 
 Here are some additional components that you can optionally install:
 
-- AI: [OpenCode](ai.md#opencode) with free and paid models, [OpenCode Desktop](ai.md#opencode-desktop), [Claude Code](ai.md#claude-code), [Claude Desktop](ai.md#claude-desktop), [ChatGPT](ai.md#chatgpt), [Codex](ai.md#codex), [Pi](ai.md#pi), [Oh My Pi](ai.md#oh-my-pi), [Grok Build](ai.md#grok-build), [Crush](ai.md#crush), [T3 Code](ai.md#t3-code), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with GitHub Copilot AI, [Antigravity](ai.md#antigravity-with-google-agentic-ai) with Google Agentic AI
+- AI: [OpenCode](ai.md#opencode) with free and paid models, [OpenCode Desktop](ai.md#opencode-desktop), [Claude Code](ai.md#claude-code), [Claude Desktop](ai.md#claude-desktop), [ChatGPT](ai.md#chatgpt), [Codex](ai.md#codex), [Pi](ai.md#pi), [Oh My Pi](ai.md#oh-my-pi), [Grok Build](ai.md#grok-build), [Crush](ai.md#crush), [T3 Code](ai.md#t3-code), [VS Code](ai.md#visual-studio-code-with-github-copilot-ai) with GitHub Copilot AI
 - VPN: [Cloudflare WARP](vpn.md#cloudflare-warp) or [Tailscale](vpn.md#tailscale)
 - Virtualization: run virtual machines via [Boxes](virtualization.md#boxes) or [Virtual Machine Manager](virtualization.md#virtual-machine-manager)
 - Containerization: run containers via [Docker](containerization.md#docker) or [Podman](containerization.md#podman)

@@ -2,6 +2,49 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.15.0
+
+### Supported distros
+
+- [Parrot OS 7](installation.md#parrot-os-7) is now supported. OhMyDebn leaves Parrot's package sources as they are, and installs packages that need a library at the version Parrot ships from its backports.
+
+### New
+
+- A [drop-down console](ai.md#drop-down-console): press `Super` and the key left of `1` (`` ` `` on a US keyboard) for a terminal in the middle of your screen, above your other windows, running your default AI assistant. Press the same keys again to hide it; your assistant keeps working while it's hidden, and the console comes back with the same conversation on whichever workspace you're on. It stays floating when window tiling is on, and opens a shell when your default assistant is a desktop app.
+- [Jade Horse](desktop-themes.md#jade-horse), a theme in jade greens from Omarchy, with three backgrounds.
+
+### Improvements
+
+- The [themes included from Omarchy](desktop-themes.md#themes-included-from-omarchy) are updated to Omarchy 4.5's, which adds a background to Ethereal. The first time you switch back to a theme after updating, it starts at its first background rather than the one you last had with it, unless that was one of your own.
+- [Codex](ai.md#codex) and [herdr](terminal.md#herdr) no longer check for new versions themselves, since they're updated with OhMyDebn. Before, they could offer to update themselves with their own installer, outside the package OhMyDebn installed.
+
+### Fixes
+
+- If OhMyDebn set up Brave's package repository before version 4.5.0, updating now limits that repository to Brave's own packages, as newer installs already do. Before, it could supply any package, and the OhMyDebn doctor reported it as missing its pin.
+- If installing Claude Code, Claude Desktop, Brave or Brave Origin can't refresh the vendor's package repository, that repository is now taken out again, as the other installers already do. Before, it stayed behind and made every later update fail.
+- Installing OhMyDebn over SSH, if the firewall's question about SSH connections is answered no, now leaves the firewall to the next update to turn on. Before, it stayed off for good.
+- Switching themes now keeps gedit's own light, dark or system setting. Before, every switch set it back to light.
+- Switching themes now keeps an Alacritty or cava config that's a link into your own dotfiles, and changes the file it points to. Before, the link was replaced with a plain file.
+- Remote Desktop Server, when XRDP was installed some other way, now says what it will change and asks before setting it up.
+- Cleaning up old SO-CRATES images no longer tries to remove the newest one when it has more than one tag.
+
+### Removed
+
+- Antigravity is no longer offered. Google ends support for 1.x, the last version it released as a Debian package, on November 6, 2026, and newer versions aren't available as one. If you have it installed, it stays until you remove it (Remove > Package), and if it was your default AI assistant, OpenCode is now. Its hotkey, `Ctrl + Super + G`, is free again.
+- The Osaka Jade theme is no longer included, since Omarchy replaced it with Jade Horse. If you were using Osaka Jade, updating switches you to Jade Horse.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [Codex](ai.md#codex) updated to version 0.166.0
+- [Crush](ai.md#crush) updated to version 0.99.0
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.15.0
+- [OpenCode](ai.md#opencode) updated to version 2.2.5
+- [Pi](ai.md#pi) updated to version 1.5.0
+- [SO-CRATES](cybersecurity.md) updated to version 5.2.0
+- [T3 Code](ai.md#t3-code) updated to version 0.1.6
+
 ## 4.14.0
 
 ### Supported distros
@@ -85,7 +128,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - The system summary (`Ctrl + Shift + S`) now shows the OhMyDebn grin, in your theme's colors, instead of your distro's logo. The first line of the summary still names your distro. Every few seconds a shimmer of light crosses the grin, and then it winks. It stays still if you turn off Desktop and window effects in System Settings > Effects.
 - The terminal prompt now starts with the OhMyDebn grin instead of your distro's logo, and each new prompt appears about three times faster, so holding down Enter no longer lags. If you changed the prompt's layout yourself, your version is kept as it is.
 - On a laptop with AMD's Radeon 890M graphics, such as the Framework Laptop 13 Pro (AMD), the [doctor](updating.md#checking-your-installation) now checks two settings that laptop needs. On Linux kernel 7, it checks that TearFree is on. Without it, small parts of the screen can briefly flash corrupted. On any kernel, it checks the boot setting that stops the laptop from freezing. The doctor links to the [Hardware Notes](hardware-notes.md#framework-laptop-13-pro-amd-ryzen-ai-300-series) steps for both.
-- Installing Antigravity now tells you that it's Antigravity 1.x, the last version Google released for Debian-based systems. Google no longer updates it, and it may stop working. The newer Antigravity 2 is a separate download from Google. See [Antigravity](ai.md#antigravity-with-google-agentic-ai).
+- Installing Antigravity now tells you that it's Antigravity 1.x, the last version Google released for Debian-based systems. Google no longer updates it, and it may stop working. The newer Antigravity 2 is a separate download from Google.
 
 ### Fixes
 

@@ -48,29 +48,29 @@ Open the OhMyDebn menu and choose Trigger > Capture:
 
 ## Deskflow
 
-[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install via OhMyDebn menu (Apps > Utility). You can then run via menu and share your keyboard and mouse with other systems running Deskflow.
+[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then run it from the menu and share your keyboard and mouse with other systems running Deskflow.
 
 ## LocalSend
 
-[LocalSend](https://github.com/localsend/localsend) is available as an optional installation. You can install via OhMyDebn menu (Apps > Utility). You can then run via menu and transfer files to other systems running LocalSend.
+[LocalSend](https://github.com/localsend/localsend) is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then run it from the menu and transfer files to other systems running LocalSend.
 
 ## rclone
 
-[rclone](https://rclone.org/) syncs files to and from cloud storage from the command line. It is available as an optional installation via OhMyDebn menu (Apps > Utility). Picking it installs rclone if needed and then opens a [terminal](terminal.md) showing its help, ready for whatever remote you want to configure.
+[rclone](https://rclone.org/) syncs files to and from cloud storage from the command line. It is available as an optional installation from the OhMyDebn menu (Apps > Utility). Picking it installs rclone if needed and then opens a [terminal](terminal.md) showing its help, ready for whatever remote you want to configure.
 
 ## SSH Server
 
-SSH server is available as an optional installation. You can install via OhMyDebn menu (Apps > Utility). You can then SSH to the system from other systems.
+SSH server is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then SSH to the system from other systems.
 
 OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhMyDebn never opens a port for you, so the server stays unreachable until you allow port 22. The installer and the menu's status window show the firewall's current rules for that port, or, when there are none yet, the two commands to add one: allow from one address or range (recommended), or allow from anywhere.
 
 ## Remote Desktop Client
 
-[Remmina](https://remmina.org/), a remote desktop client for RDP and VNC, is available as an optional installation via OhMyDebn menu (Apps > Utility > Remote Desktop Client (Remmina)). Use it to connect to another machine's desktop, such as an OhMyDebn machine running the Remote Desktop Server below.
+[Remmina](https://remmina.org/), a remote desktop client for RDP and VNC, is available as an optional installation from the OhMyDebn menu (Apps > Utility > Remote Desktop Client (Remmina)). Use it to connect to another machine's desktop, such as an OhMyDebn machine running the Remote Desktop Server below.
 
 ## Remote Desktop Server
 
-Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation via OhMyDebn menu (Apps > Utility > Remote Desktop Server (XRDP)). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389.
+Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation from the OhMyDebn menu (Apps > Utility > Remote Desktop Server (XRDP)). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389.
 
 Some things to know:
 

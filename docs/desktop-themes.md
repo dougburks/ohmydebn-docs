@@ -23,7 +23,7 @@ This opens a full-screen theme and background browser on whichever monitor your 
 
 OhMyDebn also automatically picks a matching icon color based on each theme's accent color, so icons stay legible on custom and Aether-generated themes, not just the themes bundled with OhMyDebn.
 
-To add your own backgrounds to a theme, put the images in `~/.config/ohmydebn/backgrounds/<theme>/`, where `<theme>` is the theme's name in lowercase with dashes for spaces, such as `catppuccin-latte`. They show up in the carousel and in background cycling alongside the theme's own backgrounds.
+To add your own backgrounds to a theme, put the images in `~/.config/ohmydebn/backgrounds/<theme>/`, where `<theme>` is the theme's name in lowercase with dashes for spaces, such as `catppuccin-latte`. They show up in the carousel alongside the theme's own backgrounds.
 
 ## Theme Intros
 
@@ -31,7 +31,7 @@ When you switch themes, a short, silent intro plays full screen and then fades i
 
 Every background has an intro. Most show the background itself at twilight: the light arrives from the top of the picture down, like a sunrise, and then a band of light crosses the scene, the same shimmer that crosses the OhMyDebn grin. That works for any background, including ones you add yourself and themes you install.
 
-Some of the themes included from Omarchy have their own animated intros, made by Omarchy for one of their backgrounds. With that background selected, its intro plays instead: Catppuccin (three of its backgrounds), Catppuccin Latte, Ethereal, Everforest, Flexoki Light, Hackerman, Last Horizon, Lumon, Matte Black, Miasma, Nord, Osaka Jade, Retro 82, Ristretto, Rose Pine, Vantablack and White.
+Some of the themes included from Omarchy have their own animated intros, made by Omarchy for one of their backgrounds. With that background selected, its intro plays instead: Catppuccin (three of its backgrounds), Catppuccin Latte, Ethereal, Everforest, Flexoki Light, Hackerman, Last Horizon, Lumon, Matte Black, Miasma, Nord, Retro 82, Ristretto, Rose Pine, Vantablack and White.
 
 To turn intros off, or back on, go to the OhMyDebn menu and select Appearance > Theme Intros.
 
@@ -75,6 +75,12 @@ Here are some screenshots of the themes included from Omarchy.
 
 ![OhMyDebn with hackerman theme](images/ohmydebn-theme-hackerman.png)
 
+### Jade Horse
+
+Omarchy's replacement for Osaka Jade, painted in jade greens. If you were using Osaka Jade, updating to OhMyDebn 4.15.0 switches you to Jade Horse.
+
+![OhMyDebn with jade horse theme](images/ohmydebn-theme-jade-horse.png)
+
 ### Kanagawa
 
 ![OhMyDebn with kanagawa theme](images/ohmydebn-theme-kanagawa.png)
@@ -102,10 +108,6 @@ Here are some screenshots of the themes included from Omarchy.
 ### Nord
 
 ![OhMyDebn with nord theme](images/ohmydebn-theme-nord.png)
-
-### Osaka Jade
-
-![OhMyDebn with osaka jade theme](images/ohmydebn-theme-osaka-jade.png)
 
 ### Retro 82
 

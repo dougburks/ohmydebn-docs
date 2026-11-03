@@ -116,6 +116,7 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 | `Super + R` or `Super + Alt + Space` | Application Launcher |
 | `Super + Return` or `Ctrl + Alt + T` | Terminal (Alacritty) |
 | `Super + A` | AI (your default assistant, [configurable](ai.md#default-ai-assistant)) |
+| `Super` + the key left of `1` | [Drop-down console](ai.md#drop-down-console) with your default AI assistant, or a shell (press again to hide it) |
 | `Super + B` | Browser |
 | `Super + F` | File Manager (Nemo) |
 | `Super + G` | Google search |
@@ -154,7 +155,7 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 |--------|----------|
 | `Ctrl + Shift + K` | Open or activate KeePassXC |
 | `Ctrl + Shift + U` | Open browser tab to selected URL |
-| `Ctrl + Shift + P` | Auto-type username and password for selected site |
+| `Ctrl + Shift + P` | Auto-type the matching username and password into the current window |
 | `Ctrl + N` | Create a new entry in KeePassXC |
 | `Ctrl + E` | Edit entry |
 | `Ctrl + B` | Copy username |
@@ -192,7 +193,6 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 | Hotkey | Function |
 |--------|----------|
 | `Ctrl + Super + E` | Simple Text Editor (gedit) |
-| `Ctrl + Super + G` | Antigravity |
 | `Ctrl + Super + S` | Visual Studio Code |
 | `Super + N` | Neovim |
 

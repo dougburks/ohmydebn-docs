@@ -37,6 +37,8 @@ Linux Mint Debian Edition (LMDE) splits the difference - it's Debian-based and a
 
 Plain Ubuntu works too - our [installer also supports installing directly onto Ubuntu 24.04/26.04](installation.md#ubuntu) if that's where you're already set up, as well as onto the Ubuntu-based [Pop!_OS 24.04](installation.md#pop_os-2404) and [Zorin OS 18](installation.md#zorin-os-18).
 
+If you work in security, the installer also supports the Debian-based [Kali Linux](installation.md#kali-linux) (Rolling) and [Parrot OS 7](installation.md#parrot-os-7), and leaves their own package sources as they are.
+
 ## What if I don't want systemd?
 
 Start with [Devuan 6 (Excalibur)](installation.md#devuan-6-excalibur) or [LCOS](installation.md#lcos), which is built on it. Both are Debian 13 underneath but ship without systemd, and our installer supports them directly: it leaves their package sources alone, skips the systemd-only pieces (such as the automatic update check timer), and makes Cinnamon the default login session. The sysvinit editions of [MX Linux 25](installation.md#mx-linux-25) work the same way.
