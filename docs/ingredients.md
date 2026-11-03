@@ -4,7 +4,7 @@ Here's what you get in OhMyDebn by default:
 - Desktop environment: [Cinnamon](https://github.com/linuxmint/Cinnamon) for a premium desktop experience
 - Desktop themes: OhMyDebn's own and Omarchy's, with window and panel styling built on [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)'s Gruvbox GTK theme
 - Desktop icons: artfully polished icons from [Linux Mint](https://linuxmint.com/)
-- Theme builder: [Aether](https://github.com/omacom/aether) by [Bjarne Øverli](https://x.com/iamdothash)
+- Theme builder: [Aether](https://github.com/omacom/aether) by [Bjarne Øverli](https://github.com/bjarneo)
 - Terminal emulator: [Alacritty](https://alacritty.org/) with Caskaydia Nerd Fonts
 - Shell: [Zsh](https://en.wikipedia.org/wiki/Z_shell) with [Oh My Zsh](https://ohmyz.sh/)
 - Shell prompt: [Starship](https://starship.rs/)
