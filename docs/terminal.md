@@ -25,3 +25,5 @@ A few more terminal-focused tools are available from the OhMyDebn menu's Apps > 
 ## herdr
 
 [herdr](https://herdr.dev/) is a persistent runtime for AI coding agents (Claude Code, Codex, OpenCode, and others) - it owns their terminal sessions on a server you control, so an agent keeps working on long-running tasks even after you disconnect or close your laptop, and you can reconnect from any device to check on it. It's available as an optional installation. You can install it from the OhMyDebn menu (Apps > Terminals) or [hotkey](hotkeys.md) `Ctrl + Super + Return`. That hotkey checks to see if it's installed first, so even on a new installation you can just press `Ctrl + Super + Return` and it will install and then run.
+
+herdr updates come from the OhMyDebn repository whenever you update OhMyDebn, so OhMyDebn turns off herdr's own check for new versions by setting `version_check = false` under `[update]` in `~/.config/herdr/config.toml`. It does this once and leaves a `version_check` you set yourself alone.

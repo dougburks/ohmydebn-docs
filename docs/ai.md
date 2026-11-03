@@ -61,6 +61,8 @@ Claude Desktop updates come from Anthropic's own repository whenever you update 
 
 [Codex](https://github.com/openai/codex) is OpenAI's terminal-based coding agent and is available as an optional installation. You can install it from the OhMyDebn menu (Apps > AI), where it's listed as "Codex (OpenAI CLI)". From an existing terminal session, the `codex` alias runs it directly.
 
+Codex updates come from the OhMyDebn repository whenever you update OhMyDebn, so Codex doesn't check for new versions itself. To have it check anyway, set `check_for_update_on_startup = true` in `~/.codex/config.toml`.
+
 ## Grok Build
 
 [Grok Build](https://x.ai/cli) is xAI's terminal-based coding agent and is available as an optional installation. You can install it from the OhMyDebn menu (Apps > AI), where it's listed as "Grok Build (xAI CLI)". From an existing terminal session, the `grok` alias runs it directly. Grok Build automatically adapts to our [desktop themes](desktop-themes.md).

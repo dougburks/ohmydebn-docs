@@ -16,6 +16,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### Improvements
 
 - The [themes included from Omarchy](desktop-themes.md#themes-included-from-omarchy) are updated to Omarchy 4.5's, which adds a background to Ethereal. The first time you switch back to a theme after updating, it starts at its first background rather than the one you last had with it, unless that was one of your own.
+- [Codex](ai.md#codex) and [herdr](terminal.md#herdr) no longer check for new versions themselves, since they're updated with OhMyDebn. Before, they could offer to update themselves with their own installer, outside the package OhMyDebn installed.
 
 ### Fixes
 
