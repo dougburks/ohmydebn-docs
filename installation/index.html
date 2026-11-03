@@ -652,6 +652,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#parrot-os-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parrot OS 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1476,6 +1487,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#parrot-os-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parrot OS 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1580,7 +1602,7 @@
   <h1>Installation</h1>
 
 <h2 id="choosing-a-base-distro">Choosing a base distro</h2>
-<p>OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Ubuntu 24.04/26.04, Pop!_OS 24.04, Zorin OS 18, Devuan 6 (Excalibur), LCOS, MX Linux 25, or Raspberry Pi OS. If you already have a favorite, start there - see the sections below for any distro-specific notes.</p>
+<p>OhMyDebn installs on top of an existing Debian-based distro: Debian 13, or a supported derivative like Linux Mint 22, Linux Mint Debian Edition (LMDE) 7, Kali Linux (Rolling), Parrot OS 7, Ubuntu 24.04/26.04, Pop!_OS 24.04, Zorin OS 18, Devuan 6 (Excalibur), LCOS, MX Linux 25, or Raspberry Pi OS. If you already have a favorite, start there - see the sections below for any distro-specific notes.</p>
 <p>If you don't have a favorite, we recommend <a href="https://linuxmint.com/download.php">Linux Mint Cinnamon Edition</a> on x86_64 hardware. Mint develops the Cinnamon desktop, so it ships a newer version of Cinnamon than Debian 13 does, and it adds a friendly installer, a driver manager, and multimedia codecs out of the box. Linux Mint is only available for x86_64, so on ARM hardware start with <a href="#debian-13-live-cinnamon">Debian 13</a> or <a href="#raspberry-pi-os">Raspberry Pi OS</a> instead.</p>
 <h2 id="installation-with-linux-mint-cinnamon">Installation with Linux Mint Cinnamon</h2>
 <ol>
@@ -1614,7 +1636,7 @@
 <p>If you didn't use <code>--power-user</code> during installation but want to apply that same profile later, you don't need to reinstall - just run this from a <a href="../terminal/">terminal</a> on an already-installed system:
 </p><div class="highlight"><pre><span></span><code>ohmydebn-power-user-install
 </code></pre></div>
-On an already-installed system, it removes only the optional apps your distro came with. Apps that only come from the OhMyDebn menu (AI tools, VPNs, other browsers and so on) are kept. Some of your distro's apps, such as LibreOffice, Wireshark and Remmina, are in the OhMyDebn menu too, and those are removed even if you installed them from the menu. It lists exactly which apps it will remove and asks before changing anything.<p></p>
+On an already-installed system, it removes only the optional apps your distro came with. Apps that only come from the OhMyDebn menu (AI tools, VPNs, other browsers and so on) are kept. Some of your distro's apps, such as Firefox, LibreOffice, Wireshark and Remmina, are in the OhMyDebn menu too, and those are removed even if you installed them from the menu. It lists exactly which apps it will remove and asks before changing anything.<p></p>
 <h2 id="alternative-installations">Alternative installations</h2>
 <h3 id="linux-mint-debian-edition-7">Linux Mint Debian Edition 7</h3>
 <p>Linux Mint Debian Edition (LMDE) 7 is based on Debian 13 and our installer allows for installation on LMDE 7.</p>
@@ -1624,6 +1646,8 @@ On an already-installed system, it removes only the optional apps your distro ca
 <p>Instead of starting from a Debian Live 13 Cinnamon ISO image, an alternative is to start from a Debian 13 minimal netinst installer on x86_64 or ARM64 hardware. Once the Debian netinst installer completes, reboot into your new installation and then start our installer as shown above. It will automatically install the necessary Cinnamon desktop packages and continue on with OhMyDebn installation. Once installation is complete, reboot and enjoy your new OhMyDebn desktop!</p>
 <h3 id="kali-linux">Kali Linux</h3>
 <p>Kali Linux (Rolling) is also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Kali and continue on with OhMyDebn installation.</p>
+<h3 id="parrot-os-7">Parrot OS 7</h3>
+<p><a href="https://parrotsec.org/download/">Parrot OS</a> 7 "Echo" is based on Debian 13 and is also supported, in both its Security and Home editions. Once you're connected to the Internet, run our installer as shown above and it will detect Parrot, leave Parrot's package sources exactly as they are, and continue on with OhMyDebn installation.</p>
 <h3 id="ubuntu">Ubuntu</h3>
 <p>Ubuntu 24.04 LTS and 26.04 LTS (on x86_64 hardware) are also supported. Once you're connected to the Internet, run our installer as shown above and it will detect Ubuntu and continue on with OhMyDebn installation. The default browser, Brave Origin, installs from Brave's own repository there just as on Debian. If you install Chromium as an optional browser, note that it's only available as a snap on Ubuntu, so that's how OhMyDebn installs and configures it there - functionally equivalent, though its Appearance settings currently can't follow your OhMyDebn theme's dark/light mode automatically due to a snap packaging limitation.</p>
 <h3 id="pop_os-2404">Pop!_OS 24.04</h3>
