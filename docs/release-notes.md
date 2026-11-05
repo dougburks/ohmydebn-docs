@@ -7,6 +7,15 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 ### Improvements
 
 - [SO-CRATES](cybersecurity.md) now opens in your browser by itself once it's running, so you no longer need to click the link in its window.
+- The [themes included from Omarchy](desktop-themes.md#themes-included-from-omarchy) are updated to Omarchy 4.5's final release, which touches up two backgrounds: Ethereal's sports car, and Hackerman's geometric one, now sharper.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [cliamp](media.md#cliamp) updated to version 2.4.0
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.16.0
+- [T3 Code](ai.md#t3-code) updated to version 0.1.7
 
 ## 4.15.0
 
