@@ -18,7 +18,7 @@ The first option, Apps, opens the apps menu (see below). The rest of the top lev
 
 - `Learn` - documentation links (see below)
 - `Trigger` - screenshots, screen recording, a color picker, and [speed tests](utilities.md#speed-test) for your network and disk, including velo's bufferbloat test
-- `Appearance` - everything about how the desktop looks: the [theme carousel](desktop-themes.md) for your theme and background, [theme intros](desktop-themes.md#theme-intros) on or off, [tiling](window-tiling.md) settings, and Cinnamon's effects, fonts, notifications, panel, screensaver, windows, and workspaces settings
+- `Appearance` - everything about how the desktop looks: the [theme carousel](desktop-themes.md) for your theme and background, [theme intros](desktop-themes.md#theme-intros) on or off, your [lock screen](lock-screen.md), [tiling](window-tiling.md) settings, and Cinnamon's effects, fonts, notifications, panel, screensaver, windows, and workspaces settings
 - `Install` and `Remove` - add or remove a package from your distro's repos (see [below](#installing-and-removing-packages)), a web app (a website wrapped as its own desktop app), or a terminal (TUI) app
 - `Update` - [update OhMyDebn](updating.md), choose your update [channel](updating.md#channels), run the [doctor](updating.md#checking-your-installation), update your [firmware](updating.md#firmware), and change your password or timezone
 - `Setup` - Bluetooth, defaults (your default [AI assistant](ai.md#default-ai-assistant) and [browser](browser.md#changing-the-default-browser)), display, gestures, [keybindings](hotkeys.md#customizing-keybindings), keyboard, mouse, network, power, printers, and sound

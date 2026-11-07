@@ -4,6 +4,10 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.16.0
 
+### New
+
+- You can switch your [lock screen](lock-screen.md) to XScreenSaver, a hardened screen locker, in the OhMyDebn menu under Appearance > Lock Screen. It keeps your lock settings and hotkeys, and takes your theme's colors. Cinnamon's lock screen stays the default.
+
 ### Improvements
 
 - [SO-CRATES](cybersecurity.md) now opens in your browser by itself once it's running, so you no longer need to click the link in its window.
