@@ -13,6 +13,10 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 - [SO-CRATES](cybersecurity.md) now opens in your browser by itself once it's running, so you no longer need to click the link in its window.
 - The [themes included from Omarchy](desktop-themes.md#themes-included-from-omarchy) are updated to Omarchy 4.5's final release, which touches up two backgrounds: Ethereal's sports car, and Hackerman's geometric one, now sharper.
 
+### Fixes
+
+- Installing Docker on Debian and MX Linux now installs its `docker` command too. Before, MX Linux got Docker without it. If yours is missing it, opening Docker from the OhMyDebn menu installs it.
+
 ### Updated components
 
 Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
