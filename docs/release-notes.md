@@ -15,7 +15,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### Fixes
 
-- Installing Docker on Debian and MX Linux now installs its `docker` command too. Before, MX Linux got Docker without it. If yours is missing it, opening Docker from the OhMyDebn menu installs it.
+- Installing Docker now installs its `docker` command too, on distros like MX Linux and LCOS that don't install recommended packages. Before, it could be left out. If yours is missing it, opening Docker from the OhMyDebn menu installs it.
 
 ### Updated components
 
