@@ -26,7 +26,8 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - [Crush](ai.md#crush) updated to version 0.100.0
 - fastfetch updated to version 2.71.0
 - [Grok Build](ai.md#grok-build) updated to version 1.0.77
-- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.18.0
+- lazygit updated to version 0.66.3
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.18.1
 - [OpenCode](ai.md#opencode) updated to version 2.2.6
 - [T3 Code](ai.md#t3-code) updated to version 0.1.7
 
