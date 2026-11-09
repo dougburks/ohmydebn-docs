@@ -6,7 +6,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ### New
 
-- You can switch your [lock screen](lock-screen.md) to XScreenSaver, a hardened screen locker, in the OhMyDebn menu under Appearance > Lock Screen. It keeps your lock settings and hotkeys, and takes your theme's colors. Cinnamon's lock screen stays the default.
+- You can switch your [lock screen](lock-screen.md) to XScreenSaver, a hardened screen locker, in the OhMyDebn menu under Appearance > Lock Screen. It keeps your lock settings and hotkeys, and takes your theme's colors. Cinnamon's lock screen stays the default. While XScreenSaver has your screen locked, the screen may stay on when Power Management would turn it off, and on battery it can dim and brighten again every couple of minutes. To save power while you're away, suspend instead (System > Suspend in the OhMyDebn menu), or close your laptop's lid.
 
 ### Improvements
 

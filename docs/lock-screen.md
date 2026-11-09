@@ -14,7 +14,7 @@ Everything that decides when your screen locks is still Cinnamon's, in its scree
 - Lock the computer after the screensaver starts, and the Delay before locking: with locking off, your screen just goes black when you step away, and with a delay, coming back before it ends doesn't need your password
 - Lock the computer when put to sleep
 
-Turning the screen off when you're inactive is still Cinnamon's too (Turn off the screen when inactive for, in Power Management), and it still happens while the screen is locked.
+Turning the screen off when you're inactive is still Cinnamon's too (Turn off the screen when inactive for, in Power Management).
 
 The [hotkey](hotkeys.md) `Ctrl + Alt + L`, Lock in the Cinnamon menu, and System > Lock in the OhMyDebn menu all lock with XScreenSaver too, and videos still keep your screen from going black while they play.
 
@@ -23,6 +23,8 @@ The [hotkey](hotkeys.md) `Ctrl + Alt + L`, Lock in the Cinnamon menu, and System
 The lock screen goes black, and pressing a key or moving the mouse shows XScreenSaver's password box. It uses your [desktop theme's](desktop-themes.md) colors and OhMyDebn's font, and shows the date in the same 12 or 24 hour format as your clock. It always shows your username.
 
 XScreenSaver doesn't have Cinnamon's lock screen extras: media controls, notifications, the away message, the on-screen keyboard, and the keyboard layout switcher.
+
+While XScreenSaver has your screen locked, the screen may stay on when Power Management would turn it off, and on battery it can dim and brighten again every couple of minutes. A conflict between XScreenSaver and Cinnamon's power management keeps telling Cinnamon you've come back. To save power while you're away, suspend instead (System > Suspend in the OhMyDebn menu), or close your laptop's lid.
 
 XScreenSaver only works when you log in to Cinnamon's usual X11 session, not a Wayland session, so OhMyDebn won't switch to it there.
 
