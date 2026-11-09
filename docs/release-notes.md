@@ -29,6 +29,7 @@ Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai
 - lazygit updated to version 0.66.3
 - [Oh My Pi](ai.md#oh-my-pi) updated to version 18.18.1
 - [OpenCode](ai.md#opencode) updated to version 2.2.6
+- [SO-CRATES](cybersecurity.md) updated to version 5.3.0
 - [T3 Code](ai.md#t3-code) updated to version 0.1.7
 
 ## 4.15.0
