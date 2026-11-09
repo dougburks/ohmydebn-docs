@@ -14,6 +14,8 @@ Everything that decides when your screen locks is still Cinnamon's, in its scree
 - Lock the computer after the screensaver starts, and the Delay before locking: with locking off, your screen just goes black when you step away, and with a delay, coming back before it ends doesn't need your password
 - Lock the computer when put to sleep
 
+Turning the screen off when you're inactive is still Cinnamon's too (Turn off the screen when inactive for, in Power Management), and it still happens while the screen is locked.
+
 The [hotkey](hotkeys.md) `Ctrl + Alt + L`, Lock in the Cinnamon menu, and System > Lock in the OhMyDebn menu all lock with XScreenSaver too, and videos still keep your screen from going black while they play.
 
 ## What Changes
