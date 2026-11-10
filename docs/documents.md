@@ -41,7 +41,7 @@ ohmydebn-pdf-sign pages lease.pdf                     # each page's size in poin
 ohmydebn-pdf-sign sign lease.pdf lease-signed.pdf --items items.json
 ```
 
-`items.json` lists what to place on which page, in points from the top-left corner of the page, for example `[{"signature": "Alex", "page": 2, "x": 72, "bottom": 700, "width": 150}, {"date": true, "page": 2, "x": 300, "y": 690}]`. Run `ohmydebn-pdf-sign help items` for every option, and add `--json` to any command for output a script can read.
+`items.json` lists what to place on which page, in points from the top-left corner of the page, for example `[{"signature": "Alex", "page": 2, "x": 72, "bottom": 700, "width": 150}, {"date": true, "page": 2, "x": 300, "y": 690}]`. Run `ohmydebn-pdf-sign help items` for every option, and add `--json` to `signatures`, `pages` or `sign` for output a script can read.
 
 ## Ristretto
 

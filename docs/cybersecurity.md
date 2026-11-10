@@ -1,6 +1,6 @@
 If you're in cybersecurity or networking, then you may need to analyze pcap files. The OhMyDebn menu's Apps > Cybersecurity section allows you to install standard libpcap utilities like [tcpdump](https://www.tcpdump.org/), [tshark](https://www.wireshark.org/docs/man-pages/tshark.html), and [wireshark](https://www.wireshark.org/). It also allows you to install our new [SO-CRATES](https://so-crates.org) tool. Alternatively, you can run `ohmydebn-socrates` or just use hotkey `Ctrl + Alt + S`. Any of these methods will install Podman if necessary and then download and start SO-CRATES.
 
-Once SO-CRATES starts, click the hyperlink at the bottom of the terminal window to open the SO-CRATES web interface in your browser.
+Once SO-CRATES starts, its web interface opens in your default browser. The first time, that waits until SO-CRATES has finished downloading, which can take a few minutes. If you close that browser tab, click the link at the bottom of the terminal window to open it again. To stop SO-CRATES, press `Ctrl + C` in that window.
 
 The welcome screen gives you an overview of SO-CRATES:
 

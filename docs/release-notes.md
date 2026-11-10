@@ -2,6 +2,39 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.16.0
+
+### New
+
+- You can switch your [lock screen](lock-screen.md) to XScreenSaver, a hardened screen locker, in the OhMyDebn menu under Appearance > Lock Screen. It keeps your lock settings and hotkeys, and takes your theme's colors. Cinnamon's lock screen stays the default. While XScreenSaver has your screen locked, the screen may stay on when Power Management would turn it off, and on battery it can dim and brighten again every couple of minutes. To save power while you're away, suspend instead (System > Suspend in the OhMyDebn menu), or close your laptop's lid.
+
+### Improvements
+
+- [SO-CRATES](cybersecurity.md) now opens in your browser by itself once it's running, so you no longer need to click the link in its window.
+- The [themes included from Omarchy](desktop-themes.md#themes-included-from-omarchy) are updated to Omarchy 4.5's final release, which touches up two backgrounds: Ethereal's sports car, and Hackerman's geometric one, now sharper.
+
+### Fixes
+
+- Installing Docker now installs its `docker` command too, on distros like MX Linux and LCOS that don't install recommended packages. Before, it could be left out. If yours is missing it, opening Docker from the OhMyDebn menu installs it.
+- SSH Server and Remote Desktop Server now tell you whether the firewall lets them through, and how to allow them, on Debian and the distros based on it. Before, that note never appeared there.
+- On Devuan, LCOS and other systems without systemd, the SSH Server and Remote Desktop Server windows now show whether the server is running. Before, they showed an error in its place.
+- Installing Tailscale now installs Tailscale's signing key package too, on distros like MX Linux that don't install recommended packages. Without it, updates would stop working the next time Tailscale changes its key.
+
+### Updated components
+
+Updating OhMyDebn brings you these new versions automatically. The [AI tools](ai.md) are updated if you've installed them.
+
+- [cliamp](media.md#cliamp) updated to version 2.4.0
+- [Codex](ai.md#codex) updated to version 0.167.0
+- [Crush](ai.md#crush) updated to version 0.100.0
+- fastfetch updated to version 2.71.0
+- [Grok Build](ai.md#grok-build) updated to version 1.0.77
+- lazygit updated to version 0.66.3
+- [Oh My Pi](ai.md#oh-my-pi) updated to version 18.18.1
+- [OpenCode](ai.md#opencode) updated to version 2.2.6
+- [SO-CRATES](cybersecurity.md) updated to version 5.3.0
+- [T3 Code](ai.md#t3-code) updated to version 0.1.7
+
 ## 4.15.0
 
 ### Supported distros
