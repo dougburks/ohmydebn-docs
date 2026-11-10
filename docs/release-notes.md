@@ -17,6 +17,7 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 - Installing Docker now installs its `docker` command too, on distros like MX Linux and LCOS that don't install recommended packages. Before, it could be left out. If yours is missing it, opening Docker from the OhMyDebn menu installs it.
 - SSH Server and Remote Desktop Server now tell you whether the firewall lets them through, and how to allow them, on Debian and the distros based on it. Before, that note never appeared there.
+- On Devuan, LCOS and other systems without systemd, the SSH Server and Remote Desktop Server windows now show whether the server is running. Before, they showed an error in its place.
 - Installing Tailscale now installs Tailscale's signing key package too, on distros like MX Linux that don't install recommended packages. Without it, updates would stop working the next time Tailscale changes its key.
 
 ### Updated components
