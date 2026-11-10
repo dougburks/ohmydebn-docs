@@ -20,7 +20,7 @@ The [hotkey](hotkeys.md) `Ctrl + Alt + L`, Lock in the Cinnamon menu, and System
 
 ## What Changes
 
-The lock screen goes black, and pressing a key or moving the mouse shows XScreenSaver's password box. It uses your [desktop theme's](desktop-themes.md) colors and OhMyDebn's font, and shows the date in the same 12 or 24 hour format as your clock. It always shows your username.
+The lock screen goes black, and pressing a key or moving the mouse shows XScreenSaver's password box. It uses your [desktop theme's](desktop-themes.md) colors and OhMyDebn's font, and shows the date in the same 12- or 24-hour format as your clock. It always shows your username.
 
 XScreenSaver doesn't have Cinnamon's lock screen extras: media controls, notifications, the away message, the on-screen keyboard, and the keyboard layout switcher.
 
