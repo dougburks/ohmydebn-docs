@@ -4,7 +4,14 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.17.0
 
+### Improvements
+
+- When SSH Server or Remote Desktop Server shows how to let it through the firewall, the example range is now your machine's own network, such as 192.168.199.0/24. Before, it was always 192.168.1.0/24, which didn't let anyone in if your network was different.
+
 ### Fixes
+
+- On MX Linux and LMDE, updating no longer prints a notice that OhMyDebn's package repository doesn't support i386.
+- A first installation no longer calls itself "this update" in its messages about restarting Cinnamon and rebooting.
 
 - On Devuan, LCOS and MX Linux with sysvinit, opening Cloudflare WARP or Tailscale from the OhMyDebn menu now explains that it needs systemd, which these systems don't use, and installs nothing. Before, Tailscale's install ended in an error, and WARP installed but could only say "Unable to connect". If you installed either one there, opening it now offers to remove it. The [installation notes](installation.md#devuan-6-excalibur) now say so too.
 - On LCOS, opening Remote Desktop Server from the OhMyDebn menu now explains that it can't work with LCOS's X server, and installs nothing. Before, its install ended in an error.

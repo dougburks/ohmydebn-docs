@@ -62,7 +62,7 @@ Open the OhMyDebn menu and choose Trigger > Capture:
 
 SSH server is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then SSH to the system from other systems.
 
-OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhMyDebn never opens a port for you, so the server stays unreachable until you allow port 22. The installer and the menu's status window show the firewall's current rules for that port, or, when there are none yet, the two commands to add one: allow from one address or range (recommended), or allow from anywhere.
+OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhMyDebn never opens a port for you, so the server stays unreachable until you allow port 22. The installer and the menu's status window show the firewall's current rules for that port, or, when there are none yet, the two commands to add one: allow from one address or range (recommended; the example given is this machine's own network), or allow from anywhere.
 
 ## Remote Desktop Client
 
