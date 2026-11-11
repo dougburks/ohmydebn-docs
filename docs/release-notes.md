@@ -4,6 +4,10 @@ Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks
 
 ## 4.17.0
 
+### New
+
+- `Super + K` now opens a fast, searchable list of the [hotkeys](hotkeys.md) that work on your desktop right now, including any you've added or changed, instead of this site's hotkey page in a browser window. Type any part of a hotkey to find it, and press `Enter` to run one of OhMyDebn's hotkeys or your own. Learn > Keybindings in the OhMyDebn menu opens the same list. The website's page is still its last row, for the shortcuts inside apps.
+
 ### Improvements
 
 - When SSH Server or Remote Desktop Server shows how to let it through the firewall, the example range is now your machine's own network, such as 192.168.199.0/24. Before, it was always 192.168.1.0/24, which didn't let anyone in if your network was different.

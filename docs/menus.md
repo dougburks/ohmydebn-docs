@@ -39,9 +39,9 @@ To run applications, you can select `Apps` from the OhMyDebn menu. You can then 
 
 ## Learn Menu
 
-Select `Learn` from the OhMyDebn menu for quick links to documentation, opened in your [browser](browser.md):
+Select `Learn` from the OhMyDebn menu for quick references. Keybindings opens the hotkey list, as `Super + K` does; the rest open documentation in your [browser](browser.md):
 
-- Keybindings (this site's [hotkeys](hotkeys.md) page)
+- Keybindings (the [hotkeys](hotkeys.md) that work on your desktop right now, in a searchable list)
 - OhMyDebn (ohmydebn.org)
 - Cinnamon
 - Debian
