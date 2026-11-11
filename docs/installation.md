@@ -91,13 +91,17 @@ A few things work differently without systemd:
 
 - Cinnamon becomes the default login session. Devuan's SLiM login manager has no session menu, so if you want a different desktop for a single login, press `F1` at the login screen.
 - There is no background timer to check for new OhMyDebn releases, so you won't get update notifications. Check for updates yourself from the OhMyDebn menu (Update > OhMyDebn) or with `Ctrl + Super + U`, as described in [Updating](updating.md).
-- Suspend, Restart, and Shutdown in the System menu, plus the SSH and Remote Desktop server status windows, use Devuan's own tools instead of systemd's. Everything else in OhMyDebn works the same.
+- Suspend, Restart, and Shutdown in the System menu, plus the SSH and Remote Desktop server status windows, use Devuan's own tools instead of systemd's.
+- The two [VPN](vpn.md) apps, Cloudflare WARP and Tailscale, aren't available. Each runs a background service that only systemd starts, so opening one from the OhMyDebn menu explains this instead of installing it.
+
+Everything else in OhMyDebn works the same.
 
 ### LCOS
 
-[LCOS](https://github.com/BryanLunduke/LCOS) (the Lunduke Computer Operating System) is built on Devuan 6 Excalibur, so everything in the [Devuan section](#devuan-6-excalibur) applies. Run our installer as shown above and it will detect LCOS and continue on with OhMyDebn installation. Two LCOS-specific notes:
+[LCOS](https://github.com/BryanLunduke/LCOS) (the Lunduke Computer Operating System) is built on Devuan 6 Excalibur, so everything in the [Devuan section](#devuan-6-excalibur) applies. Run our installer as shown above and it will detect LCOS and continue on with OhMyDebn installation. Three LCOS-specific notes:
 
 - LCOS already ships Brave Origin, OhMyDebn's [default browser](browser.md), so OhMyDebn uses that copy and adds nothing.
+- [Remote Desktop Server](utilities.md#remote-desktop-server) isn't available. LCOS uses the XLibre X server in place of Xorg, and the part of XRDP that shows your desktop works only with Xorg, so opening it from the OhMyDebn menu explains this instead of installing it.
 - LCOS uses the LightDM login manager. OhMyDebn makes Cinnamon the default session for anyone who hasn't logged in yet, but LightDM remembers each user's last session, so if you've already logged into XFCE, pick Cinnamon once from the session menu on the login screen and LightDM will remember it from then on.
 
 ### MX Linux 25
@@ -107,7 +111,7 @@ A few things work differently without systemd:
 MX offers each desktop with either systemd or sysvinit. Both work:
 
 - With systemd, OhMyDebn works exactly as on Debian 13.
-- With sysvinit, OhMyDebn works as on [Devuan](#devuan-6-excalibur): there's no background timer to check for new OhMyDebn releases, so check for updates yourself from the OhMyDebn menu (Update > OhMyDebn) or with `Ctrl + Super + U`.
+- With sysvinit, OhMyDebn works as on [Devuan](#devuan-6-excalibur): there's no background timer to check for new OhMyDebn releases, so check for updates yourself from the OhMyDebn menu (Update > OhMyDebn) or with `Ctrl + Super + U`, and the [VPN](vpn.md) apps aren't available.
 
 MX uses the LightDM login manager. OhMyDebn makes Cinnamon the default session, but LightDM remembers each user's last session, so if you've already logged into MX's own desktop, pick Cinnamon once from the session menu on the login screen and LightDM will remember it from then on. If you turned on automatic login when installing MX, log out once to reach the login screen and pick Cinnamon there.
 

@@ -2,6 +2,14 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.17.0
+
+### Fixes
+
+- On Devuan, LCOS and MX Linux with sysvinit, opening Cloudflare WARP or Tailscale from the OhMyDebn menu now explains that it needs systemd, which these systems don't use, and installs nothing. Before, Tailscale's install ended in an error, and WARP installed but could only say "Unable to connect". If you installed either one there, opening it now offers to remove it. The [installation notes](installation.md#devuan-6-excalibur) now say so too.
+- On LCOS, opening Remote Desktop Server from the OhMyDebn menu now explains that it can't work with LCOS's X server, and installs nothing. Before, its install ended in an error.
+- Opening Deskflow, AbiWord, rclone or Firefox from the OhMyDebn menu on a distro that doesn't have it now says so, and asks nothing. Before, the install ended in an error. Deskflow isn't available on Ubuntu 24.04, Linux Mint 22 or Pop!_OS 24.04, AbiWord and rclone on Kali, and Firefox ESR on Ubuntu, Linux Mint or Pop!_OS, where the menu now points you to your distro's own Firefox.
+
 ## 4.16.0
 
 ### New

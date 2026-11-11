@@ -48,7 +48,7 @@ Open the OhMyDebn menu and choose Trigger > Capture:
 
 ## Deskflow
 
-[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then run it from the menu and share your keyboard and mouse with other systems running Deskflow.
+[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then run it from the menu and share your keyboard and mouse with other systems running Deskflow. It isn't available on Ubuntu 24.04 or the distros based on it (Linux Mint 22 and Pop!_OS 24.04), whose repositories don't have it.
 
 ## LocalSend
 
@@ -56,7 +56,7 @@ Open the OhMyDebn menu and choose Trigger > Capture:
 
 ## rclone
 
-[rclone](https://rclone.org/) syncs files to and from cloud storage from the command line. It is available as an optional installation from the OhMyDebn menu (Apps > Utility). Picking it installs rclone if needed and then opens a [terminal](terminal.md) showing its help, ready for whatever remote you want to configure.
+[rclone](https://rclone.org/) syncs files to and from cloud storage from the command line. It is available as an optional installation from the OhMyDebn menu (Apps > Utility). Picking it installs rclone if needed and then opens a [terminal](terminal.md) showing its help, ready for whatever remote you want to configure. It isn't available on Kali, whose repositories don't have it.
 
 ## SSH Server
 
@@ -70,7 +70,7 @@ OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhM
 
 ## Remote Desktop Server
 
-Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation from the OhMyDebn menu (Apps > Utility > Remote Desktop Server (XRDP)). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389.
+Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation from the OhMyDebn menu (Apps > Utility > Remote Desktop Server (XRDP)). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389. It isn't available on [LCOS](installation.md#lcos), whose XLibre X server XRDP can't use.
 
 Some things to know:
 

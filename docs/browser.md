@@ -14,7 +14,7 @@ If you prefer other browsers you can install them by going to OhMyDebn Menu > Ap
 
 - [Brave](https://brave.com/) Browser (extras)
 - [Chromium](https://www.chromium.org/Home/) with the uBlock Origin Lite content blocker
-- [Firefox](https://www.mozilla.org/firefox/)
+- [Firefox](https://www.mozilla.org/firefox/), as Debian's Firefox ESR. Ubuntu, Linux Mint and Pop!_OS package Firefox differently, so there the menu points you to Install > Package and the `firefox` package instead.
 - [Google Chrome](https://www.google.com/chrome/)
 - [Helium](https://helium.computer/)
 
