@@ -2,6 +2,26 @@ This page lists what's new in each OhMyDebn release, newest first. To get the la
 
 Release notes for 4.8.0 and earlier are on [GitHub](https://github.com/dougburks/ohmydebn/releases).
 
+## 4.17.0
+
+### New
+
+- `Super + K` now opens a fast, searchable list of the [hotkeys](hotkeys.md) that work on your desktop right now, including any you've added or changed, instead of this site's hotkey page in a browser window. Type any part of a hotkey to find it, and press `Enter` to run one of OhMyDebn's hotkeys or your own. Learn > Keybindings in the OhMyDebn menu opens the same list. The website's page is still its last row, for the shortcuts inside apps.
+
+### Improvements
+
+- When SSH Server or Remote Desktop Server shows how to let it through the firewall, the example range is now your machine's own network, such as 192.168.199.0/24. Before, it was always 192.168.1.0/24, which didn't let anyone in if your network was different.
+
+### Fixes
+
+- On MX Linux and LMDE, updating no longer prints a notice that OhMyDebn's package repository doesn't support i386.
+- A first installation no longer calls itself "this update" in its messages about restarting Cinnamon and rebooting.
+- On a desktop in a language other than English, installing Chromium from the OhMyDebn menu now works on Debian and the distros based on it, and the doctor no longer says apt can't find OhMyDebn's package.
+- On Devuan, LCOS and MX Linux with sysvinit, opening Cloudflare WARP or Tailscale from the OhMyDebn menu now explains that it needs systemd, which these systems don't use, and installs nothing. Before, Tailscale's install ended in an error, and WARP installed but could only say "Unable to connect". If you installed either one there, opening it now offers to remove it. The [installation notes](installation.md#devuan-6-excalibur) now say so too.
+- On LCOS, opening Remote Desktop Server from the OhMyDebn menu now explains that it can't work with LCOS's X server, and installs nothing. Before, its install ended in an error.
+- Opening Deskflow, AbiWord or rclone from the OhMyDebn menu on a distro that doesn't have it now says so, and asks nothing. Before, the install ended in an error. Deskflow isn't available on Ubuntu 24.04, Linux Mint 22, Pop!_OS 24.04 or Zorin OS 18, and AbiWord and rclone aren't on Kali.
+- Opening Firefox from the OhMyDebn menu on Linux Mint and Pop!_OS now installs their own Firefox, and you can make it your default browser. Before, the install ended in an error, so after a `--power-user` install had removed Firefox, the menu couldn't put it back. On Ubuntu, the menu now opens the Firefox snap if you have it.
+
 ## 4.16.0
 
 ### New

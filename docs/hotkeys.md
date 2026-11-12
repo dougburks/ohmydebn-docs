@@ -1,4 +1,6 @@
-Pressing `Super + K` opens this list of keyboard bindings in its own [browser](browser.md) window.
+Pressing `Super + K` lists the hotkeys that work on your desktop right now, including any you've added or changed, in a searchable list. Type any part of a hotkey's keys or what it does to narrow it down ("super shift", "workspace"). Press `Enter` on one of OhMyDebn's hotkeys, or one of your own, to run it, or `Esc` to close the list. Its last row opens this page, which also has the shortcuts inside apps (text selection, the browser, KeePassXC, Neovim) that the list can't read from your desktop. The OhMyDebn menu has the same list under Learn > Keybindings.
+
+This page lists OhMyDebn's stock hotkeys.
 
 ## OhMyDebn
 
@@ -6,7 +8,7 @@ Pressing `Super + K` opens this list of keyboard bindings in its own [browser](b
 |--------|----------|
 | `Super` | Cinnamon menu |
 | `Super + Space` | OhMyDebn menu |
-| `Super + K` | This list of keybindings |
+| `Super + K` | List the hotkeys that work right now |
 | `Ctrl + Shift + G` | gTile window tiling |
 | `Ctrl + Shift + O` | OhMyDebn logo |
 | `Ctrl + Shift + S` | system summary via fastfetch |

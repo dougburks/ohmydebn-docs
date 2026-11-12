@@ -48,7 +48,7 @@ Open the OhMyDebn menu and choose Trigger > Capture:
 
 ## Deskflow
 
-[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then run it from the menu and share your keyboard and mouse with other systems running Deskflow.
+[Deskflow](https://github.com/deskflow/deskflow) is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then run it from the menu and share your keyboard and mouse with other systems running Deskflow. It isn't available on Ubuntu 24.04 or the distros based on it (Linux Mint 22, Pop!_OS 24.04 and Zorin OS 18), whose repositories don't have it.
 
 ## LocalSend
 
@@ -56,13 +56,13 @@ Open the OhMyDebn menu and choose Trigger > Capture:
 
 ## rclone
 
-[rclone](https://rclone.org/) syncs files to and from cloud storage from the command line. It is available as an optional installation from the OhMyDebn menu (Apps > Utility). Picking it installs rclone if needed and then opens a [terminal](terminal.md) showing its help, ready for whatever remote you want to configure.
+[rclone](https://rclone.org/) syncs files to and from cloud storage from the command line. It is available as an optional installation from the OhMyDebn menu (Apps > Utility). Picking it installs rclone if needed and then opens a [terminal](terminal.md) showing its help, ready for whatever remote you want to configure. It isn't available on Kali, whose repositories don't have it.
 
 ## SSH Server
 
 SSH server is available as an optional installation. You can install it from the OhMyDebn menu (Apps > Utility). You can then SSH to the system from other systems.
 
-OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhMyDebn never opens a port for you, so the server stays unreachable until you allow port 22. The installer and the menu's status window show the firewall's current rules for that port, or, when there are none yet, the two commands to add one: allow from one address or range (recommended), or allow from anywhere.
+OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhMyDebn never opens a port for you, so the server stays unreachable until you allow port 22. The installer and the menu's status window show the firewall's current rules for that port, or, when there are none yet, the two commands to add one: allow from one address or range (recommended; the example given is this machine's own network), or allow from anywhere.
 
 ## Remote Desktop Client
 
@@ -70,7 +70,7 @@ OhMyDebn's [firewall](firewall.md) denies inbound connections by default and OhM
 
 ## Remote Desktop Server
 
-Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation from the OhMyDebn menu (Apps > Utility > Remote Desktop Server (XRDP)). It installs XRDP, sets up a Cinnamon session for remote logins, and starts the service. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389.
+Remote desktop access to this machine over RDP, using [XRDP](https://www.xrdp.org/), is available as an optional installation from the OhMyDebn menu (Apps > Utility > Remote Desktop Server (XRDP)). It installs XRDP, lets it use the system's TLS certificate, limits each user to one desktop at a time (see below), and starts the service. Remote logins get your normal Cinnamon desktop. Connect from another machine with Remmina or any RDP client, using the address the menu shows and port 3389. It isn't available on [LCOS](installation.md#lcos), whose XLibre X server XRDP can't use.
 
 Some things to know:
 

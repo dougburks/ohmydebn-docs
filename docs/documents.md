@@ -1,6 +1,6 @@
 ## Office Documents
 
-Several options are available to handle standard office documents and spreadsheets: [LibreOffice](https://www.libreoffice.org/) Suite, [Calligra](https://calligra.org/) Suite, [Gnumeric](http://www.gnumeric.org/), and [AbiWord](https://www.abisource.com/). You can find these options in the OhMyDebn menu under Apps > Office.
+Several options are available to handle standard office documents and spreadsheets: [LibreOffice](https://www.libreoffice.org/) Suite, [Calligra](https://calligra.org/) Suite, [Gnumeric](http://www.gnumeric.org/), and [AbiWord](https://www.abisource.com/). You can find these options in the OhMyDebn menu under Apps > Office. AbiWord isn't available on Kali, whose repositories don't have it.
 
 ## Xournal++
 
